@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildV2Pages } from "./render-v2.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -23,11 +24,17 @@ const costs = readJson("cost-estimates.json");
 
 const NAV = [
   { href: "index.html", label: "トップ" },
+  { href: "planner.html", label: "プランナー" },
   { href: "plan-a.html", label: "案A" },
   { href: "plan-b.html", label: "案B" },
+  { href: "plan-c.html", label: "案C" },
+  { href: "stays.html", label: "宿泊" },
+  { href: "options.html", label: "選択肢" },
+  { href: "map.html", label: "地図" },
   { href: "nye.html", label: "年越し" },
   { href: "practical.html", label: "実務" },
   { href: "fares.html", label: "運賃" },
+  { href: "credits.html", label: "写真" },
 ];
 
 function esc(s) {
@@ -55,11 +62,18 @@ function cite(url, checked, extra = "") {
   return `<span class="cite">出典: <a href="${esc(url)}" rel="noopener noreferrer">${esc(url)}</a>　確認: ${esc(checked)}${extra ? ` — ${esc(extra)}` : ""}</span>`;
 }
 
-function layout({ title, current, body }) {
+function layout({ title, current, body, extraHead = "", scripts = [] }) {
+  return layoutExt({ title, current, body, extraHead, scripts });
+}
+
+function layoutExt({ title, current, body, extraHead = "", scripts = [] }) {
   const nav = NAV.map(
     (n) =>
       `<a href="${n.href}"${current === n.href ? ' aria-current="page"' : ""}>${esc(n.label)}</a>`
   ).join("\n");
+  const scriptTags = scripts
+    .map((s) => (s.startsWith("http") ? `<script src="${s}" defer crossorigin></script>` : `<script src="${s}" defer></script>`))
+    .join("\n");
   return `<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -70,6 +84,7 @@ function layout({ title, current, body }) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  ${extraHead}
 </head>
 <body>
   <header class="site-header">
@@ -84,8 +99,9 @@ function layout({ title, current, body }) {
   <footer class="site-footer">
     <p>${esc(meta.disclaimer)}</p>
     <p>データ確認日（調査）: ${esc(meta.researchCheckedDatePST)}（PST）／運賃確認: ${esc(meta.faresCheckedAtPST)}（PST）</p>
-    <p><a href="README.md">README・出典一覧</a></p>
+    <p><a href="README.md">README・出典一覧</a> · <a href="credits.html">写真クレジット</a></p>
   </footer>
+  ${scriptTags}
 </body>
 </html>`;
 }
@@ -96,22 +112,23 @@ function banner() {
 
 function buildIndex() {
   const cmp = plans.comparison;
+  const c0 = cmp[0];
+  const c1 = cmp[1];
+  const c2 = cmp[2];
   const cmpTable = `
     <div class="table-wrap"><table>
       <thead><tr>
-        <th>項目</th><th>${esc(cmp[0].name)}</th><th>${esc(cmp[1].name)}</th>
+        <th>項目</th><th>${esc(c0.name)}</th><th>${esc(c1.name)}</th><th>${esc(c2.name)}</th>
       </tr></thead>
       <tbody>
-        <tr><td>SEA 出発</td><td>${esc(cmp[0].departureSEA)}</td><td>${esc(cmp[1].departureSEA)}</td></tr>
-        <tr><td>NY 到着</td><td>${esc(cmp[0].arrivalNY)}</td><td>${esc(cmp[1].laToNY)}（LA 経由後）</td></tr>
-        <tr><td>LA 滞在</td><td>—</td><td>${esc(cmp[1].laStay)}（${cmp[1].laNights}泊）</td></tr>
-        <tr><td>大晦日・元日</td><td>${esc(cmp[0].nyeAndNewYear)}</td><td>${esc(cmp[1].nyeAndNewYear)}</td></tr>
-        <tr><td>SEA 帰着（推奨）</td><td>${esc(cmp[0].returnSEA)}</td><td>${esc(cmp[1].returnSEA)}</td></tr>
-        <tr><td>帰路メモ</td><td colspan="2">${esc(cmp[0].returnNote)}</td></tr>
-        <tr><td>日数</td><td>${cmp[0].durationDays}日</td><td>${cmp[1].durationDays}日</td></tr>
-        <tr><td>航空区間</td><td>${cmp[0].flightLegs}本</td><td>${cmp[1].flightLegs}本</td></tr>
-        <tr><td>中心</td><td>${esc(cmp[0].focus)}</td><td>${esc(cmp[1].focus)}</td></tr>
-        <tr><td>移動負担</td><td>${esc(cmp[0].travelBurden)}</td><td>${esc(cmp[1].travelBurden)}</td></tr>
+        <tr><td>SEA 出発</td><td>${esc(c0.departureSEA)}</td><td>${esc(c1.departureSEA)}</td><td>${esc(c2.departureSEA)}</td></tr>
+        <tr><td>経由・滞在</td><td>—</td><td>${esc(c1.laStay || "—")}</td><td>${esc(c2.bayStay)}</td></tr>
+        <tr><td>→ NYC</td><td>${esc(c0.arrivalNY)}</td><td>${esc(c1.laToNY)}</td><td>${esc(c2.bayToNY)}</td></tr>
+        <tr><td>12/31・1/1</td><td>${esc(c0.nyeAndNewYear)}</td><td>${esc(c1.nyeAndNewYear)}</td><td>${esc(c2.nyeAndNewYear)}</td></tr>
+        <tr><td>SEA 帰着</td><td>${esc(c0.returnSEA)}</td><td>${esc(c1.returnSEA)}</td><td>${esc(c2.returnSEA)}</td></tr>
+        <tr><td>航空区間</td><td>${c0.flightLegs}本</td><td>${c1.flightLegs}本</td><td>${c2.flightLegs}本</td></tr>
+        <tr><td>中心</td><td>${esc(c0.focus)}</td><td>${esc(c1.focus)}</td><td>${esc(c2.focus)}</td></tr>
+        <tr><td>コストメモ</td><td>${esc(c0.costNote)}</td><td>${esc(c1.costNote)}</td><td>${esc(c2.costNote)}</td></tr>
       </tbody>
     </table></div>
     ${cite(uw.sourceUrl, uw.checkedDate)}`;
@@ -121,7 +138,9 @@ function buildIndex() {
       const trip = e.plan === "both" || e.plan;
       let planBadge = "";
       if (e.plan === "both") {
-        planBadge = ' <span class="tag tag--proposal">両案</span>';
+        planBadge = ' <span class="tag tag--proposal">A/B</span>';
+      } else if (e.plan === "all") {
+        planBadge = ' <span class="tag tag--proposal">全案</span>';
       } else if (e.plan) {
         planBadge = ` <span class="tag tag--proposal">案${String(e.plan).toUpperCase()}</span>`;
       }
@@ -144,8 +163,8 @@ function buildIndex() {
 
   const body = `
     ${banner()}
-    <h1>結論と2案比較</h1>
-    <p class="lead">シアトル在住・学生1人・年末年始の予算旅行案。12/31 と 1/1 は NYC 滞在を固定。</p>
+    <h1>結論と3案比較</h1>
+    <p class="lead">シアトル在住・学生1人・年末年始の予算旅行案。12/31 と 1/1 は NYC 滞在を固定。<a href="planner.html">日付可変プランナー</a>で片道カレンダー組み合わせを試算できます。</p>
     <div class="rec-box">
       ${tag("proposal")}
       <p>${esc(plans.recommendation.summary)}</p>
@@ -162,8 +181,11 @@ function buildIndex() {
       ${uw.constraints.map((c) => `<li>${tag("proposal")} ${esc(c)}</li>`).join("")}
     </ul>
 
-    <h2>2案比較表</h2>
+    <h2>3案比較表</h2>
     ${cmpTable}
+
+    <h2>日程シナリオ（49件） ${tag("proposal")}</h2>
+    <p>${esc(plans.scenarioNote)} — <a href="planner.html">一覧・試算</a></p>
 
     <h2>日程カレンダー</h2>
     <div class="cal-grid">${cal}</div>
@@ -417,13 +439,34 @@ function buildFares() {
   return layout({ title: "運賃", current: "fares.html", body });
 }
 
+const v2 = buildV2Pages({
+  esc,
+  tag,
+  cite,
+  banner,
+  layoutExt,
+  readJson,
+  ROOT,
+  fs,
+  path,
+});
+
+let indexHtml = buildIndex();
+indexHtml = v2.patchIndex(indexHtml, plans);
+
 const pages = [
-  ["index.html", buildIndex()],
+  ["index.html", indexHtml],
+  ["planner.html", v2.buildPlanner()],
   ["plan-a.html", buildPlanItinerary(planA, "plan-a.html")],
   ["plan-b.html", buildPlanItinerary(planB, "plan-b.html")],
+  ["plan-c.html", v2.buildPlanC((data, cur) => buildPlanItinerary(data, cur))],
+  ["stays.html", v2.buildStays()],
+  ["options.html", v2.buildOptionsPage()],
+  ["map.html", v2.buildMap()],
+  ["credits.html", v2.buildCredits()],
   ["nye.html", buildNye()],
   ["practical.html", buildPractical()],
-  ["fares.html", buildFares()],
+  ["fares.html", v2.buildFaresCalendars(buildFares)],
 ];
 
 for (const [file, html] of pages) {

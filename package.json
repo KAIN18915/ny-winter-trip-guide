@@ -2,6 +2,7 @@
   "name": "ny-winter-trip-guide",
   "private": true,
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "ingest": "node scripts/ingest-v2.mjs",
+    "build": "node scripts/ingest-v2.mjs && node scripts/build.mjs"
   }
 }

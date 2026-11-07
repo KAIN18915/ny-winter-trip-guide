@@ -1,0 +1,266 @@
+{
+  "checked_at": "2026-11-07 00:01 PST",
+  "lodging_total": 43,
+  "lodging_nyc": 30,
+  "lodging_la": 13,
+  "lodging_map_points": 34,
+  "options_total": 75,
+  "option_map_points": 43,
+  "free_license_photos": 41,
+  "official_listing_photos_rights_unconfirmed": 13,
+  "date_scenarios": 49,
+  "date_specific_lodging_prices_verified": 0,
+  "blocked_or_unverified_sources": [
+    {
+      "id": "option-01",
+      "url": "https://www.metmuseum.org/plan-your-visit",
+      "status": "未確認（取得不可）",
+      "http": 429
+    },
+    {
+      "id": "option-02",
+      "url": "https://www.moma.org/visit/",
+      "status": "未確認（取得不可）",
+      "http": 403
+    },
+    {
+      "id": "option-04",
+      "url": "https://www.guggenheim.org/plan-your-visit",
+      "status": "未確認（JavaScript依存）",
+      "http": 200
+    },
+    {
+      "id": "option-06",
+      "url": "https://www.brooklynmuseum.org/visit",
+      "status": "未確認（取得不可）",
+      "http": 429
+    },
+    {
+      "id": "option-14",
+      "url": "https://www.nypl.org/locations/schwarzman",
+      "status": "未確認（取得不可）",
+      "http": 200
+    },
+    {
+      "id": "option-17",
+      "url": "https://www.nycgovparks.org/parks/washington-square-park",
+      "status": "未確認（取得不可）",
+      "http": 403
+    },
+    {
+      "id": "option-22",
+      "url": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/",
+      "status": "未確認（取得不可）",
+      "http": 403
+    },
+    {
+      "id": "option-27",
+      "url": "https://www.broadway.org/info/ticket-info/",
+      "status": "未確認（取得不可）",
+      "http": 404
+    },
+    {
+      "id": "option-29",
+      "url": "https://lottery.broadwaydirect.com/",
+      "status": "未確認（取得不可）",
+      "http": 403
+    },
+    {
+      "id": "option-32",
+      "url": "https://www.rockefellercenter.com/holidays/rockefeller-center-christmas-tree/",
+      "status": "未確認（取得不可）",
+      "http": 403
+    },
+    {
+      "id": "option-33",
+      "url": "https://www.rockefellercenter.com/attractions/the-rink-at-rockefeller-center/",
+      "status": "未確認（取得不可）",
+      "http": 403
+    },
+    {
+      "id": "option-35",
+      "url": "https://www.urbanspacenyc.com/union-square-holiday-market",
+      "status": "未確認（旧URLは別のフードホールにリダイレクト）",
+      "http": 200
+    },
+    {
+      "id": "option-36",
+      "url": "https://www.urbanspacenyc.com/columbus-circle-holiday-market",
+      "status": "未確認（旧URLは別のフードホールにリダイレクト）",
+      "http": 200
+    },
+    {
+      "id": "option-37",
+      "url": "https://www.nyctourism.com/articles/dyker-heights-christmas-lights/",
+      "status": "未確認（取得不可）",
+      "http": 404
+    },
+    {
+      "id": "option-46",
+      "url": "https://www.nyctourism.com/restaurants/wah-fung-no-1-fast-food/",
+      "status": "未確認（取得不可）",
+      "http": 404
+    },
+    {
+      "id": "option-56",
+      "url": "https://www.universalstudioshollywood.com/web/en/us/calendar-and-hours",
+      "status": "未確認（公式カレンダーがJavaScriptで本文なし）",
+      "http": 200
+    },
+    {
+      "id": "option-57",
+      "url": "https://disneyland.disney.go.com/calendars/day/2026-12-25/",
+      "status": "未確認（公式カレンダーがJavaScriptで本文なし）",
+      "http": 200
+    },
+    {
+      "id": "option-59",
+      "url": "https://www.laparks.org/venice",
+      "status": "未確認（取得不可）",
+      "http": 403
+    },
+    {
+      "id": "option-62",
+      "url": "https://www.laphil.com/visit/when-youre-here/self-guided-tours",
+      "status": "未確認（取得不可）",
+      "http": 404
+    },
+    {
+      "id": "option-66",
+      "url": "https://californiasciencecenter.org/visit",
+      "status": "未確認（取得不可）",
+      "http": 403
+    }
+  ],
+  "lodging_sources_requiring_review": [
+    {
+      "id": "lodging-04",
+      "name": "International Student Center",
+      "url": "https://www.nystudentcenter.org/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-06",
+      "name": "Chelsea International Hostel",
+      "url": "https://www.chelseahostel.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-07",
+      "name": "Q4 Hotel",
+      "url": "https://q4hotel.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-16",
+      "name": "Moxy NYC Lower East Side",
+      "url": "https://moxylower-eastside.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-17",
+      "name": "Moxy Brooklyn Williamsburg",
+      "url": "https://www.moxywilliamsburg.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-18",
+      "name": "LIC Hotel",
+      "url": "https://www.lichotelny.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-20",
+      "name": "LIC Plaza Hotel",
+      "url": "https://www.licplazahotel.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-21",
+      "name": "The West Village Eurohostel（旧The Jane候補URL）",
+      "url": "https://www.thejanenyc.com/",
+      "status": "名称変更・転送あり、予約対象物件は要再確認"
+    },
+    {
+      "id": "lodging-24",
+      "name": "The Leo House",
+      "url": "https://leohousenyc.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-25",
+      "name": "The Historic Blue Moon Hotel",
+      "url": "https://www.bluemoon-nyc.com/",
+      "status": "要注意（本文に不整合あり）"
+    },
+    {
+      "id": "lodging-26",
+      "name": "Hyatt House Jersey City",
+      "url": "https://www.hyatt.com/hyatt-house/en-US/ewrxj-hyatt-house-jersey-city",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-27",
+      "name": "DoubleTree Jersey City",
+      "url": "https://www.hilton.com/en/hotels/ewrcydt-doubletree-hotel-and-suites-jersey-city/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-28",
+      "name": "Holland Hotel Jersey City",
+      "url": "https://www.hollandhotel.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-29",
+      "name": "Hampton Inn Brooklyn Downtown",
+      "url": "https://www.hilton.com/en/hotels/nycbkhx-hampton-brooklyn-downtown/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-30",
+      "name": "citizenM New York Bowery",
+      "url": "https://www.citizenm.com/hotels/united-states/new-york/new-york-bowery-hotel",
+      "status": "未確認（物件URLがブランドトップへ転送）"
+    },
+    {
+      "id": "lodging-32",
+      "name": "Samesun Hollywood",
+      "url": "https://samesun.com/hollywood/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-33",
+      "name": "Samesun Venice Beach",
+      "url": "https://samesun.com/venice-beach/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-38",
+      "name": "The Rumi",
+      "url": "https://therumihostel.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-40",
+      "name": "The Adler a Hollywood Hotel",
+      "url": "https://www.adlerhollywood.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    },
+    {
+      "id": "lodging-41",
+      "name": "Hollywood Downtowner Inn",
+      "url": "https://www.hollywooddowntowner.com/",
+      "status": "未確認（公式本文取得不可・候補のみ）"
+    }
+  ],
+  "limitations": [
+    "parallel-cli unavailable (command not found); no search results were fabricated.",
+    "宿の指定日実売額は全件null。静的ページの一般価格、口コミ価格、別日付価格を流用していない。",
+    "MoMAとMetは今回WebFetchタイムアウト、AMNHはWebFetchで本文取得。",
+    "座標null・最寄駅nullは未確認。OSM座標は入口・営業継続を保証しない。",
+    "公開サイトはcommons_credits.jsonの自由ライセンス41枚（またはcredits.jsonでfreely_licensed=true）のみを既定採用。物件OG13枚は再掲載権未確認。"
+  ],
+  "total_credited_images": 54,
+  "image_bytes_max": 190210
+}

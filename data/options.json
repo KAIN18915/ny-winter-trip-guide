@@ -1,0 +1,3145 @@
+[
+  {
+    "id": "option-01",
+    "city": "NYC",
+    "name": "Metropolitan Museum of Art",
+    "category": "museum",
+    "source_url": "https://www.metmuseum.org/plan-your-visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 429,
+    "source_final_url": "https://www.metmuseum.org/plan-your-visit",
+    "source_status": "未確認（取得不可）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "休館（通年休館規則、既存調査から継承）",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "既存調査 research.md の公式休館規則を継承。今回の本文は取得制限。",
+      "UW学生証だけでpay-what-you-wish対象とは判断しない。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.metmuseum.org/plan-your-visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "local_file": "../research.md",
+        "checked_at": "2026-11-06 PST",
+        "claim": "既存公式調査の継承分。本文中の公式URL参照"
+      }
+    ]
+  },
+  {
+    "id": "option-02",
+    "city": "NYC",
+    "name": "Museum of Modern Art",
+    "category": "museum",
+    "source_url": "https://www.moma.org/visit/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 403,
+    "source_final_url": "https://www.moma.org/visit/",
+    "source_status": "未確認（取得不可）",
+    "lat": 40.7617,
+    "lng": -73.9775,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "既存調査ではThanksgiving/Christmas以外毎日開館。元日の特別時間は未確認。",
+      "無料枠があっても居住地・学校の対象制限を確認。"
+    ],
+    "evidence_excerpts": [],
+    "image": "img/20.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.moma.org/visit/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      },
+      {
+        "local_file": "../research.md",
+        "checked_at": "2026-11-06 PST",
+        "claim": "既存公式調査の継承分。本文中の公式URL参照"
+      }
+    ],
+    "image_asset": "assets/img/20.webp",
+    "commons_credit_id": "photo-20",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-03",
+    "city": "NYC",
+    "name": "American Museum of Natural History",
+    "category": "museum",
+    "source_url": "https://www.amnh.org/plan-your-visit",
+    "checked_at": "2026-11-07 00:00 PST",
+    "http_status": 403,
+    "source_final_url": "https://www.amnh.org/plan-your-visit",
+    "source_status": "WebFetchで公式本文確認",
+    "lat": 40.78083333,
+    "lng": -73.97444444,
+    "coordinate_source": "https://en.wikipedia.org/wiki/American_Museum_of_Natural_History",
+    "price_usd": 37,
+    "price_note": "州外一般入場大人$37、学生$30。有料特別展別、公式通常料金（指定日チェックアウト総額ではない）",
+    "hours_2026_12_31": "10:00–17:30（公式通常規則。掲載延長日一覧に12/31なし）",
+    "hours_2027_01_01": "10:00–17:30（公式通常規則。掲載延長日一覧に1/1なし）",
+    "student_policy": "有効な学生証を持つ全年齢の学生は一般入場$30。Pay-What-You-WishはNY州住民向け、UW学生のみでは対象外。",
+    "notes": [
+      "2026/12/26–30は9:00–20:00、2027/1/2は10:00–20:00。",
+      "公式は閉館前最後の1時間の来館者を入場料免除対象に含む。無料でもチケット必要、対象展示は別確認。",
+      "Christmas休館。時刻は施設現地時間。"
+    ],
+    "evidence_excerpts": [],
+    "image": "img/21.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.amnh.org/plan-your-visit",
+        "checked_at": "2026-11-07 00:00 PST",
+        "status": "WebFetchで公式本文確認"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/American_Museum_of_Natural_History",
+        "checked_at": "2026-11-07 00:00 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/21.webp",
+    "commons_credit_id": "photo-21",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-04",
+    "city": "NYC",
+    "name": "Guggenheim",
+    "category": "museum",
+    "source_url": "https://www.guggenheim.org/plan-your-visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.guggenheim.org/plan-your-visit",
+    "source_status": "未確認（JavaScript依存）",
+    "lat": 40.78305556,
+    "lng": -73.95888889,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Solomon_R._Guggenheim_Museum",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "image": "img/22.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.guggenheim.org/plan-your-visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（JavaScript依存）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Solomon_R._Guggenheim_Museum",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/22.webp",
+    "commons_credit_id": "photo-22",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-05",
+    "city": "NYC",
+    "name": "Whitney Museum",
+    "category": "museum",
+    "source_url": "https://whitney.org/visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://whitney.org/visit",
+    "source_status": "本文取得",
+    "lat": 40.7396,
+    "lng": -74.0089,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Whitney_Museum_of_American_Art",
+    "price_usd": 30,
+    "price_note": "公式通常大人$30、学生$24。25歳以下は無料。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "学生$24。25歳以下は毎日無料（本人の年齢は公開しない）",
+    "notes": [
+      "金曜17:00–22:00と毎月第2日曜も無料。元日も金曜だが祝日への適用と時間は未確認。",
+      "無料枠も入場予約推奨。"
+    ],
+    "evidence_excerpts": [
+      "Museum affiliates may book complimentary tickets in advance online. Learn about discounted and free admission , including Free 25 and Under , Free Friday Nights , and Free Second Sundays . Adults $30 Seniors and students $24 New! 25 and under Free Members Free Groups D",
+      "lity The Museum is entirely accessible via ramp and elevator. Manual wheelchairs are available free of charge on a first-come, first-served basis at the admissions desk on Floor 1 or at the coat check on Floor -1. Learn more about accessibility . Free spaces Admission ",
+      "to the ground floor of the Museum is always free, this includes entry to the gallery on Floor 1, the lobby, Whitney Shop, and Frenchette Bakery. Please stop in during Museum hours. Admission to the entire Museum is fre",
+      "e on Friday nights and the second Sunday of every month. Learn more about free and discounted offerings . Digital guides Connect to the Whitney Free WiFi network anywhere in the building to access the Bloomberg Connects app , and other digital cont",
+      "p by Studio Bar on Floor 8 for snacks, beverages, and spectacular views. Dining at the Whitney Free and Discounted Admission Enjoy free admission to the Whitney Museum of American Art during Free Friday Nights (5–10 pm), Free Second Sundays, and every day for visitors ",
+      "ages 25 and under. All offerings include free access to exhibitions, special programming, and more. Free and discounted admission Visiting with families Join us for kid-friendly fun, including artmaking workshops, s",
+      " art—directly from curators, leading cultural thinkers, and the artists themselves. Stream for free . View the Audio Guide What to see at the Whitney What to See at the Whitney The essentials There is so much to do and see at the Whitney, but if you’re short on time, h"
+    ],
+    "image": "img/23.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://whitney.org/visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Whitney_Museum_of_American_Art",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/23.webp",
+    "commons_credit_id": "photo-23",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-06",
+    "city": "NYC",
+    "name": "Brooklyn Museum",
+    "category": "museum",
+    "source_url": "https://www.brooklynmuseum.org/visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 429,
+    "source_final_url": "https://www.brooklynmuseum.org/visit",
+    "source_status": "未確認（取得不可）",
+    "lat": 40.67130556,
+    "lng": -73.96375,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Brooklyn_Museum",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "image": "img/24.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.brooklynmuseum.org/visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Brooklyn_Museum",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/24.webp",
+    "commons_credit_id": "photo-24",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-07",
+    "city": "NYC",
+    "name": "MoMA PS1",
+    "category": "museum",
+    "source_url": "https://www.momaps1.org/en/visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.momaps1.org/en/visit",
+    "source_status": "本文取得",
+    "lat": 40.745367,
+    "lng": -73.947977,
+    "coordinate_source": "https://en.wikipedia.org/wiki/MoMA_PS1",
+    "price_usd": 0,
+    "price_note": "公式の一般入場無料方針。特別プログラムは別確認。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "休館",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "通常12:00–18:00、土曜10:00開館。火・水・Christmas・New Year’s Day休館。"
+    ],
+    "evidence_excerpts": [
+      " lightbox) Close Hours Open 12–6 p.m. Sat open 10 a.m. Closed Tue and Wed Closed Thanksgiving, Christmas, New Year’s Day Address 22-25 Jackson Avenue Long Island City, Queens Reserve Tickets Photo credit: Noel Woodford Admission MoMA PS1 is a place for everyone. Free admiss",
+      "m artists, watch behind-the-scenes videos, learn about our community partners, and more on our free digital guide . Access our guide in Bloomberg Connects . Accessibility + Close – Close Read more Close this section MoMA PS1 is wheelchair accessible. Wheelchairs are av",
+      "lose Read more Close this section Lockers are available on the first floor for visitors to use free of charge. Lockers are 72 × 15 × 18\". Please do not store valuables in the lockers or leave items overnight. MoMA PS1 is not responsible for lost, stolen, or damaged per",
+      "e—full of drawing exercises, coloring prompts, and secrets from PS1’s history—is available for free in our Lobby. The guide was created by artists from Teen Art Salon , an organization dedicated to providing resources and visibility to early-career artists ages 11 to 1",
+      "son 10 a.m.–6 p.m. + Open Open House – Close Open House Join us for our November Open House, a free, all-ages day of programs and activities inspired by our new exhibitions. Be among the first to experience these exciting shows and join us for family workshops, artist "
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.momaps1.org/en/visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/MoMA_PS1",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-08",
+    "city": "NYC",
+    "name": "Museum of the Moving Image",
+    "category": "museum",
+    "source_url": "https://movingimage.org/visit/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://movingimage.org/visit/",
+    "source_status": "本文取得",
+    "lat": 40.756211,
+    "lng": -73.923964,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Museum_of_the_Moving_Image",
+    "price_usd": 20,
+    "price_note": "一般大人$20、18歳以上学生$12。オンライン取引手数料1枚$1.50。",
+    "hours_2026_12_31": "12:00–16:00（公式掲載の年末特別営業）",
+    "hours_2027_01_01": "休館（公式掲載）",
+    "student_policy": "18歳以上学生$12。通常木曜14:00–18:00無料だが12/31は短縮日、無料時間の適用未確認。",
+    "notes": [
+      "12/28–30は12:00–18:00特別開館。映像上映券はギャラリー入場と別のことがある。"
+    ],
+    "evidence_excerpts": [
+      "bitions, and groundbreaking online projects. Through our Open Worlds initiative, visitors have free access to the Museum’s lobby, cafe, and Kaufman Courtyard (weather permitting) during open hours. Learn more about Open Worlds programming here . MUSEUM HOURS Thursday 2",
+      ":00–6:00 p.m. Friday 2:00–8:00 p.m. Saturday & Sunday 11:00 a.m.–6:00 p.m. Holiday Hours & Other Changes: Early Closing: Thursday, October 22, 2:00–5:00 Closed: Thursday, November 26 (Thanks",
+      "giving) Adjusted hours: Friday, November 27, 12:00–6:00 Early closing: Thursday, December 24, 12:00–4:00 (Christmas Eve) Closed: Friday, December 25 (Christmas) Open: Monday, December 28, 12:00–6:00 Open: Tuesday, December 29, 12:00–6:00 Open: Wedne",
+      "sday, December 30, 12:00–6:00 Early closing: Thursday, December 31, 12:00–4:00 Closed: Friday, January 1 (New Year’s Day) MUSEUM ADMISSION Purchase tickets in advance online to save time at the admissions desk. All Museum members receive free gallery admission, and free or ",
+      "nted tickets to screenings and events. Access to all galleries, including special exhibitions: $10–20 (free for MoMI members). There is a $1.50 transaction fee per ticket for all online purchases. Tickets are released generally one-month prior. Advance ticket purchase",
+      " is not required; walk-up purchase is welcome. BUY TICKETS Adults (18+) $20 Seniors (65+) $12 Students (18+) $12 Youth (3-17) $10 Free admission for Museum members and children under 3. Free Museum hours every Thursday, 2:00–6:00 p.m. Please note: As part of NYC’s Parent",
+      "’s Night Out on August 16, general admission will be free 4:00–6:00 p.m. SCREENINGS & EVENTS Tickets are required for each individual screening. Unless otherwise noted, prices for most screenings and events are noted below. For",
+      " galleries and a ticket to a regular same-day screening, see above. SEE WHAT'S ON Adults (18+) $17.50 Seniors (65+) $12 Students (18+) $12 Youth (3-17) $10 Ticket holders may add on same-day gallery admission ($2.50). All Museum members receive free unlimited gallery adm",
+      "ission and free or discounted tickets to screenings and events. Learn more here . OFFERS & DISCOUNTS The Museum offers a variety of discounts on admissions, and Museum visitors and memb",
+      "TAL GUIDE Explore Museum of the Moving Image with our digital guide on Bloomberg Connects, the free arts and culture app. Use the app for exclusive multimedia perspectives from curators, educators, and more. Use the app to plan your visit, then easily access helpful in"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://movingimage.org/visit/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Museum_of_the_Moving_Image",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-09",
+    "city": "NYC",
+    "name": "9/11 Memorial and Museum",
+    "category": "museum",
+    "source_url": "https://www.911memorial.org/visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.911memorial.org/visit",
+    "source_status": "本文取得",
+    "lat": 40.71166667,
+    "lng": -74.01361111,
+    "coordinate_source": "https://en.wikipedia.org/wiki/National_September_11_Memorial_&_Museum",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "屋外Memorialは無料。Museumは別料金・別チケット。屋外のみと博物館入場を予算で分ける。"
+    ],
+    "evidence_excerpts": [
+      " purchase . Museum audio guides are available in nine languages including ASL. The Memorial is free and open to the public seven days a week. Download the free audio guide on Bloomberg Connects . Get tickets About Your Visit Visitors are encouraged to explore the Museu",
+      "ions The Collection Programs and Events The Memorial Victims The Glade The Survivor Tree Learn Students and Teachers School Programs Anniversary Digital Learning Experience Educator Professional Development Lesson Plans Resources Youth and Families Youth and Family Tours "
+    ],
+    "image": "img/12.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.911memorial.org/visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/National_September_11_Memorial_&_Museum",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/12.webp",
+    "commons_credit_id": "photo-12",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-10",
+    "city": "NYC",
+    "name": "Central Park",
+    "category": "free",
+    "source_url": "https://www.centralparknyc.org/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.centralparknyc.org/",
+    "source_status": "本文取得",
+    "lat": 40.78222222,
+    "lng": -73.96527778,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Central_Park",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [
+      "he many ways to give back to your backyard. Donate Give to the Park today Become a Member From $50/year Give Monthly Sustain New York's backyard Other Ways to Give Tribute giving, corporate partners, and more"
+    ],
+    "image": "img/01.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.centralparknyc.org/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Central_Park",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/01.webp",
+    "commons_credit_id": "photo-01",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-11",
+    "city": "NYC",
+    "name": "Brooklyn Bridge",
+    "category": "free",
+    "source_url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+    "source_status": "本文取得",
+    "lat": 40.7057,
+    "lng": -73.9964,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Brooklyn_Bridge",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [
+      "e Previous Contracts Contract 5D (1998-2000) : Brooklyn Bridge Emergency  Re-Decking Contract, $37M Contract 5 (2007-2009) : Brooklyn Bridge Travelers  Replacement, $45M Contract 6 (2010-2017) : Rehabilitation of Approaches  and Ramp Super Structure, Painting of the W",
+      "hole Bridge, $650M Contract 6A (2017-2019) : Rehabilitation of Stone  Masonry Walls at Bridge Approaches and Ramps, Sandy Related, $18M Upcoming Contracts The Brooklyn Bridge is continuou"
+    ],
+    "image": "img/03.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Brooklyn_Bridge",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/03.webp",
+    "commons_credit_id": "photo-03",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-12",
+    "city": "NYC",
+    "name": "DUMBO",
+    "category": "free",
+    "source_url": "https://www.brooklynbridgepark.org/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://brooklynbridgepark.org/",
+    "source_status": "本文取得",
+    "lat": 40.703,
+    "lng": -73.99,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Dumbo,_Brooklyn",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [
+      " PM Low 11:33 PM Park Hours and Info We Are Open 7 Days a Week | 6AM - 1AM Learn More Entry is Free! Pier 2 - 8AM–9PM* seasonal Pier 5 - 6AM–11PM Education Center - 3–5PM (THU/FRI), 1–5PM (SAT/SUN) Pier 6 Volleyball Courts - 6AM–11PM Playgrounds - sunrise–sunset Search",
+      " PM Low 11:33 PM Park Hours and Info We Are Open 7 Days a Week | 6AM - 1AM Learn More Entry is Free! Pier 2 8AM–9PM* seasonal Pier 5 6AM–11PM Education Center 3–5PM (THU/FRI), 1–5PM (SAT/SUN) Pier 6 Volleyball Courts 6AM–11PM Playgrounds sunrise–sunset Search the site "
+    ],
+    "image": "img/04.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.brooklynbridgepark.org/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Dumbo,_Brooklyn",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/04.webp",
+    "commons_credit_id": "photo-04",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-13",
+    "city": "NYC",
+    "name": "High Line",
+    "category": "free",
+    "source_url": "https://www.thehighline.org/visit/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.thehighline.org/visit/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/High_Line",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [
+      "id email address! Thanks for signing up, we'll be in touch soon! Close Alert Your gift tripled $200,000 matching challenge Through midnight on Giving Tuesday on 12/1, keep the park you love extraordinary—and do three times the good Donate Join or renew > Close Alert Expres",
+      "e’s hours vary by season: April 1 – November 30: 7am to 10pm December 1 – March 31: 7am to 8pm Free docent-led public tours are offered on select days. See the full schedule → Borrow or request a wheelchair → View FAQs Before the date of your visit, we encourage you to",
+      " connected, healthy neighborhoods, and cities. Elevator status → See upcoming events → Get our free High Line Pocket Guide! Enter your email to receive a digital copy of the pocket guide, which includes a detailed map, info on artworks on view, and more. We’ll also add",
+      " day in advance of your visit to submit your request. Requests will be reviewed Monday through Friday, 9am to 5pm. Transportation + – Subway Bus Bike Racks Bike racks are located at street level near the stairs at the following locations along the High Line. Please note ",
+      "erg Connects app and explore the High Line’s art, design, and gardens like an insider. Get the free app You keep the High Line going The High Line is almost entirely supported by people like you. As a nonprofit organization, we need your support to keep this public spa",
+      "ce free—and extraordinary—for everyone. Donate today"
+    ],
+    "image": "img/13.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.thehighline.org/visit/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/High_Line",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/13.webp",
+    "commons_credit_id": "photo-13",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-14",
+    "city": "NYC",
+    "name": "NY Public Library",
+    "category": "free",
+    "source_url": "https://www.nypl.org/locations/schwarzman",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.nypl.org/locations/schwarzman",
+    "source_status": "未確認（取得不可）",
+    "lat": 40.75305556,
+    "lng": -73.98194444,
+    "coordinate_source": "https://en.wikipedia.org/wiki/New_York_Public_Library_Main_Branch",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "image": "img/06.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nypl.org/locations/schwarzman",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/New_York_Public_Library_Main_Branch",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/06.webp",
+    "commons_credit_id": "photo-06",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-15",
+    "city": "NYC",
+    "name": "Grand Central Terminal",
+    "category": "free",
+    "source_url": "https://grandcentralterminal.com/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://grandcentralterminal.com/",
+    "source_status": "本文取得",
+    "lat": 40.7528,
+    "lng": -73.9772,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Grand_Central_Terminal",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "image": "img/05.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://grandcentralterminal.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Grand_Central_Terminal",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/05.webp",
+    "commons_credit_id": "photo-05",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-16",
+    "city": "NYC",
+    "name": "Staten Island Ferry",
+    "category": "free",
+    "source_url": "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Staten_Island_Ferry",
+    "price_usd": 0,
+    "price_note": "NYC DOT公式：無料。自由の女神は遠景、島には上陸しない。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "観光用の有料自由の女神フェリーとは別。折り返し時は下船と再乗船が必要、休日ダイヤ要確認。"
+    ],
+    "evidence_excerpts": [
+      " Mayor Ferries & Buses Staten Island Ferry NYC DOT operates the Staten Island Ferry, providing free service between Staten Island and Lower Manhattan every day"
+    ],
+    "image": "img/18.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Staten_Island_Ferry",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/18.webp",
+    "commons_credit_id": "photo-18",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-17",
+    "city": "NYC",
+    "name": "Washington Square Park",
+    "category": "free",
+    "source_url": "https://www.nycgovparks.org/parks/washington-square-park",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 403,
+    "source_final_url": "https://www.nycgovparks.org/parks/washington-square-park",
+    "source_status": "未確認（取得不可）",
+    "lat": 40.73083333,
+    "lng": -73.9975,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Washington_Square_Park",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "image": "img/17.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nycgovparks.org/parks/washington-square-park",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Washington_Square_Park",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/17.webp",
+    "commons_credit_id": "photo-17",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-18",
+    "city": "NYC",
+    "name": "SoHo",
+    "category": "neighborhood",
+    "source_url": "https://www.nyctourism.com/new-york/manhattan/soho/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.nyctourism.com/new-york/manhattan/soho/",
+    "source_status": "本文取得",
+    "lat": 40.723,
+    "lng": -74,
+    "coordinate_source": "https://en.wikipedia.org/wiki/SoHo,_Manhattan",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "image": "img/16.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nyctourism.com/new-york/manhattan/soho/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/SoHo,_Manhattan",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/16.webp",
+    "commons_credit_id": "photo-16",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-19",
+    "city": "NYC",
+    "name": "Chinatown",
+    "category": "neighborhood",
+    "source_url": "https://www.nyctourism.com/new-york/manhattan/chinatown/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.nyctourism.com/new-york/manhattan/chinatown/",
+    "source_status": "本文取得",
+    "lat": 40.715,
+    "lng": -73.997,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Chinatown,_Manhattan",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "image": "img/15.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nyctourism.com/new-york/manhattan/chinatown/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Chinatown,_Manhattan",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/15.webp",
+    "commons_credit_id": "photo-15",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-20",
+    "city": "NYC",
+    "name": "Flushing",
+    "category": "neighborhood",
+    "source_url": "https://www.nyctourism.com/new-york/queens/flushing/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.nyctourism.com/new-york/queens/flushing/",
+    "source_status": "本文取得",
+    "lat": 40.765,
+    "lng": -73.805,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Flushing,_Queens",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "image": "img/27.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nyctourism.com/new-york/queens/flushing/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Flushing,_Queens",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/27.webp",
+    "commons_credit_id": "photo-27",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-21",
+    "city": "NYC",
+    "name": "Empire State Building",
+    "category": "observation",
+    "source_url": "https://www.esbnyc.com/buy-tickets",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.esbnyc.com/buy-tickets",
+    "source_status": "本文取得",
+    "lat": 40.7483,
+    "lng": -73.9856,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Empire_State_Building",
+    "price_usd": 46,
+    "price_note": "公式86階一般券from $46。指定日・税込総額ではない。追加手数料・税・時間帯差を購入画面で確認。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "102階＋86階はfrom $81。冬は視界・風・取消条件を確認。",
+      "365日営業規則は既存 research.md に出典あり。12/31・1/1の日別時間は未確認。"
+    ],
+    "evidence_excerpts": [
+      "ets Premium & Proposals Attraction Passes Popular 86th Floor Observation Deck Buy Tickets from $46 Access to 86th Floor Observation Deck Reschedule Anytime NYC Skyline Views More Details Buy Tickets from $46 Flexible Entry Empire State Building Flex Ticket Buy Tickets",
+      " from $66 Access to 86th Floor Observation Deck Reschedule Anytime NYC Skyline Views Flexible Date Entry More Details Buy Tickets from $66 Most Popular Empire State Building 102nd",
+      " Floor & 86th Floor Observation Decks Buy Tickets from $81 Access to 102nd Floor Observation Deck Access to 86th Floor Observation Deck Reschedule Anytime NYC Skyline Views More Details Buy Tickets from $81 Compare Express Pass ",
+      "Express 86th Floor Express Pass Buy Express Pass From $87 Access to 86th Floor Observation Deck Skip-the-Line Entry Reschedule Anytime More Details Buy Express Pass From $87 Express Express 102nd Floor Observation Deck Buy Expr",
+      "ess Pass From $122 Access to 102nd Floor Observation Deck Skip-the-Line Entry Reschedule Anytime More Details Buy Express Pass From $122 Compare Exclusive Experiences Seasonal The Starbuck",
+      "s Reserve® Sunrise Buy Tickets From $135 Access to 86th Floor Observation Deck Reschedule Anytime Early Sunrise Access More Details Buy Tickets From $135 Dual Entry The AM/PM Experience Buy Tickets From $67 Acc",
+      " Deck Reschedule Anytime Two Visits in One Day Day + Night Views More Details Buy Tickets From $67 Compare Deals & Local Tickets Family Experience Empire State Building Family Ticket Bundle See Ticket Options Bundle and Save Multiple Ticket Bundles Available Reschedul",
+      "Details See Ticket Options Best Value Empire State Building Best Value Ticket Buy Tickets from $46 Access to 86th Floor Observation Deck Reschedule Anytime NYC Skyline Views More Details Buy Tickets from $46 Locals' Pick NYC Locals Ticket Unlock Local Offer: 25% Off A",
+      "ails Unlock Local Offer: 25% Off Compare Premium & Proposals Premium Experience Book Tour from $175 Private Guided Tour Small Group (Up to 7) Skip-the-Line Entry More Details Book Tour from $175 VIP Experience ALL ACCESS TOUR Buy Tickets from $500 Private VIP Entrance ",
+      "Private Guided Tour Small Group (Up to 7) Skip-the-Line Entry More Details Buy Tickets from $500 Happily Ever Empire Proposal Package Book Proposal From $1000 Romantic NYC Setting Private Proposal Space Private Guided Tour Skip-the-Line Entry More Details Book Propo",
+      "sal From $1000 Compare Attraction Passes Best Sightseeing Value Save with CityPASS®! See Ticket Options A $2 booking charge is added to each ticket Curated Best-Attraction Options Acce",
+      "ss to 86th Floor Observation Deck Bundle & Save up to 51% Valid 9 Days More Details A $2 booking charge is added to each ticket See Ticket Options 100+ NYC Experiences NEW YORK PASS Buy Pass from $89 100+ Experiences Access to 86th Floor Observation Deck Fle",
+      "xible Multi-Day Options Immersive Museum More Details Buy Pass from $89 Compare Limited-Time Only Nov 4-Jan 4 The Empire State Building Observation Deck & Christmas Spectacular Ticket Bundle Reserve Seats 2-in-1 Ticket Bundle Deal Christmas ",
+      "h Floor Viewing Gallery NYC Skyline Views Immersive Museum Reschedule Anytime Buy Tickets from $46 More Details Included in every ticket 86TH FLOOR OBSERVATION DECK #1 New York City Attraction Open-Air Observation Deck Iconic NYC Skyline Views Famous Film & TV Setting"
+    ],
+    "image": "img/09.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.esbnyc.com/buy-tickets",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Empire_State_Building",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/09.webp",
+    "commons_credit_id": "photo-09",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-22",
+    "city": "NYC",
+    "name": "Top of the Rock",
+    "category": "observation",
+    "source_url": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 403,
+    "source_final_url": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/",
+    "source_status": "未確認（取得不可）",
+    "lat": 40.75861111,
+    "lng": -73.97916667,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Rockefeller_Center",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Rockefeller_Center",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-23",
+    "city": "NYC",
+    "name": "SUMMIT One Vanderbilt",
+    "category": "observation",
+    "source_url": "https://summitov.com/tickets/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://summitov.com/tickets/",
+    "source_status": "本文取得",
+    "lat": 40.753,
+    "lng": -73.9785,
+    "coordinate_source": "https://en.wikipedia.org/wiki/One_Vanderbilt",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "公式ページに異なる券種・年次の混在表示があり、対象日の価格は未確認。",
+      "ガラス床・鏡面空間。服装注意事項、天候、日没枠の追加料金は公式で確認。"
+    ],
+    "evidence_excerpts": [
+      "higher in the world’s largest all-glass, external elevator. Enjoy SUMMIT Experience + Ascent . $3 online processing fee added to each order Starting at 68 63 Buy Now New: skip the line SUMMIT Premium Experience​ Enjoy exclusive priority access , 90-minute guided tour",
+      " , and a digital photo package. $3 online processing fee added to each order 149 Buy Now NYC / Long Island resident pricing Your credit card billing zip code will be used to verify your residency NYC / Lo",
+      "bove Midtown in Ascent for a whole new perspective of NYC. Available now through November 19 . $3 online processing fee added to each order All ages 65 59 Buy Now General Admission SUMMIT Experience Three levels of immersive experiences including art, thrills, 360 de",
+      "gree views, and café. $3 online processing fee added to each order Starting at 44 39 Buy Now Sunrise Event SUMMIT TCS NYC Sunrise Event Celebrate the TCS NYC Marathon on November 2nd with a sunr",
+      "s of immersive art, and enjoy a complimentary breakfast at Après for a new perspective of NYC. $3 online processing fee added to each order Starting at 69 Buy Now Skip the line SUMMIT Premium Experience​ Enjoy exclusive priority skip-the-line access , 90-minute guide",
+      "d tour , and a digital photo package. $3 online processing fee added to each order 149 Buy Now SUMMIT Ascent Ultimate SUMMIT Enjoy SUMMIT Experience + Ascent + our Signature Cocktail at Après with our exclusive",
+      " all-in-one ticket. $3 online processing fee added to each order Starting at 82 77 Buy Now SUMMIT Signature Experience Enjoy SUMMIT Experience + our Signature Cocktail (or Mocktail) at Après w",
+      "ith our exclusive bundled ticket. $3 online processing fee added to each order Starting at 58 53 Buy Now Lorem Ipsum Lorem Ipsum Experience Lorem ipsum ipsum morbi nulla enim integer ut lorem fringilla vari",
+      "us bibendum purus ullamcorper sit eu at luctus suscipit fringilla. $3 online processing fee added to each order Starting at 77 74 Buy Now Lorem Ipsum Lorem Ipsum Experience Lorem ipsum ipsum morbi nulla enim integer ut lorem fringilla vari",
+      "us bibendum purus ullamcorper sit eu at luctus suscipit fringilla. $3 online processing fee added to each order Starting at 83 80 Buy Now Groups​ Parties of 15 guests or more can experience a personalized visit with group bookings and serv",
+      "Military Pricing Active and retired members of the United States Armed Forces are eligible for free and reduced price tickets. contact us Things To DO The Flex at Lunch Ticket Package Explore three floors of immersive art, enjoy a bite to eat at Après, and soar above M",
+      "t external all-glass elevator. ON Dec 31 Learn More Learn More Going Fast! Early Access: Black Friday Offer Our once a year limited time Black Friday offer will be available soon! Don’t miss out on your chance to experience NYC from an awe inspiring perspective. On Sign "
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://summitov.com/tickets/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/One_Vanderbilt",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-24",
+    "city": "NYC",
+    "name": "Edge",
+    "category": "observation",
+    "source_url": "https://www.edgenyc.com/en/buy-tickets",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.edgenyc.com/get-tickets/",
+    "source_status": "本文取得",
+    "lat": 40.7541,
+    "lng": -74.0008,
+    "coordinate_source": "https://en.wikipedia.org/wiki/30_Hudson_Yards",
+    "price_usd": 42,
+    "price_note": "公式一般入場from $42＋1枚$2 processing fee。税・指定日加算は未確認。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "14日以上前のAdvance Saverはfrom $34＋手数料。12/31・1/1にその価格があるとは限らない。"
+    ],
+    "evidence_excerpts": [
+      "velers’ Choice 2026 NY, NJ & CT residents: Save up to 20% BUY NOW Families save 20% + kids get free ice cream Learn more Most Popular General Admission Pick your day and time. Our most-booked ticket. Full immersive indoor experience Outdoor observation deck + 360° view",
+      "s Reserved date & timed entry From $42 Buy Now $2 processing fee will be added to tickets. Most Popular General Admission Indoor experience & outdoor deck with 360° views. From $42 Buy Now $2 processing fee will be adde",
+      "Admission Fit Edge into your itinerary-no time slot required Arrive any time on your date From $73 Buy Now $2 processing fee will be added to tickets. Most Flexible Flex Admission Arrive any time on your selected date. From $73 Buy Now $2 processing fee will be added ",
+      " Priority Check-in Express elevator access in & out Skip the line at Pulse & Kaleidoscope From $88 Buy Now $2 processing fee will be added to tickets. Skip the line Priority Access Flexible arrival, priority entry & express elevator access. From $88 Buy Now $2 process",
+      "h it.” Viktor M. - Google Families Save 20% Take family fun to new heights. Save 20% and enjoy free ice cream for kids! Get Tickets TOP OFFERS Save ahead, celebrate, or see two icons in one trip. Advance Saver Book 14+ days ahead and save up to 35%. Our lowest price Fu",
+      "ll indoor + observation deck From $34 Buy Now $2 processing fee will be added to tickets. Advance Saver Our lowest price. Book 14+ days ahead & save up to 35%. From $34 Buy Now $2 processing fee will be added to ticket",
+      "hampagne Experience Celebrate NYC with a glass of bubbly. Everything in General Admission Save $5 with this champagne bundle From $63 Buy Now $2 processing fee will be added to tickets. Champagne Experience Celebrate NYC with a glass of bubbly. From $63 Buy Now $2 pr",
+      "o icons, one booking. Save 10% on this ticket bundle. Flexible arrival at both locations. From $84 Buy Now $2 processing fee will be added to tickets. Edge & Vessel Flex Bundle Save 10% and add entry to the iconic Vessel during your visit From $84 Buy Now $2 processin",
+      "ty Access and premium extras. Guided VIP experience + Priority Access and premium extras. From $179 Buy Now Sunset VIP Experience Golden hour, champagne in hand, no waiting. Our premium visit, enjoy champagne and priority access From $113 Buy Now Get Passes to See More",
+      "et, making it an exciting visit for children and adults alike. Children aged 5 and under visit free. Children under 12 must be accompanied by an adult ticket holder throughout the visit. Subscribe to our newsletter for deals and events TODAY: Save 20% with code INTHECL"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.edgenyc.com/en/buy-tickets",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/30_Hudson_Yards",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-25",
+    "city": "NYC",
+    "name": "One World Observatory",
+    "category": "observation",
+    "source_url": "https://www.oneworldobservatory.com/buy-tickets/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.oneworldobservatory.com/buy-tickets/",
+    "source_status": "本文取得",
+    "lat": 40.71305556,
+    "lng": -74.01333333,
+    "coordinate_source": "https://en.wikipedia.org/wiki/One_World_Trade_Center",
+    "price_usd": 39,
+    "price_note": "公式STANDARD from $39＋$3.50 processing fee＋tax。年末指定日料金ではない。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "屋内展望候補。World Trade Center周辺観光と組合せる提案。"
+    ],
+    "evidence_excerpts": [
+      "ne Experience Ticket options comparison What's Included STANDARD General Admission Starting at $39 COMBINATION An Upgraded Experience Starting at $49 ALL - INCLUSIVE Experience the Best Starting at $59 Best Value VIP TOUR An Exclusive Experience Starting at $69 Highes",
+      "ed Included Included Select Your Arrival Arrive in the morning, afternoon, or evening Included $30 to Shop, Drink or Eat Each ticket valid for $30 off at our cafe, bar, restaurant, or gift shop Included $20 to Shop, Drink or Eat Each ticket valid for $20 off at our ca",
+      "fe, bar, restaurant, or gift shop Included $15 to Shop, Drink or Eat Each ticket valid for $15 off at our cafe, bar, restaurant, or gift shop Included Escorted Entry Into the Observatory Included 60 Minute Guided Tour Learn about famous landmarks while learning th",
+      " rich history. Included Buy Now Buy Now Buy Now Buy Now STANDARD General Admission Starting at $39 What's Included Stunning views Buy Now Tickets are subject to an additional processing fee of $3.50 + tax. All Experiences are backed by our See Forever Commitment . COM",
+      "BINATION An Upgraded Experience Starting at $49 What's Included Stunning views Priority Entry Security, Elevator & Exit $20 to Shop, Drink or Eat Each ticket valid for $20 off at our cafe, bar, restaurant, or gift sho",
+      "p Buy Now Tickets are subject to an additional processing fee of $3.50 + tax. All Experiences are backed by our See Forever Commitment . ALL - INCLUSIVE Experience the Best Starting at $59 Best Value What's Included Stunning views Priority ",
+      "try Security, Elevator & Exit Select Your Arrival Arrive in the morning, afternoon, or evening $30 to Shop, Drink or Eat Each ticket valid for $30 off at our cafe, bar, restaurant, or gift shop Buy Now Tickets are subject to an additional processing fee of $3.50 + tax",
+      "iences are backed by our See Forever Commitment . VIP TOUR An Exclusive Experience Starting at $69 Highest Rated What's Included Stunning views Priority Entry Security, Elevator & Exit $15 to Shop, Drink or Eat Each ticket valid for $15 off at our cafe, bar, restauran",
+      "arning the city’s rich history. Buy Now Tickets are subject to an additional processing fee of $3.50 + tax. All Experiences are backed by our See Forever Commitment . Tickets are subject to an additional processing fee of $3.50 + tax. All Experiences are backed by our S",
+      "nt . More Ticket Offers Celebrate Autumn from the top of NYC! 🍁 For a limited time only, enjoy $40 Observatory admission plus $20 to spend on bites and cocktails at ONE Dine. Plus, don’t miss our autumn themed cocktails, crafted exclusively for the occasion! Buy Now F"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.oneworldobservatory.com/buy-tickets/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/One_World_Trade_Center",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-26",
+    "city": "NYC",
+    "name": "Statue of Liberty and Ellis Island",
+    "category": "sight",
+    "source_url": "https://www.cityexperiences.com/new-york/city-cruises/statue/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://statuecitycruises.com/tickets",
+    "source_status": "本文取得",
+    "lat": 40.68916667,
+    "lng": -74.04444444,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "島上陸・Ellis Island見学と、無料Staten Island Ferryからの遠景を区別。",
+      "Christmasは運休という既存公式調査。指定日の運航表・台座/王冠の券は未確認。"
+    ],
+    "evidence_excerpts": [
+      "SA en-US en-US es-ES fr-FR de-DE ko-KR it-IT zh-CN ru-RU pt-PT vi-VN ar-SA Sign in or Join For Free Buy Tickets Statue of Liberty and Ellis Island Official Ticket Provider Choose the perfect ticket for your visit to the Statue of Liberty and Ellis Island. Every Statue ",
+      "ty Museum Admission to the Ellis Island National Museum of Immigration Self-guided audio tours Free National Park Service ranger-led programs available throughout the day (subject to availability) Simply select your departure location and the number of guests to view a",
+      "rve, and the Hard Hat Tour. NOTE: Crown Reserve tickets require a minimum height of 42 inches. Free Cancellation Refunds are available for cancellations made at least 24 hours before departure. Check Availability Free Cancellation Refunds are available for cancellation"
+    ],
+    "image": "img/10.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.cityexperiences.com/new-york/city-cruises/statue/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      },
+      {
+        "local_file": "../research.md",
+        "checked_at": "2026-11-06 PST",
+        "claim": "既存公式調査の継承分。本文中の公式URL参照"
+      }
+    ],
+    "image_asset": "assets/img/10.webp",
+    "commons_credit_id": "photo-10",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-27",
+    "city": "NYC",
+    "name": "Broadway rush and lottery",
+    "category": "theater",
+    "source_url": "https://www.broadway.org/info/ticket-info/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 404,
+    "source_final_url": "https://www.broadway.org/info/ticket-info/",
+    "source_status": "未確認（取得不可）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Broadway_theatre",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "Rushは当日割引、lotteryは抽選。演目別の公式ルール・販売時刻・本人確認・1人購入条件を確認する提案。",
+      "一般的な安値を年末公演の実売額として載せない。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.broadway.org/info/ticket-info/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Broadway_theatre",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-28",
+    "city": "NYC",
+    "name": "TodayTix rush and lottery",
+    "category": "theater",
+    "source_url": "https://www.todaytix.com/nyc/category/rush-tickets",
+    "wiki_title": "",
+    "checked_at": "2026-11-07 00:00 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.todaytix.com/nyc/category/rush-lottery",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "公式TodayTix Rush & Lottery一覧を確認。演目・公演日・抽選/先着方式で条件が異なる。",
+      "アプリ・位置条件・受取方法は演目別に確認。年末公演の当選・在庫は保証しない。"
+    ],
+    "evidence_excerpts": [
+      "Same-Day Broadway Rush & Lottery Tickets NYC | TodayTix New York On this Fall Broadway Off-Broadway Collections All shows More Musicals Plays Comedy Family-friendly Attractions and Events New this season Concerts",
+      " Opera Dance Rush & lottery Deals & offers Get the app Get tix Same-Day Broadway Rush & Lottery Tickets in NYC Your spontaneous night out starts here. Grab discounted same-day Rush tickets or enter the Lottery to win seats to the hottest shows on Broadway — only on the Today",
+      "Tix app. Get tix Date Price Category Today This Weekend App-exclusive Rush & Lottery deals — updated daily From $71 Harry Potter and the Cursed Child Lyric Theatre From $62 The Rocky Horror Show Studio 54 From $59 Paranormal Activity August Wilson Theatre From $69",
+      " & Juliet Stephen Sondheim Theatre Other Desert Cities Hudson Theatre From $72 The Book of Mormon Eugene O'Neill Theatre From $62 The Fantasticks Hayes Theater From $130 School Girls; Or, The African Mean Girls Play Samuel J. Friedman Theatre From $68 The He",
+      "art The Laura Pels Theatre at the Harold and Miriam Steinberg Center for Theatre From $67 Just in Time Circle In The Square Theater From $139 The Curious Case of Benjamin Button The Public Theater From $84 Spring Awakening Studio Seaview From $49 Memoirs of Amorous Gen",
+      "tlemen The Night Egg at the Culture Club From $58 Now You See Me Live Al Hirschfeld Theatre From $69 The Imaginary Invalid Todd Haimes Theatre From $77 Rope Theatre at St. Clement's From $58 Midnight Daryl Roth Theatre From $87 Heated Rivalry: The Unauthorized Musical Parody The ",
+      "Club From $64 2:22 - A Ghost Story Lucille Lortel Theatre From $53 The Visitors The Irene Diamond Stage at the Pershing Square Signature Center From $199 Masquerade Masquerade From $35 Love Me SoHo Playhouse From $57 Pre-Existing Condition Greenw",
+      "ich House Theater From $62 Slam Frank Orpheum Theatre From $39 Parcel from America Theatre Row - Theatre Three From $146 Degenerates (Nov) Playwrights Horizons From $58 I Became We Atlantic Theater Company - Linda Gross Theater From $53 Trist",
+      "an & Yseult St. Ann's Warehouse From $58 The Unbelievers New York City Center From $49 The King's Critique The Romulus Linney Courtyard Theatre at The Pershing Square Signature Center From $48 A Ghost In Your Ear Audible’s Minetta Lane Theatre From $45 Copperfield! ",
+      "The New Musical The Duke on 42nd Street The Holes The Wild Project From $74 Clifford Odets’ Waiting for Lefty Classic Stage Company From $49 Soon St. Luke's Theatre From $87 Delirium The Space at Irondale From $69 Traitorz: The Unauthorized Musical Parody",
+      " St. Luke's Theatre From $35 Ghost Notes The Royal Family Performing Arts Space From $43 Perfect Crime The Theater Center From $97 We'll See The Public Theater From $42 the ripple, the wave that carried me home Playwrights Horizons From $35 Nutcracker Rouge by Company",
+      " XIV Théâtre XIV The Dead, 1904 The American Irish Historical Society From $97 The Verge The Public Theater From $57 The Steel Man 59e59 Theaters - Theater B From $42 Fantasma 59E59 Theaters - Theater A From $43 Singfeld! A Musical About Nothing Jerry Orbach",
+      "HE CIRCUIT: An Immersive Silent Disco Ballet Superfine, Dumbo Tonight could be your night. TodayTix Rush and Lottery tickets are the fastest way to see Broadway and Off-Broadway shows in NYC at a fraction of the price — no advance planning, no full-price box office. Rush tickets rele",
+      "ase every morning at 9 AM for that day's show, first-come, first-served. Lottery entries run daily for top shows, with winners drawn at random. Fan favorites like The Book of Mormon , Harry Potter and the Cursed Child , and & Juliet offer Rush regularly. Brows",
+      "e, or explore the hottest shows in New York , Broadway hits , and the best of Off-Broadway . New to Rush and Lottery? Read our full guide . Both programs are app-exclusive and updated daily — download the TodayTix app and make tonight a show night. Frequently asked questions What is ",
+      "a Rush ticket? Rush tickets are deeply discounted, same-day seats released each morning on the TodayTix app on a first-come, first-served basis. They're how you see Broadway, Off-Broadway, and beyond",
+      " — often at a fraction of the box office price — without planning ahead. What is a Broadway Lottery ticket? A Broadway Lottery ticket is an entry for the chance to win discounted seats to a Broadway or Off-Broadway show. Enter through the TodayTix app , winners are drawn at rand",
+      "you win you'll have a short window to claim and pay for your seats. What's the difference between a Rush and a Lottery ticket? Rush tickets are distributed on a first-come, first-served basis and are for that day's performance. Lottery tickets are awarded at random and winners are no",
+      "tified anywhere from about a week before the performance to day-of, depending on the Lottery. Most shows that offer Rush or Lottery have them for every performance, but the number of tickets distributed varies and is subject to availability. How do I get Rush tickets? Ope",
+      "n the TodayTix app, find the show, and tap Unlock Now . Then, tap Get Rush Tickets when the window opens. Enable Rush alerts so you're notified the moment seats are released. Most shows release Rush at 9 AM local time the day of the performance. How do I",
+      " enter the Lottery? Open the TodayTix app, find the show, and set an alert for when the Lottery opens. Once it opens, tap Enter Lottery . Entry windows are set by each show. Usually, the Lottery opens one to two days before the performance. Winners are notified by app and em",
+      "ail. How much do Rush and Lottery tickets cost? Rush and Lottery tickets are typically a fraction of the box office price. Exact pricing varies by show and is shown in the app before you confirm. Can I pick my seats? While you can't pick your e",
+      " seats, your section is shown before you buy. Specific seat numbers are assigned by the venue. From $55 Downstate Booth Theatre From $62 The Great Gatsby Broadway Theatre From $59 Paranormal Activity August Wilson Theatre From $71 Harry Potter and the Cursed Child Lyric Theatre From",
+      " $69 & Juliet Stephen Sondheim Theatre From $62 The Rocky Horror Show Studio 54"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.todaytix.com/nyc/category/rush-tickets",
+        "checked_at": "2026-11-07 00:00 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-29",
+    "city": "NYC",
+    "name": "Broadway Direct lotteries",
+    "category": "theater",
+    "source_url": "https://lottery.broadwaydirect.com/",
+    "wiki_title": "",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 403,
+    "source_final_url": "https://lottery.broadwaydirect.com/",
+    "source_status": "未確認（取得不可）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "公式演目別抽選候補。ページ取得制限のため現在の対象作・価格・応募時刻は未確認。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://lottery.broadwaydirect.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      }
+    ]
+  },
+  {
+    "id": "option-30",
+    "city": "NYC",
+    "name": "TKTS discounted tickets",
+    "category": "theater",
+    "source_url": "https://www.tdf.org/discount-ticket-programs/tkts-by-tdf/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.tdf.org/discount-ticket-programs/tkts-by-tdf/",
+    "source_status": "本文取得",
+    "lat": 40.75888889,
+    "lng": -73.98527778,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Duffy_Square",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "公式：当日公演と翌日マチネが最大50%割引。各券に$8サービス料、追加の非TDF手数料がある場合あり。",
+      "売れ残り対象、希望作品の在庫は未確認。表示Closedは取得時の窓口状態で営業終了の意味ではない。"
+    ],
+    "evidence_excerpts": [
+      "S eGift Cards. A handful of Off-Broadway shows require cash only. All tickets are subject to a $8 per ticket service charge, which helps support other TDF services and programs. Additional non-TDF service charges may apply to some tickets. Fast Pass TKTS 7-Day Fast P",
+      " may not know is that TKTS is part of a larger entity, TDF, a not-for-profit organization. The $8 per-ticket service fee (significantly lower than online sales outlets) doesn’t just cover the costs of operating TKTS. It supports a host of programs that bring theatre ",
+      "to many people beyond those waiting in line. Whether you’re a high school or middle school student who has never attended a show; or you have a physical disability such as a mobility issue, hearing or vision loss; or someone in your family is on the autism spectrum, T",
+      " youtube Close Become a TDF Member for deep discounts on theatre tickets—see Broadway for just $53.50-$62.50! Join now"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.tdf.org/discount-ticket-programs/tkts-by-tdf/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Duffy_Square",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-31",
+    "city": "NYC",
+    "name": "Bryant Park Winter Village",
+    "category": "holiday",
+    "source_url": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+    "checked_at": "2026-11-07 00:00 PST",
+    "http_status": 200,
+    "source_final_url": "https://bryantpark.org/activities/bank-of-america-winter-village",
+    "source_status": "本文取得",
+    "lat": 40.75388889,
+    "lng": -73.98388889,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Bryant_Park",
+    "price_usd": 0,
+    "price_note": "入場無料、自前スケート靴持参＋事前時間予約の場合。レンタルは公式掲載$18.72–64.48（管理料含む、税別）。指定日実売は未確認。",
+    "hours_2026_12_31": "リンク先2026–27ピーク営業規則ではリンク8:00–翌0:00。マーケット11:00–20:00、祝日例外直前再確認。",
+    "hours_2027_01_01": "リンク先2026–27ピーク営業規則ではリンク8:00–翌0:00。マーケット11:00–20:00、祝日例外直前再確認。",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "2026/10/28–2027/2/28のRink、Holiday Shopsは2027/1/3まで、祝日も営業と公式明記。",
+      "通常Rink8:00–22:00、11/19–1/3は8:00–翌0:00。店舗は月–金11:00–20:00、土日10:00–20:00。",
+      "本文に2025–26シーズンの古い券説明も残る。2026–27の日付が明記された項目だけを使用。",
+      "貸靴・手荷物預かりは有料。天候による臨時休業あり。"
+    ],
+    "evidence_excerpts": [
+      " America Winter Village Reserve tickets Holiday Shops The Lodge Cozy Igloos Live After Dark Oct 28, 2026 – Feb 28, 2027 The Rink: 8am-10pm The Lodge: 10am-10pm Nov 19 – Jan 3: open till midnight Oct 28, 2026 – Jan 3, 2027 Holiday Shops: Monday – Friday, 11am-8pm Saturday & Sunday, 10",
+      "am-8pm Bank of America Winter Village Sat. November 28, 2026 at 10:00am Club Santa Bank of America Winter Village Tue. December 1, 2026 at 5:30pm Tree Lighting Live After Dark Sat. December 19, 2026 at 4:00pm Live After Dark The Rink The ce",
+      "nterpiece of Bank of America Winter Village at Bryant Park, this 17,000 square foot rink features free-admission ice skating, high quality rental skates, free skating shows, and events. For all ice skating info, scroll below. Rink info Pricing + storage ❮ Prices below do not includ",
+      "e taxes. Admission Free Skate Rentals $18.72-$64.48 (includes $.72-$2.48 administrative fee) Save on rentals by visiting during off-peak times Express Lane Skip the line and extend your skate time on select dates! Express Lane with rental skates: $87.5",
+      "2 (includes $3.37 administrative fee) Express Lane bringing own skates: $18.42-$36.86 (includes $0.71-$1.42 administrative fee) Premium Skate $156-$182 (includes $6-$7 administrative fee) Enjoy a skate concierge, snacks + beverage, access to Polar Lounge (a shared space), skate re",
+      "ntals, bag check, and extended ice time. Additional Offerings Skate Aid rental : $26 (includes $1 administrative fee) (free before 10:30am per availability) Helmet rental : FREE Socks : $6.24 (includes $.24 administrative fee) Lock : $6.24 (includes $.24 administrative fee) Sk",
+      "ate Sharpening : 24hr turnaround: $20.80 (includes $.80 administrative fee) While you wait: $41.60 (includes $1.60 administrative fee) Storage Bags are not allowed on the ice, and coats must be worn or checked. We recommend that skaters leave personal items at home if they do n",
+      "e. Please bring a lock or purchase one on site (fee above). Shoe check : FREE Bag check * Per item: $6.24 (includes $.24 administrative fee) Per oversized item: (eg: stroller** or piece of luggage) $18.72 (includes $.72 administrative fee) Fill-a-bag: $18.72 (includes $.72 administrat",
+      "and follow the instructions. Skating info + sessions ❮ Skate rentals Tickets available for the 2025-2026 season at the \"Reserve tickets\" button above. Sign up for our newsletter for early bird access to tickets for Bumper Cars on Ice . Our skate sizes are kids 6T-7T, big kids 1-4, an",
+      "rica® credit or debit card at checkout to receive 10% off eligible skate rentals between October 28 2026 and February 28, 2027. Please look for the cardholder discount checkbox at checkout. Online only. You will receive a 10% discount on eligible Skate Rentals when you use any Bank o",
+      "s your form of payment to pay for your online purchase at checkout. Offer valid between October 28, 2026 and February 28, 2027. Offer only valid on rentals up to $500. Customers must enter their credit or debit card number, card expiration and CVV directly on the payment page online ",
+      "rporation LLC. Discount cannot be applied using Google Wallet. Hours + weather policy ❮ October 28, 2026 – February 28, 2027 Daily, 8am-10pm Holiday / peak hours November 19 – January 3: 8am-midnight January 31: 8am-8pm The Rink is open rain or shine, but may close for heavy rain. Th",
+      "cket to departure, including time to put on skates and store belongings, so that everyone can enjoy free public ice skating at Winter Village. You must have a Winter Village skater wristband to enter the ice rink. Ice skates must be worn to enter the ice rink. Read and abide by all s",
+      "y age and skill level. Reserve lessons Private lessons Coaches will be available seven days a week. Students can purchase one-time lessons or a series for private or semi-private lessons. Question? Email learntoskate@bryantpark.org Accessibility ❮ Click here for a Winter Village map, dr",
+      "e that during these hours, The Rink will still play amplified announcements. FAQs ❮ Can I skate for free? The Rink at Bank of America Winter Village is NYC’s largest free admission ice skating rink. If you own your own skates, you can ice skate for free. Please be sure to reserve an ",
+      "You must have a ticket to enter skating areas. If you are bringing your own skates please reserve a free “Bring Your Own Skates” ticket at the \"Reserve Tickets\" button above, ahead of your visit to the rink. You must show your ice skates to enter with an own skates ticket. I have my ",
+      "d crowds? - Early mornings: a great time to skate with small children, especially as skate aids are free before 10:30am daily, per availability. - Off peak dates and times: visit weekdays and mornings, and dates before Thanksgiving and after the new year. Does the rink close when it ",
+      "is no skating parent/guardian -Skating guardians must have a skating ticket Additional chaperones : $11.29 each -Must have a paid chaperone ticket to enter skating areas -Up to three non-skating, paid chaperones allowed per booking For larger groups, a minimum of two children ages 7 an",
+      "skating adults may not “babysit” items in the pavilion. Please utilize our bag check. Shoe check is free. Do you have skate aids? Yes, we have four types of skate aids for skaters of various ages and heights: Penguins are for beginner skaters under 4' tall. Snowmen are for beginner s",
+      "erved. Skate aids are not transferable to other skating parties. EARLY BIRD SPECIAL: skate aids are free before 10:30am daily, per availability. What size skates do you have? Kids 6T-7T, big kids 1-4, and adults 5-14. Do you have lockers this year? Yes, we have limited lockers availa",
+      "he ice. Please contact us at the email above for proposal options. Why can’t I book Cozy Igloos for January / February? Are those tickets all sold out already? No! Select \"Rosy Igloos\" on the ticket site for dates in January and February! What about Bumper Cars? Bumper Cars on Ice will ",
+      "s, plazas, and terraces, enjoy local crafts, artisan provisions, and exquisite gifts through Jan 3, 2027. Holiday Shops are open daily, including holidays. Many Shops also stay open late with The Rink on weekends and during peak season. Holiday Shops directory and more info The Lodge",
+      "kers and visitors alike. Looking for great game day viewing? The Lodge is open through February 28, 2027 and has a big screen plus lots of food and drink options. Find all Lodge info Cozy Igloos by ororo Revel with friends and family inside your own private igloo! Enjoy festive food ",
+      "s do not include access to the ice rink. Find igloo info here , make a reservation , and join us in 2027 when Cozy Igloos blossom into Rosy Igloos! Private Entertaining Bank of America Winter Village is home to 2 premier private event spaces: Overlook features sweeping views of The R",
+      "t to the ice rink entrance. Polar Lounge can hold up to 50 guests. Email us to book a party for the 2026-2027 season , or fill out the form below. Hold a party at Winter Village Name Email Phone number Desired date How many guests? Up to 75 76 – 225 Event type Holiday Birthday Other ",
+      " America Winter Village Today at 8:00am Ice Skating Bank of America Winter Village Sun. November 8, 2026 at 8:00am Ice Skating Bank of America Winter Village Mon. November 9, 2026 at 8:00am Ice Skating Bank of America Winter Village Tue. November 10, 2026 at 8:00am Ice Skating Bank o",
+      "f America Winter Village Wed. November 11, 2026 at 8:00am Ice Skating Bank of America Winter Village Thu. November 12, 2026 at 8:00am Ice Skating Bank of America Winter Village Fri. November 13, 2026 at 8:00am Ice Skating Bank ",
+      "of America Winter Village Sat. November 14, 2026 at 8:00am Ice Skating Bank of America Winter Village Sun. November 15, 2026 at 8:00am Ice Skating Bank of America Winter Village Mon. November 16, 2026 at 8:00am Ice Skating Bank ",
+      "of America Winter Village Tue. November 17, 2026 at 8:00am Ice Skating Bank of America Winter Village Wed. November 18, 2026 at 8:00am Ice Skating Bank of America Winter Village Thu. November 19, 2026 at 8:00am Ice Skating Bank ",
+      "of America Winter Village Fri. November 20, 2026 at 8:00am Ice Skating Bank of America Winter Village Sat. November 21, 2026 at 8:00am Ice Skating"
+    ],
+    "image": "img/07.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+        "checked_at": "2026-11-07 00:00 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Bryant_Park",
+        "checked_at": "2026-11-07 00:00 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/07.webp",
+    "commons_credit_id": "photo-07",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-32",
+    "city": "NYC",
+    "name": "Rockefeller Center Tree",
+    "category": "holiday",
+    "source_url": "https://www.rockefellercenter.com/holidays/rockefeller-center-christmas-tree/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 403,
+    "source_final_url": "https://www.rockefellercenter.com/holidays/rockefeller-center-christmas-tree/",
+    "source_status": "未確認（取得不可）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.rockefellercenter.com/holidays/rockefeller-center-christmas-tree/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      }
+    ]
+  },
+  {
+    "id": "option-33",
+    "city": "NYC",
+    "name": "Rockefeller Center Rink",
+    "category": "rink",
+    "source_url": "https://www.rockefellercenter.com/attractions/the-rink-at-rockefeller-center/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 403,
+    "source_final_url": "https://www.rockefellercenter.com/attractions/the-rink-at-rockefeller-center/",
+    "source_status": "未確認（取得不可）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.rockefellercenter.com/attractions/the-rink-at-rockefeller-center/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      }
+    ]
+  },
+  {
+    "id": "option-34",
+    "city": "NYC",
+    "name": "Wollman Rink",
+    "category": "rink",
+    "source_url": "https://wollmanrinknyc.com/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://wollmanrinknyc.com/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://wollmanrinknyc.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-35",
+    "city": "NYC",
+    "name": "Union Square Holiday Market",
+    "category": "holiday",
+    "source_url": "https://www.urbanspacenyc.com/union-square-holiday-market",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.hfbrandsandmarkets.com",
+    "source_status": "未確認（旧URLは別のフードホールにリダイレクト）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "2026年の開催日・終了日未確認。12/28到着後も営業しているとは扱わない。",
+      "早めの12/19–24 NY滞在案でのみ追加確認する候補。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.urbanspacenyc.com/union-square-holiday-market",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（旧URLは別のフードホールにリダイレクト）"
+      }
+    ]
+  },
+  {
+    "id": "option-36",
+    "city": "NYC",
+    "name": "Columbus Circle Holiday Market",
+    "category": "holiday",
+    "source_url": "https://www.urbanspacenyc.com/columbus-circle-holiday-market",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.hfbrandsandmarkets.com",
+    "source_status": "未確認（旧URLは別のフードホールにリダイレクト）",
+    "lat": 40.769,
+    "lng": -73.982,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Columbus_Circle",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "2026年の開催日・終了日未確認。12/28到着後も営業しているとは扱わない。",
+      "早めの12/19–24 NY滞在案でのみ追加確認する候補。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.urbanspacenyc.com/columbus-circle-holiday-market",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（旧URLは別のフードホールにリダイレクト）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Columbus_Circle",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-37",
+    "city": "NYC",
+    "name": "Dyker Heights Christmas Lights",
+    "category": "holiday",
+    "source_url": "https://www.nyctourism.com/articles/dyker-heights-christmas-lights/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 404,
+    "source_final_url": "https://www.nyctourism.com/articles/dyker-heights-christmas-lights/",
+    "source_status": "未確認（取得不可）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "住宅街のクリスマス照明散策候補。2026年の点灯日・時間は未確認。",
+      "個人住宅のため立入・騒音・撮影マナーに注意する提案。公式観光局の指定記事は404。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nyctourism.com/articles/dyker-heights-christmas-lights/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      }
+    ]
+  },
+  {
+    "id": "option-38",
+    "city": "NYC",
+    "name": "Radio City Christmas Spectacular / Rockettes",
+    "category": "holiday",
+    "source_url": "https://www.rockettes.com/christmas/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.rockettes.com/christmas/",
+    "source_status": "本文取得",
+    "lat": 40.75972222,
+    "lng": -73.97916667,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "Rockettes公式はJanuary 4までと表示。ただし公演ごとの2026–27年カレンダー・価格は未確認。",
+      "1人席と座席位置、手数料込み総額を比較する候補。"
+    ],
+    "evidence_excerpts": [
+      "Christmas Spectacular | The Rockettes BUY TICKETS English LIMITED TIME OFFER! Save up to 35% off  - select seats & performances. Expires Sun., 11/8. Learn More Chat CHRISTMAS SPEC",
+      "TACULAR The Christmas Spectacular Starring the Radio City Rockettes is back at Radio City Music Hall through January 4! Now featuring “Ring” a brand new Rockettes contemporary tap number. Sec",
+      "ure your tickets today! Buy Tickets Bring your group of 9 or more to the Christmas Spectacular ! Request Info SHOP SPECTACULAR MERCH Shop Now DOWNLOAD THE ROCKETTES APP Download Close Language - Choose a language English Español Français Português 简体中文"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.rockettes.com/christmas/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-39",
+    "city": "NYC",
+    "name": "Times Square New Year’s Eve",
+    "category": "nye",
+    "source_url": "https://www.timessquarenyc.org/nye/nye-faq",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.timessquarenyc.org/nye/nye-faq",
+    "source_status": "本文取得",
+    "lat": 40.7575,
+    "lng": -73.9858,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Times_Square",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "旧年情報を含むFAQ。2026/12/31の入場時刻・入口・規制は未確認。",
+      "過去規則は無料先着、仮設トイレなし、再入場不可、大きな荷物不可。2026年の確定情報とは分ける。"
+    ],
+    "evidence_excerpts": [
+      "NYE FAQ | Times Square NYC New Years Eve: -- : -- : -- : -- -- °F 12:00am EST EN New Year's Eve Frequently Asked Questions Frequently Asked Questions As we approach New Year's Eve 2025, we look forward to seeing revelers in Times Square for the Ball Drop! If ",
+      "ind us on Facebook , Twitter , and Instagram to be part of the journey as we count down to the new year, and be sure to tell us how you're celebrating with Times Square New Year's Eve by using #BallDrop in your posts! Where is the Ball lowered? Where is the best view? The ",
+      "Times Square New Year's Eve Ball descends from a flagpole at the top of One Times Square. It can best be seen along Broadway, from 43rd Street to 50th Street, and along Seventh Avenue, as far",
+      "celebration will begin shortly before 6:00pm EST. At approximately 6:00pm EST the Times Square New Year's Eve Ball will be raised to the top of the pole at One Times Square (Broadway at 43rd Street). At exactly 11:59pm EST, the Ball will make its 60-second descent down the",
+      " flagpole to signal the start of the New Year. Revelers begin to gather in the afternoon on New Year's Eve, and will be allowed entrance to the viewing areas on a first-come, first served basis. It is difficult to say when different viewing areas will fill, as that depe",
+      "eets on 6th and 8th Avenues. Can I watch the celebration online? Yes! Join us online at 6pm on December 31 to enjoy the NYE 2026 celebration. Visit TimesSquareNYC.org to enjoy the LIVE, six-and-a-half-hour, commercial-free webcast from your computer or from mobile devices lik",
+      "able. View the accessible livestream. Will there be performances? What is the schedule for the New Year's Eve celebration? Yes, there will be performances by artists including Tones and I, B.o.B., Robyn, Xavi, Ana Barbara, Ciara, Le Sserafrim, Little Big Town, Maren Morris",
+      ". See the full live schedule. Do I need a ticket? No tickets are needed for the annual outdoor New Year’s Eve in Times Square celebration, which is a free event open to everyone on a first-come, first-serve basis. There are no public viewing spaces available for sale. Howe",
+      "offer Multiple Venue/Pay-One-Price/All Access passes which advertise access to Times Square on New Year’s Eve that is actually not possible. These companies advertise this pass as allowing the holder to visit numerous venues throughout Times Square on New Year's Eve. Such ",
+      "ekends. In the past, the MTA has advised revelers not to use the 42nd Street Subway Station on New Year's Eve due to crowding conditions — you are advised to exit at one of the surrounding stations and enter Times Square on foot. While the actual time of the system changes",
+      " depend on the arrival of the revelers for the New Year’s Eve Celebration, based on the timeline from previous years,  the following service disruptions should be expected: TIMES SQUARE-42 ST STATION: The 42nd Street entrance",
+      "ccess this station. 49 ST STATION N/R/W: This station will be bypassed beginning at about noon December 31st until approximately 12:15 a.m., January 1st.  The “Olive Garden” egress will be closed at 4:00am.  Riders can use the 49th Street exit. 50 ST STATION 1 Train: This sta",
+      "tion will be bypassed beginning at noon, December 31st until approximately 12:15 a.m., January 1st. Extra subway service will run on the 1, 2, 3, 4, 5, 6, 7, C, D, L, N, Q, R and S lines on New Year’s Eve. The Times Square Alliance will provide updates to the subway",
+      "orth (212) 532-4900 Long Island Rail Road (LIRR) (718) 217- LIRR For questions about access on New Year's Eve, please contact the NYPD sub-station at (212) 239-9803 or the Times Square Alliance Dispatch Office at (212) 452-5218. Please call ONLY on New Year's Eve. How do I",
+      " enter Times Square on New Year's Eve? Access to Times Square on the evening of December 31st will be from 6th Avenue or 8th Avenue only. No one will be allowed to cross Broadway/7th Avenue once the streets have been closed. If your destination is east of Broad",
+      ", 47th, 50th, 54th, and 57th Sts. If you are attending a party or event within Times Square on New Year's Eve, be sure to contact the business to confirm special instructions you may need in order to access the entrance of the establishment. ‍ Access points for the viewing",
+      "cross intersections within affected area. What streets will be closed for the celebrations? On December 31, the New York Police Department will begin closing down access to Times Square starting at 43rd Street and Broadway, and moving north as revelers arrive. The exact times",
+      ". Remember that you could be spending an extended period of time outdoors in potentially below-freezing conditions. You should be well-prepared and well-insulated. Many layers, synthetics (such as Goretex and polypropylene), wind-resistant and water-repellant outerwear",
+      "ities has now reached capacity. If you would like to watch the NYE celebration live online for free with open captions and American Sign Language interpretation, please visit our Live Webcast page . Have further questions? Please contact info@timessquarenyc.org for mor",
+      " no licensed food and beverage vendors in Times Square. Some Broadway theaters will be open on New Year's Eve. You can check the schedules for Broadway and some Off- Broadway shows at www.telecharge.com , www.broadway.com , or www.ticketmaster.com . Stores will be open at ",
+      "ase call them ahead of time. Many restaurants located in the Times Square area will be open on New Year's Eve; be sure to consult our Restaurant Guide to locate a restaurant, and make your reservations well in advance. Please remember that if you dine at a local restaurant",
+      "t our Hotels page How can I get alerts and updates about things happening in Times Square? For New Year's Eve-specific inquiries, The New York City Emergency Management Department has launched an opt-in short message service for those attending the NYE festivities in Times",
+      "stop receiving Flash Alerts, you will need to unsubscribe. What is the history of Times Square New Year's Eve and the Ball? Revelers have been celebrating New Year's Eve in Times Square since 1904. To learn more about the celebration's history as well as more information a",
+      "bout the New Year's Eve Ball, check out our History page. ‍ NYE History & Times Square Ball How much confetti is dropped in Times Square on New Year's Eve? More than 1 ton of confetti is ",
+      "typically dropped in Times Square to bring in the new year. Can I volunteer to toss the confetti on New Year’s Eve? Unfortunately, no. Our confetti master and his team have it covered. NYE Sponsors Other Resources Sponsor NYE Le",
+      "arn how your brand can be part of Times Square New Year's Eve on a global scale. NYE Parties Learn more about New Year's Eve parties at Times Square venues. Media & Press Information on press events, media kits, pool feed det",
+      "ails, and more. Contact Us Contact us with any questions about New Year's Eve. Stay in Touch Thank you! Your submission has been received! Oops! Something went wrong while submitting the form. Thank you! Your submission has been received! Co"
+    ],
+    "image": "img/02.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.timessquarenyc.org/nye/nye-faq",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Times_Square",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/02.webp",
+    "commons_credit_id": "photo-02",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-40",
+    "city": "NYC",
+    "name": "Prospect Park NYE Fireworks",
+    "category": "nye",
+    "source_url": "https://www.prospectpark.org/event/new-years-eve-fireworks-in-prospect-park-3/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.prospectpark.org/event/new-years-eve-fireworks-in-prospect-park-3/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": 0,
+    "price_note": "公式2026/12/31イベントは無料（既存調査と今回公式本文）",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "公式：Grand Army Plaza、12/31 22:00からライブ、1/1 00:00花火（NY現地時刻）。",
+      "予約推奨だが必須ではないとの公式案内。天候による変更・観覧範囲は直前確認。"
+    ],
+    "evidence_excerpts": [
+      "New Year's Eve Fireworks in Prospect Park - Prospect Park Alliance Skip to content × Upcoming Event See All Events Location Grand Army Plaza Time 10:00 pm Admission Free, RSVP! D",
+      "ate Thursday, December 31, 2026 Map It Grand Army Plaza Share New Year’s Eve Fireworks in Prospect Park Prospect Park Alliance, the non-profit organization that sustains Brooklyn’s flagship park, will present Brooklyn’s most spectacular New",
+      "eworks celebration at the iconic Grand Army Plaza. Join tens of thousands of revelers for this free, 46-year tradition, which includes live entertainment starting at 10 pm, with a magnificent fireworks display at midnight to light up the skies above Prospect Park. RSVP",
+      " Tickets for this event are recommended but not required and will not be checked at the event. New Year’s Eve in Prospect Park is made possible in part by support from New York University and media partner VisitBrooklyn.com. Prospect Park Alliance sustains, restores and ad"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.prospectpark.org/event/new-years-eve-fireworks-in-prospect-park-3/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-41",
+    "city": "NYC",
+    "name": "NYRR Midnight Run",
+    "category": "nye",
+    "source_url": "https://events.nyrr.org/nyrr-midnight-run",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://events.nyrr.org/nyrr-midnight-run",
+    "source_status": "本文取得",
+    "lat": 40.78222222,
+    "lng": -73.96527778,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Central_Park",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "公式2026/12/31の4マイル深夜レース。区分ごとの登録状況・参加料・一般観覧可否は別確認。",
+      "レース参加者用の花火観覧と、誰でも入れる無料観覧を混同しない。"
+    ],
+    "evidence_excerpts": [
+      "NYRR Midnight Run opens in a new window NEED HELP? Date Thursday, December 31, 2026 at 11:59 PM Add to Calendar Location Central Park Distance 4 Miles More Hashtag #NYRRMidnightRun More 9+1 Credit Scored NYRR Midnight Run Registration Options All ",
+      " available options Near Capacity Eligible for 9+1 Credit – NYRR Midnight Run Scored 9+1 Credit Thursday, December 31, 2026 at 11:59 PM Distance: 4 Miles Entry Fees: From $0.00 to $74.02 see all Register Sold Out NOT ELIGIBLE for 9+1 Credit – NYRR Midnight Run Scored About ",
+      "3...2.1, Happy New Year!! Kick off the new year with your first race of 2027 at the NYRR Midnight Run! More About NYRR Midnight Run Race Details Join us in celebrating the year ahead while gearing up to set your New Y",
+      "CS New York City Marathon. Congratulations to everyone ringing the 9+1 bell as we usher in the new year 🎉 The souvenir for this event will be a winter accessory. Member-Only Standby List The Member-Only Standby List is a perk for NYRR members who are willing to participate",
+      "lives and stronger communities through the transformative power of running, and benefit NYRR’s free youth and community programs, including Rising New York Road Runners , NYRR Striders , Open Run , and more. All event information is subject to change. Volunteer Learn M",
+      "ing through NYRR x Runna , the world's top-rated running coach app, to train anywhere, anytime Free training guides and tips through our Runner Resources Registration Fee Protection NYRR allows the purchase of refund protection through Teak, a refund program that provi",
+      "ation. All requests must be placed by runners at least two weeks prior to the event. NYRR Race Free We at New York Road Runners believe running should be accessible to everyone. To help, we created NYRR Race Free to provide race fee assistance to those who qualify fina",
+      "ncially. In 2026, we will offer 1,000 spots in the NYRR Race Free Program and more than 3,000 complimentary race entries, including entry for the 2026 TCS New York City Marathon. Accepted NYRR Race Free participants will receive up to ",
+      "6 complimentary entries to our weekly races and the opportunity to access training for free. The 2026 application period is now closed. We invite you to apply for the 2027 NYRR Race Free program , which is expected to open in October 2026. Please visit the NYRR",
+      " Race Free page for updates in September. Notes on Registration Review the NYRR policy on start and finish cutoff times here . Runners can register as woman, man, or nonbinary. Vis",
+      "must pickup your race materials at the RUN CENTER in advance. The last bib pickup on race day (Thursday, December 31) will be at 10:00 p.m. Join us for a New Year's Eve party on December 31 from 6:00 p.m. to 10:00 p.m. at the RUN CENTER to celebrate 2026 with fun photo mom"
+    ],
+    "image": "img/01.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://events.nyrr.org/nyrr-midnight-run",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Central_Park",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/01.webp",
+    "commons_credit_id": "photo-01",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-42",
+    "city": "NYC",
+    "name": "NYE cruise alternatives",
+    "category": "nye",
+    "source_url": "https://www.circleline.com/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.circleline.com/",
+    "source_status": "本文取得",
+    "lat": 40.69666667,
+    "lng": -74.02833333,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Hudson_River",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "船上年越しは屋外待機の代替候補。ただし2026/12/31の運航・料金・年齢制限・飲食条件・花火可視性は未確認。",
+      "自由の女神やTimes Squareのボールを必ず見られるとは保証しない。"
+    ],
+    "evidence_excerpts": [
+      "ranslation App Follow along in your language with immersive audio narration in nine languages. Free WiFi Stay connected and share your Circle Line moments in real time. Tag us @CircleLineNYC for a chance to be featured. Tasty Refreshments Hot dogs, pretzels, nachos, an"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.circleline.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Hudson_River",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-43",
+    "city": "NYC",
+    "name": "Joe’s Pizza",
+    "category": "food",
+    "source_url": "https://www.joespizzanyc.com/",
+    "wiki_title": "",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.joespizzanyc.com/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "節約食候補としてピザ／タコス／麺／中華を比較する提案。現行メニュー価格・税・チップ・年末営業時間は未確認。",
+      "店舗により場所と営業時間が異なるため、行く支店を決めて再確認。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.joespizzanyc.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-44",
+    "city": "NYC",
+    "name": "Los Tacos No.1",
+    "category": "food",
+    "source_url": "https://www.lostacos1.com/",
+    "wiki_title": "",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.lostacos1.com/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "節約食候補としてピザ／タコス／麺／中華を比較する提案。現行メニュー価格・税・チップ・年末営業時間は未確認。",
+      "店舗により場所と営業時間が異なるため、行く支店を決めて再確認。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.lostacos1.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-45",
+    "city": "NYC",
+    "name": "Xi’an Famous Foods",
+    "category": "food",
+    "source_url": "https://www.xianfoods.com/",
+    "wiki_title": "",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.xianfoods.com/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "節約食候補としてピザ／タコス／麺／中華を比較する提案。現行メニュー価格・税・チップ・年末営業時間は未確認。",
+      "店舗により場所と営業時間が異なるため、行く支店を決めて再確認。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.xianfoods.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-46",
+    "city": "NYC",
+    "name": "Wah Fung No.1",
+    "category": "food",
+    "source_url": "https://www.nyctourism.com/restaurants/wah-fung-no-1-fast-food/",
+    "wiki_title": "",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 404,
+    "source_final_url": "https://www.nyctourism.com/restaurants/wah-fung-no-1-fast-food/",
+    "source_status": "未確認（取得不可）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "節約食候補としてピザ／タコス／麺／中華を比較する提案。現行メニュー価格・税・チップ・年末営業時間は未確認。",
+      "店舗により場所と営業時間が異なるため、行く支店を決めて再確認。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.nyctourism.com/restaurants/wah-fung-no-1-fast-food/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      }
+    ]
+  },
+  {
+    "id": "option-47",
+    "city": "NYC",
+    "name": "Chelsea Market",
+    "category": "food",
+    "source_url": "https://www.chelseamarket.com/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.chelseamarket.com/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "屋内の食事・散策候補。入館と各店の食事代は区別。祝日各店営業時間と価格は未確認。"
+    ],
+    "evidence_excerpts": [
+      "ead more → December 19, 2026 upcoming events Events main Aug 5 Chelsea Market August 5, 2026 – December 31, 2026 Meet Cutes NYC x Chelsea Market Photobooth Chelsea Market August 5, 2026 – December 31, 2026 Come meet cute IRL and capture the love. @meetcutesnyc’s new photo boo",
+      "eone special and take home a memory worth keeping! Read more → Chelsea Market August 5, 2026 – December 31, 2026 Aug 20 Chelsea Market August 20, 2026 – January 1, 2027 Oishii Pop-Up at Chelsea Market Chelsea Market August 20, 2026 – January 1, 2027 Oishii now available at Ch",
+      "elsea Market Read more → Chelsea Market August 20, 2026 – January 1, 2027 Sep 19 Chelsea Market September 19, 2026 – November 16, 2026 ARTECHOUSE: Twilight Zone - Hidden Wonders of The Ocean Chelsea Market September 19, 2026 – November 1",
+      "Chelsea Market September 19, 2026 – November 16, 2026 Oct 30 Chelsea Market October 30, 2026 – December 31, 2026 Coffeeright Creator Gallery: Set in Stones Chelsea Market October 30, 2026 – December 31, 2026 Visit ‘Set in Stones’ at Chelsea Market. An independent exhibition o",
+      "y Michael Donald at Coffeeright Creator Gallery. Read more → Chelsea Market October 30, 2026 – December 31, 2026 Nov 7 The Chelsea Local November 7, 2026 Chelsea Baila Social Club The Chelsea Local November 7, 2026 Join us in the Chelsea Local for the Chelsea Baila Social Clu",
+      "10 Veggie Delight Pearl River Mart co-founder Mrs. Chen makes this vegetarian dish every Lunar New Year Day, following in the footsteps of her mother. \"It's a must,\" she says. Read more → Social"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.chelseamarket.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-48",
+    "city": "NYC",
+    "name": "Time Out Market New York",
+    "category": "food",
+    "source_url": "https://www.timeoutmarket.com/newyork/",
+    "wiki_title": "",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.timeout.com/time-out-market-new-york",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "DUMBO散策と組合せる食事候補。各店メニューと年末営業時間は未確認。"
+    ],
+    "evidence_excerpts": [
+      "ime Out Market New York. Time Out Market Brooklyn Book Now 55 Water Street, Brooklyn, NY 11201 Friday - Saturday: 8am – 11pm Sunday - Thursday: 8am – 10pm *Individual kitchen times may vary Who we are In the heart of Dumbo, with rooftop views of the Brooklyn Bridge, Manh"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.timeoutmarket.com/newyork/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-49",
+    "city": "NYC",
+    "name": "Philadelphia by rail",
+    "category": "daytrip",
+    "source_url": "https://www.amtrak.com/northeast-regional-train",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.amtrak.com/northeast-regional-train",
+    "source_status": "本文取得",
+    "lat": 39.9528,
+    "lng": -75.1636,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Philadelphia",
+    "price_usd": null,
+    "price_note": "未確認。Amtrakは日付・時刻・座席・変更条件で変動。通常の広告最安値を年末運賃にしない。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "PhiladelphiaへのNortheast Regional候補。往復時刻・指定日料金は未確認。",
+      "NYの12/31・1/1滞在を崩さず12/29以前などに組む提案。",
+      "日帰り適性の提案：Philadelphiaを優先比較。DC/Bostonは移動負担と短い冬の日照を考え宿泊案とも比較。"
+    ],
+    "evidence_excerpts": [
+      "d points beyond. Skip the hassles of I-95 traffic and enjoy the benefits of train travel. Feel free to move about the train and relax on your way to your destination. Map Schedule Northeast Regional Close Modal Amtrak Alerts Information and updates affecting travel Por",
+      "ver in the place where it all began. Follow in the steps of our nation’s forefathers along the Freedom Trail and explore historical icons such as the Old State House and the Old North Church. Grab some clam chowder or molasses baked beans at Quincy Market or stop in a "
+    ],
+    "image": "img/43.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.amtrak.com/northeast-regional-train",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Philadelphia",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/43.webp",
+    "commons_credit_id": "photo-43",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-50",
+    "city": "NYC",
+    "name": "Washington DC by rail",
+    "category": "daytrip",
+    "source_url": "https://www.amtrak.com/northeast-regional-train",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.amtrak.com/northeast-regional-train",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。Amtrakは日付・時刻・座席・変更条件で変動。通常の広告最安値を年末運賃にしない。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "Washington DCへのNortheast Regional候補。往復時刻・指定日料金は未確認。",
+      "NYの12/31・1/1滞在を崩さず12/29以前などに組む提案。",
+      "日帰り適性の提案：Philadelphiaを優先比較。DC/Bostonは移動負担と短い冬の日照を考え宿泊案とも比較。"
+    ],
+    "evidence_excerpts": [
+      "d points beyond. Skip the hassles of I-95 traffic and enjoy the benefits of train travel. Feel free to move about the train and relax on your way to your destination. Map Schedule Northeast Regional Close Modal Amtrak Alerts Information and updates affecting travel Por",
+      "ver in the place where it all began. Follow in the steps of our nation’s forefathers along the Freedom Trail and explore historical icons such as the Old State House and the Old North Church. Grab some clam chowder or molasses baked beans at Quincy Market or stop in a "
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.amtrak.com/northeast-regional-train",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-51",
+    "city": "NYC",
+    "name": "Boston by rail",
+    "category": "daytrip",
+    "source_url": "https://www.amtrak.com/northeast-regional-train",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.amtrak.com/northeast-regional-train",
+    "source_status": "本文取得",
+    "lat": 42.36027778,
+    "lng": -71.05777778,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Boston",
+    "price_usd": null,
+    "price_note": "未確認。Amtrakは日付・時刻・座席・変更条件で変動。通常の広告最安値を年末運賃にしない。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "BostonへのNortheast Regional候補。往復時刻・指定日料金は未確認。",
+      "NYの12/31・1/1滞在を崩さず12/29以前などに組む提案。",
+      "日帰り適性の提案：Philadelphiaを優先比較。DC/Bostonは移動負担と短い冬の日照を考え宿泊案とも比較。"
+    ],
+    "evidence_excerpts": [
+      "d points beyond. Skip the hassles of I-95 traffic and enjoy the benefits of train travel. Feel free to move about the train and relax on your way to your destination. Map Schedule Northeast Regional Close Modal Amtrak Alerts Information and updates affecting travel Por",
+      "ver in the place where it all began. Follow in the steps of our nation’s forefathers along the Freedom Trail and explore historical icons such as the Old State House and the Old North Church. Grab some clam chowder or molasses baked beans at Quincy Market or stop in a "
+    ],
+    "image": "img/45.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.amtrak.com/northeast-regional-train",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Boston",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/45.webp",
+    "commons_credit_id": "photo-45",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-52",
+    "city": "NYC",
+    "name": "Philadelphia / DC / Boston by bus",
+    "category": "daytrip",
+    "source_url": "https://www.flixbus.com/bus/new-york-ny",
+    "wiki_title": "",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.flixbus.com/bus/new-york-ny",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "FlixBus公式NYページでBoston・Philadelphia・Washington接続の記載あり。",
+      "ページのfrom $7.48は出発地未指定の一般表示なので、3都市への年末料金として使わない。往復実額・荷物・停留所は未確認。"
+    ],
+    "evidence_excerpts": [
+      "scover over 8,000 destinations across more than 40 countries. Comfort on the go Kick back with free Wi-Fi, power outlets, and extra leg space. That's what modern buses are all about. Choose, book, travel From your screen to your seat in seconds. You do the booking, we'",
+      "o New York, NY 13 Number of bus stops 156 Directly reachable cities See map Cheapest trip From $7.48 Safe Payment Use Paypal, Google Pay, Visa & International cards Easy to buy Get your tickets online, in our App, or in a Flixshop Customer care Effortless support from b",
+      "ains Station Best service on board Available options you can find for a more comfortable trip: Free WiFi Stay connected throughout your journey Power Outlets Keep your devices charged on the go Comfortable seats Relax with extra legroom and reclining seats Luggage stor",
+      "osing your preferred travel date. The easiest way to find cheap tickets though is by using the free FlixBus App and keep your ticket always with you! How can I get to New York by bus? Planning a trip to New York? FlixBus makes it easy with direct routes from 155 cities",
+      "cations. How much does it cost to get to New York? Prices for a bus to New York starts at just $7.48, depending on your starting point. How do I use my FlixBus ticket to New York? Do I need to print it? Going to New York with FlixBus is simple. If you book online, you'll",
+      "hia, Washington. What is the cheapest time to book a bus ticket to New York? Prices start from $7.48, but fares vary depending on demand, time of day, and how far ahead you book. Booking early usually gets you the best deal — tickets are often cheapest a few weeks before",
+      "ower fares. What onboard services are available on New York buses? Buses to New York come with free Wi-Fi, power outlets, and extra legroom. You can also bring one carry-on and one checked bag at no extra cost. Onboard amenities may vary by route, so check your trip de",
+      "from the people of France to the people of the United States, and it stands as a symbol of the freedom of the USA. It’s located on Liberty Island, and visits to see the statue are often combined with a trip to Ellis Island, where you can discover the fascinating histor",
+      "ere you're traveling from, we've got a trip for you. Hop on board and enjoy your trip with our free Wi-Fi and spacious seats. ",
+      "are equipped with toilets and power outlets, and to make your experience even nicer, they have free Wi-Fi , so you can catch up on emails or watch your favorite show as we take you to New York.",
+      " whatever you want to New York as one stored bag and one carry-on are included in your ticket, free of charge! Continue reading Discover more destinations Boston, MA Toronto, ON Philadelphia, PA Atlanta, GA Washington, D.C. Chicago, IL Orlando, FL Newark, NJ Miami, FL "
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.flixbus.com/bus/new-york-ny",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-53",
+    "city": "LA",
+    "name": "Griffith Observatory",
+    "category": "sight",
+    "source_url": "https://griffithobservatory.lacity.gov/visit/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://griffithobservatory.lacity.gov/visit/",
+    "source_status": "本文取得",
+    "lat": 34.11833333,
+    "lng": -118.30033333,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Griffith_Observatory",
+    "price_usd": 0,
+    "price_note": "建物・敷地の入場無料。プラネタリウム・駐車等は別。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "通常火–金12:00–22:00、土日10:00–22:00、月曜休館。12/25・12/31・1/1の特別時間未確認。",
+      "DASHなどの公共交通利用候補。夕方の寒さ・帰路を確認。"
+    ],
+    "evidence_excerpts": [
+      "t of any trip to Los Angeles. Griffith Observatory is open today from 12:00 p.m. to 10:00 p.m. Friday, November 6, 2026 Local Noon – 11:38 a.m. Sunset – 4:57 p.m. Weekday (Tuesday - Friday) Hours Open 12:00 noon - 10:00 p.m. Weekend (Saturday - Sunday) Hours Open 10:00 a",
+      "e Hollywood Sign. Getting Here View our Calendar Everyone is Welcome Griffith Observatory is a free-admission facility located on the south side of Mount Hollywood in Griffith Park. The building and grounds are accessible for all visitors. The building is busiest on we",
+      "he same hours as Griffith Park, 5:00 a.m. to 10:30 p.m., every day. Access to Griffith Park is free, though there is paid parking closest to the Observatory. There are public restrooms located next to the Observatory parking lot. Trailheads on Observatory grounds lead ",
+      "since shortly after the building opened in 1935. The current program serves 27,000 fifth-grade students a year and weaves together the Observatory's telescope, exhibit, and building content, as well as programs in the Samuel Oschin Planetarium and Leonard Nimoy Event Hori"
+    ],
+    "image": "img/31.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://griffithobservatory.lacity.gov/visit/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Griffith_Observatory",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/31.webp",
+    "commons_credit_id": "photo-31",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-54",
+    "city": "LA",
+    "name": "Getty Center",
+    "category": "museum",
+    "source_url": "https://www.getty.edu/visit/center/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.getty.edu/visit/center/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": 0,
+    "price_note": "入場無料、時間指定予約必須。駐車有料。",
+    "hours_2026_12_31": "短縮営業、終了時刻未確認",
+    "hours_2027_01_01": "休館",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "Christmas・New Year’s Day・月曜休館。12/24も短縮。",
+      "車なしでも訪問可能性を交通と合わせて比較。庭園・建築・美術をまとめて楽しむ候補。"
+    ],
+    "evidence_excerpts": [
+      "esign, unique gardens, and spectacular city views Explore top things to do Admission and Hours Free Admission Admission is free, and requires a timed-entry reservation. Reserve entry time Hours Closed now Tuesday–Friday, Sunday 10am–6:30pm Saturday 10am–9pm Monday Clos",
+      "ed Additional Information Holiday Closures The Center is closed annually on New Year's Day, Independence Day, Thanksgiving Day, and Christmas Day. It will close early on Christmas Eve and New Year's Eve. Gallery Closures South Pavilion, East Pavilion Pla",
+      "orth Pavilion galleries are closed for renovations Library Hours The Library is open Monday to Friday, 9:30am to 5pm. Contact Library Reference to make an appointment or ask questions. The Library will be closed on the following dates: Jan 1–2, 2026 Jan 19, 2026 Feb 16, ",
+      "n has to offer. See top things to do Learn about Getty Center improvements GettyGuide® Let our free app be your personal guide to the Getty museums Download the GettyGuide app Location amenities Food and Drink Elegant dining to casual snacks—all with locally sourced in",
+      " FAQs Answers to frequently asked questions about visiting the Getty Center See all FAQs Is it free to visit? Admission is free, and requires a timed-entry reservation. Please note there is a fee for parking. How do I make reservations? Make a free reservation online o",
+      "r call (310) 440-7300 . How much does parking cost? Parking is $25 per car or motorcycle; $15 after 3pm; $10 after 6pm. Saturdays after 6pm, parking is free. Please note: Getty parking fees have gone cashless. All major banking/credit cards are accepted. (Rates i"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.getty.edu/visit/center/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-55",
+    "city": "LA",
+    "name": "The Broad",
+    "category": "museum",
+    "source_url": "https://www.thebroad.org/visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.thebroad.org/visit",
+    "source_status": "本文取得",
+    "lat": 34.0544,
+    "lng": -118.2506,
+    "coordinate_source": "https://en.wikipedia.org/wiki/The_Broad",
+    "price_usd": 0,
+    "price_note": "一般入場無料。特別展等に別料金がある場合あり。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "時間指定予約推奨、当日枠あり。月曜・Thanksgiving・Christmas休館。",
+      "Infinity Mirror Roomsは一般券と同じ条件とは限らない。元日の特別営業未確認。"
+    ],
+    "evidence_excerpts": [
+      "o navigate, Enter to select search Tickets Events Museum Admission Hours Tuesday & Wednesday & Friday | 11 am—5 pm Thursday | 11 am—8 pm Saturday | 10 am—6 pm Sunday | 10 am—6 pm Closed Mondays, Thanksgiving, and Christmas Day Visit Plan Your Visit Infinity Mirror Rooms ",
+      "ty Mirror Rooms Directions + Parking Schools Tours + Groups Families Shop General Admission is Free Reserving a timed ticket in advance is recommended. Walk-ups are available daily. Some exhibitions and events carry a separate charge. Get Tickets Accessibility The Broa",
+      "your accessibility requirements. Learn More : Accessibility Museum Hours Tuesday & Wednesday & Friday | 11 am—5 pm Thursday | 11 am—8 pm Saturday | 10 am—6 pm Sunday | 10 am—6 pm Closed Mondays, Thanksgiving, and Christmas Day Same-Day Tickets Extra tickets are released ",
+      "tions, reserving advance tickets, and planning your visit. Learn More Mobile Guide The Broad’s free mobile guide on Bloomberg Connects offers interactive maps, free audio tours, and content in multiple language options! No download required. Access the mobile museum gu",
+      "nder the museum, including accessible parking. Enter on 2nd St. from Grand Ave only. Rates are $19 for 3 hours with museum validation; $7 for each additional 15 minutes; $29 daily maximum; $19 flat rate after 5 pm on weeknights and all day on weekends. Lost parking ti",
+      "ckets will result in a full charge of the $29 daily maximum. Bike parking is free and located on level P1. The garage opens at 9 am and closes at 10:30 pm. Other parking garages and lots are available nearby on Grand Avenue. The Broad does not offer v",
+      "Avenue, Los Angeles, CA 90012 Learn More The Broad, 221 S. Grand Avenue, Los Angeles, CA 90012 Free Tours Today's Free Public Tours Full Tour Schedule Group Visits Self-Guided Group Visits Guided Group Visits Learn More School Visits Self-Guided School Visits Guided Sc",
+      "ore our guides, programs, and activities made just for kids and families. Learn More Visit our free mobile guide on Bloomberg Connects for an audio tour for families, Looking with LeVar . Narrated by award-winning actor, director, and education advocate LeVar Burton , ",
+      "art collection. More from the shop The Shop at The Broad Hours Store Hours Tuesday, Wednesday, Friday | 11 am–5 pm Thursday | 11 am–8 pm Saturday–Sunday | 10 am–6 pm Closed Monday, Thanksgiving Day, and Christmas Day Customer Support Hours Monday–Sunday | 10 am–5 pm Plea"
+    ],
+    "image": "img/33.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.thebroad.org/visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/The_Broad",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/33.webp",
+    "commons_credit_id": "photo-33",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-56",
+    "city": "LA",
+    "name": "Universal Studios Hollywood",
+    "category": "themepark",
+    "source_url": "https://www.universalstudioshollywood.com/web/en/us/calendar-and-hours",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.universalstudioshollywood.com/web/en/us/calendar-and-hours",
+    "source_status": "未確認（公式カレンダーがJavaScriptで本文なし）",
+    "lat": 34.136518,
+    "lng": -118.356051,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Universal_Studios_Hollywood",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "2026/12/25の開園・閉園時刻、ホリデー演出、チケット価格、予約条件は未確認。",
+      "LA2–5泊案の高額追加オプション。節約基本予算に含めない。",
+      "DisneylandはAnaheim、UniversalはHollywood。両方を1日で回す標準行程にはしない。"
+    ],
+    "evidence_excerpts": [],
+    "image": "img/38.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.universalstudioshollywood.com/web/en/us/calendar-and-hours",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（公式カレンダーがJavaScriptで本文なし）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Universal_Studios_Hollywood",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/38.webp",
+    "commons_credit_id": "photo-38",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-57",
+    "city": "LA",
+    "name": "Disneyland Christmas",
+    "category": "themepark",
+    "source_url": "https://disneyland.disney.go.com/calendars/day/2026-12-25/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://disneyland.disney.go.com/calendars/day/2026-12-25/",
+    "source_status": "未確認（公式カレンダーがJavaScriptで本文なし）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "2026/12/25の開園・閉園時刻、ホリデー演出、チケット価格、予約条件は未確認。",
+      "LA2–5泊案の高額追加オプション。節約基本予算に含めない。",
+      "DisneylandはAnaheim、UniversalはHollywood。両方を1日で回す標準行程にはしない。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://disneyland.disney.go.com/calendars/day/2026-12-25/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（公式カレンダーがJavaScriptで本文なし）"
+      }
+    ]
+  },
+  {
+    "id": "option-58",
+    "city": "LA",
+    "name": "Santa Monica Pier",
+    "category": "beach",
+    "source_url": "https://www.santamonicapier.org/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.santamonicapier.org/",
+    "source_status": "本文取得",
+    "lat": 34.00861111,
+    "lng": -118.49861111,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Santa_Monica_Pier",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "海辺・桟橋の散歩候補。遊園地・各店舗・飲食は別料金。12/25の店舗営業は未確認。"
+    ],
+    "evidence_excerpts": [
+      " AM | MORNING TOUR EVERY MONDAY | 7:00 PM | SUNSET TOUR VIEW TOURS > Locals’ Night Every Third Thursday | SEPTEMBER - MAY | 3:30-7:30 PM VIEW EVENT > Wellness & Waves SATURDAYS | APRIL 4 - OCTOBER 17 | 8 - 10 AM LEARN MORE > Explore The Pier Shopping the pier The Santa Mon",
+      "ty as we collaborate with like-minded partners to provide unique, fun, and “can’t-believe-it’s-free” experiences on the Pier. Explore HAppenings Hosting an event Our historic landmark serves as an iconic backdrop for grand affairs, intimate gatherings, activations, and"
+    ],
+    "image": "img/34.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.santamonicapier.org/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Santa_Monica_Pier",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/34.webp",
+    "commons_credit_id": "photo-34",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-59",
+    "city": "LA",
+    "name": "Venice Beach",
+    "category": "beach",
+    "source_url": "https://www.laparks.org/venice",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 403,
+    "source_final_url": "https://www.laparks.org/venice",
+    "source_status": "未確認（取得不可）",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Venice_Beach",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "海辺の散策候補。12/25の屋内施設休館時の代替提案。夜間や人通りの少ない区間を避ける行程を検討。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.laparks.org/venice",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Venice_Beach",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-60",
+    "city": "LA",
+    "name": "Hollywood Walk of Fame",
+    "category": "sight",
+    "source_url": "https://walkoffame.com/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://walkoffame.com/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Hollywood_Walk_of_Fame",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "歩道の星を探す散策候補。撮影や勧誘が有料の場合は先に条件を確認する提案。"
+    ],
+    "evidence_excerpts": [],
+    "image": "img/37.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://walkoffame.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Hollywood_Walk_of_Fame",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/37.webp",
+    "commons_credit_id": "photo-37",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-61",
+    "city": "LA",
+    "name": "Hollywood Sign",
+    "category": "sight",
+    "source_url": "https://www.hollywoodsign.org/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.hollywoodsign.org/",
+    "source_status": "本文取得",
+    "lat": 34.13406111,
+    "lng": -118.32159167,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Hollywood_Sign",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "遠景観賞・ハイキング候補。看板自体への立入はしない。登山口・公園規則・日没前の帰路を公式で確認。"
+    ],
+    "evidence_excerpts": [],
+    "image": "img/36.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.hollywoodsign.org/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Hollywood_Sign",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/36.webp",
+    "commons_credit_id": "photo-36",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-62",
+    "city": "LA",
+    "name": "Walt Disney Concert Hall",
+    "category": "sight",
+    "source_url": "https://www.laphil.com/visit/when-youre-here/self-guided-tours",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 404,
+    "source_final_url": "https://www.laphil.com/visit/when-youre-here/self-guided-tours",
+    "source_status": "未確認（取得不可）",
+    "lat": 34.05527778,
+    "lng": -118.25,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Walt_Disney_Concert_Hall",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "建築外観の散策候補。指定のツアーURLは404、セルフツアー開催と無料条件は未確認。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.laphil.com/visit/when-youre-here/self-guided-tours",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Walt_Disney_Concert_Hall",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-63",
+    "city": "LA",
+    "name": "Grand Central Market",
+    "category": "food",
+    "source_url": "https://grandcentralmarket.com/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://grandcentralmarket.com/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Grand_Central_Market",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "DTLAの食事候補。各店ごとのメニュー・年末営業は未確認。Broad/Angels Flightとまとめる提案。"
+    ],
+    "evidence_excerpts": [],
+    "image": "img/41.webp",
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://grandcentralmarket.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Grand_Central_Market",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ],
+    "image_asset": "assets/img/41.webp",
+    "commons_credit_id": "photo-41",
+    "photo_caption": "参考写真。2026年末の装飾・天候・営業状況を示すものではない。"
+  },
+  {
+    "id": "option-64",
+    "city": "LA",
+    "name": "Little Tokyo",
+    "category": "neighborhood",
+    "source_url": "https://littletokyola.org/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://littletokyola.org/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "DTLA観光と組合せる散策・食事候補。特定店舗の価格と祝日営業は未確認。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://littletokyola.org/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-65",
+    "city": "LA",
+    "name": "El Matador State Beach",
+    "category": "beach",
+    "source_url": "https://www.parks.ca.gov/?page_id=633",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.parks.ca.gov/?page_id=633",
+    "source_status": "本文取得",
+    "lat": 34.03861111,
+    "lng": -118.875,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Robert_H._Meyer_Memorial_State_Beach",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "海岸景観候補。車なしでは往復交通・日没・帰路の確保を先に比較。駐車・アクセス状況は公式で確認。"
+    ],
+    "evidence_excerpts": [
+      "ay periods, and during weekends. Prices are subject to change without notice. Vehicle Day Use: $10.00 Day Use Hourly: $3.00 Close View the park accessibility information Park information Maps and Park Directions Explore map of the park (opens in new tab) Get directions t",
+      "cing, guidelines, and availability. Filming Permits If you would like to perform commercial or student filming or photography at the park, you need to contact the State Park film permit coordinator at (818) 880-0358. Image Gallery View the full gallery Beach Water Quality"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.parks.ca.gov/?page_id=633",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Robert_H._Meyer_Memorial_State_Beach",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-66",
+    "city": "LA",
+    "name": "California Science Center",
+    "category": "museum",
+    "source_url": "https://californiasciencecenter.org/visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 403,
+    "source_final_url": "https://californiasciencecenter.org/visit",
+    "source_status": "未確認（取得不可）",
+    "lat": 34.01555556,
+    "lng": -118.28583333,
+    "coordinate_source": "https://en.wikipedia.org/wiki/California_Science_Center",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "屋内科学館候補。無料一般展示と有料展示・IMAXを分ける。今回403で料金・Christmas時間は未確認。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://californiasciencecenter.org/visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "未確認（取得不可）"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/California_Science_Center",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-67",
+    "city": "LA",
+    "name": "Academy Museum of Motion Pictures",
+    "category": "museum",
+    "source_url": "https://www.academymuseum.org/en/visit",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.academymuseum.org/visit",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": 25,
+    "price_note": "一般大人$25、学生18歳以上valid IDで$15。16:30以降の現地割引は大人$18・学生$10。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "18歳以上学生、有効IDで$15。TAPカードは通常料金から$2割引の現地扱い。併用可否未確認。",
+    "notes": [
+      "通常水–月10:00–18:00、火曜休館。Christmas・元日の特別時間未確認。",
+      "Oscar体験・映画上映は別チケット。"
+    ],
+    "evidence_excerpts": [
+      "r Parking Garage, the Onyx Tower garage, and the Petersen Automotive Museum. Prices range from $10 to $40 depending on time and location. A range of street parking options is also available. View Parking Options Upcoming Closures and Hours Changes Parts of the museum ",
+      " be limited to LACMA guests. Museum Admission Advance reservations are encouraged Price Adults $25 Seniors (62 and over) $19 Students (18 and over, with valid ID) $15 Children (17 and under) FREE Museum Members FREE Academy Members FREE EBT Cardholders FREE Last Looks",
+      " at the Academy Museum Discount: Visit us after 4:30pm and enjoy reduced admission—Adults $18; seniors $15; students $10. Visitors under 17 are always free. Available onsite only. Free general admission for visitors 17 and under is provided by an endowment honori",
+      "ng Sid Ganis. Museum members receive $5 off general admission tickets for up to two guests per visit. TAP card holders get a $2 discount off of full-price admission. Discount applicable in person only. Present",
+      "the price of your screening or general admission ticket towards an annual membership and enjoy free general admission, invitations to members-only events, free admission to select screenings, discounts at the Academy Museum Store and Fanny's, and other fantastic benefi",
+      "ings Museum tickets are not required for film screenings. General Public Museum Members Adults $10 $8 Seniors (62 and over) $7 $6 Students (18 and over,  with valid ID) $5 $4 Children (17 and under) $5 $4 Matinee* $5 $4 *All Screenings before 4pm qualify Add $2 to pri",
+      "ces above for any double bill screenings. For all film screenings that are free for Museum members, Individual-level members receive one complimentary ticket, and Dual-level members, and above, receive two complimentary tickets. Here are details abo",
+      "immersive simulation of winning an Oscar, presented in the East West Bank Gallery Price Adults $10 Seniors (62 and over) $8 Students (18 and over, with valid ID) $5 Children (17 and under) FREE Museum Members $8 A separate ticket is required in addition to same-day ge",
+      "r Parking Garage, the Onyx Tower garage, and the Petersen Automotive Museum. Prices range from $10 to $40 depending on time and location. A range of street parking options is also available. Rideshare Drop-off at Roddenberry Lane, off the museum's Fairfax Avenue entra"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.academymuseum.org/en/visit",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-68",
+    "city": "LA",
+    "name": "Angels Flight",
+    "category": "sight",
+    "source_url": "https://www.angelsflight.org/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.angelsflight.org/",
+    "source_status": "本文取得",
+    "lat": 34.05133889,
+    "lng": -118.25021111,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Angels_Flight",
+    "price_usd": 1.5,
+    "price_note": "片道$1.50、TAP Stored Value利用者$0.75。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "通常毎日6:45–22:00。祝日特別運行未確認。",
+      "Grand Central MarketとBroadを結ぶ坂の移動候補。"
+    ],
+    "evidence_excerpts": [
+      "Operation Angels Flight ® is open seven days a week from 6:45 am to 10:00 pm. Fare The fare is $1.50 each way, and for $3.00 you can purchase a souvenir round-trip ticket and take a piece of history home with you. For Metro TAP Card users, a $0.75 fare is available for ",
+      "tro Rail and Metro Orange Line Stations Commuter Discounted Ticket Books Book of 5 tickets for $6.00 or a book of 40 tickets for $45.00. These tickets cannot be combined with Metro discount and are valid for use by one person only. IN THE MOVIES View More FILMING OPPORT"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.angelsflight.org/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Angels_Flight",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-69",
+    "city": "NYC",
+    "name": "JFK airport alternative",
+    "category": "airport",
+    "source_url": "https://www.jfkairport.com/transportation/airtrain",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.jfkairport.com/transportation/airtrain",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "空港別に航空券＋地上交通＋荷物＋到着時刻で比較する提案。路線・指定日運賃は未確認。",
+      "既存公式調査：AirTrain$8.75＋地下鉄$3＝$11.75片道（通常運賃、旅行直前再確認）。"
+    ],
+    "evidence_excerpts": [
+      "erminals The AirTrain takes passengers between terminals at JFK in under 10 minutes. This is a free, convenient service to access your connecting gate. Trains run every 5-15 minutes, but be sure to check monitors in the AirTrain station for any service changes. To and ",
+      "o Jamaica or Howard Beach Station. The one-way AirTrain fare between JFK and these stations is $8.75. To learn more, visit our public transportation page. Learn more To and from parking lots You can easily access parking areas by taking the AirTrain. Each terminal is a s",
+      "aces and raised-letter and Braille signs. Paying for AirTrain AirTrain JFK single-ride fare is $8.75. Children under five ride for free. If you are using public transportation to or from the airport, you will be charged when entering/exiting Jamaica Station and Howard Be",
+      " same account. Rolling 30-day fare cap Eligible AirTrain JFK fares are automatically capped at $43.50 within a rolling 30-day period. No advance purchase required. Just tap with the same payment method every trip. Pay $8.75 per ride. Once you've paid $43.50 within 30 day",
+      "s, additional rides are free for the remainder of that period. If your final eligible paid trip would exceed the cap, the fare will be adjusted so you never pay more than $43.50. Group Fare Travelin",
+      "? No advance purchase required. Just tap with the same payment method every trip. First rider: $8.75 Additional riders: $4.50 each Up to 5 riders Maximum total fare: $26.75 All riders must tap within a 5-minute period. After use, the same payment method cannot be used a"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.jfkairport.com/transportation/airtrain",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "local_file": "../research.md",
+        "checked_at": "2026-11-06 PST",
+        "claim": "既存公式調査の継承分。本文中の公式URL参照"
+      }
+    ]
+  },
+  {
+    "id": "option-70",
+    "city": "NYC",
+    "name": "LGA airport alternative",
+    "category": "airport",
+    "source_url": "https://www.mta.info/guides/airports/laguardia/lga-to-nyc",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.mta.info/guides/airports/laguardia/lga-to-nyc",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "空港別に航空券＋地上交通＋荷物＋到着時刻で比較する提案。路線・指定日運賃は未確認。",
+      "既存公式調査：Q70無料＋接続地下鉄$3。SEA/LAXとの直行便があるとは扱わない。"
+    ],
+    "evidence_excerpts": [
+      "ia Airport Your best public transit option from LaGuardia Airport is the LaGuardia Link Q70, a free bus that travels nonstop from the airport to the subway lines in Jackson Heights, Queens. You can also ride one more stop to Woodside for the Long Island Rail Road. You ",
+      "along 125 Street, the at 116 Street, or the in Astoria, Queens. Tips The LaGuardia Link Q70 is free. You do not have to pay to board the Q70 at LaGuardia Airport. To continue your trip on the subway or another local bus, tap your credit or debit card, smartphone, weara",
+      "ble device, or OMNY Card. M60-SBS service costs $3. Tap your credit debit card, smartphone, wearable device, or OMNY Card on the bus. Transfers between the subway and bus are free for two hours when you use the same card ",
+      "ugh you may also take the airport shuttle to Terminal B. The LaGuardia Link Q70 bus service is free. Buses are equipped with luggage racks for your convenience. Board through any door. 2. Take the Q70 to Jackson Heights-Roosevelt Av/74 St-Broadway. The Q70 runs nonstop",
+      "rvice runs every 8-10 minutes from the airport. Fare information Q70 LaGuardia Link service is free. You do not have to pay to board the bus. You do have to pay to enter the subway system. The fare is $3 for most people. Option 2: Take the LaGuardia Link Q70 to the Lon",
+      "et a LIRR ticket is through our TrainTime app . Fare information Q70 LaGuardia Link service is free. You do not have to pay to board the bus. The exact fare for LIRR depends on whether you're traveling during peak hours and if you're eligible for a reduced fare. Plan a",
+      "o see your exact fare. You can buy a ticket from Woodside to Penn Station or Grand Central for $5.25 during off-peak hours and $7.25 during peak hours. Learn more about CityTicket. Option 3: Take the M60-SBS to the subway or bus. 1. Catch the M60 at Terminals A, B, and ",
+      " Astoria, Queens, where you can connect to the lines. Fare information The fare for the M60 is $2.90. Tap your credit or debit card, smartphone, wearable device, or OMNY Card when you board the bus to pay. Contact us Get help with subway service For up-to-date service st"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.mta.info/guides/airports/laguardia/lga-to-nyc",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "local_file": "../research.md",
+        "checked_at": "2026-11-06 PST",
+        "claim": "既存公式調査の継承分。本文中の公式URL参照"
+      }
+    ]
+  },
+  {
+    "id": "option-71",
+    "city": "NYC",
+    "name": "EWR airport alternative",
+    "category": "airport",
+    "source_url": "https://www.newarkairport.com/to-from-airport/public-transportation",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.newarkairport.com/transportation/public-transport",
+    "source_status": "本文取得",
+    "lat": 40.6925,
+    "lng": -74.16861111,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Newark_Liberty_International_Airport",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "空港別に航空券＋地上交通＋荷物＋到着時刻で比較する提案。路線・指定日運賃は未確認。",
+      "既存公式調査：NJ Transit＋AirTrain→NY Penn通常大人片道$17.25。"
+    ],
+    "evidence_excerpts": [
+      " one way for the AirTrain to or from the airport terminals and Newark Airport Train station is $8.75 per person, in addition to the transit fare. If you do not already have a NJ Transit or Amtrak ticket, you will be charged as you enter or exit the station. New Jersey N",
+      "MNBNP or PASC line and transfer NJCL or NEC line) OR NJ Transit (NEC line) to PATH 55 minutes, $17.05 OR 55 minutes, $15.05 Journal Square PATH Station, Journal Square, NJ NJ Transit (NJCL or NEC) and PATH 30 minutes, $15.05 Newark Penn Station NJ Transit (NEC or NJCL li",
+      "ne) 5 minutes, $12.05 Trenton Transit Center, Trenton, NJ NJ Transit (NEC line) OR Amtrak (Northeast Regional line) 68 minutes, $23.25 OR 40 minutes, cost varies New York City New York City L",
+      "on Transportation Options Time and Cost Midtown Manhattan NJ Transit (NEC or NJCL) 30 minutes, $17.25 33rd Street PATH station NJ Transit (NJCL or NEC line) and PATH 40 minutes, $11.75 World Trade Center NJ Transit (NJCL or NEC line) and PATH OR NJ Transit (NJCL or NEC l",
+      "ine) and NYC Subway ( ​ or ​ ) 45 minutes, $11.75 Pennsylvania Pennsylvania Location Transportation Options Time and Cost North Philadelphia Southeastern Pennsylvania Transportation Authority (SEPTA) and NJ Transit (NEC",
+      " line) OR Amtrak (Northeast Regional line) 120 minutes, $37 OR 70 minutes, cost varies Newark Airport Express Bus CoachUSA offers a Newark Airport express bus that stops at every terminal. The bus offers three convenient Midtown ",
+      " (41st Street between 8th and 9th Avenues) This option takes about 50 minutes and tickets cost $23.50 one way or $39.50 roundtrip. There are discounts available for seniors and travelers with accessibility issues.  They also offer multi-trip packages. For more informatio",
+      ") and Elizabeth Maplewood, Irvington and Newark Bloomfield and Newark Brick, Lakewood, Howell, Freehold, Manalapan, Marlboro, Old Bridge, Jersey City and Newark Learn more about schedules. opens in a new tab Accessibility on NJ Transit, Amtrak and PATH All AirTrain tra"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.newarkairport.com/to-from-airport/public-transportation",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Newark_Liberty_International_Airport",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      },
+      {
+        "local_file": "../research.md",
+        "checked_at": "2026-11-06 PST",
+        "claim": "既存公式調査の継承分。本文中の公式URL参照"
+      }
+    ]
+  },
+  {
+    "id": "option-72",
+    "city": "LA",
+    "name": "LAX airport alternative",
+    "category": "airport",
+    "source_url": "https://www.metro.net/destinations/lax/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.metro.net/destinations/lax/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "空港別に航空券＋地上交通＋荷物＋到着時刻で比較する提案。路線・指定日運賃は未確認。",
+      "既存公式調査：Metro$1.75＋無料空港接続シャトル。FlyAway$12.75。APM当日稼働未確認。"
+    ],
+    "evidence_excerpts": [
+      "Center . Connect from LAX/Metro Transit Center ( Bus Bays 1 and 2 ) to all LAX terminals via a free, frequent shuttle. You can also catch Nonstop Flyaway bus service from Union Station and Van Nuys —direct to LAX terminals . Metro Micro , Metro’s on-demand rideshare se",
+      "rt. Parking is available at the following stations near LAX: C Line Aviation/LAX Daily parking $3/day Open 24/7, patrolled, gated, well-lit Hawthorne/Lennox Daily & long-term parking $3/day Open 24/7, patrolled Norwalk Station Daily & long-term parking $3/day or $60/",
+      "month Open 24/7, patrolled, gated, well-lit K Line Crenshaw/Expo Daily parking $3/day Open 24/7, patrolled Fairview Heights Daily & long-term parking $3/day Open 24/7, patrolled Fare and Payment Options Metro fares are simple and affordable. Regular F",
+      "are $1.75 Transfers are free within two hours when you tap to ride. Ways to Pay TAP card Credit or Debit card (digital or physical) Apple Wallet Cash (Bus Only) LAX/MTC Station Directory Try the new"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.metro.net/destinations/lax/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "local_file": "../research.md",
+        "checked_at": "2026-11-06 PST",
+        "claim": "既存公式調査の継承分。本文中の公式URL参照"
+      }
+    ]
+  },
+  {
+    "id": "option-73",
+    "city": "LA",
+    "name": "BUR airport alternative",
+    "category": "airport",
+    "source_url": "https://www.hollywoodburbankairport.com/ground-transportation/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.hollywoodburbankairport.com/pages/ground-transportation",
+    "source_status": "本文取得",
+    "lat": 34.20055556,
+    "lng": -118.35861111,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Hollywood_Burbank_Airport",
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "空港別に航空券＋地上交通＋荷物＋到着時刻で比較する提案。路線・指定日運賃は未確認。",
+      "Hollywood/Universal重視の場合の比較候補。NYへの直行便と旅行当日の接続交通・料金は未確認。"
+    ],
+    "evidence_excerpts": [
+      " Short-Term Parking Shuttles & Taxis Valet Parking Noise Daytime Telephone (818) 840-8840 Toll-Free 24-Hour Noise Hotline (800) 441-0409 Contact Us Airport Noise and Capacity Act (ANCA) Noise Monitoring Noise Impact Reduction Plan Noise Rules Part 150 Study Update Quar"
+    ],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.hollywoodburbankairport.com/ground-transportation/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Hollywood_Burbank_Airport",
+        "checked_at": "2026-11-06 23:57 PST",
+        "claim": "地図座標"
+      }
+    ]
+  },
+  {
+    "id": "option-74",
+    "city": "LA",
+    "name": "LGB airport alternative",
+    "category": "airport",
+    "source_url": "https://www.longbeach.gov/lgb/airlines-destinations/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.longbeach.gov/lgb/airlines-destinations/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "空港別に航空券＋地上交通＋荷物＋到着時刻で比較する提案。路線・指定日運賃は未確認。",
+      "Long Beach方面重視の比較候補。NYまでの乗継・地上交通込みで比較。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.longbeach.gov/lgb/airlines-destinations/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  },
+  {
+    "id": "option-75",
+    "city": "LA",
+    "name": "SNA airport / Anaheim alternative",
+    "category": "airport",
+    "source_url": "https://www.ocair.com/",
+    "checked_at": "2026-11-06 23:57 PST",
+    "http_status": 200,
+    "source_final_url": "https://www.ocair.com/",
+    "source_status": "本文取得",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": null,
+    "price_usd": null,
+    "price_note": "未確認。指定日・税手数料込みの料金は未検証。",
+    "hours_2026_12_31": "未確認",
+    "hours_2027_01_01": "未確認",
+    "student_policy": "未確認（UW学生証での適用可否を確認）",
+    "notes": [
+      "空港別に航空券＋地上交通＋荷物＋到着時刻で比較する提案。路線・指定日運賃は未確認。",
+      "Anaheim/Disneylandを重視する場合の比較候補。LA中心部への交通費を追加比較。"
+    ],
+    "evidence_excerpts": [],
+    "time_zone_note": "営業時間・公演時刻は施設現地時間（NY EST / LA PST）。確認日時はPST。",
+    "fact_policy": "提案と未確認情報はnotesに明記。from価格は指定日料金ではなく、nullは無料ではない。",
+    "sources": [
+      {
+        "url": "https://www.ocair.com/",
+        "checked_at": "2026-11-06 23:57 PST",
+        "status": "本文取得"
+      }
+    ]
+  }
+]

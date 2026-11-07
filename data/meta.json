@@ -1,11 +1,12 @@
 {
-  "siteTitle": "年末年始ニューヨーク旅行ガイド 2026–27",
+  "siteTitle": "年末年始 NY/LA/ベイエリア旅行ガイド 2026–27",
   "lang": "ja",
   "checkedDatePST": "2026-11-06",
-  "faresCheckedAtPST": "2026-11-06 23:44",
-  "researchCheckedDatePST": "2026-11-06",
+  "faresCheckedAtPST": "2026-11-07",
+  "researchCheckedDatePST": "2026-11-07",
   "disclaimer": "本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。",
   "nothingBooked": "現時点で航空券・宿泊・イベントの予約は行っていません。",
   "liveUrl": "http://www.kainel18915.f5.si/ny-winter-trip-guide/",
-  "githubPagesUrl": "https://kain18915.github.io/ny-winter-trip-guide/"
+  "githubPagesUrl": "https://kain18915.github.io/ny-winter-trip-guide/",
+  "v2": true
 }

@@ -1,0 +1,404 @@
+{
+  "checkedAt": "2026-11-07",
+  "disclaimer": "Google Hotels 表示（税・手数料込み目安）。部屋タイプ・空室は未確認。変動します。",
+  "nyc6n": {
+    "searchUrl": null,
+    "stays": [
+      {
+        "name": "The Bed Stuy Hotel",
+        "perNightUsd": 77,
+        "totalUsd": 552,
+        "rating": "4.8",
+        "reviews": "301"
+      },
+      {
+        "name": "NY Moore Hostel $100",
+        "perNightUsd": null,
+        "totalUsd": 710,
+        "rating": "4.2",
+        "reviews": "1.1K"
+      },
+      {
+        "name": "Chelsea International Hostel $91",
+        "perNightUsd": null,
+        "totalUsd": 649,
+        "rating": "3.5",
+        "reviews": "1.2K"
+      },
+      {
+        "name": "Budget Inn $92",
+        "perNightUsd": null,
+        "totalUsd": 634,
+        "rating": "3.3",
+        "reviews": "147"
+      },
+      {
+        "name": "Harbor House B&B $116",
+        "perNightUsd": null,
+        "totalUsd": 816,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Imperial Stay B&B $117",
+        "perNightUsd": null,
+        "totalUsd": 849,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Hotel Pergola JFK Airport $122",
+        "perNightUsd": null,
+        "totalUsd": 858,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "The Local NY $132",
+        "perNightUsd": null,
+        "totalUsd": 927,
+        "rating": "4.4",
+        "reviews": "1.5K"
+      },
+      {
+        "name": "Comfort Inn Staten Island $137",
+        "perNightUsd": null,
+        "totalUsd": 967,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Sheridan Hotel $146",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "The Nolita Express Hostel $146",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Airway Inn at LaGuardia $147",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Country Inn & Suites Staten Island $148",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Fairfield Queens/Fresh Meadows $148",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Cabana Hotel Bronx $157",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Corona Hotel $152",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Fairfield LaGuardia/Flushing $152",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Courtyard Queens/Fresh Meadows $155",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "HI New York City Hostel $157",
+        "perNightUsd": null,
+        "totalUsd": 940,
+        "rating": "4.4",
+        "reviews": "4.8K"
+      },
+      {
+        "name": "Red Roof PLUS+ Brooklyn 3rd Ave $156",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "LY New York Hotel $157",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Tremont Hotel Bronx $161",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Floral Park Motor Lodge $162",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Royal Hotel Bronx $163",
+        "perNightUsd": null,
+        "totalUsd": 1,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "31 Street Broadway Hotel $321",
+        "perNightUsd": null,
+        "totalUsd": 2,
+        "rating": null,
+        "reviews": null
+      }
+    ]
+  },
+  "nycNye": {
+    "searchUrl": null,
+    "stays": [
+      {
+        "name": "The Brooklyn Riviera Hostel",
+        "perNightUsd": null,
+        "totalUsd": 44,
+        "rating": "4.0",
+        "reviews": "184"
+      },
+      {
+        "name": "Budget Inn",
+        "perNightUsd": null,
+        "totalUsd": 84,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Serenity Room",
+        "perNightUsd": null,
+        "totalUsd": 110,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "The Bed Stuy Hotel",
+        "perNightUsd": null,
+        "totalUsd": 120,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "stay and relax",
+        "perNightUsd": null,
+        "totalUsd": 151,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Chelsea International Hostel",
+        "perNightUsd": null,
+        "totalUsd": 151,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Red Carpet Inn Brooklyn",
+        "perNightUsd": null,
+        "totalUsd": 152,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Cabana Hotel Bronx",
+        "perNightUsd": null,
+        "totalUsd": 153,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Hilton Garden Inn Flushing LaGuardia",
+        "perNightUsd": null,
+        "totalUsd": 157,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "NY Moore Hostel",
+        "perNightUsd": null,
+        "totalUsd": 158,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "LY New York Hotel",
+        "perNightUsd": null,
+        "totalUsd": 165,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Casa Azul Hotel",
+        "perNightUsd": null,
+        "totalUsd": 169,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Hotel Pergola JFK",
+        "perNightUsd": null,
+        "totalUsd": 170,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Comfort Inn Staten Island",
+        "perNightUsd": null,
+        "totalUsd": 173,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Country Inn & Suites Staten Island",
+        "perNightUsd": null,
+        "totalUsd": 177,
+        "rating": null,
+        "reviews": null
+      }
+    ]
+  },
+  "la4n": {
+    "searchUrl": null,
+    "stays": [
+      {
+        "name": "Fruit Hostel",
+        "perNightUsd": null,
+        "totalUsd": 101,
+        "rating": "3.0",
+        "reviews": "6"
+      },
+      {
+        "name": "Modern HomeStay",
+        "perNightUsd": null,
+        "totalUsd": 115,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Wilshire Metro Hostel",
+        "perNightUsd": null,
+        "totalUsd": 119,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "The California - Hollywood",
+        "perNightUsd": null,
+        "totalUsd": 118,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "8th & Ardmore Hostel",
+        "perNightUsd": null,
+        "totalUsd": 112,
+        "rating": "4.0",
+        "reviews": "97"
+      },
+      {
+        "name": "San Marino Guest House",
+        "perNightUsd": null,
+        "totalUsd": 115,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Rest & Rise LA",
+        "perNightUsd": null,
+        "totalUsd": 108,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "The Steady",
+        "perNightUsd": null,
+        "totalUsd": 132,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "The Rumi",
+        "perNightUsd": null,
+        "totalUsd": 112,
+        "rating": "4.0",
+        "reviews": "582"
+      },
+      {
+        "name": "Green House Hostel",
+        "perNightUsd": null,
+        "totalUsd": 147,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Banana Bungalow Hollywood",
+        "perNightUsd": null,
+        "totalUsd": 164,
+        "rating": "4.1",
+        "reviews": "956"
+      },
+      {
+        "name": "Samesun Hollywood",
+        "perNightUsd": null,
+        "totalUsd": 159,
+        "rating": "4.1",
+        "reviews": "1.5K"
+      },
+      {
+        "name": "VWM Hostel",
+        "perNightUsd": null,
+        "totalUsd": 160,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "Burlington Hostel",
+        "perNightUsd": null,
+        "totalUsd": 150,
+        "rating": null,
+        "reviews": null
+      },
+      {
+        "name": "HI Los Angeles Santa Monica Hostel",
+        "perNightUsd": null,
+        "totalUsd": 184,
+        "rating": "4.4",
+        "reviews": "1.6K"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1807 @@
+[
+  {
+    "id": "lodging-01",
+    "city": "NYC",
+    "name": "HI New York City Hostel",
+    "area": "Upper West Side",
+    "type": "hostel",
+    "official_url": "https://www.hiusa.org/find-hostels/new-york/new-york-891-amsterdam-ave",
+    "sources": [
+      {
+        "url": "https://www.hiusa.org/find-hostels/new-york/new-york-891-amsterdam-ave",
+        "final_url": "https://www.hiusa.org/find-hostels/new-york/new-york-891-amsterdam-ave",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "coordinate_source": "https://en.wikipedia.org/wiki/Hostelling_International_New_York",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://www.hiusa.org/wp-content/uploads/2020/02/HI-New-York-2000x1000-1.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "image": "img/lodging-01.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-02",
+    "city": "NYC",
+    "name": "The Local NY",
+    "area": "Long Island City, Queens",
+    "type": "hostel",
+    "official_url": "https://thelocalny.com/",
+    "sources": [
+      {
+        "url": "https://thelocalny.com/",
+        "final_url": "https://thelocalny.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7496206,
+    "lng": -73.9479154,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [
+      " found various options to have good food nearby as a vegan.  All of the amenities, restaurants, and subways are available within a five to 10 minute walk. I must recommend this hostel as your primary stay place on a decent budget,  if you’re visiting N.Y.C. Sinngla "
+    ],
+    "coordinate_source": "https://www.openstreetmap.org/node/8789178103",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "The Local NY, 44th Avenue, Court Square, Long Island City, Queens, Queens County, New York, 11109, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-03",
+    "city": "NYC",
+    "name": "NY Moore Hostel",
+    "area": "East Williamsburg, Brooklyn",
+    "type": "hostel",
+    "official_url": "https://www.nymoorehostel.com/",
+    "sources": [
+      {
+        "url": "https://www.nymoorehostel.com/",
+        "final_url": "https://www.nymoorehostel.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7043155,
+    "lng": -73.9375954,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [
+      "ghout the Hostel rooms & lobby. TRANSPORTATION The Hostel is a short walking distance from multiple Subway lines, with a quick 15 minute commute to Union Square in Manhattan and just a 5 minute ride from the heart of Williamsburg. OUR STAFF Our friendly and knowledg",
+      " and comfortable rooms Opportunity to meet and mingle with roommates from around the world Close to subways, shopping, dining and other amenities. Located near residential area William Burdett Great atmosphere doe finding people to explore with. Nice rooms with plen",
+      " Booking through hostel world got me a 4 bed shared room for $27 a night, which is a steal. Lots of train stations in walking distance too! Jennifer Spacious rooms, fully equipped kitchen which is open 24/7. Nice common area, has a TV with Netflix , free computer room. Has"
+    ],
+    "coordinate_source": "https://www.openstreetmap.org/way/279649763",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "New York Moore Hostel, 179, Moore Street, Brooklyn, Kings County, New York, 11206, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-04",
+    "city": "NYC",
+    "name": "International Student Center",
+    "area": "Upper West Side",
+    "type": "hostel",
+    "official_url": "https://www.nystudentcenter.org/",
+    "sources": [
+      {
+        "url": "https://www.nystudentcenter.org/",
+        "status": "error",
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.7871002,
+    "lng": -73.9699793,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/node/6746784455",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "International Student Center, 38, West 88th Street, Upper West Side, Manhattan Community Board 7, Manhattan, New York County, New York, 10024, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-05",
+    "city": "NYC",
+    "name": "American Dream Hostel",
+    "area": "Gramercy",
+    "type": "hostel",
+    "official_url": "https://www.americandreamhostel.com/",
+    "sources": [
+      {
+        "url": "https://www.americandreamhostel.com/",
+        "final_url": "https://www.americandreamhostel.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7395776,
+    "lng": -73.9831267,
+    "nearest_subway": "23 St（6）／23 St（N・R、公式記載）",
+    "nearest_subway_note": "公式本文の最寄記載。現行運行・徒歩経路はMTAで確認。",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "http://static1.squarespace.com/static/53f645f1e4b00109d8c74f4e/t/5ce58b634e17b61d1ea8278b/1558547301334/AD_logo.jpg?format=1500w",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [
+      "lso dot the surrounding neighborhood. At American Dream Hostel NYC , everything is a short walk (or subway ride) from something new to see or do while in New York City. Visit The Flatiron 23rd St Partnership page for an updated calendar of the goings on in our neigh",
+      "borhood. Nearest subway trains are 6 on 23rd St. and Park Ave. and N/R on 23rd St. and 5th Ave. Getting There Get to American Dream Bed & Breakfast—Instructions from Any Airport Taxi ",
+      " From JFK ($70 + tip and toll) From LGA ($38 + tip and toll) From EWA Newark  ($100 + tip and toll) Subway From JFK/La Guardia, use MTA trip planner here . From EWA Newark, use NJ trip planner here . We Make It Easy to Stay with Us SIMPLE. SAFE. WELCOMING. Book Your",
+      "How close are you to major NYC attractions? We're located in Manhattan near Union Square — close to subways, museums, shops, and more. Are linens & towels included? Yes, we provide both so you can pack light. Can I store my luggage before check-in or after check-out"
+    ],
+    "coordinate_source": "https://www.openstreetmap.org/node/5683351246",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "American Dream Bed & Breakfast, 168, East 24th Street, Gramercy, Manhattan Community Board 6, Manhattan, New York County, New York, 10010, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-06",
+    "city": "NYC",
+    "name": "Chelsea International Hostel",
+    "area": "Chelsea",
+    "type": "hostel",
+    "official_url": "https://www.chelseahostel.com/",
+    "sources": [
+      {
+        "url": "https://www.chelseahostel.com/",
+        "final_url": "https://www.chelseahostel.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.7432235,
+    "lng": -73.9990189,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/node/4596542825",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Chelsea international hostel, 251, West 20th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-07",
+    "city": "NYC",
+    "name": "Q4 Hotel",
+    "area": "Long Island City, Queens",
+    "type": "hostel",
+    "official_url": "https://q4hotel.com/",
+    "sources": [
+      {
+        "url": "https://q4hotel.com/",
+        "status": "error",
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.7499439,
+    "lng": -73.9375408,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/node/4248061489",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Q4 hotel, Queens Plaza North, Court Square, Long Island City, Queens, Queens County, New York, 11101, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-08",
+    "city": "NYC",
+    "name": "Freehand New York",
+    "area": "Flatiron",
+    "type": "hotel",
+    "official_url": "https://freehandhotels.com/new-york/",
+    "sources": [
+      {
+        "url": "https://freehandhotels.com/new-york/",
+        "final_url": "https://freehandhotels.com/new-york/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.739627,
+    "lng": -73.984647,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "coordinate_source": "https://en.wikipedia.org/wiki/George_Washington_Hotel_(New_York_City)",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://freehandhotels.com/new-york/wp-content/uploads/sites/5/2023/10/Freehand_Hotel_NewYork_Badroom.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "image": "img/lodging-08.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-09",
+    "city": "NYC",
+    "name": "Pod 39",
+    "area": "Murray Hill",
+    "type": "hotel",
+    "official_url": "https://www.thepodhotel.com/pod-39",
+    "sources": [
+      {
+        "url": "https://www.thepodhotel.com/pod-39",
+        "final_url": "https://www.thepodhotel.com/pod-39",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7494051,
+    "lng": -73.9765731,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://assets.milestoneinternet.com/pod-hotels/the-pod-hotels/siteimages/pod-39-home-hero.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/265864905",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Pod 39, 145, East 39th Street, Murray Hill, Manhattan Community Board 6, Manhattan, New York County, New York, 10016, United States",
+    "image": "img/lodging-09.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-10",
+    "city": "NYC",
+    "name": "Pod 51",
+    "area": "Midtown East",
+    "type": "hotel",
+    "official_url": "https://www.thepodhotel.com/pod-51",
+    "sources": [
+      {
+        "url": "https://www.thepodhotel.com/pod-51",
+        "final_url": "https://www.thepodhotel.com/pod-51",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://assets.milestoneinternet.com/pod-hotels/the-pod-hotels/siteimages/pod-51-home-hero.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "image": "img/lodging-10.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-11",
+    "city": "NYC",
+    "name": "Pod Times Square",
+    "area": "Hell’s Kitchen",
+    "type": "hotel",
+    "official_url": "https://www.thepodhotel.com/pod-times-square",
+    "sources": [
+      {
+        "url": "https://www.thepodhotel.com/pod-times-square",
+        "final_url": "https://www.thepodhotel.com/pod-times-square",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7584977,
+    "lng": -73.9932281,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://assets.milestoneinternet.com/pod-hotels/the-pod-hotels/siteimages/pod-times-sq-home-hero.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [
+      "avits Center and countless restaurants, bars and shops. With Port Authority just one block away and subway lines nearby, the rest of New York City is easy to explore too. Stay Near Times Square, Broadway & Midtown NYC Explore Times Square Times Square is only a few "
+    ],
+    "coordinate_source": "https://www.openstreetmap.org/node/6564006743",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "The Pod Times Square, 400, West 42nd Street, Manhattan Community Board 4, Manhattan, New York County, New York, 10036, United States",
+    "image": "img/lodging-11.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-12",
+    "city": "NYC",
+    "name": "Pod Brooklyn",
+    "area": "Williamsburg, Brooklyn",
+    "type": "hotel",
+    "official_url": "https://www.thepodhotel.com/pod-brooklyn",
+    "sources": [
+      {
+        "url": "https://www.thepodhotel.com/pod-brooklyn",
+        "final_url": "https://www.thepodhotel.com/pod-bk",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7152835,
+    "lng": -73.9588191,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://assets.milestoneinternet.com/pod-hotels/the-pod-hotels/siteimages/pod-bk-home-hero.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/279777213",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "The Pod, 247, Metropolitan Avenue, Williamsburg, Brooklyn, Kings County, New York, 11211, United States",
+    "image": "img/lodging-12.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-13",
+    "city": "NYC",
+    "name": "YOTEL New York Times Square",
+    "area": "Hell’s Kitchen",
+    "type": "hotel",
+    "official_url": "https://www.yotel.com/en/hotels/yotel-new-york",
+    "sources": [
+      {
+        "url": "https://www.yotel.com/en/hotels/yotel-new-york",
+        "final_url": "https://www.yotel.com/en/hotels/yotel-new-york",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.759242,
+    "lng": -73.995532,
+    "nearest_subway": "42 St–Port Authority（A・C・E、公式記載）",
+    "nearest_subway_note": "公式本文のアクセス記載。徒歩経路は確認。",
+    "coordinate_source": "https://www.yotel.com/en/hotels/yotel-new-york",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://www.yotel.com/sites/default/files/2026-02/NYC_N1039.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [
+      "tan. This is a Times Square hotel that keeps the energy of Manhattan close while staying practical: subway, bus and airport connections are all nearby, and getting from room to street takes minutes. YOTEL NEW YORK TIMES SQUARE, MEET HILTON HONORS The best price guar",
+      "t 42nd Street, on the western edge of Midtown. The Times Square-42 St / Port Authority Bus Terminal subway stop, served by the A, C and E lines, is about two avenue blocks east, connecting onward to the 1, 2, 3, 7, N, Q, R, W and S shuttle lines. Port Authority Bus ",
+      "irTrain to Howard Beach and the A train. Newark Liberty is about 40 to 50 minutes by NJ Transit and subway, similar by car. LaGuardia is closest by distance but not always fastest: taxi or rideshare typically takes 25 to 45 minutes, with the M60 bus offering a cheap",
+      "er, but slower subway connection. Transport JFK Airport 45-minute drive Newark Liberty International Airport 50-minute public transport Grand Central Terminal 11 minute drive Read o",
+      " York trip even better. What’s the best way to explore New York from the hotel? Walking, taking the subway, or using rideshares are the easiest ways to explore NYC from our prime Times Square location. What's the vibe at the hotel? YOTEL New York Times Square offers"
+    ],
+    "image": "img/lodging-13.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-14",
+    "city": "NYC",
+    "name": "Moxy NYC Times Square",
+    "area": "Garment District",
+    "type": "hotel",
+    "official_url": "https://moxytimessquare.com/",
+    "sources": [
+      {
+        "url": "https://moxytimessquare.com/",
+        "final_url": "https://moxytimessquare.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7522281,
+    "lng": -73.9892637,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/node/11748989360",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Moxy NYC Times Square, 487, 7th Avenue, Garment District, Manhattan Community Board 5, Manhattan, New York County, New York, 10018, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-15",
+    "city": "NYC",
+    "name": "Moxy NYC East Village",
+    "area": "East Village",
+    "type": "hotel",
+    "official_url": "https://moxyeastvillage.com/",
+    "sources": [
+      {
+        "url": "https://moxyeastvillage.com/",
+        "final_url": "https://moxyeastvillage.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.731407,
+    "lng": -73.9894371,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/1396638254",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Moxy, 112, East 11th Street, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10003, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-16",
+    "city": "NYC",
+    "name": "Moxy NYC Lower East Side",
+    "area": "Lower East Side",
+    "type": "hotel",
+    "official_url": "https://moxylower-eastside.com/",
+    "sources": [
+      {
+        "url": "https://moxylower-eastside.com/",
+        "status": "error",
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-17",
+    "city": "NYC",
+    "name": "Moxy Brooklyn Williamsburg",
+    "area": "Williamsburg, Brooklyn",
+    "type": "hotel",
+    "official_url": "https://www.moxywilliamsburg.com/",
+    "sources": [
+      {
+        "url": "https://www.moxywilliamsburg.com/",
+        "status": "error",
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.7114591,
+    "lng": -73.9628918,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/1408407482",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Moxy, 353, Bedford Avenue, Williamsburg, Brooklyn, Kings County, New York, 11211, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-18",
+    "city": "NYC",
+    "name": "LIC Hotel",
+    "area": "Long Island City, Queens",
+    "type": "hotel",
+    "official_url": "https://www.lichotelny.com/",
+    "sources": [
+      {
+        "url": "https://www.lichotelny.com/",
+        "final_url": "https://www.lichotelny.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.749411,
+    "lng": -73.9471369,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "http://static1.squarespace.com/static/5f8f1025509ef00c9174e2db/t/5f8f112c736c6833fda8d829/1603211571680/logo_green1+%281%29-1.jpg?format=1500w",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/281332437",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "LIC Hotel, 44-04, 21st Street, Court Square, Long Island City, Queens, Queens County, New York, 11101, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-19",
+    "city": "NYC",
+    "name": "Feather Factory Hotel",
+    "area": "Long Island City, Queens",
+    "type": "hotel",
+    "official_url": "https://www.featherfactoryhotel.com/",
+    "sources": [
+      {
+        "url": "https://www.featherfactoryhotel.com/",
+        "final_url": "https://featherfactoryhotel.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7441657,
+    "lng": -73.9407386,
+    "nearest_subway": "Hunters Point Av（7、公式記載）",
+    "nearest_subway_note": "公式本文は最寄駅まで700mと記載。実際の入口・徒歩経路は確認。",
+    "coordinate_source": "https://www.featherfactoryhotel.com/",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://featherfactoryhotel.com/IMAGENES/SLIDER/Feather%20Factory%20Hotel%20001.webp",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [
+      ".2 mi) and the Museum of the Moving Image 2.5 km (1.6 mi). To get around New York, Hunters Point Av subway station (7 train) is 700 m (0.4 mi) away, Court Sq-23 St (E and F trains) 900 m (0.6 mi) and Queens Plaza (E, F and R trains) 1 km (0.6 mi). On the 7 train you",
+      "ocated at 26-32 Skillman Avenue, Long Island City, NY 11101 , in the borough of Queens. The nearest subway station, Hunters Point Av, is 700 m (0.4 mi) from the door. Address 26-32 Skillman Ave Long Island City, NY 11101 7 train Hunters Point Av 0.4 mi (700 m) from ",
+      "onvenient. Public transportation nearby Hunterspoint Avenue LIRR station is 650 m (0.4 mi) away. By subway, you have Hunters Point Av (7 train) at 700 m, Court Sq-23 St (E and F) at 900 m, 21 St (G) at 1 km, Queens Plaza (E, F and R) at 1 km and Vernon Blvd-Jackson ",
+      "ng Hogshead Ranch 230 m · 0.1 mi Hunterspoint Avenue station (LIRR) 650 m · 0.4 mi Hunters Point Av subway 700 m · 0.4 mi Court Sq-23 St subway 900 m · 0.6 mi SculptureCenter 900 m · 0.6 mi 1 to 1.5 km (0.6 to 0.9 mi) Queens Plaza subway 1 km · 0.6 mi Vernon Blvd-Ja",
+      "ckson Av subway 1.1 km · 0.7 mi MoMA PS1 1.2 km · 0.7 mi 1.5 to 2 km (0.9 to 1.2 mi) Hunter's Point South Park 1.7 km · 1.1 mi Gantry Plaza State Park 1.9 km · 1.2 mi Over 2 k"
+    ],
+    "image": "img/lodging-19.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-20",
+    "city": "NYC",
+    "name": "LIC Plaza Hotel",
+    "area": "Long Island City, Queens",
+    "type": "hotel",
+    "official_url": "https://www.licplazahotel.com/",
+    "sources": [
+      {
+        "url": "https://www.licplazahotel.com/",
+        "status": "error",
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-21",
+    "city": "NYC",
+    "name": "The West Village Eurohostel（旧The Jane候補URL）",
+    "area": "West Village",
+    "type": "hotel",
+    "official_url": "https://www.thejanenyc.com/",
+    "sources": [
+      {
+        "url": "https://www.thejanenyc.com/",
+        "final_url": "https://www.westvillageeurohostel.com",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "名称変更・転送あり、予約対象物件は要再確認",
+    "lat": 40.73833333,
+    "lng": -74.00944444,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "coordinate_source": "https://en.wikipedia.org/wiki/American_Seamen's_Friend_Society_Sailors'_Home_and_Institute",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。",
+      "旧The Jane公式URLはWest Village Eurohostelに転送。現ブランド・所在地・予約条件を再確認。旧Wikipedia座標は参考値。"
+    ],
+    "image_url": "http://static1.squarespace.com/static/68e554a11d43c33d8c2d3e42/t/692f81ac7d955c6b564f3a26/1764721068374/WV-Eurohostel-stacked-white.png?format=1500w",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-22",
+    "city": "NYC",
+    "name": "The Hotel @ Fifth Avenue",
+    "area": "Koreatown",
+    "type": "hotel",
+    "official_url": "https://www.hotelatfifthavenue.com/",
+    "sources": [
+      {
+        "url": "https://www.hotelatfifthavenue.com/",
+        "final_url": "https://www.hotelatfifthavenuenyc.com",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.747823,
+    "lng": -73.9890902,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "coordinate_source": "https://www.hotelatfifthavenue.com/",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://www.hotelatfifthavenuenyc.com/images/logo-schema.png",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "image": "img/lodging-22.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-23",
+    "city": "NYC",
+    "name": "Hotel 31",
+    "area": "Midtown South",
+    "type": "hotel",
+    "official_url": "https://www.hotel31.com/",
+    "sources": [
+      {
+        "url": "https://www.hotel31.com/",
+        "final_url": "https://www.hotel31.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 40.7445627,
+    "lng": -73.9818094,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/265261769",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Hotel 31, 120, East 31st Street, Rose Hill, Manhattan Community Board 5, Manhattan, New York County, New York, 10016, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-24",
+    "city": "NYC",
+    "name": "The Leo House",
+    "area": "Chelsea",
+    "type": "guesthouse",
+    "official_url": "https://leohousenyc.com/",
+    "sources": [
+      {
+        "url": "https://leohousenyc.com/",
+        "status": "error",
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.7456073,
+    "lng": -73.9999064,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/264651600",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "The Leo House, 332, West 23rd Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-25",
+    "city": "NYC",
+    "name": "The Historic Blue Moon Hotel",
+    "area": "Lower East Side",
+    "type": "hotel",
+    "official_url": "https://www.bluemoon-nyc.com/",
+    "sources": [
+      {
+        "url": "https://www.bluemoon-nyc.com/",
+        "final_url": "https://www.bluemoon-nyc.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "要注意（本文に不整合あり）",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "coordinate_source": "https://en.wikipedia.org/wiki/Blue_Moon_Hotel",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。",
+      "公式本文にNapa Valley等の無関係なテンプレート文が混在。掲載情報・営業継続・予約対象の信頼性は未確認。"
+    ],
+    "image_url": "https://cdn.prod.website-files.com/671fd1b43a70afbe10b2319f/671fed51210cd2fc902f77ae_10galery_02Compress.webp",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "image": "img/lodging-25.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-26",
+    "city": "NYC",
+    "name": "Hyatt House Jersey City",
+    "area": "Exchange Place, Jersey City",
+    "type": "hotel",
+    "official_url": "https://www.hyatt.com/hyatt-house/en-US/ewrxj-hyatt-house-jersey-city",
+    "sources": [
+      {
+        "url": "https://www.hyatt.com/hyatt-house/en-US/ewrxj-hyatt-house-jersey-city",
+        "final_url": "https://www.hyatt.com/hyatt-house/en-US/ewrxj-hyatt-house-jersey-city",
+        "status": 429,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.7159431,
+    "lng": -74.0338805,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。",
+      "NYC市外。PATH等の運賃は地下鉄OMNY上限と別に確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/424998825",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Hyatt House New Jersey, 1, Exchange Place, Colgate Center, Jersey City, Hudson County, New Jersey, 07302, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-27",
+    "city": "NYC",
+    "name": "DoubleTree Jersey City",
+    "area": "Newport, Jersey City",
+    "type": "hotel",
+    "official_url": "https://www.hilton.com/en/hotels/ewrcydt-doubletree-hotel-and-suites-jersey-city/",
+    "sources": [
+      {
+        "url": "https://www.hilton.com/en/hotels/ewrcydt-doubletree-hotel-and-suites-jersey-city/",
+        "final_url": "https://www.hilton.com/en/hotels/ewrcydt-doubletree-hotel-and-suites-jersey-city/",
+        "status": 403,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.7235929,
+    "lng": -74.0367522,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。",
+      "NYC市外。PATH等の運賃は地下鉄OMNY上限と別に確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/27111277",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "DoubleTree, 455, Washington Boulevard, Newport, Jersey City, Hudson County, New Jersey, 07310, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-28",
+    "city": "NYC",
+    "name": "Holland Hotel Jersey City",
+    "area": "Newport, Jersey City",
+    "type": "hotel",
+    "official_url": "https://www.hollandhotel.com/",
+    "sources": [
+      {
+        "url": "https://www.hollandhotel.com/",
+        "final_url": "https://www.hollandhotel.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 40.7297102,
+    "lng": -74.0401902,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。",
+      "NYC市外。PATH等の運賃は地下鉄OMNY上限と別に確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/292375847",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "The Holland Hotel, 175, 12th Street, Hamilton Park, Journal Square, Jersey City, Hudson County, New Jersey, 07310, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-29",
+    "city": "NYC",
+    "name": "Hampton Inn Brooklyn Downtown",
+    "area": "Downtown Brooklyn",
+    "type": "hotel",
+    "official_url": "https://www.hilton.com/en/hotels/nycbkhx-hampton-brooklyn-downtown/",
+    "sources": [
+      {
+        "url": "https://www.hilton.com/en/hotels/nycbkhx-hampton-brooklyn-downtown/",
+        "final_url": "https://www.hilton.com/en/hotels/nycbkhx-hampton-brooklyn-downtown/",
+        "status": 403,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-30",
+    "city": "NYC",
+    "name": "citizenM New York Bowery",
+    "area": "Bowery",
+    "type": "hotel",
+    "official_url": "https://www.citizenm.com/hotels/united-states/new-york/new-york-bowery-hotel",
+    "sources": [
+      {
+        "url": "https://www.citizenm.com/hotels/united-states/new-york/new-york-bowery-hotel",
+        "final_url": "https://www.marriott.com/brands/citizenm.mi",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（物件URLがブランドトップへ転送）",
+    "lat": 40.7205955,
+    "lng": -73.9934478,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/715606203",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "citizenM, 189, Bowery, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-31",
+    "city": "LA",
+    "name": "HI Los Angeles Santa Monica Hostel",
+    "area": "Santa Monica",
+    "type": "hostel",
+    "official_url": "https://www.hiusa.org/find-hostels/california/santa-monica-1436-2nd-street",
+    "sources": [
+      {
+        "url": "https://www.hiusa.org/find-hostels/california/santa-monica-1436-2nd-street",
+        "final_url": "https://www.hiusa.org/find-hostels/california/santa-monica-1436-2nd-street",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://www.hiusa.org/wp-content/uploads/2020/02/LA-SM-featured-350x200-1.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "image": "img/lodging-31.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-32",
+    "city": "LA",
+    "name": "Samesun Hollywood",
+    "area": "Hollywood",
+    "type": "hostel",
+    "official_url": "https://samesun.com/hollywood/",
+    "sources": [
+      {
+        "url": "https://samesun.com/hollywood/",
+        "final_url": "https://samesun.com/hollywood/",
+        "status": 403,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 34.1013896,
+    "lng": -118.3393354,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/node/13253155317",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Samesun Hostel, Alley 89368, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-33",
+    "city": "LA",
+    "name": "Samesun Venice Beach",
+    "area": "Venice",
+    "type": "hostel",
+    "official_url": "https://samesun.com/venice-beach/",
+    "sources": [
+      {
+        "url": "https://samesun.com/venice-beach/",
+        "final_url": "https://samesun.com/venice-beach/",
+        "status": 403,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 33.987336,
+    "lng": -118.4733306,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/413168603",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Samesun Venice Beach, 25, Windward Avenue, Venice, Los Angeles, Los Angeles County, California, 90291, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-34",
+    "city": "LA",
+    "name": "Banana Bungalow Hollywood",
+    "area": "Hollywood",
+    "type": "hostel",
+    "official_url": "https://www.bananabungalows.com/",
+    "sources": [
+      {
+        "url": "https://www.bananabungalows.com/",
+        "final_url": "https://www.bananabungalows.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 34.10151220201081,
+    "lng": -118.31887338720598,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "coordinate_source": "https://www.bananabungalows.com/",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://www.bananabungalows.com/images/og.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-35",
+    "city": "LA",
+    "name": "Banana Bungalow West Hollywood",
+    "area": "West Hollywood",
+    "type": "hostel",
+    "official_url": "https://www.bananabungalows.com/",
+    "sources": [
+      {
+        "url": "https://www.bananabungalows.com/",
+        "final_url": "https://www.bananabungalows.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 34.0818329,
+    "lng": -118.3616791,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "coordinate_source": "https://www.openstreetmap.org/node/4433581966",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://www.bananabungalows.com/images/og.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Banana Bungalow West Hollywood, Clinton Street, Beverly Grove, Fairfax, Los Angeles, Los Angeles County, California, 90046, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-36",
+    "city": "LA",
+    "name": "Orange Drive Hostel",
+    "area": "Hollywood",
+    "type": "hostel",
+    "official_url": "https://www.orangedrivehostel.com/",
+    "sources": [
+      {
+        "url": "https://www.orangedrivehostel.com/",
+        "final_url": "https://orangedrivehostel.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 34.1035061,
+    "lng": -118.3413067,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/way/424105901",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Orange Drive Hostel, 1764, North Orange Drive, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-37",
+    "city": "LA",
+    "name": "Freehand Los Angeles",
+    "area": "Downtown LA",
+    "type": "hostel/hotel",
+    "official_url": "https://freehandhotels.com/los-angeles/",
+    "sources": [
+      {
+        "url": "https://freehandhotels.com/los-angeles/",
+        "final_url": "https://freehandhotels.com/los-angeles/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 34.04444444,
+    "lng": -118.25638889,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "coordinate_source": "https://en.wikipedia.org/wiki/Commercial_Exchange_Building",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://freehandhotels.com/los-angeles/wp-content/uploads/sites/4/2024/01/broken-shaker-los-angeles-freehand-hotel-rooftop-pool.jpg",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "image": "img/lodging-37.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-38",
+    "city": "LA",
+    "name": "The Rumi",
+    "area": "Koreatown",
+    "type": "hostel",
+    "official_url": "https://therumihostel.com/",
+    "sources": [
+      {
+        "url": "https://therumihostel.com/",
+        "status": "error",
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 34.0570413,
+    "lng": -118.3075295,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/node/10757362805",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "The Rumi, 820, South Oxford Avenue, Koreatown, Los Angeles, Los Angeles County, California, 90005, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-39",
+    "city": "LA",
+    "name": "Hollywood Hotel",
+    "area": "East Hollywood",
+    "type": "hotel",
+    "official_url": "https://www.thehollywoodhotel.com/",
+    "sources": [
+      {
+        "url": "https://www.thehollywoodhotel.com/",
+        "final_url": "https://www.thehollywoodhotel.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 34.0928217,
+    "lng": -118.291181,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [
+      "more... View All Specials HH DODGER STADIUM BROAD MUSEUM STAPLES CENTER WELCOME TO HOLLYWOOD With a metro station just across the street and many must-see California landmarks only minutes away, our iconic boutique destination is the most accessible of all Hollywood hotels"
+    ],
+    "coordinate_source": "https://www.openstreetmap.org/way/955153350",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Hollywood Hotel, 1160, North Vermont Avenue, East Hollywood, Los Angeles, Los Angeles County, California, 90029, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-40",
+    "city": "LA",
+    "name": "The Adler a Hollywood Hotel",
+    "area": "Hollywood",
+    "type": "hotel",
+    "official_url": "https://www.adlerhollywood.com/",
+    "sources": [
+      {
+        "url": "https://www.adlerhollywood.com/",
+        "status": "error",
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-41",
+    "city": "LA",
+    "name": "Hollywood Downtowner Inn",
+    "area": "East Hollywood",
+    "type": "motel",
+    "official_url": "https://www.hollywooddowntowner.com/",
+    "sources": [
+      {
+        "url": "https://www.hollywooddowntowner.com/",
+        "final_url": "https://www.hollywooddowntowner.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "未確認（公式本文取得不可・候補のみ）",
+    "lat": 34.1020072,
+    "lng": -118.3117495,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/relation/6268306",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Hollywood Downtowner Inn, 5601, Hollywood Boulevard, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-42",
+    "city": "LA",
+    "name": "Sea Blue Hotel",
+    "area": "Santa Monica",
+    "type": "hotel",
+    "official_url": "https://www.seabluehotel.com/",
+    "sources": [
+      {
+        "url": "https://www.seabluehotel.com/",
+        "final_url": "https://www.seabluehotel.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": 34.0097975,
+    "lng": -118.4934769,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": "https://assets.milestoneinternet.com/cdn-cgi/image/f=auto/vagabond-inn-corporation/sea-blue-hotel/site-images/home/view-of-santa-monica-beach-california.jpg?width=1920&height=1024",
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_source": "https://www.openstreetmap.org/relation/20416816",
+    "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
+    "osm_name": "Sea Blue Hotel, 1670, Ocean Avenue, Downtown Santa Monica, Santa Monica, Los Angeles County, California, 90401, United States",
+    "image": "img/lodging-42.webp",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  },
+  {
+    "id": "lodging-43",
+    "city": "LA",
+    "name": "American Hotel Los Angeles",
+    "area": "Arts District, DTLA",
+    "type": "hotel",
+    "official_url": "https://www.americanhotella.com/",
+    "sources": [
+      {
+        "url": "https://www.americanhotella.com/",
+        "final_url": "https://www.americanhotella.com/",
+        "status": 200,
+        "checked_at": "2026-11-06 23:57 PST"
+      }
+    ],
+    "checked_at": "2026-11-06 23:57 PST",
+    "listing_status": "公式ページ取得",
+    "lat": null,
+    "lng": null,
+    "nearest_subway": null,
+    "nearest_subway_note": "未確認。最寄駅・徒歩経路は予約前に地図で確認",
+    "price_usd_total_2026_12_28_to_2027_01_03": null,
+    "price_usd_nye_night": null,
+    "price_note": "未確認。2026/12/28チェックイン→2027/1/3チェックアウト6泊・大人1名、12/31→1/1の税込実売総額は静的公式本文に無し。一般のfrom価格は転記しない。LAは比較用日付であり実際の推奨滞在日ではない。",
+    "notes": [
+      "比較候補。低価格・営業継続・空室を保証しない。",
+      "税、手数料、キャンセル条件、最低泊数、年齢制限、相部屋の性別条件は未確認。"
+    ],
+    "image_url": null,
+    "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
+    "transit_source_excerpts": [],
+    "coordinate_note": "未確認。OSM名称検索が別物件を返したため不採用。",
+    "field_status": {
+      "name_area_type": "公式取得本文または候補の名称。listing_status参照",
+      "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
+      "nearest_subway": "公式で確認できたもののみ記入、その他null",
+      "price": "指定日・税込・1名実売総額は未確認",
+      "photo": "自由ライセンスではない。公開利用は別途権利確認。"
+    }
+  }
+]

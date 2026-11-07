@@ -1,0 +1,361 @@
+[
+  {
+    "subject": "Central Park",
+    "lat": 40.78222222,
+    "lng": -73.96527778,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Central_Park",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/01.webp"
+  },
+  {
+    "subject": "Times Square",
+    "lat": 40.7575,
+    "lng": -73.9858,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Times_Square",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/02.webp"
+  },
+  {
+    "subject": "Brooklyn Bridge",
+    "lat": 40.7057,
+    "lng": -73.9964,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Brooklyn_Bridge",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/03.webp"
+  },
+  {
+    "subject": "Dumbo, Brooklyn",
+    "lat": 40.703,
+    "lng": -73.99,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Dumbo,_Brooklyn",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/04.webp"
+  },
+  {
+    "subject": "Grand Central Terminal",
+    "lat": 40.7528,
+    "lng": -73.9772,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Grand_Central_Terminal",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/05.webp"
+  },
+  {
+    "subject": "New York Public Library Main Branch",
+    "lat": 40.75305556,
+    "lng": -73.98194444,
+    "coordinate_source": "https://en.wikipedia.org/wiki/New_York_Public_Library_Main_Branch",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/06.webp"
+  },
+  {
+    "subject": "Bryant Park",
+    "lat": 40.75388889,
+    "lng": -73.98388889,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Bryant_Park",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/07.webp"
+  },
+  {
+    "subject": "Rockefeller Center",
+    "lat": 40.75861111,
+    "lng": -73.97916667,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Rockefeller_Center",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image_status": "代表画像が写真でないため除外"
+  },
+  {
+    "subject": "Empire State Building",
+    "lat": 40.7483,
+    "lng": -73.9856,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Empire_State_Building",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/09.webp"
+  },
+  {
+    "subject": "Statue of Liberty",
+    "lat": 40.68916667,
+    "lng": -74.04444444,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/10.webp"
+  },
+  {
+    "subject": "Ellis Island",
+    "lat": 40.69944444,
+    "lng": -74.03972222,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Ellis_Island",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/11.webp"
+  },
+  {
+    "subject": "National September 11 Memorial & Museum",
+    "lat": 40.71166667,
+    "lng": -74.01361111,
+    "coordinate_source": "https://en.wikipedia.org/wiki/National_September_11_Memorial_&_Museum",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/12.webp"
+  },
+  {
+    "subject": "The High Line",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/High_Line",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/13.webp"
+  },
+  {
+    "subject": "Chelsea Market",
+    "lat": 40.7425,
+    "lng": -74.00611111,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Chelsea_Market",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/14.webp"
+  },
+  {
+    "subject": "Chinatown, Manhattan",
+    "lat": 40.715,
+    "lng": -73.997,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Chinatown,_Manhattan",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/15.webp"
+  },
+  {
+    "subject": "SoHo, Manhattan",
+    "lat": 40.723,
+    "lng": -74,
+    "coordinate_source": "https://en.wikipedia.org/wiki/SoHo,_Manhattan",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/16.webp"
+  },
+  {
+    "subject": "Washington Square Park",
+    "lat": 40.73083333,
+    "lng": -73.9975,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Washington_Square_Park",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/17.webp"
+  },
+  {
+    "subject": "Staten Island Ferry",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Staten_Island_Ferry",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/18.webp"
+  },
+  {
+    "subject": "Metropolitan Museum of Art",
+    "lat": 40.7794,
+    "lng": -73.9631,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Metropolitan_Museum_of_Art",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/19.webp"
+  },
+  {
+    "subject": "Museum of Modern Art",
+    "lat": 40.7617,
+    "lng": -73.9775,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/20.webp"
+  },
+  {
+    "subject": "American Museum of Natural History",
+    "lat": 40.78083333,
+    "lng": -73.97444444,
+    "coordinate_source": "https://en.wikipedia.org/wiki/American_Museum_of_Natural_History",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/21.webp"
+  },
+  {
+    "subject": "Solomon R. Guggenheim Museum",
+    "lat": 40.78305556,
+    "lng": -73.95888889,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Solomon_R._Guggenheim_Museum",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/22.webp"
+  },
+  {
+    "subject": "Whitney Museum",
+    "lat": 40.7396,
+    "lng": -74.0089,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Whitney_Museum_of_American_Art",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/23.webp"
+  },
+  {
+    "subject": "Brooklyn Museum",
+    "lat": 40.67130556,
+    "lng": -73.96375,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Brooklyn_Museum",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/24.webp"
+  },
+  {
+    "subject": "Prospect Park (Brooklyn)",
+    "lat": 40.66166667,
+    "lng": -73.97083333,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Prospect_Park_(Brooklyn)",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/25.webp"
+  },
+  {
+    "subject": "Dyker Heights",
+    "lat": 40.62,
+    "lng": -74.007,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Dyker_Heights,_Brooklyn",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image_status": "自由ライセンス未確認"
+  },
+  {
+    "subject": "Flushing, Queens",
+    "lat": 40.765,
+    "lng": -73.805,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Flushing,_Queens",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/27.webp"
+  },
+  {
+    "subject": "Long Island City",
+    "lat": 40.7509,
+    "lng": -73.9411,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Long_Island_City",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/28.webp"
+  },
+  {
+    "subject": "Williamsburg, Brooklyn",
+    "lat": 40.71,
+    "lng": -73.96,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Williamsburg,_Brooklyn",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/29.webp"
+  },
+  {
+    "subject": "Jersey City, New Jersey",
+    "lat": 40.71,
+    "lng": -74.06,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Jersey_City,_New_Jersey",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/30.webp"
+  },
+  {
+    "subject": "Griffith Observatory",
+    "lat": 34.11833333,
+    "lng": -118.30033333,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Griffith_Observatory",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/31.webp"
+  },
+  {
+    "subject": "Getty Center",
+    "lat": 34.0775,
+    "lng": -118.475,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Getty_Center",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/32.webp"
+  },
+  {
+    "subject": "The Broad",
+    "lat": 34.0544,
+    "lng": -118.2506,
+    "coordinate_source": "https://en.wikipedia.org/wiki/The_Broad",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/33.webp"
+  },
+  {
+    "subject": "Santa Monica Pier",
+    "lat": 34.00861111,
+    "lng": -118.49861111,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Santa_Monica_Pier",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/34.webp"
+  },
+  {
+    "subject": "Venice Beach",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Venice_Beach",
+    "checked_at": "2026-11-06 23:57 PST"
+  },
+  {
+    "subject": "Hollywood Sign",
+    "lat": 34.13406111,
+    "lng": -118.32159167,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Hollywood_Sign",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/36.webp"
+  },
+  {
+    "subject": "Hollywood Walk of Fame",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Hollywood_Walk_of_Fame",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/37.webp"
+  },
+  {
+    "subject": "Universal Studios Hollywood",
+    "lat": 34.136518,
+    "lng": -118.356051,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Universal_Studios_Hollywood",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/38.webp"
+  },
+  {
+    "subject": "Disneyland",
+    "lat": 33.81,
+    "lng": -117.92,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Disneyland",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/39.webp"
+  },
+  {
+    "subject": "Walt Disney Concert Hall",
+    "lat": 34.05527778,
+    "lng": -118.25,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Walt_Disney_Concert_Hall",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image_status": "自由ライセンス未確認"
+  },
+  {
+    "subject": "Grand Central Market",
+    "lat": null,
+    "lng": null,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Grand_Central_Market",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/41.webp"
+  },
+  {
+    "subject": "Little Tokyo, Los Angeles",
+    "lat": 34.05055556,
+    "lng": -118.23944444,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Little_Tokyo,_Los_Angeles",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/42.webp"
+  },
+  {
+    "subject": "Philadelphia",
+    "lat": 39.9528,
+    "lng": -75.1636,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Philadelphia",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/43.webp"
+  },
+  {
+    "subject": "Washington, D.C.",
+    "lat": 38.90472222,
+    "lng": -77.01638889,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Washington,_D.C.",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/44.webp"
+  },
+  {
+    "subject": "Boston",
+    "lat": 42.36027778,
+    "lng": -71.05777778,
+    "coordinate_source": "https://en.wikipedia.org/wiki/Boston",
+    "checked_at": "2026-11-06 23:57 PST",
+    "image": "img/45.webp"
+  }
+]

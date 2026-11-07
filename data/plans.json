@@ -1,53 +1,63 @@
 {
-  "checkedDate": "2026-11-06",
+  "checkedDate": "2026-11-07",
   "recommendation": {
     "primary": "plan-a",
-    "summary": "初めての NY 観光と年越しを優先し、移動区間を減らすなら案A（SEA→NYC 往復）が第一候補。LA も訪れたい場合のみ案Bを検討し、追加の航空券・宿泊・移動費を総額で比較してください。",
+    "summary": "初めての NY 観光と年越しを優先するなら案A。LA も訪れたいなら案B。SF 湾岸の知人宅が使えるなら案Cで西海岸コストを抑えられる可能性があるが、友人宅の可否は未確認。航空は片道カレンダーの組み合わせが往復 $558 より安い場合あり（目安）。",
     "type": "proposal"
   },
   "comparison": [
     {
       "key": "plan-a",
       "name": "案A：NYのみ",
-      "departureSEA": "2026-12-28",
-      "arrivalNY": "2026-12-28 〜 29（便次第）",
+      "departureSEA": "2026-12-28（柔軟: 12/19–31 から選択可）",
+      "arrivalNY": "出発日または翌日（便次第）",
       "nyeAndNewYear": "NYC",
-      "returnSEA": "2027-01-03",
-      "returnNote": "1/2 帰着は天候・遅延対策として目安案",
-      "durationDays": 7,
-      "nyNights": "5〜6泊（到着・出発時刻次第）",
+      "returnSEA": "2027-01-03（1/2 推奨案あり）",
+      "durationDays": "7日前後",
       "flightLegs": 2,
       "focus": "NY を深く観光",
       "travelBurden": "比較的小さい",
-      "costNote": "航空券2区間。宿は年末年始で変動大（未確認の実額あり）"
+      "costNote": "片道組み合わせで往復より安い可能性"
     },
     {
       "key": "plan-b",
       "name": "案B：LA経由",
-      "departureSEA": "2026-12-24",
-      "laStay": "2026-12-24 〜 2026-12-28",
+      "departureSEA": "2026-12-24 目安",
+      "laStay": "12/24–28",
       "laToNY": "2026-12-28",
       "nyeAndNewYear": "NYC",
       "returnSEA": "2027-01-03",
-      "returnNote": "1/2 帰着は天候・遅延対策として目安案",
       "durationDays": 11,
-      "laNights": 4,
-      "nyNights": "5〜6泊",
       "flightLegs": 3,
-      "focus": "西海岸＋東海岸",
-      "travelBurden": "大きい（3便＋LA宿）",
-      "costNote": "テーマパーク等の入場料は別（未確認）"
+      "focus": "LA＋NY",
+      "travelBurden": "大きい",
+      "costNote": "LA 宿泊・3便"
+    },
+    {
+      "key": "plan-c",
+      "name": "案C：ベイエリア経由",
+      "departureSEA": "12/19–28 柔軟",
+      "bayStay": "数日（友人宅・$0 目安）",
+      "bayToNY": "OAK/SFO→NYC（12/21–31 カレンダー）",
+      "nyeAndNewYear": "NYC",
+      "returnSEA": "2027-01-02 または 1/3",
+      "durationDays": "可変",
+      "flightLegs": 3,
+      "focus": "SF 湾＋NY",
+      "travelBurden": "中〜大",
+      "costNote": "OAK 最安 $80 台〜の例あり（目安）"
     }
   ],
   "calendarEvents": [
     { "date": "2026-12-12", "label": "UW 期末試験週開始", "plan": null },
     { "date": "2026-12-18", "label": "UW 期末試験週終了", "plan": null },
-    { "date": "2026-12-19", "label": "冬休み開始", "plan": null },
-    { "date": "2026-12-24", "label": "案B：SEA→LAX", "plan": "b" },
-    { "date": "2026-12-28", "label": "案A：SEA→NYC／案B：LAX→NYC", "plan": "both" },
-    { "date": "2026-12-31", "label": "大晦日（NYC）", "plan": "both" },
-    { "date": "2027-01-01", "label": "元日（NYC）", "plan": "both" },
-    { "date": "2027-01-03", "label": "両案：NYC→SEA 帰路（推奨）", "plan": "both" },
+    { "date": "2026-12-19", "label": "冬休み開始・最早出発", "plan": null },
+    { "date": "2026-12-24", "label": "案B：SEA→LAX 目安", "plan": "b" },
+    { "date": "2026-12-28", "label": "案A出発／案B LA→NY", "plan": "both" },
+    { "date": "2026-12-31", "label": "大晦日（全案 NYC）", "plan": "all" },
+    { "date": "2027-01-01", "label": "元日（全案 NYC）", "plan": "all" },
+    { "date": "2027-01-03", "label": "帰国候補", "plan": "all" },
     { "date": "2027-01-04", "label": "UW 冬学期開始", "plan": null }
-  ]
+  ],
+  "scenarioNote": "49 の日程シナリオは planner ページと date_scenarios.json 参照"
 }
