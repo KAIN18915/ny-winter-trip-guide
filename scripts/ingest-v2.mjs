@@ -106,6 +106,8 @@ function parseHotels() {
 function enrichLodging() {
   const lodging = JSON.parse(fs.readFileSync(path.join(DATA, "lodging.json"), "utf8"));
   const hotels = JSON.parse(fs.readFileSync(path.join(DATA, "hotel-google-prices.json"), "utf8"));
+  const credits = JSON.parse(fs.readFileSync(path.join(DATA, "commons_credits.json"), "utf8"));
+  const allowedCommons = new Set(credits.map((c) => c.path));
 
   function norm(s) {
     return s.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -122,8 +124,48 @@ function enrichLodging() {
     return best;
   }
 
+  function credBySubject(subject) {
+    return credits.find((c) => c.subject === subject);
+  }
+
+  function commonsForArea(l) {
+    const area = `${l.area || ""} ${l.name || ""}`.toLowerCase();
+    const rules = [
+      { re: /bed\s*stuy|williamsburg|bushwick|dumbo|brooklyn/, subject: "Brooklyn Bridge" },
+      { re: /prospect/, subject: "Prospect Park (Brooklyn)" },
+      { re: /long island city|\blic\b|queens|astoria|flushing|fresh meadow|corona/, subject: "Long Island City" },
+      { re: /flushing/, subject: "Flushing, Queens" },
+      { re: /staten/, subject: "Staten Island Ferry" },
+      { re: /bronx/, subject: "Grand Central Terminal" },
+      { re: /upper west|amsterdam|central park/, subject: "Central Park" },
+      { re: /chelsea/, subject: "Chelsea Market" },
+      { re: /chinatown/, subject: "Chinatown, Manhattan" },
+      { re: /soho|nolita/, subject: "SoHo, Manhattan" },
+      { re: /jersey|newark|jfk|laguardia|airport/, subject: "Statue of Liberty" },
+      { re: /hollywood|universal/, subject: "Hollywood Walk of Fame" },
+      { re: /santa monica/, subject: "Santa Monica Pier" },
+      { re: /downtown|little tokyo|grand central market/, subject: "Little Tokyo, Los Angeles" },
+      { re: /getty|brentwood|westwood/, subject: "Getty Center" },
+    ];
+    for (const { re, subject } of rules) {
+      if (re.test(area)) {
+        const c = credBySubject(subject);
+        if (c) return c;
+      }
+    }
+    if (l.city === "NYC") return credBySubject("Times Square");
+    if (l.city === "LA") return credBySubject("Santa Monica Pier");
+    return credBySubject("Times Square");
+  }
+
   for (const l of lodging) {
     l.commons_image = null;
+    l.commons_credit_id = null;
+
+    if (l.image && /lodging-\d+\.webp$/i.test(l.image)) {
+      l.image = null;
+    }
+
     if (l.city === "NYC") {
       const m6 = matchPrice(l.name, hotels.nyc6n);
       const mNye = matchPrice(l.name, hotels.nycNye);
@@ -144,35 +186,18 @@ function enrichLodging() {
         l.google_hotels_la4n_note = "目安・Google Hotels 2026-11-07";
       }
     }
-    if (l.image && l.image.startsWith("img/")) {
-      l.commons_image = `assets/${l.image.replace(/^img\//, "img/")}`;
-    }
-  }
 
-  const credits = JSON.parse(fs.readFileSync(path.join(DATA, "commons_credits.json"), "utf8"));
-  const bySubject = Object.fromEntries(credits.map((c) => [c.subject.toLowerCase(), c]));
-
-  for (const l of lodging) {
-    if (!l.commons_image && l.area) {
-      const areaKey = l.area.split(",")[0].toLowerCase();
-      for (const [sub, cred] of Object.entries(bySubject)) {
-        if (areaKey.includes(sub) || sub.includes("brooklyn") && areaKey.includes("brooklyn")) {
-          l.commons_image = `assets/${cred.path}`;
-          l.commons_credit_id = cred.id;
-          break;
-        }
-      }
+    if (l.image && l.image.startsWith("img/") && allowedCommons.has(l.image)) {
+      l.commons_image = `assets/${l.image}`;
+      const cred = credits.find((c) => c.path === l.image);
+      if (cred) l.commons_credit_id = cred.id;
     }
+
     if (!l.commons_image) {
-      const nycDefault = credits.find((c) => c.subject === "Manhattan");
-      if (l.city === "NYC" && nycDefault) {
-        l.commons_image = `assets/${nycDefault.path}`;
-        l.commons_credit_id = nycDefault.id;
-      }
-      const laDefault = credits.find((c) => c.subject.includes("Santa Monica"));
-      if (l.city === "LA" && laDefault) {
-        l.commons_image = `assets/${laDefault.path}`;
-        l.commons_credit_id = laDefault.id;
+      const cred = commonsForArea(l);
+      if (cred) {
+        l.commons_image = `assets/${cred.path}`;
+        l.commons_credit_id = cred.id;
       }
     }
   }
@@ -186,11 +211,11 @@ function attachOptionImages() {
   const byFile = Object.fromEntries(credits.map((c) => [c.path.replace("img/", ""), c]));
 
   for (const o of options) {
-    if (o.image && o.image.startsWith("img/")) {
+    if (o.image && o.image.startsWith("img/") && !/lodging-/i.test(o.image)) {
       const file = o.image.replace("img/", "");
-      o.image_asset = `assets/img/${file}`;
       const cred = byFile[file] || credits.find((c) => c.path === o.image);
       if (cred) {
+        o.image_asset = `assets/img/${file}`;
         o.commons_credit_id = cred.id;
         o.photo_caption = cred.caption_note;
       }

@@ -31,7 +31,7 @@
     "image_url": "https://www.hiusa.org/wp-content/uploads/2020/02/HI-New-York-2000x1000-1.jpg",
     "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
     "transit_source_excerpts": [],
-    "image": "img/lodging-01.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -39,10 +39,11 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-01.webp",
+    "commons_image": "assets/img/01.webp",
     "google_hotels_6n_total_usd": 940,
     "google_hotels_6n_per_night_usd": null,
-    "google_hotels_6n_note": "目安・Google Hotels 2026-11-07"
+    "google_hotels_6n_note": "目安・Google Hotels 2026-11-07",
+    "commons_credit_id": "photo-01"
   },
   {
     "id": "lodging-02",
@@ -138,12 +139,13 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null,
+    "commons_image": "assets/img/03.webp",
     "google_hotels_6n_total_usd": 710,
     "google_hotels_6n_per_night_usd": null,
     "google_hotels_6n_note": "目安・Google Hotels 2026-11-07",
     "google_hotels_nye_total_usd": 158,
-    "google_hotels_nye_note": "目安・Google Hotels 2026-11-07"
+    "google_hotels_nye_note": "目安・Google Hotels 2026-11-07",
+    "commons_credit_id": "photo-03"
   },
   {
     "id": "lodging-04",
@@ -185,7 +187,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/01.webp",
+    "commons_credit_id": "photo-01"
   },
   {
     "id": "lodging-05",
@@ -233,7 +236,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-06",
@@ -276,12 +280,13 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null,
+    "commons_image": "assets/img/14.webp",
     "google_hotels_6n_total_usd": 649,
     "google_hotels_6n_per_night_usd": null,
     "google_hotels_6n_note": "目安・Google Hotels 2026-11-07",
     "google_hotels_nye_total_usd": 151,
-    "google_hotels_nye_note": "目安・Google Hotels 2026-11-07"
+    "google_hotels_nye_note": "目安・Google Hotels 2026-11-07",
+    "commons_credit_id": "photo-14"
   },
   {
     "id": "lodging-07",
@@ -358,7 +363,7 @@
     "image_url": "https://freehandhotels.com/new-york/wp-content/uploads/sites/5/2023/10/Freehand_Hotel_NewYork_Badroom.jpg",
     "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
     "transit_source_excerpts": [],
-    "image": "img/lodging-08.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -366,7 +371,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-08.webp"
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-09",
@@ -402,7 +408,7 @@
     "coordinate_source": "https://www.openstreetmap.org/way/265864905",
     "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
     "osm_name": "Pod 39, 145, East 39th Street, Murray Hill, Manhattan Community Board 6, Manhattan, New York County, New York, 10016, United States",
-    "image": "img/lodging-09.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -410,7 +416,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-09.webp"
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-10",
@@ -443,7 +450,7 @@
     "image_url": "https://assets.milestoneinternet.com/pod-hotels/the-pod-hotels/siteimages/pod-51-home-hero.jpg",
     "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
     "transit_source_excerpts": [],
-    "image": "img/lodging-10.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -451,7 +458,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-10.webp"
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-11",
@@ -489,7 +497,7 @@
     "coordinate_source": "https://www.openstreetmap.org/node/6564006743",
     "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
     "osm_name": "The Pod Times Square, 400, West 42nd Street, Manhattan Community Board 4, Manhattan, New York County, New York, 10036, United States",
-    "image": "img/lodging-11.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -497,7 +505,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-11.webp"
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-12",
@@ -533,7 +542,7 @@
     "coordinate_source": "https://www.openstreetmap.org/way/279777213",
     "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
     "osm_name": "The Pod, 247, Metropolitan Avenue, Williamsburg, Brooklyn, Kings County, New York, 11211, United States",
-    "image": "img/lodging-12.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -541,7 +550,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-12.webp"
+    "commons_image": "assets/img/03.webp",
+    "commons_credit_id": "photo-03"
   },
   {
     "id": "lodging-13",
@@ -581,7 +591,7 @@
       "er, but slower subway connection. Transport JFK Airport 45-minute drive Newark Liberty International Airport 50-minute public transport Grand Central Terminal 11 minute drive Read o",
       " York trip even better. What’s the best way to explore New York from the hotel? Walking, taking the subway, or using rideshares are the easiest ways to explore NYC from our prime Times Square location. What's the vibe at the hotel? YOTEL New York Times Square offers"
     ],
-    "image": "img/lodging-13.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -589,7 +599,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-13.webp"
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-14",
@@ -632,7 +643,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-15",
@@ -675,7 +687,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-16",
@@ -714,7 +727,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-17",
@@ -756,7 +770,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/03.webp",
+    "commons_credit_id": "photo-03"
   },
   {
     "id": "lodging-18",
@@ -840,7 +855,7 @@
       "ng Hogshead Ranch 230 m · 0.1 mi Hunterspoint Avenue station (LIRR) 650 m · 0.4 mi Hunters Point Av subway 700 m · 0.4 mi Court Sq-23 St subway 900 m · 0.6 mi SculptureCenter 900 m · 0.6 mi 1 to 1.5 km (0.6 to 0.9 mi) Queens Plaza subway 1 km · 0.6 mi Vernon Blvd-Ja",
       "ckson Av subway 1.1 km · 0.7 mi MoMA PS1 1.2 km · 0.7 mi 1.5 to 2 km (0.9 to 1.2 mi) Hunter's Point South Park 1.7 km · 1.1 mi Gantry Plaza State Park 1.9 km · 1.2 mi Over 2 k"
     ],
-    "image": "img/lodging-19.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -848,7 +863,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-19.webp"
+    "commons_image": "assets/img/28.webp",
+    "commons_credit_id": "photo-28"
   },
   {
     "id": "lodging-20",
@@ -930,7 +946,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-22",
@@ -964,7 +981,7 @@
     "image_url": "https://www.hotelatfifthavenuenyc.com/images/logo-schema.png",
     "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
     "transit_source_excerpts": [],
-    "image": "img/lodging-22.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -972,7 +989,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-22.webp"
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-23",
@@ -1015,7 +1033,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-24",
@@ -1057,7 +1076,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/14.webp",
+    "commons_credit_id": "photo-14"
   },
   {
     "id": "lodging-25",
@@ -1092,7 +1112,7 @@
     "image_url": "https://cdn.prod.website-files.com/671fd1b43a70afbe10b2319f/671fed51210cd2fc902f77ae_10galery_02Compress.webp",
     "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
     "transit_source_excerpts": [],
-    "image": "img/lodging-25.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -1100,7 +1120,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-25.webp"
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-26",
@@ -1144,7 +1165,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/10.webp",
+    "commons_credit_id": "photo-10"
   },
   {
     "id": "lodging-27",
@@ -1188,7 +1210,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/10.webp",
+    "commons_credit_id": "photo-10"
   },
   {
     "id": "lodging-28",
@@ -1232,7 +1255,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/10.webp",
+    "commons_credit_id": "photo-10"
   },
   {
     "id": "lodging-29",
@@ -1316,7 +1340,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": null
+    "commons_image": "assets/img/02.webp",
+    "commons_credit_id": "photo-02"
   },
   {
     "id": "lodging-31",
@@ -1349,7 +1374,7 @@
     "image_url": "https://www.hiusa.org/wp-content/uploads/2020/02/LA-SM-featured-350x200-1.jpg",
     "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
     "transit_source_excerpts": [],
-    "image": "img/lodging-31.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -1357,9 +1382,10 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-31.webp",
+    "commons_image": "assets/img/34.webp",
     "google_hotels_la4n_total_usd": 184,
-    "google_hotels_la4n_note": "目安・Google Hotels 2026-11-07"
+    "google_hotels_la4n_note": "目安・Google Hotels 2026-11-07",
+    "commons_credit_id": "photo-34"
   },
   {
     "id": "lodging-32",
@@ -1402,10 +1428,10 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/34.webp",
+    "commons_image": "assets/img/37.webp",
     "google_hotels_la4n_total_usd": 159,
     "google_hotels_la4n_note": "目安・Google Hotels 2026-11-07",
-    "commons_credit_id": "photo-34"
+    "commons_credit_id": "photo-37"
   },
   {
     "id": "lodging-33",
@@ -1490,10 +1516,10 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/34.webp",
+    "commons_image": "assets/img/37.webp",
     "google_hotels_la4n_total_usd": 164,
     "google_hotels_la4n_note": "目安・Google Hotels 2026-11-07",
-    "commons_credit_id": "photo-34"
+    "commons_credit_id": "photo-37"
   },
   {
     "id": "lodging-35",
@@ -1536,8 +1562,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/34.webp",
-    "commons_credit_id": "photo-34"
+    "commons_image": "assets/img/37.webp",
+    "commons_credit_id": "photo-37"
   },
   {
     "id": "lodging-36",
@@ -1580,8 +1606,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/34.webp",
-    "commons_credit_id": "photo-34"
+    "commons_image": "assets/img/37.webp",
+    "commons_credit_id": "photo-37"
   },
   {
     "id": "lodging-37",
@@ -1615,7 +1641,7 @@
     "image_url": "https://freehandhotels.com/los-angeles/wp-content/uploads/sites/4/2024/01/broken-shaker-los-angeles-freehand-hotel-rooftop-pool.jpg",
     "image_note": "公式公開OG画像。自由ライセンスではないため掲載権は未確認。ダウンロード・再配布しない。",
     "transit_source_excerpts": [],
-    "image": "img/lodging-37.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -1623,7 +1649,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-37.webp"
+    "commons_image": "assets/img/42.webp",
+    "commons_credit_id": "photo-42"
   },
   {
     "id": "lodging-38",
@@ -1713,8 +1740,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/34.webp",
-    "commons_credit_id": "photo-34"
+    "commons_image": "assets/img/37.webp",
+    "commons_credit_id": "photo-37"
   },
   {
     "id": "lodging-40",
@@ -1753,8 +1780,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/34.webp",
-    "commons_credit_id": "photo-34"
+    "commons_image": "assets/img/37.webp",
+    "commons_credit_id": "photo-37"
   },
   {
     "id": "lodging-41",
@@ -1797,8 +1824,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/34.webp",
-    "commons_credit_id": "photo-34"
+    "commons_image": "assets/img/37.webp",
+    "commons_credit_id": "photo-37"
   },
   {
     "id": "lodging-42",
@@ -1834,7 +1861,7 @@
     "coordinate_source": "https://www.openstreetmap.org/relation/20416816",
     "coordinate_note": "OSMの名称検索結果。入口位置・物件同一性は予約前に確認。",
     "osm_name": "Sea Blue Hotel, 1670, Ocean Avenue, Downtown Santa Monica, Santa Monica, Los Angeles County, California, 90401, United States",
-    "image": "img/lodging-42.webp",
+    "image": null,
     "field_status": {
       "name_area_type": "公式取得本文または候補の名称。listing_status参照",
       "coordinates": "coordinate_sourceがあれば出典付き位置、nullは未確認",
@@ -1842,7 +1869,8 @@
       "price": "指定日・税込・1名実売総額は未確認",
       "photo": "自由ライセンスではない。公開利用は別途権利確認。"
     },
-    "commons_image": "assets/img/lodging-42.webp"
+    "commons_image": "assets/img/34.webp",
+    "commons_credit_id": "photo-34"
   },
   {
     "id": "lodging-43",
