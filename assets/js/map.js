@@ -1,10 +1,15 @@
 (function () {
+  function dataRoot() {
+    return document.documentElement.getAttribute("data-root") || "";
+  }
+
   async function init() {
     const mapEl = document.getElementById("map");
     if (!mapEl || typeof L === "undefined") return;
+    const base = dataRoot();
     const [points, lodging] = await Promise.all([
-      fetch("data/map_points.json").then((r) => r.json()),
-      fetch("data/lodging.json").then((r) => r.json()),
+      fetch(`${base}data/map_points.json`).then((r) => r.json()),
+      fetch(`${base}data/lodging.json`).then((r) => r.json()),
     ]);
     const map = L.map("map").setView([40.75, -73.98], 11);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -14,7 +19,7 @@
 
     for (const p of points) {
       if (p.lat == null || p.lng == null) continue;
-      const img = p.image ? p.image.replace("img/", "assets/img/") : null;
+      const img = p.image ? `${base}${p.image.replace("img/", "assets/img/")}` : null;
       const html = `<strong>${p.subject}</strong>${img ? `<br><img src="${img}" alt="" loading="lazy" style="max-width:160px">` : ""}<br><small>${p.coordinate_source || ""}</small>`;
       L.marker([p.lat, p.lng]).addTo(map).bindPopup(html);
     }

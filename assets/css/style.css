@@ -32,6 +32,10 @@ body {
   line-height: 1.65;
 }
 
+body.app {
+  padding-bottom: calc(72px + env(safe-area-inset-bottom));
+}
+
 a {
   color: var(--accent);
 }

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "midtown",
+    "nameJa": "Midtown（ミッドタウン）",
+    "heroPhoto": "img/02.webp",
+    "creditId": "photo-02",
+    "areaLabel": "エリアの写真",
+    "keywords": ["times", "rockefeller", "bryant", "5th", "empire", "moMA", "radio"]
+  },
+  {
+    "id": "downtown",
+    "nameJa": "Lower Manhattan（下町）",
+    "heroPhoto": "img/03.webp",
+    "creditId": "photo-03",
+    "areaLabel": "エリアの写真",
+    "keywords": ["wall", "9/11", "memorial", "battery", "statue", "ferry", "financial", "one world", "staten"]
+  },
+  {
+    "id": "brooklyn",
+    "nameJa": "Brooklyn（ブルックリン）",
+    "heroPhoto": "img/04.webp",
+    "creditId": "photo-04",
+    "areaLabel": "エリアの写真",
+    "keywords": ["brooklyn", "dumbo", "prospect", "williamsburg", "bridge park"]
+  },
+  {
+    "id": "uptown",
+    "nameJa": "Uptown / Central Park",
+    "heroPhoto": "img/01.webp",
+    "creditId": "photo-01",
+    "areaLabel": "エリアの写真",
+    "keywords": ["central", "met", "natural history", "amnh", "guggenheim", "upper west", "harlem"]
+  },
+  {
+    "id": "queens",
+    "nameJa": "Queens / その他NY",
+    "heroPhoto": "img/28.webp",
+    "creditId": "photo-28",
+    "areaLabel": "エリアの写真",
+    "keywords": ["queens", "long island", "lic", "flushing", "airport", "jfk", "lga", "bronx", "staten"]
+  },
+  {
+    "id": "la",
+    "nameJa": "Los Angeles",
+    "heroPhoto": "img/34.webp",
+    "creditId": "photo-34",
+    "areaLabel": "エリアの写真",
+    "keywords": ["los angeles", "santa monica", "hollywood", "getty", "broad", "griffith", "universal", "disney"]
+  },
+  {
+    "id": "bay",
+    "nameJa": "SF Bay Area",
+    "heroPhoto": "img/31.webp",
+    "creditId": "photo-31",
+    "areaLabel": "参考写真（カリフォルニア）",
+    "keywords": ["san francisco", "oakland", "alameda", "golden gate", "alcatraz", "ferry", "bart"]
+  },
+  {
+    "id": "nye",
+    "nameJa": "年越し（12/31・1/1）",
+    "heroPhoto": "img/02.webp",
+    "creditId": "photo-02",
+    "areaLabel": "エリアの写真",
+    "keywords": ["new year", "nye", "midnight", "times square", "prospect", "nyrr", "fireworks", "holiday"]
+  }
+]

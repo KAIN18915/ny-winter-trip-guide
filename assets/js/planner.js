@@ -197,11 +197,16 @@
     hotels.nyc6n.stays.forEach((s) => sel.add(new Option(`${s.name} — 6泊 $${s.totalUsd}（目安）`, s.name)));
   }
 
+  function dataRoot() {
+    return document.documentElement.getAttribute("data-root") || "";
+  }
+
   async function init() {
+    const base = dataRoot();
     const [c, h, l] = await Promise.all([
-      fetch("data/fare-calendars.json").then((r) => r.json()),
-      fetch("data/hotel-google-prices.json").then((r) => r.json()),
-      fetch("data/lodging.json").then((r) => r.json()),
+      fetch(`${base}data/fare-calendars.json`).then((r) => r.json()),
+      fetch(`${base}data/hotel-google-prices.json`).then((r) => r.json()),
+      fetch(`${base}data/lodging.json`).then((r) => r.json()),
     ]);
     calendars = c;
     hotels = h;

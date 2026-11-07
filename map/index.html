@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>地図 | 年末年始 NY/LA/ベイエリア旅行ガイド 2026–27</title>
+  <meta name="description" content="本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#16304f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/app.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body class="app p-map">
+<header class="sitebar"><div class="in">
+<a class="brand" href="../">NY冬旅ガイド</a>
+<nav class="topnav" aria-label="サブ">
+<a href="../fares/">運賃</a>
+<a href="../practical/">実務</a>
+<a href="../credits/">写真出典</a>
+</nav>
+</div></header>
+<main id="main-c" tabindex="-1" class="wrap">
+
+      <div class="banner" role="status"><strong>現時点で航空券・宿泊・イベントの予約は行っていません。</strong> 本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</div>
+      <h1>地図</h1>
+      <p class="lead">OpenStreetMap タイル。座標は出典付き（data/map_points.json）。座標 null の宿はピンなし。</p>
+      <div id="map" class="map-canvas" role="application" aria-label="旅行候補地図"></div>
+      <p><span class="tag tag--estimate">目安</span> 写真は参考イメージであり現地の 2026 年末状況を保証しません。</p>
+    
+</main>
+<div class="dock" id="dock"><nav class="botnav" aria-label="主要ナビ">
+<a href="../"><span>ホーム</span></a>
+<a href="../planner/"><span>プランナー</span></a>
+<a href="../compare/"><span>比較</span></a>
+<a href="../stays/"><span>宿泊</span></a>
+<a href="../guide/"><span>ガイド</span></a>
+<a href="../map/" aria-current="page"><span>地図</span></a>
+</nav></div>
+<footer class="wrap site-footer note">
+  <p>本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</p>
+  <p>データ確認: 2026-11-07（PST）／運賃: 2026-11-07（PST）</p>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer crossorigin></script>
+<script src="../assets/js/map.js" defer></script>
+</body>
+</html>

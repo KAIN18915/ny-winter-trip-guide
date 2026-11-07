@@ -1,5 +1,15 @@
 export function buildV2Pages(ctx) {
-  const { esc, tag, cite, banner, layoutExt, readJson, ROOT, fs, path } = ctx;
+  const {
+    esc,
+    tag,
+    cite,
+    banner,
+    layoutExt,
+    readJson,
+    assetPre = "",
+    lodgingSlugs = null,
+    stayListDepth = 1,
+  } = ctx;
 
   const lodging = readJson("lodging.json");
   const options = readJson("options.json");
@@ -12,10 +22,18 @@ export function buildV2Pages(ctx) {
 
   const creditsById = Object.fromEntries(credits.map((c) => [c.id, c]));
 
-  function photoCap(creditId) {
+  function photoCap(creditId, areaLabel = "") {
     const c = creditsById[creditId];
     if (!c) return "";
-    return `<p class="photo-cap"><small>写真: ${esc(c.author)} / <a href="${esc(c.file_page_url)}">${esc(c.license)}</a> · ${esc(c.caption_note || "")}</small></p>`;
+    const pre = areaLabel ? `<strong>${esc(areaLabel)}</strong> — ` : "";
+    return `<p class="photo-cap"><small>${pre}写真: ${esc(c.author)} / <a href="${esc(c.license_url || c.file_page_url)}">${esc(c.license)}</a> · <a href="${esc(c.file_page_url)}">Commons</a> · ${esc(c.caption_note || "")}</small></p>`;
+  }
+
+  function commonsImgPath(p) {
+    if (!p) return `${assetPre}assets/img/01.webp`;
+    if (p.startsWith("http") || p.startsWith("/")) return p;
+    if (p.startsWith("assets/")) return `${assetPre}${p}`;
+    return `${assetPre}assets/${p.replace(/^img\//, "img/")}`;
   }
 
   function buildPlanner() {
@@ -100,25 +118,30 @@ export function buildV2Pages(ctx) {
     `;
     return layoutExt({
       title: "プランナー",
-      current: "planner.html",
+      nav: "planner",
+      depth: 1,
       body,
       scripts: ["assets/js/planner.js"],
     });
   }
 
   function buildStays() {
+    const relSlug = stayListDepth === 1 ? "" : "../";
     const cards = lodging
       .map((l) => {
-        const img = l.commons_image || "assets/img/01.webp";
+        const img = commonsImgPath(l.commons_image);
         const price6 = l.google_hotels_6n_total_usd;
         const priceNye = l.google_hotels_nye_total_usd;
         const priceLa = l.google_hotels_la4n_total_usd;
         const priceData = price6 || priceLa || 99999;
-        const cap = l.commons_credit_id ? photoCap(l.commons_credit_id) : '<span class="tag tag--unverified">写真クレジット未割当</span>';
-        return `<article class="stay-card" data-card data-city="${esc(l.city)}" data-area="${esc(l.area)}" data-price="${priceData}" hidden="false">
-          <img src="${esc(img)}" alt="" loading="lazy" width="320" height="200" />
-          ${cap}
-          <h3><a href="${esc(l.official_url)}">${esc(l.name)}</a></h3>
+        const slug = lodgingSlugs?.get(l.id) || l.id;
+        const detailHref = `${relSlug}${slug}/`;
+        const cap = l.commons_credit_id
+          ? photoCap(l.commons_credit_id, "エリアの写真")
+          : '<span class="tag tag--unverified">写真クレジット未割当</span>';
+        return `<article class="stay-card card" data-card data-city="${esc(l.city)}" data-area="${esc(l.area)}" data-price="${priceData}" hidden="false">
+          <figure class="vimg"><img src="${esc(img)}" alt="" loading="lazy" width="320" height="200" />${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>
+          <h3><a href="${esc(detailHref)}">${esc(l.name)}</a></h3>
           <p>${esc(l.area)} · ${esc(l.type)}</p>
           <p>${price6 ? `6泊: $${price6} <span class="tag tag--estimate">目安</span>` : '<span class="tag tag--unverified">6泊価格未確認</span>'}</p>
           <p>${priceNye ? `大晦日1泊: $${priceNye} <span class="tag tag--estimate">目安</span>` : ""}</p>
@@ -143,7 +166,7 @@ export function buildV2Pages(ctx) {
       </div>
       ${cite(hotels.nyc6n.searchUrl || "https://www.google.com/travel/hotels", hotels.checkedAt, hotels.disclaimer)}
     `;
-    return layoutExt({ title: "宿泊", current: "stays.html", body, scripts: ["assets/js/cards-filter.js"] });
+    return layoutExt({ title: "宿泊", nav: "stays", depth: 1, body, scripts: ["assets/js/cards-filter.js"] });
   }
 
   function buildOptionsPage() {
@@ -152,12 +175,12 @@ export function buildV2Pages(ctx) {
 
     const cards = options
       .map((o) => {
-        const img = o.image_asset || null;
+        const img = o.image_asset ? commonsImgPath(o.image_asset.replace(/^assets\//, "")) : null;
         const unv = (o.source_status || "").includes("未確認");
         const price = o.price_usd != null ? `$${o.price_usd}` : "—";
-        return `<article class="option-card${unv ? " is-muted" : ""}" data-card data-city="${esc(o.city)}" data-category="${esc(o.category)}" data-price="${o.price_usd || 0}">
-          ${img ? `<img src="${esc(img)}" alt="" loading="lazy" />` : ""}
-          ${o.commons_credit_id ? photoCap(o.commons_credit_id) : ""}
+        return `<article class="option-card card${unv ? " is-muted" : ""}" data-card data-city="${esc(o.city)}" data-category="${esc(o.category)}" data-price="${o.price_usd || 0}">
+          ${img ? `<figure class="vimg"><img src="${esc(img)}" alt="" loading="lazy" />${o.commons_credit_id ? `<figcaption>${photoCap(o.commons_credit_id)}</figcaption>` : ""}</figure>` : ""}
+          ${!img && o.commons_credit_id ? photoCap(o.commons_credit_id) : ""}
           <h3><a href="${esc(o.source_url)}">${esc(o.name)}</a></h3>
           <p>${esc(o.category)} · ${esc(o.city)} ${unv ? tag("unverified") : ""}</p>
           <p>12/31: ${esc(o.hours_2026_12_31)}</p>
@@ -180,7 +203,7 @@ export function buildV2Pages(ctx) {
         ${cards}
       </div>
     `;
-    return layoutExt({ title: "選択肢", current: "options.html", body, scripts: ["assets/js/cards-filter.js"] });
+    return layoutExt({ title: "観光・食事・イベント", nav: "guide", depth: 2, body, scripts: ["assets/js/cards-filter.js"] });
   }
 
   function buildMap() {
@@ -193,7 +216,8 @@ export function buildV2Pages(ctx) {
     `;
     return layoutExt({
       title: "地図",
-      current: "map.html",
+      nav: "map",
+      depth: 1,
       body,
       extraHead:
         '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">',
@@ -208,7 +232,7 @@ export function buildV2Pages(ctx) {
     const rows = credits
       .map(
         (c) => `<tr>
-          <td><img src="assets/${esc(c.path)}" alt="" loading="lazy" width="120" /></td>
+          <td><img src="${commonsImgPath(c.path)}" alt="" loading="lazy" width="120" /></td>
           <td>${esc(c.subject)}</td>
           <td>${esc(c.author)}</td>
           <td><a href="${esc(c.license_url)}">${esc(c.license)}</a></td>
@@ -227,11 +251,11 @@ export function buildV2Pages(ctx) {
         <tbody>${rows}</tbody>
       </table></div>
     `;
-    return layoutExt({ title: "クレジット", current: "credits.html", body });
+    return layoutExt({ title: "クレジット", nav: "credits", depth: 1, body });
   }
 
   function buildPlanC(ctxBuildPlan) {
-    return ctxBuildPlan(planC, "plan-c.html");
+    return ctxBuildPlan(planC);
   }
 
   function buildFaresCalendars(ctxFares) {
@@ -257,11 +281,49 @@ export function buildV2Pages(ctx) {
     );
   }
 
-  function patchIndex(html, plans) {
-    const extra = `<p><a href="planner.html">→ 日付可変プランナー</a> · <a href="stays.html">宿泊 ${lodging.length}件</a> · <a href="options.html">選択肢 ${options.length}件</a> · <a href="map.html">地図</a></p>
-      <p><span class="tag tag--proposal">案C</span> <a href="plan-c.html">ベイエリア経由</a> — 友人宅 $0 目安（未確認）</p>
+  function patchIndex(html, plans, links = {}) {
+    const lp = links.planner || "planner/";
+    const ls = links.stays || "stays/";
+    const lg = links.guide || "guide/";
+    const lm = links.map || "map/";
+    const lpc = links.planC || "plan/c/";
+    const extra = `<p class="links"><a href="${esc(lp)}">→ 日付可変プランナー</a> · <a href="${esc(ls)}">宿泊 ${lodging.length}件</a> · <a href="${esc(lg)}">エリア別ガイド</a> · <a href="${esc(lm)}">地図</a> · <a href="${esc(links.compare || "compare/")}">運賃・宿比較</a></p>
+      <p><span class="tag tag--proposal">案C</span> <a href="${esc(lpc)}">ベイエリア経由</a> — 友人宅（可否・日程は未確認）</p>
       <p>掲載: シナリオ ${scenarios.length} · Commons 写真 ${credits.length} · ${esc(manifest.checked_at)} 時点 manifest</p>`;
     return html.replace("</h1>", `</h1>\n${extra}`);
+  }
+
+  function buildStayDetail(l, slug, assetDepth = 2) {
+    const pre = "../".repeat(assetDepth);
+    const img = commonsImgPath(l.commons_image);
+    const cap = l.commons_credit_id ? photoCap(l.commons_credit_id, "エリアの写真") : "";
+    const price6 = l.google_hotels_6n_total_usd;
+    const priceNye = l.google_hotels_nye_total_usd;
+    const priceLa = l.google_hotels_la4n_total_usd;
+    const body = `
+      ${banner()}
+      <p><a href="../">← 宿泊一覧</a></p>
+      <h1 class="pg-h">${esc(l.name)}</h1>
+      <p>${esc(l.area)} · ${esc(l.type)} · ${esc(l.city)}</p>
+      <figure class="vimg venue"><img src="${esc(img)}" alt="" loading="lazy" />
+      ${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>
+      <h2>料金 <span class="tag tag--estimate">目安</span></h2>
+      <ul class="compact">
+        <li>6泊（12/28→1/3）: ${price6 ? `$${price6}` : '<span class="tag tag--unverified">未確認</span>'}</li>
+        <li>大晦日1泊: ${priceNye ? `$${priceNye}` : "—"}</li>
+        <li>LA 4泊比較: ${priceLa ? `$${priceLa}` : "—"}</li>
+      </ul>
+      <p class="note">${esc(l.price_note || "")}</p>
+      <h2>アクセス</h2>
+      <p>${l.nearest_subway ? esc(l.nearest_subway) : `<span class="tag tag--unverified">最寄駅未確認</span>`}</p>
+      <p class="note">${esc(l.nearest_subway_note || "")}</p>
+      <h2>リンク・出典</h2>
+      <p><a href="${esc(l.official_url)}" rel="noopener">公式ページ</a></p>
+      <ul class="compact">${(l.notes || []).map((n) => `<li>${esc(n)}</li>`).join("")}</ul>
+      ${(l.sources || []).map((s) => cite(s.url || s.final_url, s.checked_at || l.checked_at)).join("")}
+      <p class="cite">確認: ${esc(l.checked_at)} · listing: ${esc(l.listing_status || "")}</p>
+    `;
+    return layoutExt({ title: l.name, nav: "stays", depth: 2, body });
   }
 
   return {
@@ -273,6 +335,9 @@ export function buildV2Pages(ctx) {
     buildPlanC,
     buildFaresCalendars,
     patchIndex,
+    buildStayDetail,
+    photoCap,
+    commonsImgPath,
     lodging,
     options,
     scenarios,
