@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(ROOT, "data");
-const UP = path.join(ROOT, "uploads_extracted");
+const SOURCES = path.join(DATA, "sources");
 
 function parseCalendarMd(text, routeId, label, sampleUrlLine) {
   const lines = text.split("\n");
@@ -35,8 +35,8 @@ function parseCalendarMd(text, routeId, label, sampleUrlLine) {
 }
 
 function parseFareCalendars() {
-  const main = fs.readFileSync(path.join(UP, "fare_calendar.md"), "utf8");
-  const bay = fs.readFileSync(path.join(UP, "fare_calendar_bay.md"), "utf8");
+  const main = fs.readFileSync(path.join(SOURCES, "fare_calendar.md"), "utf8");
+  const bay = fs.readFileSync(path.join(SOURCES, "fare_calendar_bay.md"), "utf8");
   const routes = [
     parseCalendarMd(main, "sea-nyc", "SEA→NYC", "SEA→NYC"),
     parseCalendarMd(main, "nyc-sea", "NYC→SEA", "NYC→SEA"),
@@ -91,7 +91,7 @@ function parseHotelBlock(text, sectionTitle) {
 }
 
 function parseHotels() {
-  const text = fs.readFileSync(path.join(UP, "hotel_prices.md"), "utf8");
+  const text = fs.readFileSync(path.join(SOURCES, "hotel_prices.md"), "utf8");
   const checkedAt = "2026-11-07";
   const out = {
     checkedAt,
