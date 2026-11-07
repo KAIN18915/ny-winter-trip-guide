@@ -199,7 +199,7 @@ function buildIndex() {
     <p>詳細内訳と実運賃サンプルは <a href="fares.html">運賃ページ</a> 参照。</p>
     ${cite("https://www.washington.edu/students/reg/2627cal.html", costs.checkedDate, costs.sourceNote)}
   `;
-  return layout({ title: "結論・比較", current: "index.html", body });
+  return layout({ title: "結論・3案比較", current: "index.html", body });
 }
 
 function buildPlanItinerary(data, current) {
