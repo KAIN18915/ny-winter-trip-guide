@@ -1,0 +1,34 @@
+{
+  "label": "UW 学事暦（2026–27）",
+  "checkedDate": "2026-11-06",
+  "sourceUrl": "https://www.washington.edu/students/reg/2627cal.html",
+  "sourceLabel": "UW Academic Calendar 2026–27",
+  "facts": [
+    {
+      "item": "秋学期期末試験週",
+      "dates": "2026-12-12 〜 2026-12-18",
+      "type": "fact"
+    },
+    {
+      "item": "冬休み",
+      "dates": "2026-12-19 〜 2027-01-03",
+      "type": "fact"
+    },
+    {
+      "item": "冬学期（授業開始）",
+      "dates": "2027-01-04",
+      "type": "fact"
+    }
+  ],
+  "unverified": [
+    {
+      "item": "EE342・EE482 の個人期末日時",
+      "status": "未確認",
+      "note": "Canvas 上の syllabus・カレンダーで要確認"
+    }
+  ],
+  "constraints": [
+    "2026-12-31 と 2027-01-01 は両案とも NYC 滞在を固定",
+    "1/4 授業開始のため帰路は 1/3 が現実的。悪天候・遅延リスクを考えると 1/2 帰着は任意の安全策（目安・提案）"
+  ]
+}

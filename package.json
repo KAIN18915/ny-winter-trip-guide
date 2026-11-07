@@ -1,0 +1,7 @@
+{
+  "name": "ny-winter-trip-guide",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  }
+}

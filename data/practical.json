@@ -1,0 +1,152 @@
+{
+  "checkedDate": "2026-11-06",
+  "nycTransit": {
+    "title": "NYC 地下鉄・バス",
+    "items": [
+      {
+        "label": "通常運賃",
+        "value": "$3（地下鉄・通常バス）",
+        "sourceUrl": "https://www.mta.info/fares-tolls/subway-bus",
+        "checkedDate": "2026-11-06",
+        "type": "fact"
+      },
+      {
+        "label": "OMNY 7日上限",
+        "value": "同一カード・同一端末の同一ウォレットで、最初のタップから7日間で $35 上限",
+        "sourceUrl": "https://www.mta.info/fares-tolls/subway-bus/tap-and-ride",
+        "checkedDate": "2026-11-06",
+        "type": "fact"
+      }
+    ],
+    "note": "AirTrain・NJ TRANSIT・LIRR 等は OMNY 上限の対象外。旅行直前に運賃改定がないか再確認。"
+  },
+  "airportAccessNY": {
+    "title": "NY 主要空港 → マンハッタン（片道・公式ベース）",
+    "items": [
+      {
+        "airport": "JFK",
+        "route": "AirTrain + 地下鉄（目安 60〜90分・目的地による）",
+        "fare": "AirTrain $8.75 + 地下鉄 $3 = $11.75（上限到達前の計算例）",
+        "sources": [
+          "https://www.jfkairport.com/transportation/airtrain",
+          "https://www.mta.info/guides/airports/jfk"
+        ],
+        "checkedDate": "2026-11-06",
+        "durationNote": "目安"
+      },
+      {
+        "airport": "LGA",
+        "route": "Q70 無料バス + 地下鉄接続（目安 40〜70分）",
+        "fare": "Q70 無料 + 接続地下鉄 $3",
+        "sources": [
+          "https://www.mta.info/guides/airports/laguardia/lga-to-nyc"
+        ],
+        "checkedDate": "2026-11-06",
+        "durationNote": "目安"
+      },
+      {
+        "airport": "EWR",
+        "route": "AirTrain + NJ TRANSIT → NY Penn（目安 40〜70分）",
+        "fare": "成人片道 $17.25（AirTrain 分込み）",
+        "sources": [
+          "https://www.njtransit.com/destinations/newark-liberty-international-airport-ewr-start-your-trip-out-right-taking-nj-transit"
+        ],
+        "checkedDate": "2026-11-06",
+        "durationNote": "目安"
+      }
+    ],
+    "proposal": "総額・直行便・到着時刻で空港を選ぶ。LIRR 便料金・夜間ダイヤ・工事は未確認。"
+  },
+  "laTransit": {
+    "title": "LA Metro・LAX",
+    "items": [
+      {
+        "label": "Metro 通常片道",
+        "value": "$1.75。日上限 $5、7日上限 $18（タップ・同一カード形式要統一）",
+        "sourceUrl": "https://www.metro.net/fares/",
+        "checkedDate": "2026-11-06"
+      },
+      {
+        "label": "LAX アクセス",
+        "value": "C/K 線で LAX/Metro Transit Center → ターミナル間は無料 Metro Connector シャトル（公式案内）",
+        "sourceUrl": "https://www.metro.net/destinations/lax/",
+        "checkedDate": "2026-11-06"
+      },
+      {
+        "label": "FlyAway",
+        "value": "LAX ↔ Union Station 等、片道 $12.75（先着・座席予約不可・現金不可）",
+        "sourceUrl": "https://www.flylax.com/flyaway-bus/fares-tickets",
+        "checkedDate": "2026-11-06"
+      }
+    ],
+    "unverified": ["祝日ダイヤ", "APM（Automated People Mover）の旅行当日稼働"]
+  },
+  "closures": {
+    "title": "休館・営業（通年規則＋調査時点。指定日の券・時間は別途未確認）",
+    "checkedDate": "2026-11-06",
+    "rows": [
+      {
+        "venue": "MoMA 本館",
+        "dec25": "休館",
+        "jan1": "通年規則上開館（特別時間は未確認）",
+        "sourceUrl": "https://www.moma.org/visit/"
+      },
+      {
+        "venue": "MoMA PS1",
+        "dec25": "休館",
+        "jan1": "休館",
+        "sourceUrl": "https://www.momaps1.org/en/visit"
+      },
+      {
+        "venue": "Met（Fifth・Cloisters）",
+        "dec25": "休館",
+        "jan1": "休館",
+        "sourceUrl": "https://www.metmuseum.org/plan-your-visit"
+      },
+      {
+        "venue": "AMNH",
+        "dec25": "休館",
+        "jan1": "通常時間で開館（2026 holiday 案内）",
+        "sourceUrl": "https://www.amnh.org/plan-your-visit/holiday-visit-tips"
+      },
+      {
+        "venue": "Empire State Building",
+        "dec25": "365日開館規則",
+        "jan1": "同左（日別時間・券は未確認）",
+        "sourceUrl": "https://www.esbnyc.com/visit/when-visit"
+      },
+      {
+        "venue": "自由の女神フェリー",
+        "dec25": "Christmas 休業（公式カレンダー参照）",
+        "jan1": "2027/1/1 の運航時刻は未確認",
+        "sourceUrl": "https://www.nps.gov/stli/planyourvisit/calendar.htm"
+      }
+    ]
+  },
+  "weather": {
+    "title": "NYC 12月下旬の気候（平年値・当日予報ではない）",
+    "sourceUrl": "https://www.weather.gov/media/okx/Climate/Almanacs/nyc/nycdec.pdf",
+    "checkedDate": "2026-11-06",
+    "items": [
+      { "date": "12/25 平年", "highC": "約 5.6℃（42°F）", "lowC": "約 0℃（32°F）", "type": "fact" },
+      { "date": "12/31 平年", "highC": "約 5.0℃（41°F）", "lowC": "約 −1.1℃（30°F）", "type": "fact" }
+    ],
+    "proposal": "防寒・重ね着・屋内休憩。長時間屋外待機は行程に組み込みすぎない。",
+    "unverified": "2026 年末の実際の降雪・体感温度"
+  },
+  "packingAndDocuments": {
+    "j1OneLine": "国内線区間でも TSA 用にパスポートと DS-2019・I-94 控え等を携行（UW ISS 案内）。書類有効期限は本人未確認。",
+    "sourceUrl": "https://iss.washington.edu/travel/in-the-us/",
+    "checkedDate": "2026-11-06"
+  },
+  "laFreeAttractions": {
+    "title": "LA 無料候補（入場料・予約規則は各公式）",
+    "items": [
+      { "name": "Griffith Observatory", "note": "入館無料・月曜休館。12/25 特別営業は未確認", "url": "https://griffithobservatory.lacity.gov/visit/" },
+      { "name": "Getty Center", "note": "無料・時間指定予約必須。Christmas・New Year's Day 休館", "url": "https://www.getty.edu/visit/center/" },
+      { "name": "The Broad", "note": "一般入場無料・時間指定券推奨。Christmas 休館。1/1 特別営業未確認", "url": "https://www.thebroad.org/visit" },
+      { "name": "Santa Monica", "note": "散策無料。店舗・乗り物は別料金・12/25 営業未確認", "url": "https://www.santamonica.com/things-to-do/family/100-free-things-to-do-santa-monica-family-and-outdoor/" }
+    ],
+    "checkedDate": "2026-11-06"
+  }
+}

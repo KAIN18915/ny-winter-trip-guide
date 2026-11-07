@@ -1,0 +1,81 @@
+{
+  "checkedDate": "2026-11-06",
+  "intro": "2026年12月31日の年越しは NYC 滞在が固定。以下は公式ソースに基づく整理。2026→2027 の運用細目は一部未確認です。",
+  "options": [
+    {
+      "id": "times-square",
+      "name": "Times Square カウントダウン",
+      "price": "無料（先着・チケット不要とされるが、2026→27 の確定運用は未確認）",
+      "statusMix": "fact_and_unverified",
+      "sources": [
+        {
+          "label": "Times Square NYE FAQ（旧版表記が残る）",
+          "url": "https://www.timessquarenyc.org/nye/nye-faq",
+          "checkedDate": "2026-11-06",
+          "note": "FAQ 冒頭は「NYE 2025」等の表記。以下は過去版規則の参考であり 2026/12/31 の確定運用ではない"
+        },
+        {
+          "label": "Times Square NYE 公式入口",
+          "url": "https://www.timessquarenyc.org/nye/nye-landing",
+          "checkedDate": "2026-11-06",
+          "note": "最新案内は直前に再確認"
+        }
+      ],
+      "referenceRulesFromPastFaq": [
+        { "item": "公共観覧エリア開場", "value": "例年 15:00（EST）頃から（参考・未確認）", "type": "unverified_for_2026" },
+        { "item": "ボール降下", "value": "23:59（EST）開始、約60秒（参考）", "type": "reference" },
+        { "item": "入場", "value": "無料・先着順。公式は観覧席の販売なし", "type": "fact_from_faq" },
+        { "item": "トイレ", "value": "会場内仮設トイレなし（FAQ 参考）", "type": "reference" },
+        { "item": "飲食", "value": "認可売店なし。退出後は同じ場所に戻れない（FAQ 参考）", "type": "reference" },
+        { "item": "持ち物", "value": "バックパック・大型バッグ・傘・折りたたみ椅子等不可（FAQ 参考）", "type": "reference" },
+        { "item": "2026 出演者・入口・交通規制", "value": "未確認", "type": "unverified" }
+      ],
+      "proposal": "無料でも寒さ・トイレ・長時間待機の負担が大きい。無理に第一候補にしない提案。"
+    },
+    {
+      "id": "prospect-park",
+      "name": "Prospect Park 年越し花火",
+      "price": "無料（チケット推奨とあるが必須ではないと記載）",
+      "statusMix": "fact",
+      "sources": [
+        {
+          "label": "Prospect Park イベント一覧（2026/12/31 掲載確認）",
+          "url": "https://www.prospectpark.org/events/category/holiday/",
+          "checkedDate": "2026-11-06"
+        },
+        {
+          "label": "NYE Fireworks in Prospect Park 詳細",
+          "url": "https://www.prospectpark.org/event/new-years-eve-fireworks-in-prospect-park-3/",
+          "checkedDate": "2026-11-06"
+        }
+      ],
+      "schedule": [
+        { "item": "会場", "value": "Grand Army Plaza 周辺", "type": "fact" },
+        { "item": "ライブ", "value": "22:00（EST）", "type": "fact" },
+        { "item": "花火", "value": "2027-01-01 00:00（EST）", "type": "fact" }
+      ],
+      "proposal": "Times Square の代替候補。天候中止・規制は直前再確認。"
+    },
+    {
+      "id": "nyrr-midnight-run",
+      "name": "NYRR Midnight Run（Central Park）",
+      "price": "登録料は区分により異なる（未確認）。観覧条件は未確認",
+      "statusMix": "fact_and_unverified",
+      "sources": [
+        {
+          "label": "NYRR Midnight Run",
+          "url": "https://events.nyrr.org/nyrr-midnight-run",
+          "checkedDate": "2026-11-06"
+        }
+      ],
+      "schedule": [
+        { "item": "開催日時", "value": "2026-12-31 23:59（EST）スタート、4マイル", "type": "fact" },
+        { "item": "花火", "value": "午前0時頃（レース関連）", "type": "fact" },
+        { "item": "登録状況", "value": "区分により Near Capacity / Sold Out 表示あり。全体完売とは断定不可", "type": "fact" },
+        { "item": "一般観覧", "value": "自由観覧区域は未確認のため「誰でも無料入場可」とは記載しない", "type": "unverified" },
+        { "item": "ゼッケン受取", "value": "当日公園では不可。RUN_CENTER 最終受取 22:00（EST）", "type": "fact" }
+      ],
+      "proposal": "走る場合は早めの登録確認。観覧のみの場合は公式の観覧案内が出るまで未確認。"
+    }
+  ]
+}

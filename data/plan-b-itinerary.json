@@ -1,0 +1,88 @@
+{
+  "planId": "b",
+  "title": "案B：シアトル → ロサンゼルス → ニューヨーク",
+  "dates": "2026-12-24 出発 〜 2027-01-03 帰着",
+  "checkedDate": "2026-11-06",
+  "type": "proposal",
+  "note": "12/25 は屋内施設休館が多いため屋外中心の提案。Universal 等のチケット・営業は未確認。",
+  "days": [
+    {
+      "date": "2026-12-24",
+      "weekdayJa": "木",
+      "summary": "SEA→LAX。Santa Monica Pier・ビーチ夕景など",
+      "transit": "飛行機＋Metro／FlyAway 等",
+      "region": "LA"
+    },
+    {
+      "date": "2026-12-25",
+      "weekdayJa": "金",
+      "summary": "Griffith Observatory 周辺、Hollywood Walk of Fame など屋外中心",
+      "transit": "Metro＋バス",
+      "region": "LA",
+      "closuresRef": "Getty・Broad 等は Christmas 休館 — https://www.getty.edu/visit/center/"
+    },
+    {
+      "date": "2026-12-26",
+      "weekdayJa": "土",
+      "summary": "Getty Center または The Broad 等（要予約・時間指定券）",
+      "transit": "Metro＋徒歩／シャトル",
+      "region": "LA"
+    },
+    {
+      "date": "2026-12-27",
+      "weekdayJa": "日",
+      "summary": "Downtown LA、Little Tokyo、Grand Central Market 周辺",
+      "transit": "Metro＋徒歩",
+      "region": "LA"
+    },
+    {
+      "date": "2026-12-28",
+      "weekdayJa": "月",
+      "summary": "LAX→NYC。到着後チェックイン",
+      "transit": "飛行機＋地下鉄等",
+      "region": "NY"
+    },
+    {
+      "date": "2026-12-29",
+      "weekdayJa": "火",
+      "summary": "自由の女神周辺、Wall Street、9/11 Memorial",
+      "transit": "地下鉄＋徒歩",
+      "region": "NY"
+    },
+    {
+      "date": "2026-12-30",
+      "weekdayJa": "水",
+      "summary": "Central Park、Rockefeller Center、5番街周辺",
+      "transit": "地下鉄＋徒歩",
+      "region": "NY"
+    },
+    {
+      "date": "2026-12-31",
+      "weekdayJa": "木",
+      "summary": "年越し（nye ページ参照）",
+      "transit": "地下鉄＋徒歩",
+      "region": "NY"
+    },
+    {
+      "date": "2027-01-01",
+      "weekdayJa": "金",
+      "summary": "Brooklyn Bridge、DUMBO",
+      "transit": "地下鉄＋徒歩",
+      "region": "NY"
+    },
+    {
+      "date": "2027-01-02",
+      "weekdayJa": "土",
+      "summary": "自然史博物館、SoHo、Chinatown など",
+      "transit": "地下鉄＋徒歩",
+      "region": "NY"
+    },
+    {
+      "date": "2027-01-03",
+      "weekdayJa": "日",
+      "summary": "NYC→SEA 帰着",
+      "transit": "空港アクセス＋飛行機",
+      "region": "NY"
+    }
+  ]
+}

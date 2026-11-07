@@ -1,0 +1,53 @@
+{
+  "checkedDate": "2026-11-06",
+  "recommendation": {
+    "primary": "plan-a",
+    "summary": "初めての NY 観光と年越しを優先し、移動区間を減らすなら案A（SEA→NYC 往復）が第一候補。LA も訪れたい場合のみ案Bを検討し、追加の航空券・宿泊・移動費を総額で比較してください。",
+    "type": "proposal"
+  },
+  "comparison": [
+    {
+      "key": "plan-a",
+      "name": "案A：NYのみ",
+      "departureSEA": "2026-12-28",
+      "arrivalNY": "2026-12-28 〜 29（便次第）",
+      "nyeAndNewYear": "NYC",
+      "returnSEA": "2027-01-03",
+      "returnNote": "1/2 帰着は天候・遅延対策として目安案",
+      "durationDays": 7,
+      "nyNights": "5〜6泊（到着・出発時刻次第）",
+      "flightLegs": 2,
+      "focus": "NY を深く観光",
+      "travelBurden": "比較的小さい",
+      "costNote": "航空券2区間。宿は年末年始で変動大（未確認の実額あり）"
+    },
+    {
+      "key": "plan-b",
+      "name": "案B：LA経由",
+      "departureSEA": "2026-12-24",
+      "laStay": "2026-12-24 〜 2026-12-28",
+      "laToNY": "2026-12-28",
+      "nyeAndNewYear": "NYC",
+      "returnSEA": "2027-01-03",
+      "returnNote": "1/2 帰着は天候・遅延対策として目安案",
+      "durationDays": 11,
+      "laNights": 4,
+      "nyNights": "5〜6泊",
+      "flightLegs": 3,
+      "focus": "西海岸＋東海岸",
+      "travelBurden": "大きい（3便＋LA宿）",
+      "costNote": "テーマパーク等の入場料は別（未確認）"
+    }
+  ],
+  "calendarEvents": [
+    { "date": "2026-12-12", "label": "UW 期末試験週開始", "plan": null },
+    { "date": "2026-12-18", "label": "UW 期末試験週終了", "plan": null },
+    { "date": "2026-12-19", "label": "冬休み開始", "plan": null },
+    { "date": "2026-12-24", "label": "案B：SEA→LAX", "plan": "b" },
+    { "date": "2026-12-28", "label": "案A：SEA→NYC／案B：LAX→NYC", "plan": "both" },
+    { "date": "2026-12-31", "label": "大晦日（NYC）", "plan": "both" },
+    { "date": "2027-01-01", "label": "元日（NYC）", "plan": "both" },
+    { "date": "2027-01-03", "label": "両案：NYC→SEA 帰路（推奨）", "plan": "both" },
+    { "date": "2027-01-04", "label": "UW 冬学期開始", "plan": null }
+  ]
+}

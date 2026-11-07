@@ -1,0 +1,35 @@
+{
+  "label": "費用目安",
+  "checkedDate": "2026-11-06",
+  "disclaimer": "以下は予算比較用の目安であり、検証済みの予約可能料金ではありません。宿泊は特に 12/31 を含む夜が未確認です。",
+  "type": "estimate",
+  "plans": [
+    {
+      "planKey": "plan-a",
+      "name": "案A",
+      "totalRangeUsd": "$1,100–2,100",
+      "lines": [
+        { "item": "航空券", "range": "$400–750（目安）", "note": "Google Flights では往復 $558 からの例あり（fares 参照）" },
+        { "item": "NY 宿泊", "range": "$400–850（目安・未確認）", "note": null },
+        { "item": "LA 宿泊", "range": "—", "note": null },
+        { "item": "現地・空港交通", "range": "$50–100（目安）", "note": null },
+        { "item": "食費", "range": "$180–300（目安）", "note": null },
+        { "item": "観光・予備", "range": "$70–100（目安）", "note": null }
+      ]
+    },
+    {
+      "planKey": "plan-b",
+      "name": "案B",
+      "totalRangeUsd": "$1,550–2,900",
+      "lines": [
+        { "item": "航空券", "range": "$550–1,050（目安）", "note": "3区間合算 $749 からの例あり（fares 参照）" },
+        { "item": "NY 宿泊", "range": "$400–850（目安・未確認）", "note": null },
+        { "item": "LA 宿泊", "range": "$180–380（目安・未確認）", "note": null },
+        { "item": "現地・空港交通", "range": "$90–160（目安）", "note": null },
+        { "item": "食費", "range": "$300–450（目安）", "note": null },
+        { "item": "観光・予備", "range": "$30–60（目安）", "note": "テーマパーク等は含まない" }
+      ]
+    }
+  ],
+  "sourceNote": "総額レンジは草案（chatgpt_plan 由来の目安）と実運賃サンプルを併記。確定見積もりではありません。"
+}

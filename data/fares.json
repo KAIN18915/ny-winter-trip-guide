@@ -1,0 +1,58 @@
+{
+  "checkedAtPST": "2026-11-06 23:44",
+  "currency": "USD",
+  "passengerNote": "1人・エコノミー・Google Flights 表示（税込）。購入前に変動します。",
+  "variableDisclaimer": "運賃は検索日時時点の参考です。座席・条件は未予約。",
+  "sourcesLabel": "Google Flights",
+  "planA": {
+    "title": "案A 往復 SEA ⇄ NYC（2026-12-28 → 2027-01-03）",
+    "searchUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0VBcgcIARIDTllDGh4SCjIwMjctMDEtMDNqBwgBEgNOWUNyBwgBEgNTRUFAAUgBcAGCAQsI____________AZgBAQ&curr=USD&hl=en",
+    "options": [
+      { "airline": "United", "route": "SEA–EWR", "detail": "17:34→翌7:06、1回乗継(LAX)", "priceUsd": 558, "type": "roundtrip" },
+      { "airline": "Alaska", "route": "SEA–EWR", "detail": "22:12→翌6:39、直行", "priceUsd": 587, "type": "roundtrip" },
+      { "airline": "United", "route": "SEA–EWR", "detail": "19:25→翌6:59、1回乗継(SFO)", "priceUsd": 599, "type": "roundtrip" },
+      { "airline": "Alaska", "route": "SEA–EWR", "detail": "15:40→23:59、直行", "priceUsd": 647, "type": "roundtrip" }
+    ]
+  },
+  "planB": {
+    "segments": [
+      {
+        "title": "SEA → LAX（2026-12-24）片道",
+        "searchUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDU0VBcgcIARIDTEFYQAFIAXABggELCP___________wGYAQI&curr=USD&hl=en",
+        "options": [
+          { "airline": "Southwest", "detail": "5:15→9:20、乗継 SMF", "priceUsd": 149 },
+          { "airline": "Alaska", "detail": "8:31→13:04、乗継 PDX", "priceUsd": 149 },
+          { "airline": "Alaska", "detail": "13:41→18:31、乗継 SFO", "priceUsd": 149 },
+          { "airline": "American (SkyWest)", "detail": "7:06→10:14、直行", "priceUsd": 169 }
+        ]
+      },
+      {
+        "title": "LAX → NYC（2026-12-28）片道",
+        "searchUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDTEFYcgcIARIDTllDQAFIAXABggELCP___________wGYAQI&curr=USD&hl=en",
+        "options": [
+          {
+            "airline": "United",
+            "detail": "LAX–EWR 直行 $246（例: 6:00→14:21 / 16:35→翌0:52 / 21:00→翌5:07 / 22:55→翌7:06）",
+            "priceUsd": 246
+          }
+        ]
+      },
+      {
+        "title": "NYC → SEA（2027-01-03）片道",
+        "searchUrl": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI3LTAxLTAzagcIARIDTllDcgcIARIDU0VBQAFIAXABggELCP___________wGYAQI&curr=USD&hl=en",
+        "options": [
+          { "airline": "Alaska", "detail": "EWR–SEA 17:45→21:09 直行", "priceUsd": 354 },
+          { "airline": "Alaska", "detail": "EWR–SEA 19:29→22:48", "priceUsd": 354 },
+          { "airline": "United", "detail": "EWR–SEA 20:08→23:30", "priceUsd": 378 }
+        ]
+      }
+    ],
+    "comboEstimate": {
+      "label": "目安",
+      "description": "最安組み合わせの足し算（同一予約条件ではない）",
+      "calculation": "$149 + $246 + $354 = $749",
+      "alt": "直行重視なら $169 + $246 + $354 = $769（目安）",
+      "lodgingNote": "宿泊実額は未確認"
+    }
+  }
+}
