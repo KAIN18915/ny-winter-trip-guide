@@ -50,9 +50,9 @@
   {
     "id": "bay",
     "nameJa": "SF Bay Area",
-    "heroPhoto": "img/31.webp",
-    "creditId": "photo-31",
-    "areaLabel": "参考写真（カリフォルニア）",
+    "heroPhoto": null,
+    "creditId": null,
+    "areaLabel": null,
     "keywords": ["san francisco", "oakland", "alameda", "golden gate", "alcatraz", "ferry", "bart"]
   },
   {

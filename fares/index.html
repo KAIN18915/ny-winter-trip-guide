@@ -11,10 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/app.css">
+  <link rel="stylesheet" href="../assets/css/ny-guide-base.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   
 </head>
-<body class="app p-fares">
+<body class="app p-fares js">
+<a class="skip" href="#main-c">本文へ</a>
 <header class="sitebar"><div class="in">
 <a class="brand" href="../">NY冬旅ガイド</a>
 <nav class="topnav" aria-label="サブ">
@@ -25,7 +27,9 @@
 </div></header>
 <main id="main-c" tabindex="-1" class="wrap">
 
-    <div class="banner" role="status"><strong>現時点で航空券・宿泊・イベントの予約は行っていません。</strong> 本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</div>
+    <ul class="alerts static" role="status">
+  <li class="a-cap"><b>未予約</b> <span>現時点で航空券・宿泊・イベントの予約は行っていません。 表示料金・時刻は調査時点の参考値です。</span></li>
+</ul>
     <h1>実運賃（Google Flights）</h1>
       <div class="card"><p>片道2本の組み合わせが往復 $558 より安い可能性あり（2026-11-07確認のカレンダー目安）。 往復 $558 と比較して片道2本が安い日あり（例: 12/29発 + 1/1帰りはカレンダー上 $189+$279=$468 目安）。</p></div>
       <h2>片道価格カレンダー（2026-11-07 PST）</h2>
@@ -59,7 +63,7 @@
 
     <h2>案A 往復 SEA ⇄ NYC（2026-12-28 → 2027-01-03）</h2>
     <p><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0VBcgcIARIDTllDGh4SCjIwMjctMDEtMDNqBwgBEgNOWUNyBwgBEgNTRUFAAUgBcAGCAQsI____________AZgBAQ&amp;curr=USD&amp;hl=en">Google Flights で再検索</a></p>
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr><th>航空会社</th><th>区間</th><th>詳細</th><th>表示運賃</th></tr></thead>
       <tbody><tr>
         <td>United</td>
@@ -88,7 +92,7 @@
     <h2>案B（3区間）</h2>
     <h3>SEA → LAX（2026-12-24）片道</h3>
         <p><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDU0VBcgcIARIDTEFYQAFIAXABggELCP___________wGYAQI&amp;curr=USD&amp;hl=en">Google Flights で再検索</a>　確認: 2026-11-06 23:44（PST）</p>
-        <div class="table-wrap"><table>
+        <div class="table-wrap table-scroll"><table class="wide">
           <thead><tr><th>便</th><th>詳細</th><th>表示運賃</th></tr></thead>
           <tbody><tr>
             <td>Southwest</td>
@@ -109,7 +113,7 @@
           </tr></tbody>
         </table></div><h3>LAX → NYC（2026-12-28）片道</h3>
         <p><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDTEFYcgcIARIDTllDQAFIAXABggELCP___________wGYAQI&amp;curr=USD&amp;hl=en">Google Flights で再検索</a>　確認: 2026-11-06 23:44（PST）</p>
-        <div class="table-wrap"><table>
+        <div class="table-wrap table-scroll"><table class="wide">
           <thead><tr><th>便</th><th>詳細</th><th>表示運賃</th></tr></thead>
           <tbody><tr>
             <td>United</td>
@@ -118,7 +122,7 @@
           </tr></tbody>
         </table></div><h3>NYC → SEA（2027-01-03）片道</h3>
         <p><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI3LTAxLTAzagcIARIDTllDcgcIARIDU0VBQAFIAXABggELCP___________wGYAQI&amp;curr=USD&amp;hl=en">Google Flights で再検索</a>　確認: 2026-11-06 23:44（PST）</p>
-        <div class="table-wrap"><table>
+        <div class="table-wrap table-scroll"><table class="wide">
           <thead><tr><th>便</th><th>詳細</th><th>表示運賃</th></tr></thead>
           <tbody><tr>
             <td>Alaska</td>
@@ -144,23 +148,23 @@
     <h2>総予算レンジ（宿泊等込み・目安）</h2>
     <p>以下は予算比較用の目安であり、検証済みの予約可能料金ではありません。宿泊は特に 12/31 を含む夜が未確認です。</p>
     <h3>案A 内訳 <span class="tag tag--estimate">目安</span></h3>
-      <div class="table-wrap"><table>
+      <div class="table-wrap table-scroll"><table class="wide">
         <thead><tr><th>項目</th><th>レンジ</th><th>メモ</th></tr></thead>
         <tbody><tr><td>航空券</td><td>$400–750（目安）</td><td>Google Flights では往復 $558 からの例あり（fares 参照）</td></tr><tr><td>NY 宿泊</td><td>$400–850（目安・未確認）</td><td>—</td></tr><tr><td>LA 宿泊</td><td>—</td><td>—</td></tr><tr><td>現地・空港交通</td><td>$50–100（目安）</td><td>—</td></tr><tr><td>食費</td><td>$180–300（目安）</td><td>—</td></tr><tr><td>観光・予備</td><td>$70–100（目安）</td><td>—</td></tr></tbody>
       </table></div><h3>案B 内訳 <span class="tag tag--estimate">目安</span></h3>
-      <div class="table-wrap"><table>
+      <div class="table-wrap table-scroll"><table class="wide">
         <thead><tr><th>項目</th><th>レンジ</th><th>メモ</th></tr></thead>
         <tbody><tr><td>航空券</td><td>$550–1,050（目安）</td><td>3区間合算 $749 からの例あり（fares 参照）</td></tr><tr><td>NY 宿泊</td><td>$400–850（目安・未確認）</td><td>—</td></tr><tr><td>LA 宿泊</td><td>$180–380（目安・未確認）</td><td>—</td></tr><tr><td>現地・空港交通</td><td>$90–160（目安）</td><td>—</td></tr><tr><td>食費</td><td>$300–450（目安）</td><td>—</td></tr><tr><td>観光・予備</td><td>$30–60（目安）</td><td>テーマパーク等は含まない</td></tr></tbody>
       </table></div>
   
 </main>
 <div class="dock" id="dock"><nav class="botnav" aria-label="主要ナビ">
-<a href="../"><span>ホーム</span></a>
-<a href="../planner/"><span>プランナー</span></a>
-<a href="../compare/"><span>比較</span></a>
-<a href="../stays/"><span>宿泊</span></a>
-<a href="../guide/"><span>ガイド</span></a>
-<a href="../map/"><span>地図</span></a>
+<a href="../"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-house"/></svg><span>ホーム</span></a>
+<a href="../planner/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-calculator"/></svg><span>プランナー</span></a>
+<a href="../compare/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-scale"/></svg><span>比較</span></a>
+<a href="../stays/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-hotel"/></svg><span>宿泊</span></a>
+<a href="../guide/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-book-open"/></svg><span>ガイド</span></a>
+<a href="../map/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-map"/></svg><span>地図</span></a>
 </nav></div>
 <footer class="wrap site-footer note">
   <p>本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</p>

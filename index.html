@@ -11,10 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="assets/css/ny-guide-base.css">
   <link rel="stylesheet" href="assets/css/style.css">
   
 </head>
-<body class="app p-home">
+<body class="app p-home js">
+<a class="skip" href="#main-c">本文へ</a>
 <header class="sitebar"><div class="in">
 <a class="brand" href="">NY冬旅ガイド</a>
 <nav class="topnav" aria-label="サブ">
@@ -25,40 +27,45 @@
 </div></header>
 <main id="main-c" tabindex="-1" class="wrap">
 
-    <div class="banner" role="status"><strong>現時点で航空券・宿泊・イベントの予約は行っていません。</strong> 本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</div>
+    <ul class="alerts static" role="status">
+  <li class="a-cap"><b>未予約</b> <span>現時点で航空券・宿泊・イベントの予約は行っていません。 表示料金・時刻は調査時点の参考値です。</span></li>
+</ul>
     <h1>結論と3案比較</h1>
-<p class="links"><a href="planner/">→ 日付可変プランナー</a> · <a href="stays/">宿泊 43件</a> · <a href="guide/">エリア別ガイド</a> · <a href="map/">地図</a> · <a href="compare/">運賃・宿比較</a></p>
+<p class="links"><a href="planner/">プランナー</a> · <a href="stays/">宿泊</a> · <a href="guide/">ガイド</a> · <a href="map/">地図</a> · <a href="compare/">比較</a></p>
       <p><span class="tag tag--proposal">案C</span> <a href="plan/c/">ベイエリア経由</a> — 友人宅（可否・日程は未確認）</p>
-      <p>掲載: シナリオ 49 · Commons 写真 41 · 2026-11-07 00:01 PST 時点 manifest</p>
     <p class="lead">シアトル在住・学生1人・年末年始の予算旅行案。12/31 と 1/1 は NYC 滞在を固定。<a href="planner/">日付可変プランナー</a>で片道カレンダー組み合わせを試算できます。</p>
-    <div class="plans panel"><article class="plan"><header><b>案A</b></header>
-        <p class="pname">案A：NYのみ</p>
-        <div class="facts">
-          <div><dt>出発</dt><dd>2026-12-28（柔軟: 12/19–31 から選択可）</dd></div>
-          <div><dt>年越し</dt><dd>NYC</dd></div>
-          <div><dt>帰国</dt><dd>2027-01-03（1/2 推奨案あり）</dd></div>
-        </div>
-        <p class="note">NY を深く観光 · 片道組み合わせで往復より安い可能性</p>
-        <p class="btns"><a class="btn" href="plan/a/">詳細行程</a></p>
-        </article><article class="plan"><header><b>案B</b></header>
-        <p class="pname">案B：LA経由</p>
-        <div class="facts">
-          <div><dt>出発</dt><dd>2026-12-24 目安</dd></div>
-          <div><dt>年越し</dt><dd>NYC</dd></div>
-          <div><dt>帰国</dt><dd>2027-01-03</dd></div>
-        </div>
-        <p class="note">LA＋NY · LA 宿泊・3便</p>
-        <p class="btns"><a class="btn" href="plan/b/">詳細行程</a></p>
-        </article><article class="plan"><header><b>案C</b></header>
-        <p class="pname">案C：ベイエリア経由</p>
-        <div class="facts">
-          <div><dt>出発</dt><dd>12/19–28 柔軟</dd></div>
-          <div><dt>年越し</dt><dd>NYC</dd></div>
-          <div><dt>帰国</dt><dd>2027-01-02 または 1/3</dd></div>
-        </div>
-        <p class="note">SF 湾＋NY · OAK 最安 $80 台〜の例あり（目安）</p>
-        <p class="btns"><a class="btn" href="plan/c/">詳細行程</a></p>
-        </article></div>
+    <section class="panel"><h2 class="pg-h" style="margin-top:0">3案</h2>
+    <div class="plans"><article class="plan"><header><b>案A</b> <span class="lbl c-est">目安</span></header>
+        <p class="amt">$1,100–2,100 <small>概算合計（USD）</small></p>
+        <p class="pname">案A：NYのみ · 7日前後</p>
+        <ul class="keypts">
+          <li>出発: 2026-12-28（柔軟: 12/19–31 から選択可）</li>
+          <li>12/31・1/1: NYC</li>
+          <li>帰国: 2027-01-03（1/2 推奨案あり）</li>
+          <li>NY を深く観光</li>
+        </ul>
+        <p class="btns"><a class="btn" href="plan/a/">行程を見る</a> <a class="btn" href="planner/">日付試算</a></p>
+        </article><article class="plan"><header><b>案B</b> <span class="lbl c-est">目安</span></header>
+        <p class="amt">$1,550–2,900 <small>概算合計（USD）</small></p>
+        <p class="pname">案B：LA経由 · 11</p>
+        <ul class="keypts">
+          <li>出発: 2026-12-24 目安</li>
+          <li>12/31・1/1: NYC</li>
+          <li>帰国: 2027-01-03</li>
+          <li>LA＋NY</li>
+        </ul>
+        <p class="btns"><a class="btn" href="plan/b/">行程を見る</a> <a class="btn" href="planner/">日付試算</a></p>
+        </article><article class="plan"><header><b>案C</b> <span class="lbl c-est">目安</span></header>
+        <p class="amt">$900–2,200 <small>概算合計（USD）</small></p>
+        <p class="pname">案C：ベイエリア経由 · 可変</p>
+        <ul class="keypts">
+          <li>出発: 12/19–28 柔軟</li>
+          <li>12/31・1/1: NYC</li>
+          <li>帰国: 2027-01-02 または 1/3</li>
+          <li>SF 湾＋NY</li>
+        </ul>
+        <p class="btns"><a class="btn" href="plan/c/">行程を見る</a> <a class="btn" href="planner/">日付試算</a></p>
+        </article></div></section>
     <div class="rec-box">
       <span class="tag tag--proposal">提案</span>
       <p>初めての NY 観光と年越しを優先するなら案A。LA も訪れたいなら案B。SF 湾岸の知人宅が使えるなら案Cで西海岸コストを抑えられる可能性があるが、友人宅の可否は未確認。航空は片道カレンダーの組み合わせが往復 $558 より安い場合あり（目安）。</p>
@@ -77,7 +84,7 @@
 
     <h2>3案比較表</h2>
     
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr>
         <th>項目</th><th>案A：NYのみ</th><th>案B：LA経由</th><th>案C：ベイエリア経由</th>
       </tr></thead>
@@ -129,7 +136,7 @@
 
     <h2>費用目安（USD・1人） <span class="tag tag--estimate">目安</span></h2>
     <p class="lead">以下は予算比較用の目安であり、検証済みの予約可能料金ではありません。宿泊は特に 12/31 を含む夜が未確認です。</p>
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr><th>案</th><th>概算合計</th><th>航空券メモ</th></tr></thead>
       <tbody><tr>
         <td>案A</td>
@@ -146,12 +153,12 @@
   
 </main>
 <div class="dock" id="dock"><nav class="botnav" aria-label="主要ナビ">
-<a href="" aria-current="page"><span>ホーム</span></a>
-<a href="planner/"><span>プランナー</span></a>
-<a href="compare/"><span>比較</span></a>
-<a href="stays/"><span>宿泊</span></a>
-<a href="guide/"><span>ガイド</span></a>
-<a href="map/"><span>地図</span></a>
+<a href="" aria-current="page"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-house"/></svg><span>ホーム</span></a>
+<a href="planner/"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-calculator"/></svg><span>プランナー</span></a>
+<a href="compare/"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-scale"/></svg><span>比較</span></a>
+<a href="stays/"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-hotel"/></svg><span>宿泊</span></a>
+<a href="guide/"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-book-open"/></svg><span>ガイド</span></a>
+<a href="map/"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-map"/></svg><span>地図</span></a>
 </nav></div>
 <footer class="wrap site-footer note">
   <p>本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</p>

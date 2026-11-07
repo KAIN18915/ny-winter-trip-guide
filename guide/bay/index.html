@@ -11,10 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/app.css">
+  <link rel="stylesheet" href="../../assets/css/ny-guide-base.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   
 </head>
-<body class="app p-guide">
+<body class="app p-guide js">
+<a class="skip" href="#main-c">本文へ</a>
 <header class="sitebar"><div class="in">
 <a class="brand" href="../../">NY冬旅ガイド</a>
 <nav class="topnav" aria-label="サブ">
@@ -25,21 +27,23 @@
 </div></header>
 <main id="main-c" tabindex="-1" class="wrap">
 
-    <div class="banner" role="status"><strong>現時点で航空券・宿泊・イベントの予約は行っていません。</strong> 本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</div>
+    <ul class="alerts static" role="status">
+  <li class="a-cap"><b>未予約</b> <span>現時点で航空券・宿泊・イベントの予約は行っていません。 表示料金・時刻は調査時点の参考値です。</span></li>
+</ul>
     <p><a href="../">← ガイド一覧</a></p>
     <h1 class="pg-h">SF Bay Area</h1>
-    <figure class="vimg"><img src="../../assets/img/31.webp" alt="" loading="lazy" /><figcaption><p class="photo-cap"><small><strong>参考写真（カリフォルニア）</strong> — 写真: Matthew Field / <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a> · <a href="https://commons.wikimedia.org/wiki/File:Griffith_observatory_2006.jpg">Commons</a> · 参考写真。2026年末の装飾・天候・営業状況を示すものではない。</small></p></figcaption></figure>
+    <p class="note"><span class="tag tag--unverified">未確認</span> ベイエリア用の Commons 参考写真は未掲載（住居可否も未確認）。</p>
     <p>0 件の候補</p>
     <div class="cards"><p>該当候補なし</p></div>
   
 </main>
 <div class="dock" id="dock"><nav class="botnav" aria-label="主要ナビ">
-<a href="../../"><span>ホーム</span></a>
-<a href="../../planner/"><span>プランナー</span></a>
-<a href="../../compare/"><span>比較</span></a>
-<a href="../../stays/"><span>宿泊</span></a>
-<a href="../../guide/" aria-current="page"><span>ガイド</span></a>
-<a href="../../map/"><span>地図</span></a>
+<a href="../../"><svg class="ic" aria-hidden="true"><use href="../../assets/icons.svg#i-house"/></svg><span>ホーム</span></a>
+<a href="../../planner/"><svg class="ic" aria-hidden="true"><use href="../../assets/icons.svg#i-calculator"/></svg><span>プランナー</span></a>
+<a href="../../compare/"><svg class="ic" aria-hidden="true"><use href="../../assets/icons.svg#i-scale"/></svg><span>比較</span></a>
+<a href="../../stays/"><svg class="ic" aria-hidden="true"><use href="../../assets/icons.svg#i-hotel"/></svg><span>宿泊</span></a>
+<a href="../../guide/" aria-current="page"><svg class="ic" aria-hidden="true"><use href="../../assets/icons.svg#i-book-open"/></svg><span>ガイド</span></a>
+<a href="../../map/"><svg class="ic" aria-hidden="true"><use href="../../assets/icons.svg#i-map"/></svg><span>地図</span></a>
 </nav></div>
 <footer class="wrap site-footer note">
   <p>本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</p>

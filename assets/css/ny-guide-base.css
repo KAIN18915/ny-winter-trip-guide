@@ -1,0 +1,392 @@
+/* Boston 型ベース（index インライン CSS から NY 用に抜粋・調整） */
+:root {
+  --navy: #1f3a5f;
+  --accent: #c8102e;
+  --bg: #f5f6f9;
+  --card: #fff;
+  --ink: #1d2330;
+  --muted: #5b6475;
+  --line: #e3e6ee;
+  --hover: #eef3fa;
+  --soft: #f1f4fa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body.app {
+  margin: 0;
+  overflow-x: clip;
+  max-width: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  padding-top: 52px;
+}
+
+body.app #main-c.wrap,
+body.app footer.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px 12px 48px;
+  min-width: 0;
+  width: 100%;
+}
+
+body.app img,
+body.app video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body.app a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+body.app .cite,
+body.app .cite a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 画像ボックス */
+body.app .img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--soft);
+  width: 100%;
+  max-width: 100%;
+}
+
+body.app .img-box.ar-hero {
+  aspect-ratio: 16 / 9;
+  max-height: min(52vw, 280px);
+}
+
+body.app .img-box.ar-card {
+  aspect-ratio: 16 / 10;
+}
+
+body.app .img-box.ar-thumb {
+  aspect-ratio: 3 / 2;
+  max-height: 120px;
+}
+
+body.app .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+}
+
+body.app .vimg {
+  margin: 0 0 10px;
+  max-width: 100%;
+}
+
+body.app .vimg--thumb .img-box {
+  max-height: 120px;
+}
+
+body.app .vimg figcaption {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.45;
+}
+
+body.app .vimg figcaption .photo-cap {
+  margin: 0;
+}
+
+body.app .photo-cap small {
+  font-size: inherit;
+}
+
+/* プランカード */
+body.app .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 12px;
+  margin: 12px 0;
+  min-width: 0;
+}
+
+body.app .plan {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--navy);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  min-width: 0;
+}
+
+body.app .plan header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: var(--navy);
+}
+
+body.app .plan header b {
+  font-size: 17px;
+}
+
+body.app .plan .pname {
+  font-size: 13.5px;
+  line-height: 1.45;
+  margin: 4px 0;
+  color: var(--ink);
+}
+
+body.app .plan .amt {
+  margin: 6px 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #0d2a4d;
+  line-height: 1.2;
+}
+
+body.app .plan .amt small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+body.app .plan .keypts {
+  margin: 6px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+body.app .plan .keypts li {
+  margin: 2px 0;
+}
+
+body.app .btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+body.app a.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  padding: 5px 10px;
+  border: 1px solid #c9d3e3;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--navy);
+  text-decoration: none;
+  min-height: 44px;
+}
+
+body.app a.btn:hover {
+  border-color: var(--navy);
+  background: var(--hover);
+}
+
+/* カード一覧 */
+body.app .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+  margin: 8px 0 12px;
+  min-width: 0;
+}
+
+body.app .cards .card,
+body.app .card.stay-card,
+body.app .card.option-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+body.app .cards .card > img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+body.app .card .cb {
+  padding: 10px 12px 12px;
+  min-width: 0;
+}
+
+body.app .panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  min-width: 0;
+}
+
+/* テーブル */
+body.app .table-wrap,
+body.app .table-scroll,
+body.app .tw {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  margin: 8px 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+body.app .table-wrap table,
+body.app .table-scroll table,
+body.app .tw table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+body.app table.wide {
+  min-width: 520px;
+}
+
+body.app th,
+body.app td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  word-break: break-word;
+}
+
+/* 未予約バナー（短く） */
+body.app ul.alerts.static {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+body.app ul.alerts.static li {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: #fff7e6;
+  border-left: 4px solid #d08a00;
+}
+
+body.app ul.alerts.static li b {
+  color: #7a4b00;
+  white-space: nowrap;
+}
+
+body.app .filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  min-width: 0;
+}
+
+body.app .filter-bar input,
+body.app .filter-bar select {
+  min-width: 0;
+  max-width: 100%;
+  flex: 1 1 120px;
+}
+
+body.app .form-grid {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+body.app .form-grid label {
+  min-width: 0;
+}
+
+body.app .form-grid select,
+body.app .form-grid input {
+  width: 100%;
+  max-width: 100%;
+}
+
+body.app .heat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 100%;
+}
+
+body.app #map.map-canvas {
+  width: 100%;
+  max-width: 100%;
+}
+
+body.app .ic {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+body.app .botnav a .ic {
+  width: 22px;
+  height: 22px;
+}
+
+body.app .sitebar .in {
+  max-width: 1180px;
+  margin: 0 auto;
+  min-width: 0;
+  padding: 0 10px;
+  gap: 8px;
+}
+
+body.app .brand {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+
+@media (max-width: 520px) {
+  body.app .topnav {
+    display: none;
+  }
+}
+
+body.app .dock,
+body.app .botnav {
+  max-width: 100%;
+  min-width: 0;
+}

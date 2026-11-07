@@ -11,10 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/app.css">
+  <link rel="stylesheet" href="../assets/css/ny-guide-base.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   
 </head>
-<body class="app p-compare">
+<body class="app p-compare js">
+<a class="skip" href="#main-c">本文へ</a>
 <header class="sitebar"><div class="in">
 <a class="brand" href="../">NY冬旅ガイド</a>
 <nav class="topnav" aria-label="サブ">
@@ -25,14 +27,16 @@
 </div></header>
 <main id="main-c" tabindex="-1" class="wrap">
 
-    <div class="banner" role="status"><strong>現時点で航空券・宿泊・イベントの予約は行っていません。</strong> 本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</div>
+    <ul class="alerts static" role="status">
+  <li class="a-cap"><b>未予約</b> <span>現時点で航空券・宿泊・イベントの予約は行っていません。 表示料金・時刻は調査時点の参考値です。</span></li>
+</ul>
     <h1 class="pg-h">運賃・宿泊の比較</h1>
     <p class="lead"><span class="tag tag--estimate">目安</span> Google Flights / Google Hotels の調査値。購入前に再確認。</p>
     <h2>片道運賃サンプル（各ルート先頭5日）</h2>
-    <div class="table-wrap"><table><thead><tr><th>ルート</th><th>日付・目安</th></tr></thead><tbody><tr><td>SEA→NYC</td><td>2026-12-19 $234<br>2026-12-20 $196<br>2026-12-21 $186<br>2026-12-22 $189<br>2026-12-23 $189</td></tr><tr><td>NYC→SEA</td><td>2026-12-31 $232<br>2027-01-01 $279<br>2027-01-02 $369<br>2027-01-03 $354<br>2027-01-04 $204</td></tr><tr><td>SEA→LAX</td><td>2026-12-19 $105<br>2026-12-20 $135<br>2026-12-21 $103<br>2026-12-22 $119<br>2026-12-23 $119</td></tr><tr><td>LAX→NYC</td><td>2026-12-20 $204<br>2026-12-21 $209<br>2026-12-22 $201<br>2026-12-23 $210<br>2026-12-24 $200</td></tr><tr><td>SEA→OAK</td><td>2026-12-19 $80<br>2026-12-20 $124<br>2026-12-21 $95<br>2026-12-22 $114<br>2026-12-23 $100</td></tr><tr><td>SEA→SFO</td><td>2026-12-19 $80<br>2026-12-20 $124<br>2026-12-21 $95<br>2026-12-22 $80<br>2026-12-23 $80</td></tr></tbody></table></div>
+    <div class="table-wrap table-scroll"><table class="wide"><thead><tr><th>ルート</th><th>日付・目安</th></tr></thead><tbody><tr><td>SEA→NYC</td><td>2026-12-19 $234<br>2026-12-20 $196<br>2026-12-21 $186<br>2026-12-22 $189<br>2026-12-23 $189</td></tr><tr><td>NYC→SEA</td><td>2026-12-31 $232<br>2027-01-01 $279<br>2027-01-02 $369<br>2027-01-03 $354<br>2027-01-04 $204</td></tr><tr><td>SEA→LAX</td><td>2026-12-19 $105<br>2026-12-20 $135<br>2026-12-21 $103<br>2026-12-22 $119<br>2026-12-23 $119</td></tr><tr><td>LAX→NYC</td><td>2026-12-20 $204<br>2026-12-21 $209<br>2026-12-22 $201<br>2026-12-23 $210<br>2026-12-24 $200</td></tr><tr><td>SEA→OAK</td><td>2026-12-19 $80<br>2026-12-20 $124<br>2026-12-21 $95<br>2026-12-22 $114<br>2026-12-23 $100</td></tr><tr><td>SEA→SFO</td><td>2026-12-19 $80<br>2026-12-20 $124<br>2026-12-21 $95<br>2026-12-22 $80<br>2026-12-23 $80</td></tr></tbody></table></div>
     <span class="cite">出典: <a href="https://www.google.com/travel/flights" rel="noopener noreferrer">https://www.google.com/travel/flights</a>　確認: 2026-11-07 — 片道2本の組み合わせが往復 $558 より安い可能性あり（2026-11-07確認のカレンダー目安）。</span>
     <h2>NYC 宿泊候補（6泊目安・一部）</h2>
-    <div class="table-wrap"><table><thead><tr><th>宿</th><th>エリア</th><th>6泊総額</th></tr></thead><tbody><tr>
+    <div class="table-wrap table-scroll"><table class="wide"><thead><tr><th>宿</th><th>エリア</th><th>6泊総額</th></tr></thead><tbody><tr>
         <td><a href="../stays/hi-new-york-city-hostel/">HI New York City Hostel</a></td>
         <td>Upper West Side</td>
         <td>$940</td>
@@ -118,12 +122,12 @@
   
 </main>
 <div class="dock" id="dock"><nav class="botnav" aria-label="主要ナビ">
-<a href="../"><span>ホーム</span></a>
-<a href="../planner/"><span>プランナー</span></a>
-<a href="../compare/" aria-current="page"><span>比較</span></a>
-<a href="../stays/"><span>宿泊</span></a>
-<a href="../guide/"><span>ガイド</span></a>
-<a href="../map/"><span>地図</span></a>
+<a href="../"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-house"/></svg><span>ホーム</span></a>
+<a href="../planner/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-calculator"/></svg><span>プランナー</span></a>
+<a href="../compare/" aria-current="page"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-scale"/></svg><span>比較</span></a>
+<a href="../stays/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-hotel"/></svg><span>宿泊</span></a>
+<a href="../guide/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-book-open"/></svg><span>ガイド</span></a>
+<a href="../map/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-map"/></svg><span>地図</span></a>
 </nav></div>
 <footer class="wrap site-footer note">
   <p>本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</p>

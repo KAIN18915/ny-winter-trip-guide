@@ -42,7 +42,14 @@ function layoutExt(opts) {
 }
 
 function banner() {
-  return `<div class="banner" role="status"><strong>${esc(meta.nothingBooked)}</strong> ${esc(meta.disclaimer)}</div>`;
+  return `<ul class="alerts static" role="status">
+  <li class="a-cap"><b>未予約</b> <span>${esc(meta.nothingBooked)} 表示料金・時刻は調査時点の参考値です。</span></li>
+</ul>`;
+}
+
+function costForPlan(planKey) {
+  const row = costs.plans.find((p) => p.planKey === planKey);
+  return row?.totalRangeUsd || "—";
 }
 
 function buildIndex() {
@@ -51,7 +58,7 @@ function buildIndex() {
   const c1 = cmp[1];
   const c2 = cmp[2];
   const cmpTable = `
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr>
         <th>項目</th><th>${esc(c0.name)}</th><th>${esc(c1.name)}</th><th>${esc(c2.name)}</th>
       </tr></thead>
@@ -100,20 +107,28 @@ function buildIndex() {
     ${banner()}
     <h1>結論と3案比較</h1>
     <p class="lead">シアトル在住・学生1人・年末年始の予算旅行案。12/31 と 1/1 は NYC 滞在を固定。<a href="planner/">日付可変プランナー</a>で片道カレンダー組み合わせを試算できます。</p>
-    <div class="plans panel">${cmp
-      .map(
-        (p) => `<article class="plan"><header><b>${esc(p.name.split("：")[0])}</b></header>
-        <p class="pname">${esc(p.name)}</p>
-        <div class="facts">
-          <div><dt>出発</dt><dd>${esc(p.departureSEA)}</dd></div>
-          <div><dt>年越し</dt><dd>${esc(p.nyeAndNewYear)}</dd></div>
-          <div><dt>帰国</dt><dd>${esc(p.returnSEA)}</dd></div>
-        </div>
-        <p class="note">${esc(p.focus)} · ${esc(p.costNote)}</p>
-        <p class="btns"><a class="btn" href="plan/${p.key.replace("plan-", "")}/">詳細行程</a></p>
-        </article>`
-      )
-      .join("")}</div>
+    <section class="panel"><h2 class="pg-h" style="margin-top:0">3案</h2>
+    <div class="plans">${cmp
+      .map((p) => {
+        const slug = p.key.replace("plan-", "");
+        const days = esc(p.durationDays || "—");
+        const amt =
+          p.key === "plan-c"
+            ? "$900–2,200"
+            : esc(costForPlan(p.key));
+        return `<article class="plan"><header><b>${esc(p.name.split("：")[0])}</b> <span class="lbl c-est">目安</span></header>
+        <p class="amt">${amt} <small>概算合計（USD）</small></p>
+        <p class="pname">${esc(p.name)} · ${days}</p>
+        <ul class="keypts">
+          <li>出発: ${esc(p.departureSEA)}</li>
+          <li>12/31・1/1: ${esc(p.nyeAndNewYear)}</li>
+          <li>帰国: ${esc(p.returnSEA)}</li>
+          <li>${esc(p.focus)}</li>
+        </ul>
+        <p class="btns"><a class="btn" href="plan/${slug}/">行程を見る</a> <a class="btn" href="planner/">日付試算</a></p>
+        </article>`;
+      })
+      .join("")}</div></section>
     <div class="rec-box">
       ${tag("proposal")}
       <p>${esc(plans.recommendation.summary)}</p>
@@ -141,7 +156,7 @@ function buildIndex() {
 
     <h2>費用目安（USD・1人） ${tag("estimate")}</h2>
     <p class="lead">${esc(costs.disclaimer)}</p>
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr><th>案</th><th>概算合計</th><th>航空券メモ</th></tr></thead>
       <tbody>${costRows}</tbody>
     </table></div>
@@ -174,7 +189,7 @@ function buildPlanItinerary(data, planNav) {
     <p>${esc(data.note)}</p>
     ${extra || ""}
     <h2>日別行程表 ${tag("proposal")}</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr><th>日付</th><th>行程</th><th>移動</th><th>休館・メモ</th></tr></thead>
       <tbody>${rows}</tbody>
     </table></div>
@@ -263,7 +278,7 @@ function buildPractical() {
     <p>${esc(practical.nycTransit.note)}</p>
 
     <h2>${esc(practical.airportAccessNY.title)}</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr><th>空港</th><th>ルート</th><th>運賃（参考）</th></tr></thead>
       <tbody>${nyRows}</tbody>
     </table></div>
@@ -282,7 +297,7 @@ function buildPractical() {
     </ul>
 
     <h2>${esc(practical.closures.title)}</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr><th>施設</th><th>12/25</th><th>1/1</th></tr></thead>
       <tbody>${closureRows}</tbody>
     </table></div>
@@ -336,7 +351,7 @@ function buildFares() {
         .join("");
       return `<h3>${esc(seg.title)}</h3>
         <p><a href="${esc(seg.searchUrl)}">Google Flights で再検索</a>　確認: ${esc(fares.checkedAtPST)}（PST）</p>
-        <div class="table-wrap"><table>
+        <div class="table-wrap table-scroll"><table class="wide">
           <thead><tr><th>便</th><th>詳細</th><th>表示運賃</th></tr></thead>
           <tbody>${opts}</tbody>
         </table></div>`;
@@ -346,7 +361,7 @@ function buildFares() {
   const costDetail = costs.plans
     .map(
       (p) => `<h3>${esc(p.name)} 内訳 <span class="tag tag--estimate">目安</span></h3>
-      <div class="table-wrap"><table>
+      <div class="table-wrap table-scroll"><table class="wide">
         <thead><tr><th>項目</th><th>レンジ</th><th>メモ</th></tr></thead>
         <tbody>${p.lines
           .map(
@@ -366,7 +381,7 @@ function buildFares() {
 
     <h2>${esc(fares.planA.title)}</h2>
     <p><a href="${esc(fares.planA.searchUrl)}">Google Flights で再検索</a></p>
-    <div class="table-wrap"><table>
+    <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr><th>航空会社</th><th>区間</th><th>詳細</th><th>表示運賃</th></tr></thead>
       <tbody>${planArows}</tbody>
     </table></div>
@@ -415,10 +430,10 @@ function buildCompare(v2d1) {
     <h1 class="pg-h">運賃・宿泊の比較</h1>
     <p class="lead">${tag("estimate")} Google Flights / Google Hotels の調査値。購入前に再確認。</p>
     <h2>片道運賃サンプル（各ルート先頭5日）</h2>
-    <div class="table-wrap"><table><thead><tr><th>ルート</th><th>日付・目安</th></tr></thead><tbody>${fareRows}</tbody></table></div>
+    <div class="table-wrap table-scroll"><table class="wide"><thead><tr><th>ルート</th><th>日付・目安</th></tr></thead><tbody>${fareRows}</tbody></table></div>
     ${cite("https://www.google.com/travel/flights", calendars.checkedAt, calendars.note)}
     <h2>NYC 宿泊候補（6泊目安・一部）</h2>
-    <div class="table-wrap"><table><thead><tr><th>宿</th><th>エリア</th><th>6泊総額</th></tr></thead><tbody>${stayRows}</tbody></table></div>
+    <div class="table-wrap table-scroll"><table class="wide"><thead><tr><th>宿</th><th>エリア</th><th>6泊総額</th></tr></thead><tbody>${stayRows}</tbody></table></div>
     <p><a href="../stays/">全 ${lodging.length} 件 →</a></p>
     ${cite(hotels.nyc6n?.searchUrl || "https://www.google.com/travel/hotels", hotels.checkedAt, hotels.disclaimer)}
   `;
@@ -440,15 +455,16 @@ function assignOptionArea(o, areas) {
 
 function buildGuideIndex(v2, areas) {
   const cards = areas
-    .map(
-      (a) => `<a class="card guide-area" href="${a.id}/"><img src="../assets/${esc(a.heroPhoto)}" alt="" loading="lazy" />
-      <div class="cb"><b>${esc(a.nameJa)}</b></div></a>`
-    )
+    .map((a) => {
+      const img = a.heroPhoto
+        ? `<div class="img-box ar-thumb"><img src="../assets/${esc(a.heroPhoto)}" alt="" loading="lazy" decoding="async"></div>`
+        : "";
+      return `<a class="card guide-area" href="${a.id}/">${img}<div class="cb"><b>${esc(a.nameJa)}</b></div></a>`;
+    })
     .join("");
   const body = `
     ${banner()}
     <h1 class="pg-h">エリア別ガイド</h1>
-    <p class="lead">写真は各スポット・エリアの文脈で表示（別タブのギャラリーはありません）。</p>
     <div class="cards">${cards}</div>
     <p><a href="more/">全 ${v2.options.length} 件の候補一覧 →</a></p>
   `;
@@ -458,14 +474,18 @@ function buildGuideIndex(v2, areas) {
 function buildGuideArea(areaId, v2, areas) {
   const area = areas.find((a) => a.id === areaId);
   const opts = v2.options.filter((o) => assignOptionArea(o, areas) === areaId);
-  const hero = `../../assets/${area.heroPhoto}`;
-  const cap = v2.photoCap(area.creditId, area.areaLabel);
+  const heroBlock =
+    area.heroPhoto && area.creditId
+      ? `<figure class="vimg"><div class="img-box ar-hero"><img src="../../assets/${esc(area.heroPhoto)}" alt="" loading="lazy" decoding="async"></div><figcaption>${v2.photoCap(area.creditId, area.areaLabel || "エリアの写真")}</figcaption></figure>`
+      : area.id === "bay"
+        ? `<p class="note">${tag("unverified")} ベイエリア用の Commons 参考写真は未掲載（住居可否も未確認）。</p>`
+        : "";
   const cards = opts
     .map((o) => {
       const img = o.image_asset ? v2.commonsImgPath(o.image_asset) : null;
       const unv = (o.source_status || "").includes("未確認");
-      return `<article class="card option-card${unv ? " is-muted" : ""}">
-        ${img ? `<img src="${esc(img)}" alt="" loading="lazy" />` : ""}
+        return `<article class="card option-card${unv ? " is-muted" : ""}">
+        ${img ? `<figure class="vimg vimg--thumb"><div class="img-box ar-thumb"><img src="${esc(img)}" alt="" loading="lazy" decoding="async"></div></figure>` : ""}
         <div class="cb"><h3><a href="${esc(o.source_url)}" rel="noopener">${esc(o.name)}</a> ${unv ? tag("unverified") : ""}</h3>
         <p>${esc(o.category)} · 12/31 ${esc(o.hours_2026_12_31)} / 1/1 ${esc(o.hours_2027_01_01)}</p>
         ${o.commons_credit_id ? v2.photoCap(o.commons_credit_id) : ""}
@@ -476,7 +496,7 @@ function buildGuideArea(areaId, v2, areas) {
     ${banner()}
     <p><a href="../">← ガイド一覧</a></p>
     <h1 class="pg-h">${esc(area.nameJa)}</h1>
-    <figure class="vimg"><img src="${esc(hero)}" alt="" loading="lazy" /><figcaption>${cap}</figcaption></figure>
+    ${heroBlock}
     <p>${opts.length} 件の候補</p>
     <div class="cards">${cards || "<p>該当候補なし</p>"}</div>
   `;

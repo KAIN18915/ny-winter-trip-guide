@@ -84,10 +84,16 @@ a:focus-visible {
   font-weight: 600;
 }
 
-main {
+main:not(.wrap) {
   max-width: 48rem;
   margin: 0 auto;
   padding: 1rem 1rem 2.5rem;
+}
+
+body.app main.wrap {
+  max-width: 1180px;
+  padding: 16px 12px 48px;
+  min-width: 0;
 }
 
 h1 {
@@ -135,10 +141,18 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.table-wrap {
+.table-wrap,
+.table-scroll {
   overflow-x: auto;
   margin: 0.5rem 0 1rem;
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+body.app .table-wrap,
+body.app .table-scroll {
+  border: 1px solid var(--line, #e3e6ee);
+  border-radius: 8px;
 }
 
 table {
@@ -295,12 +309,14 @@ ul.compact {
   padding: 0 0 0.75rem;
 }
 
-.stay-card img,
-.option-card img {
+.stay-card .img-box img,
+.option-card .img-box img,
+.stay-card > img,
+.option-card > img {
   width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: 100%;
   display: block;
-  aspect-ratio: 16/10;
   object-fit: cover;
 }
 

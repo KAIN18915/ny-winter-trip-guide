@@ -11,10 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/app.css">
+  <link rel="stylesheet" href="../assets/css/ny-guide-base.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   
 </head>
-<body class="app p-guide">
+<body class="app p-guide js">
+<a class="skip" href="#main-c">本文へ</a>
 <header class="sitebar"><div class="in">
 <a class="brand" href="../">NY冬旅ガイド</a>
 <nav class="topnav" aria-label="サブ">
@@ -25,28 +27,21 @@
 </div></header>
 <main id="main-c" tabindex="-1" class="wrap">
 
-    <div class="banner" role="status"><strong>現時点で航空券・宿泊・イベントの予約は行っていません。</strong> 本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</div>
+    <ul class="alerts static" role="status">
+  <li class="a-cap"><b>未予約</b> <span>現時点で航空券・宿泊・イベントの予約は行っていません。 表示料金・時刻は調査時点の参考値です。</span></li>
+</ul>
     <h1 class="pg-h">エリア別ガイド</h1>
-    <p class="lead">写真は各スポット・エリアの文脈で表示（別タブのギャラリーはありません）。</p>
-    <div class="cards"><a class="card guide-area" href="midtown/"><img src="../assets/img/02.webp" alt="" loading="lazy" />
-      <div class="cb"><b>Midtown（ミッドタウン）</b></div></a><a class="card guide-area" href="downtown/"><img src="../assets/img/03.webp" alt="" loading="lazy" />
-      <div class="cb"><b>Lower Manhattan（下町）</b></div></a><a class="card guide-area" href="brooklyn/"><img src="../assets/img/04.webp" alt="" loading="lazy" />
-      <div class="cb"><b>Brooklyn（ブルックリン）</b></div></a><a class="card guide-area" href="uptown/"><img src="../assets/img/01.webp" alt="" loading="lazy" />
-      <div class="cb"><b>Uptown / Central Park</b></div></a><a class="card guide-area" href="queens/"><img src="../assets/img/28.webp" alt="" loading="lazy" />
-      <div class="cb"><b>Queens / その他NY</b></div></a><a class="card guide-area" href="la/"><img src="../assets/img/34.webp" alt="" loading="lazy" />
-      <div class="cb"><b>Los Angeles</b></div></a><a class="card guide-area" href="bay/"><img src="../assets/img/31.webp" alt="" loading="lazy" />
-      <div class="cb"><b>SF Bay Area</b></div></a><a class="card guide-area" href="nye/"><img src="../assets/img/02.webp" alt="" loading="lazy" />
-      <div class="cb"><b>年越し（12/31・1/1）</b></div></a></div>
+    <div class="cards"><a class="card guide-area" href="midtown/"><div class="img-box ar-thumb"><img src="../assets/img/02.webp" alt="" loading="lazy" decoding="async"></div><div class="cb"><b>Midtown（ミッドタウン）</b></div></a><a class="card guide-area" href="downtown/"><div class="img-box ar-thumb"><img src="../assets/img/03.webp" alt="" loading="lazy" decoding="async"></div><div class="cb"><b>Lower Manhattan（下町）</b></div></a><a class="card guide-area" href="brooklyn/"><div class="img-box ar-thumb"><img src="../assets/img/04.webp" alt="" loading="lazy" decoding="async"></div><div class="cb"><b>Brooklyn（ブルックリン）</b></div></a><a class="card guide-area" href="uptown/"><div class="img-box ar-thumb"><img src="../assets/img/01.webp" alt="" loading="lazy" decoding="async"></div><div class="cb"><b>Uptown / Central Park</b></div></a><a class="card guide-area" href="queens/"><div class="img-box ar-thumb"><img src="../assets/img/28.webp" alt="" loading="lazy" decoding="async"></div><div class="cb"><b>Queens / その他NY</b></div></a><a class="card guide-area" href="la/"><div class="img-box ar-thumb"><img src="../assets/img/34.webp" alt="" loading="lazy" decoding="async"></div><div class="cb"><b>Los Angeles</b></div></a><a class="card guide-area" href="bay/"><div class="cb"><b>SF Bay Area</b></div></a><a class="card guide-area" href="nye/"><div class="img-box ar-thumb"><img src="../assets/img/02.webp" alt="" loading="lazy" decoding="async"></div><div class="cb"><b>年越し（12/31・1/1）</b></div></a></div>
     <p><a href="more/">全 75 件の候補一覧 →</a></p>
   
 </main>
 <div class="dock" id="dock"><nav class="botnav" aria-label="主要ナビ">
-<a href="../"><span>ホーム</span></a>
-<a href="../planner/"><span>プランナー</span></a>
-<a href="../compare/"><span>比較</span></a>
-<a href="../stays/"><span>宿泊</span></a>
-<a href="../guide/" aria-current="page"><span>ガイド</span></a>
-<a href="../map/"><span>地図</span></a>
+<a href="../"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-house"/></svg><span>ホーム</span></a>
+<a href="../planner/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-calculator"/></svg><span>プランナー</span></a>
+<a href="../compare/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-scale"/></svg><span>比較</span></a>
+<a href="../stays/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-hotel"/></svg><span>宿泊</span></a>
+<a href="../guide/" aria-current="page"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-book-open"/></svg><span>ガイド</span></a>
+<a href="../map/"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-map"/></svg><span>地図</span></a>
 </nav></div>
 <footer class="wrap site-footer note">
   <p>本サイトは旅行案の整理用です。航空券・宿泊・イベントは一切予約済みではありません。表示料金・時刻は調査時点の参考値であり、購入前に必ず公式情報で再確認してください。</p>

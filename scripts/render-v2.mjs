@@ -22,11 +22,19 @@ export function buildV2Pages(ctx) {
 
   const creditsById = Object.fromEntries(credits.map((c) => [c.id, c]));
 
-  function photoCap(creditId, areaLabel = "") {
+  function photoCap(creditId, areaLabel = "", inline = false) {
     const c = creditsById[creditId];
     if (!c) return "";
     const pre = areaLabel ? `<strong>${esc(areaLabel)}</strong> — ` : "";
-    return `<p class="photo-cap"><small>${pre}写真: ${esc(c.author)} / <a href="${esc(c.license_url || c.file_page_url)}">${esc(c.license)}</a> · <a href="${esc(c.file_page_url)}">Commons</a> · ${esc(c.caption_note || "")}</small></p>`;
+    const inner = `<small>${pre}写真: ${esc(c.author)} / <a href="${esc(c.license_url || c.file_page_url)}">${esc(c.license)}</a> · <a href="${esc(c.file_page_url)}">Commons</a> · ${esc(c.caption_note || "")}</small>`;
+    return inline ? inner : `<span class="photo-cap">${inner}</span>`;
+  }
+
+  function figureImg(src, creditId, { variant = "card", areaLabel = "" } = {}) {
+    const ar = variant === "hero" ? "ar-hero" : variant === "thumb" ? "ar-thumb" : "ar-card";
+    const thumbCls = variant === "thumb" ? " vimg--thumb" : "";
+    const cap = creditId ? photoCap(creditId, areaLabel, true) : "";
+    return `<figure class="vimg${thumbCls}"><div class="img-box ${ar}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"></div>${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>`;
   }
 
   function commonsImgPath(p) {
@@ -58,7 +66,7 @@ export function buildV2Pages(ctx) {
 
       <noscript>
         <h2>JS 無効: 49 シナリオ一覧</h2>
-        <div class="table-wrap"><table>
+        <div class="table-wrap table-scroll"><table class="wide">
           <thead><tr><th>ID</th><th>種別</th><th>SEA 出発候補</th><th>NYC 宿泊</th><th>SEA 帰着</th><th>状態</th></tr></thead>
           <tbody>${scenarioRows}</tbody>
         </table></div>
@@ -99,7 +107,7 @@ export function buildV2Pages(ctx) {
         </div>
 
         <p id="cal-label"></p>
-        <div class="table-wrap"><table id="leg-table">
+        <div class="table-wrap table-scroll"><table id="leg-table" class="wide">
           <thead><tr><th>区間</th><th>日付</th><th>運賃</th></tr></thead>
           <tbody></tbody>
         </table></div>
@@ -136,17 +144,18 @@ export function buildV2Pages(ctx) {
         const priceData = price6 || priceLa || 99999;
         const slug = lodgingSlugs?.get(l.id) || l.id;
         const detailHref = `${relSlug}${slug}/`;
-        const cap = l.commons_credit_id
-          ? photoCap(l.commons_credit_id, "エリアの写真")
-          : '<span class="tag tag--unverified">写真クレジット未割当</span>';
+        const fig = l.commons_credit_id
+          ? figureImg(img, l.commons_credit_id, { variant: "thumb", areaLabel: "エリアの写真" })
+          : '<div class="img-box ar-thumb noph"><small>写真なし</small></div>';
         return `<article class="stay-card card" data-card data-city="${esc(l.city)}" data-area="${esc(l.area)}" data-price="${priceData}" hidden="false">
-          <figure class="vimg"><img src="${esc(img)}" alt="" loading="lazy" width="320" height="200" />${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>
-          <h3><a href="${esc(detailHref)}">${esc(l.name)}</a></h3>
+          ${fig}
+          <div class="cb"><h3><a href="${esc(detailHref)}">${esc(l.name)}</a></h3>
           <p>${esc(l.area)} · ${esc(l.type)}</p>
           <p>${price6 ? `6泊: $${price6} <span class="tag tag--estimate">目安</span>` : '<span class="tag tag--unverified">6泊価格未確認</span>'}</p>
           <p>${priceNye ? `大晦日1泊: $${priceNye} <span class="tag tag--estimate">目安</span>` : ""}</p>
           <p>${priceLa ? `LA 4泊: $${priceLa} <span class="tag tag--estimate">目安</span>` : ""}</p>
           <p class="cite">確認: ${esc(l.checked_at)}</p>
+          </div>
         </article>`;
       })
       .join("");
@@ -161,7 +170,7 @@ export function buildV2Pages(ctx) {
         <select id="stay-area"><option value="all">全エリア</option></select>
         <label>最大6泊総額 <input type="number" id="price-max" value="2500" /></label>
       </div>
-      <div class="card-grid" id="stays-grid" data-filter-grid="stays-grid" data-filter-search="stay-search" data-filter-city="stay-city" data-filter-cat="stay-area">
+      <div class="cards" id="stays-grid" data-filter-grid="stays-grid" data-filter-search="stay-search" data-filter-city="stay-city" data-filter-cat="stay-area">
         ${cards}
       </div>
       ${cite(hotels.nyc6n.searchUrl || "https://www.google.com/travel/hotels", hotels.checkedAt, hotels.disclaimer)}
@@ -179,14 +188,14 @@ export function buildV2Pages(ctx) {
         const unv = (o.source_status || "").includes("未確認");
         const price = o.price_usd != null ? `$${o.price_usd}` : "—";
         return `<article class="option-card card${unv ? " is-muted" : ""}" data-card data-city="${esc(o.city)}" data-category="${esc(o.category)}" data-price="${o.price_usd || 0}">
-          ${img ? `<figure class="vimg"><img src="${esc(img)}" alt="" loading="lazy" />${o.commons_credit_id ? `<figcaption>${photoCap(o.commons_credit_id)}</figcaption>` : ""}</figure>` : ""}
+          ${img && o.commons_credit_id ? figureImg(img, o.commons_credit_id, { variant: "thumb" }) : img ? `<figure class="vimg vimg--thumb"><div class="img-box ar-thumb"><img src="${esc(img)}" alt="" loading="lazy" decoding="async"></div></figure>` : ""}
           ${!img && o.commons_credit_id ? photoCap(o.commons_credit_id) : ""}
-          <h3><a href="${esc(o.source_url)}">${esc(o.name)}</a></h3>
+          <div class="cb"><h3><a href="${esc(o.source_url)}">${esc(o.name)}</a></h3>
           <p>${esc(o.category)} · ${esc(o.city)} ${unv ? tag("unverified") : ""}</p>
           <p>12/31: ${esc(o.hours_2026_12_31)}</p>
           <p>1/1: ${esc(o.hours_2027_01_01)}</p>
           <p>料金: ${esc(price)} ${o.price_note ? `<small>${esc(o.price_note)}</small>` : ""}</p>
-          <span class="cite">確認: ${esc(o.checked_at)}</span>
+          <span class="cite">確認: ${esc(o.checked_at)}</span></div>
         </article>`;
       })
       .join("");
@@ -199,7 +208,7 @@ export function buildV2Pages(ctx) {
         <select id="opt-city"><option value="all">全都市</option><option value="NYC">NYC</option><option value="LA">LA</option></select>
         <select id="opt-cat"><option value="all">全カテゴリ</option>${catOpts}</select>
       </div>
-      <div class="card-grid" id="options-grid" data-filter-grid="options-grid" data-filter-search="opt-search" data-filter-city="opt-city" data-filter-cat="opt-cat">
+      <div class="cards" id="options-grid" data-filter-grid="options-grid" data-filter-search="opt-search" data-filter-city="opt-city" data-filter-cat="opt-cat">
         ${cards}
       </div>
     `;
@@ -287,16 +296,14 @@ export function buildV2Pages(ctx) {
     const lg = links.guide || "guide/";
     const lm = links.map || "map/";
     const lpc = links.planC || "plan/c/";
-    const extra = `<p class="links"><a href="${esc(lp)}">→ 日付可変プランナー</a> · <a href="${esc(ls)}">宿泊 ${lodging.length}件</a> · <a href="${esc(lg)}">エリア別ガイド</a> · <a href="${esc(lm)}">地図</a> · <a href="${esc(links.compare || "compare/")}">運賃・宿比較</a></p>
-      <p><span class="tag tag--proposal">案C</span> <a href="${esc(lpc)}">ベイエリア経由</a> — 友人宅（可否・日程は未確認）</p>
-      <p>掲載: シナリオ ${scenarios.length} · Commons 写真 ${credits.length} · ${esc(manifest.checked_at)} 時点 manifest</p>`;
+    const extra = `<p class="links"><a href="${esc(lp)}">プランナー</a> · <a href="${esc(ls)}">宿泊</a> · <a href="${esc(lg)}">ガイド</a> · <a href="${esc(lm)}">地図</a> · <a href="${esc(links.compare || "compare/")}">比較</a></p>
+      <p><span class="tag tag--proposal">案C</span> <a href="${esc(lpc)}">ベイエリア経由</a> — 友人宅（可否・日程は未確認）</p>`;
     return html.replace("</h1>", `</h1>\n${extra}`);
   }
 
   function buildStayDetail(l, slug, assetDepth = 2) {
     const pre = "../".repeat(assetDepth);
     const img = commonsImgPath(l.commons_image);
-    const cap = l.commons_credit_id ? photoCap(l.commons_credit_id, "エリアの写真") : "";
     const price6 = l.google_hotels_6n_total_usd;
     const priceNye = l.google_hotels_nye_total_usd;
     const priceLa = l.google_hotels_la4n_total_usd;
@@ -305,8 +312,7 @@ export function buildV2Pages(ctx) {
       <p><a href="../">← 宿泊一覧</a></p>
       <h1 class="pg-h">${esc(l.name)}</h1>
       <p>${esc(l.area)} · ${esc(l.type)} · ${esc(l.city)}</p>
-      <figure class="vimg venue"><img src="${esc(img)}" alt="" loading="lazy" />
-      ${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>
+      ${figureImg(img, l.commons_credit_id, { variant: "hero", areaLabel: "エリアの写真" })}
       <h2>料金 <span class="tag tag--estimate">目安</span></h2>
       <ul class="compact">
         <li>6泊（12/28→1/3）: ${price6 ? `$${price6}` : '<span class="tag tag--unverified">未確認</span>'}</li>
@@ -336,6 +342,7 @@ export function buildV2Pages(ctx) {
     buildFaresCalendars,
     patchIndex,
     buildStayDetail,
+    figureImg,
     photoCap,
     commonsImgPath,
     lodging,

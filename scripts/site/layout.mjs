@@ -1,12 +1,12 @@
 import { esc } from "../lib/html.mjs";
 
 const NAV_ITEMS = [
-  { key: "home", href: "", label: "ホーム" },
-  { key: "planner", href: "planner/", label: "プランナー" },
-  { key: "compare", href: "compare/", label: "比較" },
-  { key: "stays", href: "stays/", label: "宿泊" },
-  { key: "guide", href: "guide/", label: "ガイド" },
-  { key: "map", href: "map/", label: "地図" },
+  { key: "home", href: "", label: "ホーム", icon: "i-house" },
+  { key: "planner", href: "planner/", label: "プランナー", icon: "i-calculator" },
+  { key: "compare", href: "compare/", label: "比較", icon: "i-scale" },
+  { key: "stays", href: "stays/", label: "宿泊", icon: "i-hotel" },
+  { key: "guide", href: "guide/", label: "ガイド", icon: "i-book-open" },
+  { key: "map", href: "map/", label: "地図", icon: "i-map" },
 ];
 
 export function relPrefix(depth) {
@@ -21,7 +21,7 @@ export function createLayout(meta, depth = 0) {
 ${NAV_ITEMS.map((n) => {
   const href = pre + n.href;
   const cur = n.key === current ? ' aria-current="page"' : "";
-  return `<a href="${href}"${cur}><span>${esc(n.label)}</span></a>`;
+  return `<a href="${href}"${cur}><svg class="ic" aria-hidden="true"><use href="${pre}assets/icons.svg#${n.icon}"/></svg><span>${esc(n.label)}</span></a>`;
 }).join("\n")}
 </nav></div>`;
   }
@@ -66,10 +66,12 @@ ${NAV_ITEMS.map((n) => {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="${pre}assets/app.css">
+  <link rel="stylesheet" href="${pre}assets/css/ny-guide-base.css">
   <link rel="stylesheet" href="${pre}assets/css/style.css">
   ${extraHead}
 </head>
-<body class="app p-${esc(nav)}">
+<body class="app p-${esc(nav)} js">
+<a class="skip" href="#main-c">本文へ</a>
 ${sitebar(nav)}
 <main id="main-c" tabindex="-1" class="wrap${wide ? " wrap--wide" : ""}">
 ${body}
