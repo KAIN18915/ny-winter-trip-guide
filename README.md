@@ -1,6 +1,6 @@
 # 年末年始 NY / LA / ベイエリア旅行ガイド 2026–27（v2）
 
-GitHub Pages 静的サイト。案A（NYのみ）・案B（LA経由）・案C（ベイエリア友人宅経由）、日付可変プランナー、宿泊43件・選択肢75件・地図・Commons写真付き。
+GitHub Pages 静的サイト。ホームは未予約の暫定プラン（2026-12-27夜 SEA発、2027-01-02 NY発、宿泊5泊）。案A（NYのみ）・案B（LA経由）・案C（友人宅・可否未確認）は代替。日付可変プランナー、宿泊、地図、Commons写真付き。
 
 - https://www.kainel18915.f5.si/ny-winter-trip-guide/
 - https://kain18915.github.io/ny-winter-trip-guide/（リダイレクト）
@@ -9,7 +9,7 @@ GitHub Pages 静的サイト。案A（NYのみ）・案B（LA経由）・案C（
 
 | ファイル | 内容 |
 |---------|------|
-| `index.html` | 3案比較・シナリオ案内 |
+| `index.html` | 現行の暫定プラン（12/27夜–1/2・未予約）と、代替の3案 |
 | `planner.html` | 日付可変試算・ヒートマップ（JS）／シナリオ表（no-JS） |
 | `plan-a.html` / `plan-b.html` / `plan-c.html` | 固定行程案 |
 | `stays.html` | 宿泊候補カード（Google Hotels 目安価格） |
@@ -33,6 +33,7 @@ node scripts/build.mjs       # HTML 生成
 
 - 調査・options/lodging: **2026-11-06〜07（PST）**
 - 片道運賃カレンダー・Google Hotels: **2026-11-07（PST）**
+- 現行暫定（直行の参考帯・Expedia 5泊）: **2026-11-11（PT）**。直行だけの再検索と航空会社公式の確認は途中。
 
 ## 免責
 

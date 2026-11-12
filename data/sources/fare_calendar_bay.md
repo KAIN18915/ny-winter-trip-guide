@@ -11,4 +11,4 @@ URL https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI3agc
 ## SFO→NYC: 12/21 $210, 12/22 $239, 12/23 $250, 12/24 $196, 12/25 $196, 12/26 $284, 12/27 $236, 12/28 $274, 12/29 $239, 12/30 $196, 12/31 $196
 12/27実便（読み込み途中の可能性）: American 23:46→翌10:00 SFO–JFK 乗継ORD $236; American 9:47→21:52 乗継LAX $236; American 18:51→翌5:30 SFO–EWR 乗継PHX $236
 URL https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDU0ZPcgcIARIDTllDQAFIAXABggELCP___________wGYAQI&curr=USD&hl=en
-## メモ: Alameda（サンフランシスコ湾の東側）はOAKが最寄り、SFOも可（BART+フェリー/バス）。友人宅滞在の可否・日程は未確認（公開サイトに個人名・住所は載せない）。
+## メモ: 友人宅（可否未確認）。公開サイトに個人名・住所は載せない。空港は OAK または SFO（未確定）。

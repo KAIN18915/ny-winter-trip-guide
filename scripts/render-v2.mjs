@@ -62,7 +62,7 @@ export function buildV2Pages(ctx) {
     const body = `
       ${banner()}
       <h1>日程プランナー（日付可変）</h1>
-      <p class="lead">12/31 と 1/1 は NYC 滞在必須。運賃・宿は <span class="tag tag--estimate">目安</span>。JavaScript 無効時は下のシナリオ表を参照。</p>
+      <p class="lead">現行の暫定日程（12/27夜–1/2、未予約）は <a href="../">ホーム</a>。このページは日付を変えた試算です。12/31 と 1/1 は NYC 滞在必須。運賃・宿は <span class="tag tag--estimate">目安</span>。JavaScript 無効時は下のシナリオ表を参照。</p>
 
       <noscript>
         <h2>JS 無効: 49 シナリオ一覧</h2>
@@ -79,7 +79,7 @@ export function buildV2Pages(ctx) {
             <select id="route-type">
               <option value="ny-only">NYのみ</option>
               <option value="la-via">LA経由</option>
-              <option value="bay">ベイエリア（友人宅）経由</option>
+              <option value="bay">ベイエリア（友人宅・可否未確認）経由</option>
             </select>
           </label>
           <label>SEA 出発日
@@ -163,7 +163,7 @@ export function buildV2Pages(ctx) {
     const body = `
       ${banner()}
       <h1>宿泊候補（${lodging.length}件）</h1>
-      <p class="lead">Google Hotels 実売表示の一部をマッチ。全件の指定日総額は未確認のものあり。</p>
+      <p class="lead">ここは 2026-11-07 の Google Hotels 目安。現行暫定の5泊（12/28–1/2、Expedia、2026-11-11）は <a href="../">ホーム</a>。全件の指定日総額は未確認のものあり。</p>
       <div class="filter-bar">
         <input type="search" id="stay-search" placeholder="検索" />
         <select id="stay-city"><option value="all">全都市</option><option value="NYC">NYC</option><option value="LA">LA</option></select>
@@ -290,15 +290,8 @@ export function buildV2Pages(ctx) {
     );
   }
 
-  function patchIndex(html, plans, links = {}) {
-    const lp = links.planner || "planner/";
-    const ls = links.stays || "stays/";
-    const lg = links.guide || "guide/";
-    const lm = links.map || "map/";
-    const lpc = links.planC || "plan/c/";
-    const extra = `<p class="links"><a href="${esc(lp)}">プランナー</a> · <a href="${esc(ls)}">宿泊</a> · <a href="${esc(lg)}">ガイド</a> · <a href="${esc(lm)}">地図</a> · <a href="${esc(links.compare || "compare/")}">比較</a></p>
-      <p><span class="tag tag--proposal">案C</span> <a href="${esc(lpc)}">ベイエリア経由</a> — 友人宅（可否・日程は未確認）</p>`;
-    return html.replace("</h1>", `</h1>\n${extra}`);
+  function patchIndex(html) {
+    return html;
   }
 
   function buildStayDetail(l, slug, assetDepth = 2) {

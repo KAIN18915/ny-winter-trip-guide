@@ -79,7 +79,7 @@ ${body}
 ${botnav(nav)}
 <footer class="wrap site-footer note">
   <p>${esc(meta.disclaimer)}</p>
-  <p>データ確認: ${esc(meta.researchCheckedDatePST)}（PST）／運賃: ${esc(meta.faresCheckedAtPST)}（PST）</p>
+  <p>データ確認: ${esc(meta.researchCheckedDatePST)}（PST）／運賃カレンダー: ${esc(meta.faresCheckedAtPST)}（PST）${meta.currentPlanCheckedAtPST ? `／現行暫定: ${esc(meta.currentPlanCheckedAtPST)}（PT）` : ""}</p>
 </footer>
 ${scriptTags}
 </body>

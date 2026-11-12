@@ -127,7 +127,7 @@
       legs.push({ label: calendars.routes.find((r) => r.routeId === bayRoute).label, date: seaDep, price: p1 });
       legs.push({ label: calendars.routes.find((r) => r.routeId === nyRoute).label, date: nycArrival, price: p2 });
       legs.push({ label: "NYC→SEA", date: ret, price: p3 });
-      stopLabel = "ベイエリア 友人宅（$0 目安・未確認）";
+      stopLabel = "ベイエリア 友人宅（可否未確認・$0 目安）";
       stopCost = 0;
     }
 

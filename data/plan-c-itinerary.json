@@ -4,7 +4,8 @@
   "dates": "出発 12/19–28 目安・SEA→OAK または SEA→SFO、数日滞在後 LAX 代替で OAK/SFO→NYC、帰路 1/2–1/3",
   "checkedDate": "2026-11-07",
   "type": "proposal",
-  "lodgingNote": "ベイエリアは友人宅に滞在（可否・日程は未確認）。宿泊費はプラン計算上 $0 として目安表示のみ。個人名・住所は掲載しません。",
+  "note": "ベイエリアは友人宅（可否未確認）。個人名・住所は掲載しない。宿泊費は計算上 $0 の目安。",
+  "lodgingNote": "ベイエリアは友人宅に滞在（可否未確認）。宿泊費はプラン計算上 $0 として目安表示のみ。個人名・住所は掲載しません。",
   "sources": [
     {
       "url": "https://www.bart.gov/",
@@ -29,20 +30,14 @@
       "label": "Ferry Building（公式）",
       "checkedDate": "2026-11-07",
       "status": "年末営業は未確認"
-    },
-    {
-      "url": "https://www.alamedaca.gov/",
-      "label": "City of Alameda（公式）",
-      "checkedDate": "2026-11-07",
-      "status": "観光案内のみ・詳細未確認"
     }
   ],
   "days": [
     {
       "date": "（柔軟）",
       "weekdayJa": "—",
-      "summary": "SEA→OAK または SEA→SFO。OAK がアラメダ東岸に近い候補（提案）。",
-      "transit": "飛行機。空港→友人宅は未確認",
+      "summary": "SEA→OAK または SEA→SFO。滞在は友人宅（可否未確認）。住所は掲載しない。",
+      "transit": "飛行機。空港から友人宅までの経路は未確認",
       "region": "Bay"
     },
     {
@@ -62,7 +57,7 @@
     {
       "date": "（柔軟）",
       "weekdayJa": "—",
-      "summary": "Alameda・Jack London Square（Oakland）散策",
+      "summary": "オークランドの公開スポット（Jack London Square など）。友人宅の住所は掲載しない。",
       "transit": "BART・フェリー（SF Bay Ferry 等は未確認）",
       "region": "East Bay"
     },

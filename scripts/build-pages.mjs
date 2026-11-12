@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildV2Pages } from "./render-v2.mjs";
-import { esc, tag, cite, slugifyLodging } from "./lib/html.mjs";
+import { esc, tag, cite } from "./lib/html.mjs";
+import { renderCurrentPlan } from "./site/current-plan.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -22,6 +23,7 @@ const nye = readJson("nye.json");
 const practical = readJson("practical.json");
 const fares = readJson("fares.json");
 const costs = readJson("cost-estimates.json");
+const currentPlan = readJson("current-plan.json");
 
 const layout0 = layouts[0];
 const layout1 = layouts[1];
@@ -43,7 +45,7 @@ function layoutExt(opts) {
 
 function banner() {
   return `<ul class="alerts static" role="status">
-  <li class="a-cap"><b>未予約</b> <span>${esc(meta.nothingBooked)} 表示料金・時刻は調査時点の参考値です。</span></li>
+  <li class="a-cap"><b>未予約・暫定</b> <span>${esc(meta.nothingBooked)}</span></li>
 </ul>`;
 }
 
@@ -83,6 +85,8 @@ function buildIndex() {
         planBadge = ' <span class="tag tag--proposal">A/B</span>';
       } else if (e.plan === "all") {
         planBadge = ' <span class="tag tag--proposal">全案</span>';
+      } else if (e.plan === "current") {
+        planBadge = ' <span class="tag tag--estimate">暫定</span>';
       } else if (e.plan) {
         planBadge = ` <span class="tag tag--proposal">案${String(e.plan).toUpperCase()}</span>`;
       }
@@ -103,10 +107,30 @@ function buildIndex() {
     )
     .join("");
 
+  const currentHtml = renderCurrentPlan(currentPlan, {
+    photoCap: (creditId, areaLabel, inline) => v2d1.photoCap(creditId, areaLabel, inline),
+    lodgingHref: (id) => {
+      const slug = lodgingSlugs.get(id);
+      return slug ? `stays/${slug}/` : "";
+    },
+  });
+
   const body = `
     ${banner()}
-    <h1>結論と3案比較</h1>
-    <p class="lead">シアトル在住・学生1人・年末年始の予算旅行案。12/31 と 1/1 は NYC 滞在を固定。<a href="planner/">日付可変プランナー</a>で片道カレンダー組み合わせを試算できます。</p>
+    ${currentHtml}
+
+    <h2>UW 学事日程 ${tag("fact")}</h2>
+    <ul class="compact">
+      ${uw.facts.map((f) => `<li>${esc(f.item)}: ${esc(f.dates)}</li>`).join("")}
+    </ul>
+    ${cite(uw.sourceUrl, uw.checkedDate)}
+    <ul class="compact">
+      ${uw.unverified.map((u) => `<li>${tag("unverified")} ${esc(u.item)}: ${esc(u.status)} — ${esc(u.note)}</li>`).join("")}
+      ${uw.constraints.map((c) => `<li>${tag("proposal")} ${esc(c)}</li>`).join("")}
+    </ul>
+
+    <h2>代替案（案A・案B・案C）</h2>
+    <p class="lead">上の暫定とは別の案です。予約ではありません。12/31 と 1/1 は NYC。<a href="planner/">日付可変プランナー</a>は、2026-11-07 の片道カレンダーで試すページです。案Cの滞在は友人宅（可否未確認）。</p>
     <section class="panel"><h2 class="pg-h" style="margin-top:0">3案</h2>
     <div class="plans">${cmp
       .map((p) => {
@@ -132,18 +156,8 @@ function buildIndex() {
     <div class="rec-box">
       ${tag("proposal")}
       <p>${esc(plans.recommendation.summary)}</p>
-      <span class="cite">確認: ${esc(plans.checkedDate)}（PST）</span>
+      <span class="cite">確認: ${esc(plans.checkedDate)}（PT）</span>
     </div>
-
-    <h2>UW 学事日程 ${tag("fact")}</h2>
-    <ul class="compact">
-      ${uw.facts.map((f) => `<li>${esc(f.item)}: ${esc(f.dates)}</li>`).join("")}
-    </ul>
-    ${cite(uw.sourceUrl, uw.checkedDate)}
-    <ul class="compact">
-      ${uw.unverified.map((u) => `<li>${tag("unverified")} ${esc(u.item)}: ${esc(u.status)} — ${esc(u.note)}</li>`).join("")}
-      ${uw.constraints.map((c) => `<li>${tag("proposal")} ${esc(c)}</li>`).join("")}
-    </ul>
 
     <h2>3案比較表</h2>
     ${cmpTable}
@@ -155,7 +169,7 @@ function buildIndex() {
     <div class="cal-grid">${cal}</div>
 
     <h2>費用目安（USD・1人） ${tag("estimate")}</h2>
-    <p class="lead">${esc(costs.disclaimer)}</p>
+    <p class="lead">案A/B/Cの古い概算です。ホーム上部の 2026-11-11 の Expedia・Google Flights とは別です。${esc(costs.disclaimer)}</p>
     <div class="table-wrap table-scroll"><table class="wide">
       <thead><tr><th>案</th><th>概算合計</th><th>航空券メモ</th></tr></thead>
       <tbody>${costRows}</tbody>
@@ -163,7 +177,7 @@ function buildIndex() {
     <p>詳細内訳と実運賃サンプルは <a href="fares/">運賃ページ</a> 参照。</p>
     ${cite("https://www.washington.edu/students/reg/2627cal.html", costs.checkedDate, costs.sourceNote)}
   `;
-  return layoutExt({ title: "結論・3案比較", nav: "home", body, depth: 0 });
+  return layoutExt({ title: "現行の暫定プラン", nav: "home", body, depth: 0 });
 }
 
 function buildPlanItinerary(data, planNav) {
@@ -376,7 +390,7 @@ function buildFares() {
   const body = `
     ${banner()}
     <h1>実運賃（Google Flights）</h1>
-    <p class="lead">${esc(fares.passengerNote)} ${esc(fares.variableDisclaimer)}</p>
+    <p class="lead">現行暫定の直行参考帯（2026-11-11、約 $686–722）は<a href="../">ホーム</a>。このページは 2026-11-07 のカレンダーです。${esc(fares.passengerNote)} ${esc(fares.variableDisclaimer)}</p>
     <p>確認日時: <strong>${esc(fares.checkedAtPST)}（PST）</strong></p>
 
     <h2>${esc(fares.planA.title)}</h2>
@@ -428,7 +442,7 @@ function buildCompare(v2d1) {
   const body = `
     ${banner()}
     <h1 class="pg-h">運賃・宿泊の比較</h1>
-    <p class="lead">${tag("estimate")} Google Flights / Google Hotels の調査値。購入前に再確認。</p>
+    <p class="lead">${tag("estimate")} Google Flights / Google Hotels の調査値。購入前に再確認。現行暫定（5泊・2026-11-11）は <a href="../">ホーム</a>。</p>
     <h2>片道運賃サンプル（各ルート先頭5日）</h2>
     <div class="table-wrap table-scroll"><table class="wide"><thead><tr><th>ルート</th><th>日付・目安</th></tr></thead><tbody>${fareRows}</tbody></table></div>
     ${cite("https://www.google.com/travel/flights", calendars.checkedAt, calendars.note)}
@@ -444,7 +458,7 @@ function assignOptionArea(o, areas) {
   const hay = `${o.name} ${o.category} ${o.city} ${(o.notes || []).join(" ")}`.toLowerCase();
   if (hay.includes("new year") || hay.includes("nye") || hay.includes("times square") && hay.includes("eve")) return "nye";
   if (o.city === "LA") return "la";
-  if (o.city === "SF" || hay.includes("oakland") || hay.includes("alameda")) return "bay";
+  if (o.city === "SF" || hay.includes("oakland")) return "bay";
   for (const a of areas) {
     if (a.id === "nye") continue;
     if (a.keywords.some((kw) => hay.includes(kw.toLowerCase()))) return a.id;

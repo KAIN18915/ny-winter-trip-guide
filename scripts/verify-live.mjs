@@ -37,6 +37,12 @@ async function main() {
 
   const home = await fetch(BASE);
   const html = await home.text();
+  const markers = ["未予約・暫定", "2026-12-27", "2027-01-02", "Pod 39", "現行の候補ではない"];
+  const missingMarkers = markers.filter((m) => !html.includes(m));
+  const forbidden = ["Alameda", "アラメダ"].filter((m) => html.includes(m));
+  const planC = await fetch(BASE + "plan/c/");
+  const planCHtml = await planC.text();
+  const planCForbidden = ["Alameda", "アラメダ"].filter((m) => planCHtml.includes(m));
   const imgs = [...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map((m) => m[1]);
   const imgResults = [];
   for (const src of imgs) {
@@ -56,14 +62,29 @@ async function main() {
         badPages,
         homeImgsChecked: imgResults.length,
         badHomeImgs: badImgs,
-        ok: badPages.length === 0 && badImgs.length === 0,
+        missingMarkers,
+        forbidden,
+        planCStatus: planC.status,
+        planCForbidden,
+        ok:
+          badPages.length === 0 &&
+          badImgs.length === 0 &&
+          missingMarkers.length === 0 &&
+          forbidden.length === 0 &&
+          planC.status === 200 &&
+          planCForbidden.length === 0,
       },
       null,
       2
     )
   );
 
-  process.exit(badPages.length + badImgs.length > 0 ? 1 : 0);
+  process.exit(
+    badPages.length + badImgs.length + missingMarkers.length + forbidden.length + planCForbidden.length > 0 ||
+      planC.status !== 200
+      ? 1
+      : 0
+  );
 }
 
 main().catch((e) => {

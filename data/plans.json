@@ -1,8 +1,8 @@
 {
-  "checkedDate": "2026-11-07",
+  "checkedDate": "2026-11-11",
   "recommendation": {
-    "primary": "plan-a",
-    "summary": "初めての NY 観光と年越しを優先するなら案A。LA も訪れたいなら案B。SF 湾岸の知人宅が使えるなら案Cで西海岸コストを抑えられる可能性があるが、友人宅の可否は未確認。航空は片道カレンダーの組み合わせが往復 $558 より安い場合あり（目安）。",
+    "primary": "current",
+    "summary": "いま先頭に置いているのは、12/27夜発・1/2帰りの直行（未予約・暫定）です。案AはNYのみ、案BはLA経由、案Cは友人宅（可否未確認）経由の代替です。2026-11-07の片道カレンダーは運賃ページに残しています。",
     "type": "proposal"
   },
   "comparison": [
@@ -37,7 +37,7 @@
       "key": "plan-c",
       "name": "案C：ベイエリア経由",
       "departureSEA": "12/19–28 柔軟",
-      "bayStay": "数日（友人宅・$0 目安）",
+      "bayStay": "数日（友人宅・可否未確認・$0 目安）",
       "bayToNY": "OAK/SFO→NYC（12/21–31 カレンダー）",
       "nyeAndNewYear": "NYC",
       "returnSEA": "2027-01-02 または 1/3",
@@ -53,10 +53,13 @@
     { "date": "2026-12-18", "label": "UW 期末試験週終了", "plan": null },
     { "date": "2026-12-19", "label": "冬休み開始・最早出発", "plan": null },
     { "date": "2026-12-24", "label": "案B：SEA→LAX 目安", "plan": "b" },
-    { "date": "2026-12-28", "label": "案A出発／案B LA→NY", "plan": "both" },
-    { "date": "2026-12-31", "label": "大晦日（全案 NYC）", "plan": "all" },
-    { "date": "2027-01-01", "label": "元日（全案 NYC）", "plan": "all" },
-    { "date": "2027-01-03", "label": "帰国候補", "plan": "all" },
+    { "date": "2026-12-27", "label": "現行暫定: SEA夜発（直行・未予約）", "plan": "current" },
+    { "date": "2026-12-28", "label": "現行暫定: NY朝着・チェックイン（未予約）", "plan": "current" },
+    { "date": "2026-12-28", "label": "代替: 案A出発／案B LA→NY", "plan": "both" },
+    { "date": "2026-12-31", "label": "大晦日（NYC）", "plan": "all" },
+    { "date": "2027-01-01", "label": "元日（NYC）", "plan": "all" },
+    { "date": "2027-01-02", "label": "現行暫定: チェックアウト・NY発直行（未予約）", "plan": "current" },
+    { "date": "2027-01-03", "label": "1/3朝の直行は無し。代替案の帰国候補日", "plan": "all" },
     { "date": "2027-01-04", "label": "UW 冬学期開始", "plan": null }
   ],
   "scenarioNote": "49 の日程シナリオは planner ページと date_scenarios.json 参照"

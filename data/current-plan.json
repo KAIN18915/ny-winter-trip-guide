@@ -1,0 +1,193 @@
+{
+  "id": "current-2026-11-11",
+  "status": "unbooked-tentative",
+  "statusLabel": "未予約・暫定",
+  "checkedDate": "2026-11-11",
+  "timezone": "America/Los_Angeles",
+  "title": "現行の暫定プラン",
+  "dateLine": "2026-12-27（日）夜 SEA発 → 2027-01-02（土）NY発",
+  "intro": "予約はしていません。この節の料金は 2026-11-11（PT）時点の目安です。便名と、往路・復路の発着時刻は載せていません（未定のため）。",
+  "guests": 1,
+  "nights": 5,
+  "checkIn": "2026-12-28",
+  "checkOut": "2027-01-02",
+  "exchange": {
+    "usdJpy": 159.7,
+    "asOf": "2026-11-11",
+    "label": "1 USD ≈ 159.7 JPY",
+    "sourceNote": "このレートの出典サイトは未確認。"
+  },
+  "why": "冬休みは 2027-01-03 まで、冬学期の授業開始は 2027-01-04。1/2 に NY を出る直行が夜便なら、同日の夜に SEA 着となり、授業開始より前に戻れる。以前希望していた「1/3 朝の直行」は存在しない（2026-11-11、Google Flights で確認）。",
+  "outbound": {
+    "label": "往路",
+    "text": "2026-12-27（日）の夜に SEA を出発し、2026-12-28（月）の朝に NY 着。直行のレッドアイ。便名・時刻は未定。"
+  },
+  "returnFlight": {
+    "label": "復路",
+    "text": "2027-01-02（土）に NY を出発する直行便。夜便なら同日の夜に SEA 着。復路の直行レッドアイは無い（2026-11-11 確認）。便名・時刻は未定。"
+  },
+  "stay": {
+    "label": "宿泊",
+    "text": "チェックイン 2026-12-28、チェックアウト 2027-01-02。5泊・1名。ホテルはまだ選んでいない。"
+  },
+  "flights": {
+    "sourceLabel": "Google Flights",
+    "sourceUrl": "https://www.google.com/travel/flights",
+    "checkedDate": "2026-11-11",
+    "progressNote": "直行便だけを対象にした再検索と、航空会社の公式サイトでの確認はまだ途中です。下の金額は 2026-11-11 の参考帯で、選んだ便ではありません。",
+    "nonstopReferenceUsd": {
+      "low": 686,
+      "high": 722,
+      "note": "同じ日付の直行シリーズの参考帯（約 $686–722）。"
+    },
+    "noReturnNonstopRedeye": "復路の直行レッドアイは無い。",
+    "noJan3MorningNonstop": "1/3 朝に着く直行便は存在しない（確認済み）。1/3 の朝に着くには、少なくとも1回の乗り継ぎが必要。",
+    "notCurrent": {
+      "heading": "現行の候補ではない",
+      "text": "以前、アラスカ航空の SFO 経由 $1,169（1/3 8:17 着）を見ていた。その後、直行便だけを見る方針になった。この経由便は現行の暫定プランではない。"
+    },
+    "stopExample": {
+      "heading": "乗り継ぎの例（現行の候補ではない）",
+      "text": "1/3 朝着の例: デルタ航空、SLC 経由、$1,332、1/3 00:10 着。1/3 朝に着くには乗り継ぎが必要、という例であり、今のプランではない。"
+    }
+  },
+  "hotels": {
+    "sourceLabel": "Expedia",
+    "sourceUrl": "https://www.expedia.com/",
+    "checkedDate": "2026-11-11",
+    "terms": "税込・後払い。各ホテルの公式サイトでは、この金額を別に再確認していない。",
+    "preferFreeCancel": "キャンセル料がかからないプランを優先する。",
+    "checkInNote": "12/28 は朝の到着。一般的なチェックインは 15:00。荷物預かりと、早めのチェックインができるかは各ホテルで未確認。",
+    "resortFee": {
+      "usdPerNight": 29.84,
+      "note": "Pod は、別途リゾートフィー $29.84/泊がかかることがある。下のカードの宿泊金額には含めていない。"
+    },
+    "timesSquareNote": "タイムズスクエア周辺は、12/31 頃に大規模イベントの規制と高額になりやすい。",
+    "items": [
+      {
+        "name": "Pod Brooklyn",
+        "lodgingId": "lodging-12",
+        "area": "Williamsburg",
+        "priceUsd": 1560,
+        "extraPrices": [],
+        "points": ["この5件では最安", "二段ベッド", "12/26 まで全額返金"],
+        "creditId": "photo-29",
+        "image": "assets/img/29.webp",
+        "areaLabel": "ウィリアムズバーグの参考写真（ホテルの外観ではない）"
+      },
+      {
+        "name": "Pod Times Square",
+        "lodgingId": "lodging-11",
+        "area": "タイムズスクエア周辺",
+        "priceUsd": 1972,
+        "priceLabel": "二段ベッド",
+        "extraPrices": [{ "label": "ダブルルーム", "usd": 2104 }],
+        "points": ["二段ベッドが $1,972", "12/31 前後は規制と高額になりやすい"],
+        "creditId": "photo-02",
+        "image": "assets/img/02.webp",
+        "areaLabel": "タイムズスクエアの参考写真（ホテルの外観ではない）"
+      },
+      {
+        "name": "Pod 51",
+        "lodgingId": "lodging-10",
+        "area": "ミッドタウン東側",
+        "priceUsd": 2032,
+        "extraPrices": [],
+        "points": ["最安プランは共用バスルーム"],
+        "creditId": "photo-07",
+        "image": "assets/img/07.webp",
+        "areaLabel": "ミッドタウンの参考写真（ブライアントパーク。ホテルの外観ではない）"
+      },
+      {
+        "name": "Pod 39",
+        "lodgingId": "lodging-09",
+        "area": "グランドセントラル付近",
+        "priceUsd": 2127,
+        "extraPrices": [],
+        "recommended": true,
+        "points": ["この5件の中では推奨", "グランドセントラルまで徒歩約6分（Expediaのメモ）", "評価 9.2（Expedia、2026-11-11の表示）"],
+        "creditId": "photo-05",
+        "image": "assets/img/05.webp",
+        "areaLabel": "グランドセントラルの参考写真（ホテルの外観ではない）"
+      },
+      {
+        "name": "Hilton Garden Inn Financial Center",
+        "lodgingId": null,
+        "area": "フィナンシャルセンター",
+        "priceUsd": 2164,
+        "priceLabel": "最安（返金不可）",
+        "extraPrices": [{ "label": "返金可はここから", "usd": 2304 }],
+        "points": ["最安プランは返金不可", "公式ページのURLは、この一覧では未確認"],
+        "creditId": "photo-12",
+        "image": "assets/img/12.webp",
+        "areaLabel": "ロウワーマンハッタン（9/11メモリアル）の参考写真。ホテルの外観ではない"
+      }
+    ],
+    "areaWithoutPrice": {
+      "name": "ロングアイランドシティ",
+      "note": "エリアとしては検討に挙がった。この一覧に、価格の付いた候補は無い。",
+      "creditId": "photo-28",
+      "image": "assets/img/28.webp",
+      "areaLabel": "ロングアイランドシティの参考写真（価格付きの候補は無い）"
+    }
+  },
+  "days": [
+    {
+      "date": "2026-12-27",
+      "weekdayJa": "日",
+      "title": "SEA 夜発",
+      "body": "NY 行きの直行レッドアイ。便名・時刻は未定。"
+    },
+    {
+      "date": "2026-12-28",
+      "weekdayJa": "月",
+      "title": "NY 朝着・チェックイン",
+      "body": "朝に NY 着。宿泊のチェックイン日。一般的なチェックインは 15:00 なので、荷物預かりか早めのチェックインを確認する。この日の観光は未定。"
+    },
+    {
+      "date": "2026-12-29",
+      "weekdayJa": "火",
+      "title": "NYC",
+      "body": "NYC に滞在。中身は未定。候補はガイドを参照。"
+    },
+    {
+      "date": "2026-12-30",
+      "weekdayJa": "水",
+      "title": "NYC",
+      "body": "NYC に滞在。中身は未定。"
+    },
+    {
+      "date": "2026-12-31",
+      "weekdayJa": "木",
+      "title": "年越しは NYC",
+      "body": "NYC で年越し。タイムズスクエア周辺は大規模イベントの規制と高額になりやすい。どこで年を越すかは未定。",
+      "creditId": "photo-02",
+      "image": "assets/img/02.webp",
+      "areaLabel": "タイムズスクエアの参考写真（この日の予定を示すものではない）"
+    },
+    {
+      "date": "2027-01-01",
+      "weekdayJa": "金",
+      "title": "元日は NYC",
+      "body": "NYC。チェックアウトは翌日。"
+    },
+    {
+      "date": "2027-01-02",
+      "weekdayJa": "土",
+      "title": "チェックアウト・NY 発",
+      "body": "チェックアウト。NY 発の直行便。夜便なら同日の夜に SEA 着。復路の直行レッドアイは無い。便名・時刻は未定。"
+    },
+    {
+      "date": "2027-01-03",
+      "weekdayJa": "日",
+      "title": "この朝の直行便は無い",
+      "body": "1/3 朝の直行便は存在しない。冬休みの最終日。授業は翌日から。"
+    },
+    {
+      "date": "2027-01-04",
+      "weekdayJa": "月",
+      "title": "UW 冬学期の授業開始",
+      "body": "授業開始。現行の暫定は、その前に SEA へ戻る前提。"
+    }
+  ]
+}
