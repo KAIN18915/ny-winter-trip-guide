@@ -1,0 +1,199 @@
+.stay-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 12px;
+  min-width: 0;
+}
+
+.stay-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 140px;
+  min-width: 0;
+  font-size: 13px;
+}
+
+.stay-filters input,
+.stay-filters select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  font: inherit;
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.map-legend i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+  vertical-align: -1px;
+}
+
+.map-legend .swatch-hotel {
+  background: #1f3a5f;
+  border-radius: 50%;
+}
+
+.map-legend .swatch-airbnb {
+  background: #c45c26;
+  border-radius: 50%;
+}
+
+.map-legend .swatch-dest {
+  background: #c8102e;
+  border-radius: 2px;
+}
+
+.map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.9fr);
+  gap: 12px;
+  min-width: 0;
+  align-items: start;
+}
+
+.map-layout > * {
+  min-width: 0;
+}
+
+.stay-list-wrap {
+  min-width: 0;
+  max-height: 70vh;
+  overflow: auto;
+  border: 1px solid var(--line, #e3e6ee);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.stay-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stay-list li {
+  border-bottom: 1px solid var(--line, #e3e6ee);
+  min-width: 0;
+}
+
+.stay-list li.is-hidden {
+  display: none;
+}
+
+.stay-list button {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  margin: 0;
+  padding: 8px 10px;
+  border: 0;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.stay-list button b,
+.stay-list button span,
+.stay-static {
+  overflow-wrap: anywhere;
+}
+
+.stay-list button:hover,
+.stay-list button:focus-visible {
+  background: #eef3fa;
+}
+
+.stay-static {
+  margin: 0;
+  padding: 0 10px 8px;
+  color: var(--muted, #5b6475);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.stay-notes li {
+  margin: 0.35rem 0;
+}
+
+.leaflet-div-icon.pin {
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.leaflet-div-icon.pin-hotel {
+  background: #1f3a5f;
+  border-radius: 50%;
+}
+
+.leaflet-div-icon.pin-airbnb {
+  background: #c45c26;
+  border-radius: 50%;
+}
+
+.leaflet-div-icon.pin-dest {
+  background: #c8102e;
+  border-radius: 3px;
+}
+
+.leaflet-container {
+  font-family: inherit;
+  max-width: 100%;
+}
+
+.leaflet-popup {
+  max-width: calc(100vw - 36px);
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px;
+  max-width: min(280px, calc(100vw - 72px));
+  max-height: 38vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.45;
+}
+
+.stay-pop p {
+  margin: 0.35rem 0;
+}
+
+.stay-pop-time {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1f3a5f;
+}
+
+@media (max-width: 800px) {
+  .map-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.app #map.map-canvas {
+    height: 52vh;
+    min-height: 240px;
+    scroll-margin-top: 64px;
+  }
+
+  .stay-list-wrap {
+    max-height: none;
+  }
+}

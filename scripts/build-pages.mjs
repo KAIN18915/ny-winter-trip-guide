@@ -24,6 +24,7 @@ const practical = readJson("practical.json");
 const fares = readJson("fares.json");
 const costs = readJson("cost-estimates.json");
 const currentPlan = readJson("current-plan.json");
+const stayMap = readJson("map_stays.json");
 
 const layout0 = layouts[0];
 const layout1 = layouts[1];
@@ -118,6 +119,12 @@ function buildIndex() {
   const body = `
     ${banner()}
     ${currentHtml}
+
+    <section class="panel" id="stay-map-link">
+      <h2>宿と Times Square までの所要時間</h2>
+      <p>${esc(String(stayMap.counts.on_map))}件（ホテル ${esc(String(stayMap.counts.hotel))}、Airbnb ${esc(String(stayMap.counts.airbnb))}）を地図に置いています。未予約・目安。12/28 チェックイン、1/2 チェックアウト、5泊、1名。</p>
+      <p class="btns"><a class="btn" href="map/">地図を開く</a></p>
+    </section>
 
     <h2>UW 学事日程 ${tag("fact")}</h2>
     <ul class="compact">

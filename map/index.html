@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>地図 | 年末年始 NY/LA/ベイエリア旅行ガイド 2026–27</title>
+  <title>宿と Times Square までの時間 | 年末年始 NY/LA/ベイエリア旅行ガイド 2026–27</title>
   <meta name="description" content="未予約の暫定プランです。料金と時刻は調査時点の目安で、購入前に公式で再確認してください。">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#16304f">
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../assets/css/ny-guide-base.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../assets/css/map-stays.css">
 </head>
 <body class="app p-map js">
 <a class="skip" href="#main-c">本文へ</a>
@@ -30,10 +31,897 @@
       <ul class="alerts static" role="status">
   <li class="a-cap"><b>未予約・暫定</b> <span>航空券・宿泊・イベントは予約していません。現行プランの料金は 2026-11-11（PT）の目安です。ほかのページの料金は、そのページの確認日の参考値です。</span></li>
 </ul>
-      <h1>地図</h1>
-      <p class="lead">OpenStreetMap タイル。座標は出典付き（data/map_points.json）。座標 null の宿はピンなし。</p>
-      <div id="map" class="map-canvas" role="application" aria-label="旅行候補地図"></div>
-      <p><span class="tag tag--estimate">目安</span> 写真は参考イメージであり現地の 2026 年末状況を保証しません。</p>
+      <h1>宿と Times Square までの所要時間</h1>
+      <p class="lead">122件（ホテル 83、Airbnb 39）。ピンに触れるか、一覧を押すと内訳が出ます。</p>
+      <ul class="alerts static" role="status">
+  <li><b>未予約・目安</b> <span>2026-12-28 チェックイン、2027-01-02 チェックアウト。5泊、大人1名。予約していない。</span></li>
+</ul>
+<ul class="compact stay-notes">
+  <li>所要時間は 2026-12-29（火）19:00（America/New_York）の時刻表による目安。Transitous（MTA 地下鉄・バス、LIRR、NJ Transit）。ライブではなく、保証でもない。</li>
+  <li>合計は、出発にちょうど間に合う場合のドアツードア。19:00 より後の初便待ち（wait_after_19_00_minutes）は合計に入っていない。乗換の待ちは入っている。</li>
+  <li>12/31 のタイムズスクエアは、通常、一般の出入りが制限される。この時間は大晦日ではない。</li>
+  <li>Times Sq-42 St 駅からの最後の徒歩（およそ 4–7 分）は公共交通の合計に入っている。目的地はタイムズスクエアの 7 番街（42 丁目より西 45–46 丁目寄り）。</li>
+  <li>料金は 2026-11-11 夜（PT）に確認。検索時の端末はオフラインで、料金は別のネットワークで読んだ。Expedia の合計は税・手数料込み。Airbnb の表示価格は、税込みか書いていないことが多い。</li>
+  <li>円は 1 USD = 159.51378 JPY（open.er-api.com、2026-11-12 00:02 UTC）の目安。</li>
+  <li>住所が公開されていない Vrbo 2件は載せていない。Airbnb で「約 150m」と出るピンは、公開座標がぼかされている。</li>
+</ul>
+      <div class="stay-filters">
+        <label>種類
+          <select id="stay-type">
+            <option value="all">両方</option>
+            <option value="hotel">ホテル</option>
+            <option value="airbnb">Airbnb</option>
+          </select>
+        </label>
+        <label>Times Square まで（分）以内
+          <input id="stay-max-min" type="number" min="0" inputmode="numeric" placeholder="指定なし">
+        </label>
+        <label>5泊合計（USD）以内
+          <input id="stay-max-price" type="number" min="0" inputmode="decimal" placeholder="指定なし">
+        </label>
+      </div>
+      <p class="map-legend" aria-hidden="true"><span><i class="swatch-hotel"></i>ホテル</span><span><i class="swatch-airbnb"></i>Airbnb</span><span><i class="swatch-dest"></i>タイムズスクエア</span></p>
+      <p id="stay-count">表示 122 / 122</p>
+      <div class="map-layout">
+        <div id="map" class="map-canvas" role="application" aria-label="宿とタイムズスクエアの地図"></div>
+        <div class="stay-list-wrap">
+          <ul id="stay-list" class="stay-list"><li data-stay-index="0" data-type="hotel" data-minutes="36" data-price="620">
+        <button type="button">
+          <b>NY Moore Hostel</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 36分 · $620 · 約98,899円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 134分。公共交通: 36分。徒歩7分 + バスB60 0分 + 徒歩2分 + 地下鉄L 11分 + 徒歩2分 + 地下鉄W 7分 + 徒歩6分（乗換待ち計1分）。別ルート: 40分 — 徒歩8分 + バスB43 5分 + 徒歩2分 + 地下鉄L 10分 + 徒歩5分 + 地下鉄2 3分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-NY-Moore-Hostel.h7803456.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451574341&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=620&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=201923389&amp;selectedRatePlan=399435229&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="1" data-type="hotel" data-minutes="45" data-price="1011">
+        <button type="button">
+          <b>Hotel 369 Brooklyn</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 45分 · $1,011 · 約161,268円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 200分。公共交通: 45分。徒歩3分 + 地下鉄C 2分 + 徒歩2分 + 地下鉄A 30分 + 徒歩8分。別ルート: 43分 — 徒歩3分 + 地下鉄C 2分 + 徒歩2分 + 地下鉄A 19分 + 徒歩2分 + 地下鉄3 8分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Hotel-369-Brooklyn.h73565274.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451574342&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1011&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=315889235&amp;selectedRatePlan=384948138&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="2" data-type="hotel" data-minutes="49" data-price="1022">
+        <button type="button">
+          <b>Moon Hotel Brooklyn</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 49分 · $1,022 · 約163,023円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 195分。公共交通: 49分。徒歩2分 + バスB60 5分 + 徒歩2分 + 地下鉄C 21分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分（乗換待ち計2分）。別ルート: 53分 — 徒歩2分 + バスB12 6分 + 徒歩7分 + 地下鉄A 30分 + 徒歩8分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Moon-Hotel-Brooklyn.h100143400.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451574343&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1022&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=323744423&amp;selectedRatePlan=392674923&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="3" data-type="hotel" data-minutes="65" data-price="1104">
+        <button type="button">
+          <b>Days Inn by Wyndham Brooklyn Marine Park</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 65分 · $1,104 · 約176,103円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 249分。公共交通: 65分。徒歩4分 + バスB41 11分 + 徒歩2分 + 地下鉄5 38分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分（乗換待ち計2分）。別ルート: 68分 — 徒歩5分 + バスB41 11分 + 徒歩2分 + 地下鉄2 42分 + 徒歩7分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Days-Inn-By-Wyndham-Brooklyn-Marine-Park.h18178895.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578030&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1104&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=202032513&amp;selectedRatePlan=210415454&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="4" data-type="hotel" data-minutes="60" data-price="1258">
+        <button type="button">
+          <b>Bay Ridge ApartHotel</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 60分 · $1,258 · 約200,668円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 239分。公共交通: 60分。徒歩4分 + バスB8 1分 + 徒歩2分 + 地下鉄R 26分 + 徒歩2分 + 地下鉄Q 19分 + 徒歩6分。別ルート: 62分 — 徒歩3分 + バスB37 1分 + 徒歩3分 + 地下鉄R 24分 + 徒歩2分 + 地下鉄Q 19分 + 徒歩6分（乗換待ち計4分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Bay-Ridge-Hotel.h113385990.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578032&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1258&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326681277&amp;selectedRatePlan=402256682&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="5" data-type="hotel" data-minutes="33" data-price="1263">
+        <button type="button">
+          <b>Queens Hotel</b>
+          <span>ホテル · Queens, 4.9 mi from Brooklyn</span>
+          <span>公共交通 33分 · $1,263 · 約201,466円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 119分。公共交通: 33分。徒歩1分 + バスQ18 3分 + 徒歩2分 + 地下鉄7 20分 + 徒歩7分。別ルート: 34分 — 徒歩1分 + バスQ60 7分 + 徒歩2分 + 地下鉄7 17分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Queens-Hotel.h33109019.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578033&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=149004&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1263&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=219011008&amp;selectedRatePlan=280057601&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="6" data-type="hotel" data-minutes="45" data-price="1274">
+        <button type="button">
+          <b>The Vue Hotel Express</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 45分 · $1,274 · 約203,221円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 184分。公共交通: 45分。徒歩3分 + バスB63 0分 + 徒歩3分 + 地下鉄N 32分 + 徒歩6分（乗換待ち計1分）。別ルート: 45分 — 徒歩2分 + バスB70 3分 + 徒歩2分 + 地下鉄D 26分 + 徒歩2分 + 地下鉄W 1分 + 徒歩6分（乗換待ち計3分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-The-Vue-Hotel-Express.h34577489.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578034&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1274&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=218441614&amp;selectedRatePlan=276154973&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="7" data-type="hotel" data-minutes="44" data-price="1288">
+        <button type="button">
+          <b>Phoenix Hotel</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 44分 · $1,288 · 約205,454円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 183分。公共交通: 44分。徒歩2分 + バスB63 0分 + 徒歩3分 + 地下鉄N 32分 + 徒歩6分（乗換待ち計1分）。別ルート: 44分 — 徒歩1分 + バスB70 3分 + 徒歩2分 + 地下鉄D 26分 + 徒歩2分 + 地下鉄W 1分 + 徒歩6分（乗換待ち計3分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-PHOENIX-HOTEL.h70104409.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578035&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1288&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326464981&amp;selectedRatePlan=401246091&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="8" data-type="hotel" data-minutes="47" data-price="1309">
+        <button type="button">
+          <b>King Hotel Brooklyn Sunset Park</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 47分 · $1,309 · 約208,804円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 188分。公共交通: 47分。徒歩3分 + バスB70 4分 + 徒歩2分 + 地下鉄D 26分 + 徒歩2分 + 地下鉄W 1分 + 徒歩6分（乗換待ち計3分）。別ルート: 51分 — 徒歩6分 + バスB63 0分 + 徒歩3分 + 地下鉄R 13分 + 徒歩2分 + 地下鉄Q 19分 + 徒歩6分（乗換待ち計2分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-King-Hotel-Brooklyn-Sunset-Park.h77933072.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578037&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1309&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=316521255&amp;selectedRatePlan=386200899&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="9" data-type="hotel" data-minutes="36" data-price="1384">
+        <button type="button">
+          <b>Astoria Inn LaGuardia hotel</b>
+          <span>ホテル · Queens, 2.5 mi from Long Island City</span>
+          <span>公共交通 36分 · $1,384 · 約220,767円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 118分。公共交通: 36分。徒歩4分 + バスM60-SBS 3分 + 徒歩2分 + 地下鉄W 21分 + 徒歩6分。別ルート: 37分 — 徒歩3分 + バスQ19 3分 + 徒歩2分 + 地下鉄N 20分 + 徒歩6分（乗換待ち計3分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Steinway-Hotel.h76932712.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451604684&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=149004&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1384&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=316487459&amp;selectedRatePlan=386123436&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="10" data-type="hotel" data-minutes="42" data-price="1389">
+        <button type="button">
+          <b>Red Roof Inn PLUS+ Brooklyn - 3rd Ave</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 42分 · $1,389 · 約221,565円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 157分。公共交通: 42分。徒歩2分 + バスB37 10分 + 徒歩2分 + 地下鉄Q 22分 + 徒歩6分。別ルート: 44分 — 徒歩2分 + バスB37 3分 + 徒歩2分 + 地下鉄F 25分 + 徒歩2分 + 地下鉄W 1分 + 徒歩6分（乗換待ち計3分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Essence-Hotel-Park-Slope.h110440173.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578038&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1389&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326472458&amp;selectedRatePlan=401267338&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="11" data-type="hotel" data-minutes="28" data-price="1389">
+        <button type="button">
+          <b>Elmhurst Hotel</b>
+          <span>ホテル · Queens, 5.7 mi from Brooklyn</span>
+          <span>公共交通 28分 · $1,389 · 約221,565円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 138分。公共交通: 28分。徒歩3分 + 地下鉄7 1分 + 徒歩2分 + 地下鉄E 14分 + 徒歩2分 + バスM104 4分 + 徒歩2分。別ルート: 34分 — 徒歩3分 + 地下鉄7 24分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Elmhurst-Hotel.h18659046.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578039&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=149004&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1389&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=219340961&amp;selectedRatePlan=282203690&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="12" data-type="hotel" data-minutes="20" data-price="1414">
+        <button type="button">
+          <b>CityNest</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 20分 · $1,414 · 約225,552円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 65分。公共交通: 20分。徒歩3分 + 地下鉄B 8分 + 徒歩2分 + 地下鉄W 1分 + 徒歩6分。別ルート: 21分 — 徒歩3分 + 地下鉄D 8分 + 徒歩2分 + 地下鉄N 2分 + 徒歩6分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-CityNest.h128658532.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451532630&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6141723&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1414&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328521472&amp;selectedRatePlan=409197001&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="13" data-type="hotel" data-minutes="41" data-price="1422">
+        <button type="button">
+          <b>Comfort Inn &amp; Suites LaGuardia Airport</b>
+          <span>ホテル · Queens, 4.1 mi from Brooklyn</span>
+          <span>公共交通 41分 · $1,422 · 約226,829円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 138分。公共交通: 41分。徒歩4分 + バスQ67 18分 + 徒歩2分 + 地下鉄7 8分 + 徒歩7分（乗換待ち計2分）。別ルート: 43分 — 徒歩9分 + バスQ18 11分 + 徒歩2分 + 鉄道LIRR 1971 10分 + 徒歩2分 + 地下鉄A 1分 + 徒歩8分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Comfort-Inn-Suites-LaGuardia-Airport.h1209275.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578040&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=149004&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1422&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=211813848&amp;selectedRatePlan=383247931&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="14" data-type="hotel" data-minutes="31" data-price="1436">
+        <button type="button">
+          <b>Dutch Hotel Long Island City New York , Belvilla District 6</b>
+          <span>ホテル · Long Island City, 5.2 mi from Brooklyn</span>
+          <span>公共交通 31分 · $1,436 · 約229,062円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 76分。公共交通: 31分。徒歩9分 + バスQ66 2分 + 徒歩2分 + 地下鉄N 12分 + 徒歩6分。別ルート: 30分 — 徒歩6分 + バスQ102 4分 + 徒歩2分 + 地下鉄E 8分 + 徒歩2分 + バスM20 4分 + 徒歩2分（乗換待ち計2分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-The-Dutch-Hotel-Long-Island-City-New-York.h81590207.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578041&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1436&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328066544&amp;selectedRatePlan=407418417&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="15" data-type="hotel" data-minutes="36" data-price="1463">
+        <button type="button">
+          <b>Essence Hotel</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 36分 · $1,463 · 約233,369円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 133分。公共交通: 36分。徒歩3分 + バスB37 3分 + 徒歩2分 + 地下鉄Q 22分 + 徒歩6分。別ルート: 42分 — 徒歩6分 + バスB103 7分 + 徒歩3分 + 地下鉄Q 19分 + 徒歩6分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Essence-Hotel.h4453783.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578042&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1463&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=325285669&amp;selectedRatePlan=397521343&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="16" data-type="hotel" data-minutes="52" data-price="1477">
+        <button type="button">
+          <b>Knights Inn Brooklyn Sunset Park</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 52分 · $1,477 · 約235,602円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 193分。公共交通: 52分。徒歩3分 + バスB35 2分 + 徒歩5分 + 地下鉄D 31分 + 徒歩2分 + 地下鉄N 2分 + 徒歩6分（乗換待ち計1分）。別ルート: 52分 — 徒歩2分 + バスB70 6分 + 徒歩2分 + 地下鉄R 13分 + 徒歩2分 + 地下鉄Q 19分 + 徒歩6分（乗換待ち計2分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Knights-Inn-Brooklyn-Sunset-Park.h2369850.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578043&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1477&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=210045438&amp;selectedRatePlan=385647333&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="17" data-type="hotel" data-minutes="34" data-price="1495">
+        <button type="button">
+          <b>Super 8 by Wyndham Long Island City LGA Hotel</b>
+          <span>ホテル · Queens, 1.7 mi from Long Island City</span>
+          <span>公共交通 34分 · $1,495 · 約238,473円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 99分。公共交通: 34分。徒歩4分 + バスQ69 9分 + 徒歩3分 + 地下鉄W 12分 + 徒歩6分。別ルート: 32分 — 徒歩4分 + バスQ100 7分 + 徒歩2分 + 地下鉄M 5分 + 徒歩2分 + 地下鉄Q 6分 + 徒歩6分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Super-8-By-Wyndham-Long-Island-City-LGA-Hotel.h896387.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607923&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=149004&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1495&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=91698&amp;selectedRatePlan=1136313&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="18" data-type="hotel" data-minutes="38" data-price="1497">
+        <button type="button">
+          <b>Bklyn House</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 38分 · $1,497 · 約238,792円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 134分。公共交通: 38分。徒歩4分 + バスB43 7分 + 徒歩2分 + 地下鉄L 10分 + 徒歩5分 + 地下鉄2 3分 + 徒歩7分。別ルート: 38分 — 徒歩4分 + バスB43 7分 + 徒歩2分 + 地下鉄L 8分 + 徒歩2分 + 地下鉄W 6分 + 徒歩6分（乗換待ち計3分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Bklyn-House.h9711491.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578044&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1497&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328989597&amp;selectedRatePlan=410900452&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="19" data-type="hotel" data-minutes="22" data-price="1505">
+        <button type="button">
+          <b>Court Square Hotel Long Island City New York , Belvilla District 6 Formerly Sonder</b>
+          <span>ホテル · Long Island City, 4.7 mi from Brooklyn</span>
+          <span>公共交通 22分 · $1,505 · 約240,068円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 77分。公共交通: 22分。徒歩4分 + 地下鉄7 11分 + 徒歩7分。別ルート: 21分 — 徒歩4分 + 地下鉄7 8分 + 徒歩4分 + 地下鉄S 1分 + 徒歩4分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Court-Square-Hotel-Long-Island-City-New-York.h75721614.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578045&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248635976381281&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1505&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328066550&amp;selectedRatePlan=407418449&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="20" data-type="hotel" data-minutes="48" data-price="1511">
+        <button type="button">
+          <b>Super 8 by Wyndham Brooklyn Fulton Street/Broadway Junction</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 48分 · $1,511 · 約241,025円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 198分。公共交通: 48分。徒歩7分 + バスB25 1分 + 徒歩2分 + 地下鉄A 30分 + 徒歩8分。別ルート: 46分 — 徒歩7分 + バスB25 1分 + 徒歩2分 + 地下鉄A 19分 + 徒歩2分 + 地下鉄3 8分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Super-8-By-Wyndham-Brooklyn-Fulton-Street.h109052764.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578046&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1511&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=325402153&amp;selectedRatePlan=397985859&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="21" data-type="hotel" data-minutes="29" data-price="1522">
+        <button type="button">
+          <b>LUX HOTEL</b>
+          <span>ホテル · Long Island City, 5.6 mi from Brooklyn</span>
+          <span>公共交通 29分 · $1,522 · 約242,780円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 85分。公共交通: 29分。徒歩4分 + バスQ69 4分 + 徒歩3分 + 地下鉄W 12分 + 徒歩6分。別ルート: 30分 — 徒歩4分 + バスQ69 4分 + 徒歩3分 + 地下鉄7 12分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-LUX-HOTEL.h106045106.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578047&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1522&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=324940084&amp;selectedRatePlan=396240411&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="22" data-type="hotel" data-minutes="39" data-price="1522">
+        <button type="button">
+          <b>Fairfield Inn by Marriott New York LaGuardia Airport/Astoria</b>
+          <span>ホテル · Queens, 2.7 mi from Long Island City</span>
+          <span>公共交通 39分 · $1,522 · 約242,780円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 123分。公共交通: 39分。徒歩7分 + バスM60-SBS 3分 + 徒歩2分 + 地下鉄W 21分 + 徒歩6分。別ルート: 39分 — 徒歩4分 + バスQ19 4分 + 徒歩2分 + 地下鉄N 20分 + 徒歩6分（乗換待ち計3分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Fairfield-Inn-By-Marriott-New-York-LaGuardia-AirportAstoria.h1509664.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607928&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=149004&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1522&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328470872&amp;selectedRatePlan=409030807&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="23" data-type="hotel" data-minutes="43" data-price="1524">
+        <button type="button">
+          <b>Sleep Inn</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 43分 · $1,524 · 約243,099円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 183分。公共交通: 43分。徒歩3分 + バスB41 1分 + 徒歩3分 + 地下鉄Q 30分 + 徒歩6分。別ルート: 46分 — 徒歩3分 + バスB35 1分 + 徒歩2分 + 地下鉄Q 32分 + 徒歩6分（乗換待ち計2分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Sleep-Inn.h124343113.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578048&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1524&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=327908033&amp;selectedRatePlan=406740148&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="24" data-type="hotel" data-minutes="42" data-price="1524">
+        <button type="button">
+          <b>Imperial Hotel</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 42分 · $1,524 · 約243,099円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 192分。公共交通: 42分。徒歩1分 + バスB25 1分 + 徒歩2分 + 地下鉄A 30分 + 徒歩8分。別ルート: 40分 — 徒歩1分 + バスB25 1分 + 徒歩2分 + 地下鉄A 19分 + 徒歩2分 + 地下鉄3 8分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Imperial-Hotel.h128804327.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578049&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1524&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=329087652&amp;selectedRatePlan=411162899&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="25" data-type="hotel" data-minutes="27" data-price="1560">
+        <button type="button">
+          <b>Pod Brooklyn</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 27分 · $1,560 · 約248,841円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 110分。公共交通: 27分。徒歩4分 + バスB62 1分 + 徒歩2分 + 地下鉄L 6分 + 徒歩2分 + 地下鉄Q 5分 + 徒歩6分（乗換待ち計1分）。別ルート: 36分 — 徒歩5分 + バスQ59 2分 + 徒歩2分 + 地下鉄L 9分 + 徒歩5分 + 地下鉄2 3分 + 徒歩7分（乗換待ち計3分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Pod-Brooklyn.h19908533.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578050&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1560&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=327604401&amp;selectedRatePlan=405603774&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="26" data-type="hotel" data-minutes="41" data-price="1567">
+        <button type="button">
+          <b>Holiday Inn Express Maspeth by IHG</b>
+          <span>ホテル · Queens, 3.9 mi from Brooklyn</span>
+          <span>公共交通 41分 · $1,567 · 約249,958円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 135分。公共交通: 41分。徒歩4分 + バスQ67 18分 + 徒歩2分 + 地下鉄7 8分 + 徒歩7分（乗換待ち計2分）。別ルート: 46分 — 徒歩7分 + バスQ39 18分 + 徒歩3分 + 地下鉄7 10分 + 徒歩7分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Holiday-Inn-Express-Maspeth.h1742005.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578050&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=149004&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1567&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=229032&amp;selectedRatePlan=380433917&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="27" data-type="hotel" data-minutes="54" data-price="1570">
+        <button type="button">
+          <b>Best Western Gregory Hotel</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 54分 · $1,570 · 約250,437円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 229分。公共交通: 54分。徒歩3分 + 地下鉄R 24分 + 徒歩2分 + 地下鉄Q 19分 + 徒歩6分。別ルート: 55分 — 徒歩3分 + 地下鉄R 24分 + 徒歩2分 + 地下鉄N 20分 + 徒歩6分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Best-Western-Gregory-Hotel.h6324.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578051&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1570&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326237262&amp;selectedRatePlan=400466678&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="28" data-type="hotel" data-minutes="56" data-price="1573">
+        <button type="button">
+          <b>BKWAY Hotel Brooklyn</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 56分 · $1,573 · 約250,915円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 220分。公共交通: 56分。徒歩14分 + 地下鉄A 34分 + 徒歩8分。別ルート: 54分 — 徒歩14分 + 地下鉄A 23分 + 徒歩2分 + 地下鉄3 8分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-BKWAY-Hotel-Brooklyn.h112580559.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578052&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1573&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326129910&amp;selectedRatePlan=400198203&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="29" data-type="hotel" data-minutes="44" data-price="1593">
+        <button type="button">
+          <b>Quality Inn near Sunset Park</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 44分 · $1,593 · 約254,105円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 182分。公共交通: 44分。徒歩2分 + バスB37 3分 + 徒歩2分 + 地下鉄D 26分 + 徒歩2分 + 地下鉄N 2分 + 徒歩6分（乗換待ち計1分）。別ルート: 50分 — 徒歩7分 + バスB35 3分 + 徒歩2分 + 地下鉄N 32分 + 徒歩6分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Quality-Inn-Near-Sunset-Park.h19950460.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578053&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1593&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=24479751&amp;selectedRatePlan=6Bs49oe71LJgLCV6W%3A%3AaKnU4B1fpyrq7mMQ%2BUB4tQjJKrgMZUum3A9aZdMRqs9uZSewy5Xp7BLJE6G5H%2BUMUIv8OKBoGQH22DWTSmIvt1S04zxJ6foxdgz4wnASFYK%2ByG5308JwJtdwmZDqrWxjGYkUoJim9DGoAyumcgkQbpt3uc3U17e5o8ScBQ69sjc%3D&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="30" data-type="hotel" data-minutes="68" data-price="1601">
+        <button type="button">
+          <b>Best Western Brooklyn-Coney Island Inn</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 68分 · $1,601 · 約255,382円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 292分。公共交通: 68分。徒歩3分 + バスB64 3分 + 徒歩2分 + 地下鉄Q 54分 + 徒歩6分。別ルート: 69分 — 徒歩2分 + バスB64 1分 + 徒歩2分 + 地下鉄D 29分 + 徒歩2分 + 地下鉄3 22分 + 徒歩7分（乗換待ち計4分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Best-Western-Brooklyn-Coney-Island-Inn.h37491808.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578054&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1601&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=214817040&amp;selectedRatePlan=252134071&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="31" data-type="hotel" data-minutes="30" data-price="1602">
+        <button type="button">
+          <b>Skylux Hotel Long Island City</b>
+          <span>ホテル · Long Island City, 5.2 mi from Brooklyn</span>
+          <span>公共交通 30分 · $1,602 · 約255,541円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 79分。公共交通: 30分。徒歩3分 + バスQ102 2分 + 徒歩2分 + 地下鉄N 17分 + 徒歩6分。別ルート: 32分 — 徒歩4分 + バスQ101 5分 + 徒歩2分 + 地下鉄R 13分 + 徒歩6分（乗換待ち計2分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Skylux-Hotel-Long-Island-City.h133670082.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578055&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1602&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=329111004&amp;selectedRatePlan=411221225&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="32" data-type="hotel" data-minutes="55" data-price="1610">
+        <button type="button">
+          <b>Umbrella Hotel Brooklyn</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 55分 · $1,610 · 約256,817円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 221分。公共交通: 55分。徒歩2分 + バスB9 3分 + 徒歩2分 + 地下鉄N 42分 + 徒歩6分。別ルート: 56分 — 徒歩1分 + バスB9 3分 + 徒歩2分 + 地下鉄D 40分 + 徒歩2分 + バスM42 2分 + 徒歩5分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Umbrella-Hotel-Brooklyn.h67453643.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578056&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1610&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=314396089&amp;selectedRatePlan=383384471&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="33" data-type="hotel" data-minutes="52" data-price="1622">
+        <button type="button">
+          <b>Days Inn by Wyndham Brooklyn Borough Park</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 52分 · $1,622 · 約258,731円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 200分。公共交通: 52分。徒歩3分 + バスB16 2分 + 徒歩2分 + 地下鉄F 30分 + 徒歩4分 + 地下鉄3 3分 + 徒歩7分（乗換待ち計1分）。別ルート: 56分 — 徒歩3分 + バスB16 10分 + 徒歩2分 + 地下鉄Q 31分 + 徒歩6分（乗換待ち計4分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Days-Inn-By-Wyndham-Brooklyn-Borough-Park.h8411481.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578057&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1622&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326860872&amp;selectedRatePlan=403053546&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="34" data-type="hotel" data-minutes="30" data-price="1649">
+        <button type="button">
+          <b>Hotel The Villa</b>
+          <span>ホテル · Long Island City, 5.5 mi from Brooklyn</span>
+          <span>公共交通 30分 · $1,649 · 約263,038円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 83分。公共交通: 30分。徒歩5分 + バスQ69 4分 + 徒歩3分 + 地下鉄W 12分 + 徒歩6分。別ルート: 31分 — 徒歩5分 + バスQ66 4分 + 徒歩3分 + 地下鉄N 12分 + 徒歩6分（乗換待ち計1分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Hotel-The-Villa.h71139090.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578058&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1649&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=315581841&amp;selectedRatePlan=383985139&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="35" data-type="hotel" data-minutes="50" data-price="1653">
+        <button type="button">
+          <b>Rockaway Hotel Brooklyn</b>
+          <span>ホテル · Brooklyn</span>
+          <span>公共交通 50分 · $1,653 · 約263,676円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 200分。公共交通: 50分。徒歩1分 + バスB60 7分 + 徒歩2分 + 地下鉄C 21分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分（乗換待ち計2分）。別ルート: 54分 — 徒歩1分 + バスB60 7分 + 徒歩2分 + 地下鉄C 35分 + 徒歩8分（乗換待ち計1分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Rockaway-Hotel-Brooklyn.h12794444.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451578059&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=177851&amp;destination=Brooklyn%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=177851&amp;latLong=40.678177%2C-73.94416&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1653&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=315436619&amp;selectedRatePlan=383610761&amp;categorySearch=any_option&amp;searchId=728fab2e-fe38-4f34-abbb-9957701932c2&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="36" data-type="hotel" data-minutes="34" data-price="1820">
+        <button type="button">
+          <b>Holiday Inn Express &amp; Suites Woodside LaGuardia Airport by IHG</b>
+          <span>ホテル · Queens, 2.5 mi from Long Island City</span>
+          <span>公共交通 34分 · $1,820 · 約290,315円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 119分。公共交通: 34分。徒歩3分 + バスQ60 5分 + 徒歩2分 + 地下鉄7 17分 + 徒歩7分。別ルート: 36分 — 徒歩4分 + バスQ18 3分 + 徒歩2分 + 地下鉄7 20分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Holiday-Inn-Express-Suites-Woodside-Queens-NYC.h58131140.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607932&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=149004&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1820&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=229863815&amp;selectedRatePlan=408913947&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="37" data-type="hotel" data-minutes="30" data-price="1841">
+        <button type="button">
+          <b>Capital Hotel</b>
+          <span>ホテル · Long Island City</span>
+          <span>公共交通 30分 · $1,841 · 約293,665円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 83分。公共交通: 30分。徒歩5分 + バスQ69 4分 + 徒歩3分 + 地下鉄W 12分 + 徒歩6分。別ルート: 31分 — 徒歩5分 + バスQ66 4分 + 徒歩3分 + 地下鉄N 12分 + 徒歩6分（乗換待ち計1分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Capital-Hotel.h70387234.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607933&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1841&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326737664&amp;selectedRatePlan=402495989&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="38" data-type="hotel" data-minutes="34" data-price="1944">
+        <button type="button">
+          <b>Nova Hotel Brooklyn</b>
+          <span>ホテル · Brooklyn, 2.7 mi from Long Island City</span>
+          <span>公共交通 34分 · $1,944 · 約310,095円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 138分。公共交通: 34分。徒歩3分 + バスB60 1分 + 徒歩2分 + 地下鉄L 11分 + 徒歩2分 + 地下鉄W 7分 + 徒歩6分（乗換待ち計2分）。別ルート: 37分 — 徒歩3分 + バスB60 1分 + 徒歩2分 + 地下鉄L 15分 + 徒歩5分 + 地下鉄2 3分 + 徒歩7分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Nova-Hotel-Brooklyn.h111995915.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607936&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248635976381588&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1944&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=325924547&amp;selectedRatePlan=402157409&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="39" data-type="hotel" data-minutes="28" data-price="1967">
+        <button type="button">
+          <b>Franklin Guesthouse</b>
+          <span>ホテル · Brooklyn, 0.9 mi from Long Island City</span>
+          <span>公共交通 28分 · $1,967 · 約313,764円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 107分。公共交通: 28分。徒歩2分 + バスB32 7分 + 徒歩3分 + 地下鉄7 8分 + 徒歩7分（乗換待ち計1分）。別ルート: 29分 — 徒歩5分 + バスB62 6分 + 徒歩2分 + 地下鉄7 9分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Franklin-Guesthouse.h13578491.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607937&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6004557&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1967&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=201443102&amp;selectedRatePlan=393405455&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="40" data-type="hotel" data-minutes="10" data-price="1972">
+        <button type="button">
+          <b>Pod Times Square</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 10分 · $1,972 · 約314,561円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 12分。公共交通: 10分。徒歩2分 + バスM42 3分 + 徒歩5分。別ルート: 13分 — 徒歩6分 + バスM104 2分 + 徒歩5分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Pod-Times-Square.h19681371.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451532632&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6203474&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1972&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=327123714&amp;selectedRatePlan=403805055&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="41" data-type="hotel" data-minutes="12" data-price="1977">
+        <button type="button">
+          <b>31 Street Broadway Hotel</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 12分 · $1,977 · 約315,359円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 18分。公共交通: 12分。徒歩3分 + 地下鉄W 3分 + 徒歩6分。別ルート: 12分 — 徒歩3分 + 地下鉄R 3分 + 徒歩6分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-31-Street-Broadway-Hotel.h19794327.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451532634&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6360639&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1977&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=324348634&amp;selectedRatePlan=394243379&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="42" data-type="hotel" data-minutes="26" data-price="1981">
+        <button type="button">
+          <b>Holiday Inn Express Long Island City E New York by IHG</b>
+          <span>ホテル · Long Island City</span>
+          <span>公共交通 26分 · $1,981 · 約315,997円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 94分。公共交通: 26分。徒歩4分 + バスQ67 4分 + 徒歩2分 + 地下鉄7 9分 + 徒歩7分。別ルート: 35分 — 徒歩9分 + バスQ39 5分 + 徒歩3分 + 地下鉄7 10分 + 徒歩7分（乗換待ち計1分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Holiday-Inn-Express-Long-Island-City-E-New-York.h102370288.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607940&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248635976383054&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=1981&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=324247708&amp;selectedRatePlan=394019400&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="43" data-type="hotel" data-minutes="35" data-price="2022">
+        <button type="button">
+          <b>Henry Norman Hotel</b>
+          <span>ホテル · Brooklyn, 1.2 mi from Long Island City</span>
+          <span>公共交通 35分 · $2,022 · 約322,537円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 113分。公共交通: 35分。徒歩6分 + バスB48 1分 + 徒歩2分 + 地下鉄G 6分 + 徒歩2分 + 地下鉄7 10分 + 徒歩7分（乗換待ち計1分）。別ルート: 40分 — 徒歩11分 + バスB62 4分 + 徒歩2分 + 地下鉄G 4分 + 徒歩4分 + 地下鉄7 8分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Henry-Norman-Hotel.h8416360.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607941&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6004557&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2022&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=200715910&amp;selectedRatePlan=260057497&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="44" data-type="hotel" data-minutes="29" data-price="2031">
+        <button type="button">
+          <b>Vista LIC Hotel, BW Premier Collection</b>
+          <span>ホテル · Long Island City</span>
+          <span>公共交通 29分 · $2,031 · 約323,972円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 77分。公共交通: 29分。徒歩5分 + バスQ102 4分 + 徒歩2分 + 地下鉄E 8分 + 徒歩2分 + バスM20 4分 + 徒歩2分（乗換待ち計2分）。別ルート: 32分 — 徒歩5分 + バスQ102 2分 + 徒歩2分 + 地下鉄N 17分 + 徒歩6分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Four-Points-By-Sheraton-Long-Island-City-Queensboro-Bridge.h3887116.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607941&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2031&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=315460440&amp;selectedRatePlan=383691540&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="45" data-type="hotel" data-minutes="21" data-price="2032">
+        <button type="button">
+          <b>Pod 51</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 21分 · $2,032 · 約324,132円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 25分。公共交通: 21分。徒歩4分 + バスM50 12分 + 徒歩5分。別ルート: 19分 — 徒歩5分 + バスM102 4分 + 徒歩4分 + 地下鉄S 2分 + 徒歩4分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Pod-51.h5358.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536655&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248635976383202&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2032&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=327604398&amp;selectedRatePlan=405603767&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="46" data-type="hotel" data-minutes="20" data-price="2033">
+        <button type="button">
+          <b>Courtyard Long Island City/New York Manhattan View</b>
+          <span>ホテル · Long Island City</span>
+          <span>公共交通 20分 · $2,033 · 約324,292円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 73分。公共交通: 20分。徒歩4分 + 地下鉄E 8分 + 徒歩2分 + バスM104 4分 + 徒歩2分。別ルート: 23分 — 徒歩4分 + 地下鉄R 13分 + 徒歩6分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Courtyard-Long-Island-CityNew-York-Manhattan-View.h13075920.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607943&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2033&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=329410815&amp;selectedRatePlan=412466864&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="47" data-type="hotel" data-minutes="29" data-price="2049">
+        <button type="button">
+          <b>Hampton Inn Long Island City NY</b>
+          <span>ホテル · Long Island City</span>
+          <span>公共交通 29分 · $2,049 · 約326,844円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 84分。公共交通: 29分。徒歩4分 + バスQ69 4分 + 徒歩3分 + 地下鉄W 12分 + 徒歩6分。別ルート: 30分 — 徒歩4分 + バスQ69 4分 + 徒歩3分 + 地下鉄7 12分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Hampton-Inn-Long-Island-City-NY.h127770679.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607944&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2049&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328398849&amp;selectedRatePlan=408806991&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="48" data-type="hotel" data-minutes="16" data-price="2069">
+        <button type="button">
+          <b>Night Hotel Broadway</b>
+          <span>ホテル · Upper West Side</span>
+          <span>公共交通 16分 · $2,069 · 約330,034円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 59分。公共交通: 16分。徒歩2分 + 地下鉄3 7分 + 徒歩7分。別ルート: 16分 — 徒歩2分 + 地下鉄2 7分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Night-Hotel-Broadway.h129325.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536656&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=800075&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2069&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328040061&amp;selectedRatePlan=407342495&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="49" data-type="hotel" data-minutes="18" data-price="2069">
+        <button type="button">
+          <b>Interfaith 21</b>
+          <span>ホテル · Chelsea, 2.6 mi from Long Island City</span>
+          <span>公共交通 18分 · $2,069 · 約330,034円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 29分。公共交通: 18分。徒歩4分 + バスM23-SBS 1分 + 徒歩2分 + 地下鉄1 4分 + 徒歩7分。別ルート: 18分 — 徒歩2分 + バスM20 2分 + 徒歩2分 + 地下鉄E 3分 + 徒歩8分（乗換待ち計1分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Interfaith-21.h115476207.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607945&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6142489&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2069&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=SGL.EY&amp;selectedRatePlan=20261228%7C20270102%7CW%7C254%7C1085776%7CSGL.EY%7CBAROPAQ%7CBB%7C%7C1%7E1%7E0%7C%7CN%7C%7CB2C&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="50" data-type="hotel" data-minutes="30" data-price="2069">
+        <button type="button">
+          <b>LIC Manhattan View Hotel</b>
+          <span>ホテル · Long Island City</span>
+          <span>公共交通 30分 · $2,069 · 約330,034円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 79分。公共交通: 30分。徒歩3分 + バスQ102 2分 + 徒歩2分 + 地下鉄N 17分 + 徒歩6分。別ルート: 32分 — 徒歩4分 + バスQ101 5分 + 徒歩2分 + 地下鉄R 13分 + 徒歩6分（乗換待ち計2分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-LIC-Manhattan-View-Hotel.h113896272.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607946&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2069&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326331549&amp;selectedRatePlan=400956372&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="51" data-type="hotel" data-minutes="30" data-price="2078">
+        <button type="button">
+          <b>The Boro Hotel</b>
+          <span>ホテル · Long Island City</span>
+          <span>公共交通 30分 · $2,078 · 約331,470円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 77分。公共交通: 30分。徒歩6分 + バスQ102 4分 + 徒歩2分 + 地下鉄E 8分 + 徒歩2分 + バスM20 4分 + 徒歩2分（乗換待ち計2分）。別ルート: 33分 — 徒歩11分 + バスQ66 2分 + 徒歩2分 + 地下鉄N 12分 + 徒歩6分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-The-Boro-Hotel.h9711478.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607947&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2078&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=200882086&amp;selectedRatePlan=204589078&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="52" data-type="hotel" data-minutes="23" data-price="2085">
+        <button type="button">
+          <b>The Gatsby Hotel</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 23分 · $2,085 · 約332,586円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 58分。公共交通: 23分。徒歩3分 + 地下鉄F 9分 + 徒歩2分 + 地下鉄Q 1分 + 徒歩6分（乗換待ち計2分）。別ルート: 23分 — 徒歩3分 + 地下鉄F 12分 + 徒歩2分 + バスM5 1分 + 徒歩5分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-The-Gatsby-Hotel.h22244736.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536657&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6141723&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2085&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=202463437&amp;selectedRatePlan=401831732&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="53" data-type="hotel" data-minutes="31" data-price="2098">
+        <button type="button">
+          <b>TownePlace Suites by Marriott New York Long Island City/Manhattan View</b>
+          <span>ホテル · Long Island City</span>
+          <span>公共交通 31分 · $2,098 · 約334,660円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 82分。公共交通: 31分。徒歩6分 + バスQ69 4分 + 徒歩3分 + 地下鉄W 12分 + 徒歩6分。別ルート: 29分 — 徒歩6分 + バスQ103 6分 + 徒歩2分 + 地下鉄E 7分 + 徒歩2分 + バスM104 4分 + 徒歩2分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-TownePlace-Suites-By-Marriott-New-York-Long-Island-CityManhattan-View.h35782720.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451607948&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=127357&amp;destination=Long+Island+City%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=976435759435649024&amp;latLong=40.744679%2C-73.94854&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2098&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=219021528&amp;selectedRatePlan=387380868&amp;categorySearch=any_option&amp;searchId=c2927bfe-192f-456d-b946-ea4f1925caf5&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="54" data-type="hotel" data-minutes="14" data-price="2127">
+        <button type="button">
+          <b>Pod 39</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 14分 · $2,127 · 約339,286円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 21分。公共交通: 14分。徒歩9分 + 地下鉄S 1分 + 徒歩4分。別ルート: 17分 — 徒歩4分 + バス42nd St 1分 + 徒歩2分 + 地下鉄7 3分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Pod-39.h5321579.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536658&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6141728&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2127&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=327604390&amp;selectedRatePlan=405603702&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="55" data-type="hotel" data-minutes="21" data-price="2142">
+        <button type="button">
+          <b>Soho 54</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 21分 · $2,142 · 約341,679円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 59分。公共交通: 21分。徒歩3分 + 地下鉄1 11分 + 徒歩7分。別ルート: 22分 — 徒歩5分 + 地下鉄E 9分 + 徒歩8分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Soho-54.h19783816.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536659&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248635976008498&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2142&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=202152729&amp;selectedRatePlan=211034531&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="56" data-type="hotel" data-minutes="26" data-price="2164">
+        <button type="button">
+          <b>Hilton Garden Inn NYC Financial Center/Manhattan Downtown</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 26分 · $2,164 · 約345,188円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 95分。公共交通: 26分。徒歩3分 + バスM15 1分 + 徒歩3分 + 地下鉄3 12分 + 徒歩7分。別ルート: 26分 — 徒歩3分 + バスM55 6分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Hilton-Garden-Inn-NYC-Financial-CenterManhattan-Downtown.h18113315.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536660&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2164&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=201963075&amp;selectedRatePlan=296111993&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="57" data-type="hotel" data-minutes="28" data-price="2179">
+        <button type="button">
+          <b>Fairfield Inn New York Manhattan/Financial District</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 28分 · $2,179 · 約347,581円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 88分。公共交通: 28分。徒歩3分 + バスM15 2分 + 徒歩3分 + 地下鉄3 13分 + 徒歩7分。別ルート: 31分 — 徒歩10分 + 地下鉄A 13分 + 徒歩8分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Fairfield-Inn-New-York-ManhattanFinancial-District.h8370299.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536661&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2179&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328674920&amp;selectedRatePlan=409913849&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="58" data-type="hotel" data-minutes="28" data-price="2215">
+        <button type="button">
+          <b>Courtyard by Marriott New York Downtown Manhattan/Financial District</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 28分 · $2,215 · 約353,323円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 87分。公共交通: 28分。徒歩7分 + 地下鉄A 13分 + 徒歩8分。別ルート: 26分 — 徒歩8分 + 地下鉄5 10分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Courtyard-By-Marriott-New-York-Downtown-ManhattanFinancial-District.h36942819.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536662&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2215&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=219039424&amp;selectedRatePlan=382432036&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="59" data-type="hotel" data-minutes="23" data-price="2223">
+        <button type="button">
+          <b>The Solita Soho Hotel</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 23分 · $2,223 · 約354,599円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 64分。公共交通: 23分。徒歩3分 + バスM1 1分 + 徒歩2分 + 地下鉄W 11分 + 徒歩6分。別ルート: 23分 — 徒歩4分 + バスM55 2分 + 徒歩2分 + 地下鉄Q 9分 + 徒歩6分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-The-Solita-Soho-Hotel.h1107496.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536663&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=126542&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2223&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=326202029&amp;selectedRatePlan=400373707&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="60" data-type="hotel" data-minutes="24" data-price="2240">
+        <button type="button">
+          <b>Tribeca Hotel FiDi</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 24分 · $2,240 · 約357,311円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 85分。公共交通: 24分。徒歩2分 + 地下鉄1 15分 + 徒歩7分。別ルート: 22分 — 徒歩2分 + 地下鉄1 2分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Tribeca-Hotel-NY-LLC.h107472061.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536664&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2240&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=325194193&amp;selectedRatePlan=396897156&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="61" data-type="hotel" data-minutes="26" data-price="2244">
+        <button type="button">
+          <b>The Serene</b>
+          <span>ホテル · Harlem</span>
+          <span>公共交通 26分 · $2,244 · 約357,949円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 100分。公共交通: 26分。徒歩4分 + バスM10 2分 + 徒歩2分 + 地下鉄A 10分 + 徒歩8分。別ルート: 28分 — 徒歩6分 + バスM3 1分 + 徒歩2分 + 地下鉄A 10分 + 徒歩8分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-The-Serene.h136001652.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536665&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=112757&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2244&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=329413545&amp;selectedRatePlan=412475084&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="62" data-type="hotel" data-minutes="17" data-price="2246">
+        <button type="button">
+          <b>Chelsea Inn</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 17分 · $2,246 · 約358,268円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 34分。公共交通: 17分。徒歩3分 + 地下鉄M 4分 + 徒歩2分 + 地下鉄Q 2分 + 徒歩6分。別ルート: 17分 — 徒歩3分 + 地下鉄F 4分 + 徒歩2分 + 地下鉄R 2分 + 徒歩6分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Chelsea-Inn.h865587.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536666&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6142495&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2246&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=210307145&amp;selectedRatePlan=222165332&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="63" data-type="hotel" data-minutes="25" data-price="2246">
+        <button type="button">
+          <b>DoubleTree by Hilton New York Downtown</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 25分 · $2,246 · 約358,268円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 93分。公共交通: 25分。徒歩5分 + 地下鉄5 12分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。別ルート: 26分 — 徒歩4分 + バスM55 5分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-DoubleTree-By-Hilton-New-York-Downtown.h3859014.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536667&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6346972&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2246&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=200023722&amp;selectedRatePlan=222056904&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="64" data-type="hotel" data-minutes="27" data-price="2256">
+        <button type="button">
+          <b>Holiday Inn Express New York City- Wall Street by IHG</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 27分 · $2,256 · 約359,863円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 90分。公共交通: 27分。徒歩1分 + バスM15-SBS 2分 + 徒歩5分 + 地下鉄3 11分 + 徒歩7分（乗換待ち計1分）。別ルート: 27分 — 徒歩8分 + 地下鉄5 11分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Holiday-Inn-Express-New-York-City-Wall-Street.h2571813.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536668&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2256&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=200815402&amp;selectedRatePlan=244443151&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="65" data-type="hotel" data-minutes="21" data-price="2271">
+        <button type="button">
+          <b>Aloft by Marriott Manhattan Downtown - Financial District</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 21分 · $2,271 · 約362,256円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 83分。公共交通: 21分。徒歩3分 + 地下鉄3 11分 + 徒歩7分。別ルート: 21分 — 徒歩3分 + 地下鉄2 11分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Aloft-Manhattan-Downtown-Financial-District.h9394157.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536669&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2271&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=329340857&amp;selectedRatePlan=412155123&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="66" data-type="hotel" data-minutes="22" data-price="2317">
+        <button type="button">
+          <b>The Ridge Hotel</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 22分 · $2,317 · 約369,593円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 59分。公共交通: 22分。徒歩2分 + 地下鉄F 9分 + 徒歩2分 + 地下鉄Q 1分 + 徒歩6分（乗換待ち計2分）。別ルート: 22分 — 徒歩2分 + 地下鉄F 12分 + 徒歩2分 + バスM5 1分 + 徒歩5分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-The-Ridge-Hotel.h1784927.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536670&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6141723&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2317&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=202090694&amp;selectedRatePlan=210769027&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="67" data-type="hotel" data-minutes="18" data-price="2323">
+        <button type="button">
+          <b>Duane Street Hotel Tribeca, Belvilla District 6 Formerly Sonder</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 18分 · $2,323 · 約370,551円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 71分。公共交通: 18分。徒歩3分 + 地下鉄2 8分 + 徒歩7分。別ルート: 18分 — 徒歩3分 + 地下鉄3 8分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Duane-Street-Hotel.h1793639.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536670&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248621555566047&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2323&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328508406&amp;selectedRatePlan=409155771&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="68" data-type="hotel" data-minutes="17" data-price="2338">
+        <button type="button">
+          <b>Heritage Hotel</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 17分 · $2,338 · 約372,943円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 25分。公共交通: 17分。徒歩5分 + バスM7 2分 + 徒歩2分 + 地下鉄W 2分 + 徒歩6分。別ルート: 20分 — 徒歩5分 + バスM7 10分 + 徒歩5分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Heritage-Hotel.h15040315.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536671&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6226054&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2338&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=201500843&amp;selectedRatePlan=389917096&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="69" data-type="hotel" data-minutes="28" data-price="2356">
+        <button type="button">
+          <b>AC Hotel by Marriott New York Downtown</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 28分 · $2,356 · 約375,814円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 88分。公共交通: 28分。徒歩3分 + バスM15 2分 + 徒歩3分 + 地下鉄3 13分 + 徒歩7分。別ルート: 31分 — 徒歩10分 + 地下鉄A 13分 + 徒歩8分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-AC-Hotel-By-Marriott-New-York-Downtown.h22514703.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536672&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2356&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=329411270&amp;selectedRatePlan=412470328&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="70" data-type="hotel" data-minutes="4" data-price="2367">
+        <button type="button">
+          <b>Paramount Times Square – A Generator Hotel</b>
+          <span>ホテル · Theater District</span>
+          <span>徒歩 4分 · $2,367 · 約377,569円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 4分。公共交通: データに無い。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Paramount-Times-Square.h24245.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536673&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6157019&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2367&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=201967771&amp;selectedRatePlan=210030202&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="71" data-type="hotel" data-minutes="27" data-price="2368">
+        <button type="button">
+          <b>Little Something</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 27分 · $2,368 · 約377,729円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 87分。公共交通: 27分。徒歩6分 + 地下鉄A 13分 + 徒歩8分。別ルート: 25分 — 徒歩6分 + 地下鉄A 2分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Little-Something.h132005887.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536674&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2368&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=328946245&amp;selectedRatePlan=411397274&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="72" data-type="hotel" data-minutes="30" data-price="2369">
+        <button type="button">
+          <b>Hotel Richland LES</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 30分 · $2,369 · 約377,888円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 73分。公共交通: 30分。徒歩3分 + バスM9 9分 + 徒歩2分 + 地下鉄3 8分 + 徒歩7分（乗換待ち計1分）。別ルート: 28分 — 徒歩4分 + バスM22 5分 + 徒歩3分 + 地下鉄5 8分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Hotel-Richland-LES.h78472939.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536675&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6004549&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2369&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=324623427&amp;selectedRatePlan=401139429&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="73" data-type="hotel" data-minutes="23" data-price="2396">
+        <button type="button">
+          <b>Holiday Inn NYC - Lower East Side by IHG</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 23分 · $2,396 · 約382,195円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 70分。公共交通: 23分。徒歩2分 + 地下鉄J 3分 + 徒歩2分 + 地下鉄N 10分 + 徒歩6分。別ルート: 23分 — 徒歩2分 + 地下鉄M 11分 + 徒歩2分 + 地下鉄W 1分 + 徒歩6分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Holiday-Inn-NYC-Lower-East-Side.h5148566.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536676&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248631819633287&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2396&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=200283567&amp;selectedRatePlan=380380408&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="74" data-type="hotel" data-minutes="25" data-price="2404">
+        <button type="button">
+          <b>Four Points By Sheraton New York Downtown</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 25分 · $2,404 · 約383,471円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 88分。公共交通: 25分。徒歩7分 + 地下鉄5 10分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。別ルート: 28分 — 徒歩7分 + 地下鉄A 13分 + 徒歩8分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Four-Points-By-Sheraton-New-York-Downtown.h13400088.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536677&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2404&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=329340885&amp;selectedRatePlan=412155331&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="75" data-type="hotel" data-minutes="6" data-price="2409">
+        <button type="button">
+          <b>JGSTAY - Times Square</b>
+          <span>ホテル · New York</span>
+          <span>徒歩 6分 · $2,409 · 約384,269円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 6分。公共交通: データに無い。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Time-Hotel-By-JGSTAY-Times-Square.h119253591.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536678&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6203474&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2409&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=327097804&amp;selectedRatePlan=405218821&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="76" data-type="hotel" data-minutes="26" data-price="2412">
+        <button type="button">
+          <b>Belvilla District 6 Residences, Battery Park, Financial District</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 26分 · $2,412 · 約384,747円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 91分。公共交通: 26分。徒歩6分 + 地下鉄5 12分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。別ルート: 26分 — 徒歩4分 + バスM55 5分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Studio-6-Battery-Park.h57275839.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536679&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2412&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=329610996&amp;selectedRatePlan=413471038&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="77" data-type="hotel" data-minutes="14" data-price="2432">
+        <button type="button">
+          <b>HGU New York</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 14分 · $2,432 · 約387,938円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 23分。公共交通: 14分。徒歩3分 + 地下鉄6 2分 + 徒歩3分 + 地下鉄S 2分 + 徒歩4分。別ルート: 14分 — 徒歩3分 + 地下鉄6X 2分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分（乗換待ち計1分）。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-HGU-New-York.h14769374.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536680&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6141525&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2432&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=219912902&amp;selectedRatePlan=286042961&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="78" data-type="hotel" data-minutes="25" data-price="2435">
+        <button type="button">
+          <b>The FIDI Hotel</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 25分 · $2,435 · 約388,416円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 93分。公共交通: 25分。徒歩5分 + 地下鉄5 12分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。別ルート: 26分 — 徒歩4分 + バスM55 5分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-The-FiDi-Hotel.h74597374.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536681&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6346972&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2435&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=316181676&amp;selectedRatePlan=402839215&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="79" data-type="hotel" data-minutes="18" data-price="2436">
+        <button type="button">
+          <b>JGSTAY - Soho</b>
+          <span>ホテル · SoHo</span>
+          <span>公共交通 18分 · $2,436 · 約388,576円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 66分。公共交通: 18分。徒歩3分 + 地下鉄Q 9分 + 徒歩6分。別ルート: 19分 — 徒歩3分 + 地下鉄N 10分 + 徒歩6分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-JG-Sohotel.h82949759.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536682&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6142503&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2436&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=318870531&amp;selectedRatePlan=409312211&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="80" data-type="hotel" data-minutes="21" data-price="2447">
+        <button type="button">
+          <b>Gild Hall, A Thompson Hotel, by Hyatt</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 21分 · $2,447 · 約390,330円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 87分。公共交通: 21分。徒歩3分 + 地下鉄3 11分 + 徒歩7分。別ルート: 21分 — 徒歩3分 + 地下鉄2 11分 + 徒歩7分。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Gild-Hall.h327886.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536683&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2447&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=213010481&amp;selectedRatePlan=413836308&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="81" data-type="hotel" data-minutes="20" data-price="2467">
+        <button type="button">
+          <b>Days Inn by Wyndham New York Chinatown</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 20分 · $2,467 · 約393,520円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 68分。公共交通: 20分。徒歩3分 + 地下鉄B 8分 + 徒歩2分 + 地下鉄W 1分 + 徒歩6分。別ルート: 21分 — 徒歩3分 + 地下鉄D 8分 + 徒歩2分 + 地下鉄N 2分 + 徒歩6分。税・手数料込み。返金可。<a href="https://www.expedia.com/New-York-Hotels-Days-Inn-By-Wyndham-New-York-Chinatown.h101154648.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536684&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=6141723&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2467&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=324132389&amp;selectedRatePlan=393781818&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="82" data-type="hotel" data-minutes="27" data-price="2471">
+        <button type="button">
+          <b>Hotel Indigo - NYC Downtown - Wall Street by IHG</b>
+          <span>ホテル · New York</span>
+          <span>公共交通 27分 · $2,471 · 約394,159円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 90分。公共交通: 27分。徒歩8分 + 地下鉄5 11分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。別ルート: 28分 — 徒歩2分 + バスM15-SBS 2分 + 徒歩5分 + 地下鉄3 11分 + 徒歩7分（乗換待ち計1分）。税・手数料込み。返金条件は未記載。<a href="https://www.expedia.com/New-York-Hotels-Indigo-NYC-Downtown-Wall-Street.h71756627.Hotel-Information?chkin=2026-12-28&amp;chkout=2027-01-02&amp;x_pwa=1&amp;rfrr=HSR&amp;pwa_ts=1794451536685&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;useRewards=false&amp;rm1=a1&amp;regionId=2621&amp;destination=New+York%2C+New+York%2C+United+States+of+America&amp;destType=MARKET&amp;neighborhoodId=553248633429418894&amp;latLong=40.712843%2C-74.005966&amp;sort=PRICE_LOW_TO_HIGH&amp;top_dp=2471&amp;top_cur=USD&amp;userIntent=&amp;selectedRoomType=315877816&amp;selectedRatePlan=384904540&amp;categorySearch=any_option&amp;searchId=3c565638-b31d-41a8-81cd-f8ab271b143e&amp;containsVideo=false" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="83" data-type="airbnb" data-minutes="64" data-price="480">
+        <button type="button">
+          <b>The Brooklyn Nook I</b>
+          <span>Airbnb · New York City (fc=true)</span>
+          <span>公共交通 64分 · $480 · 約76,567円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 236分。公共交通: 64分。徒歩3分 + バスB83 6分 + 徒歩2分 + 地下鉄3 46分 + 徒歩7分。別ルート: 68分 — 徒歩2分 + バスB20 8分 + 徒歩11分 + 地下鉄A 35分 + 徒歩8分（乗換待ち計4分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1698721205235249710?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="84" data-type="airbnb" data-minutes="52" data-price="485">
+        <button type="button">
+          <b>BestRest #2 NEAR NYC/NEWARK AIRPORT/OUTLET MALL</b>
+          <span>Airbnb · New York City (fc=true)</span>
+          <span>公共交通 52分 · $485 · 約77,364円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: —分。公共交通: 52分。徒歩5分 + バス24 4分 + 徒歩3分 + 鉄道NJ Transit NJCL 27分 + 徒歩2分 + 地下鉄2 1分 + 徒歩7分（乗換待ち計3分）。別ルート: 55分 — 徒歩5分 + バス24 4分 + 徒歩2分 + バス112 35分 + 徒歩2分 + バスM42 1分 + 徒歩5分（乗換待ち計1分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/42951960?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="85" data-type="airbnb" data-minutes="58" data-price="515">
+        <button type="button">
+          <b>Sunny Bedroom with Full Bath NYC (one guest only)</b>
+          <span>Airbnb · Long Island City</span>
+          <span>公共交通 58分 · $515 · 約82,150円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 261分。公共交通: 58分。徒歩5分 + バスQM2 48分 + 徒歩5分。別ルート: 58分 — 徒歩12分 + バスQM20 41分 + 徒歩5分。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/883112096841319366?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="86" data-type="airbnb" data-minutes="50" data-price="728.65">
+        <button type="button">
+          <b>Private Porch Queen Suite with private bathroom</b>
+          <span>Airbnb · Long Island City</span>
+          <span>公共交通 50分 · $728.65 · 約116,230円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 216分。公共交通: 50分。徒歩6分 + バスQ15 2分 + 徒歩2分 + 地下鉄7 33分 + 徒歩7分。別ルート: 51分 — 徒歩7分 + バスQ16 3分 + 徒歩2分 + 地下鉄7 32分 + 徒歩7分。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1196675137374418456?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="87" data-type="airbnb" data-minutes="43" data-price="777.07">
+        <button type="button">
+          <b>Private Sunlight Room in Brownstone Near Subway</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 43分 · $777.07 · 約123,953円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 155分。公共交通: 43分。徒歩1分 + バスB46-SBS 5分 + 徒歩2分 + 地下鉄A 27分 + 徒歩8分。別ルート: 41分 — 徒歩1分 + バスB46-SBS 5分 + 徒歩2分 + 地下鉄A 16分 + 徒歩2分 + 地下鉄3 8分 + 徒歩7分。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/8054651?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="88" data-type="airbnb" data-minutes="41" data-price="798.52">
+        <button type="button">
+          <b>Your Home Away From Home # 2 (Single Occupancy)</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 41分 · $798.52 · 約127,375円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 168分。公共交通: 41分。徒歩3分 + バスB60 9分 + 徒歩2分 + 地下鉄L 13分 + 徒歩2分 + 地下鉄Q 5分 + 徒歩6分（乗換待ち計1分）。別ルート: 42分 — 徒歩5分 + バスB52 2分 + 徒歩2分 + 地下鉄L 17分 + 徒歩2分 + 地下鉄W 6分 + 徒歩6分（乗換待ち計2分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1060241871693461480?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="89" data-type="airbnb" data-minutes="40" data-price="1207.05">
+        <button type="button">
+          <b>Private bathroom in cozy home</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 40分 · $1,207.05 · 約192,541円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 142分。公共交通: 40分。徒歩1分 + バスB47 2分 + 徒歩2分 + 地下鉄J 15分 + 徒歩2分 + 地下鉄Q 9分 + 徒歩6分（乗換待ち計3分）。別ルート: 42分 — 徒歩1分 + バスB47 2分 + 徒歩2分 + 地下鉄J 15分 + 徒歩3分 + 地下鉄R 12分 + 徒歩6分（乗換待ち計1分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/8712309?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="90" data-type="airbnb" data-minutes="26" data-price="1233">
+        <button type="button">
+          <b>Work From Our Home w/ Loft</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 26分 · $1,233 · 約196,680円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 116分。公共交通: 26分。徒歩1分 + バスQ59 2分 + 徒歩2分 + 地下鉄L 7分 + 徒歩2分 + 地下鉄Q 5分 + 徒歩6分（乗換待ち計1分）。別ルート: 29分 — 徒歩4分 + バスB48 1分 + 徒歩2分 + 地下鉄L 7分 + 徒歩2分 + 地下鉄Q 5分 + 徒歩6分（乗換待ち計2分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/55959?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="91" data-type="airbnb" data-minutes="35" data-price="1241.17">
+        <button type="button">
+          <b>Beautiful Bedroom w Sky Window - 15 min to Midtown</b>
+          <span>Airbnb · Long Island City</span>
+          <span>公共交通 35分 · $1,241.17 · 約197,984円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 107分。公共交通: 35分。徒歩3分 + バスQ104 2分 + 徒歩3分 + 地下鉄M 11分 + 徒歩2分 + 地下鉄Q 6分 + 徒歩6分（乗換待ち計2分）。別ルート: 38分 — 徒歩3分 + バスQ104 4分 + 徒歩3分 + 地下鉄R 18分 + 徒歩6分（乗換待ち計4分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1558907340302983675?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="92" data-type="airbnb" data-minutes="27" data-price="1419.87">
+        <button type="button">
+          <b>Pod Brooklyn Hotel, Queen pod</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 27分 · $1,419.87 · 約226,489円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 110分。公共交通: 27分。徒歩4分 + バスB62 1分 + 徒歩2分 + 地下鉄L 6分 + 徒歩2分 + 地下鉄Q 5分 + 徒歩6分（乗換待ち計1分）。別ルート: 36分 — 徒歩5分 + バスQ59 2分 + 徒歩2分 + 地下鉄L 9分 + 徒歩5分 + 地下鉄2 3分 + 徒歩7分（乗換待ち計3分）。税込みかどうかは記載なし。返金可。<a href="https://www.airbnb.com/rooms/1227420009397765852?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="93" data-type="airbnb" data-minutes="53" data-price="1574">
+        <button type="button">
+          <b>Entire unit 3BR near LGA, 7Train Citifield, Food</b>
+          <span>Airbnb · Long Island City</span>
+          <span>公共交通 53分 · $1,574 · 約251,075円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 237分。公共交通: 53分。徒歩7分 + バスQ26 12分 + 徒歩3分 + 鉄道LIRR 365 21分 + 徒歩2分 + 地下鉄3 1分 + 徒歩7分。別ルート: 59分 — 徒歩2分 + バスQ25 14分 + 徒歩4分 + 地下鉄7 32分 + 徒歩7分。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1001730138556048837?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="94" data-type="airbnb" data-minutes="38" data-price="1642.87">
+        <button type="button">
+          <b>BKLYN House Hotel, Double queen</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 38分 · $1,642.87 · 約262,060円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 134分。公共交通: 38分。徒歩4分 + バスB43 7分 + 徒歩2分 + 地下鉄L 10分 + 徒歩5分 + 地下鉄2 3分 + 徒歩7分。別ルート: 38分 — 徒歩4分 + バスB43 7分 + 徒歩2分 + 地下鉄L 8分 + 徒歩2分 + 地下鉄W 6分 + 徒歩6分（乗換待ち計3分）。税込みかどうかは記載なし。返金条件は未記載。<a href="https://www.airbnb.com/rooms/1572553355608384130?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="95" data-type="airbnb" data-minutes="36" data-price="1666">
+        <button type="button">
+          <b>NY Moore Hostel, 3 Bed private ensuite</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 36分 · $1,666 · 約265,750円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 134分。公共交通: 36分。徒歩7分 + バスB60 0分 + 徒歩2分 + 地下鉄L 11分 + 徒歩2分 + 地下鉄W 7分 + 徒歩6分（乗換待ち計1分）。別ルート: 40分 — 徒歩8分 + バスB43 5分 + 徒歩2分 + 地下鉄L 10分 + 徒歩5分 + 地下鉄2 3分 + 徒歩7分。税込みかどうかは記載なし。返金可。<a href="https://www.airbnb.com/rooms/1630548536541015517?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="96" data-type="airbnb" data-minutes="30" data-price="1667.87">
+        <button type="button">
+          <b>Capital Hotel, Superior queen room</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 30分 · $1,667.87 · 約266,048円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 83分。公共交通: 30分。徒歩5分 + バスQ69 4分 + 徒歩3分 + 地下鉄W 12分 + 徒歩6分。別ルート: 31分 — 徒歩5分 + バスQ66 4分 + 徒歩3分 + 地下鉄N 12分 + 徒歩6分（乗換待ち計1分）。税込みかどうかは記載なし。返金可。<a href="https://www.airbnb.com/rooms/1689137793599761102?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="97" data-type="airbnb" data-minutes="41" data-price="1765">
+        <button type="button">
+          <b>Marco LaGuardia Hotel &amp; Suites, One bedroom suite.</b>
+          <span>Airbnb · Long Island City</span>
+          <span>公共交通 41分 · $1,765 · 約281,542円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 208分。公共交通: 41分。徒歩3分 + バスQ50 2分 + 徒歩3分 + 鉄道LIRR 1365 22分 + 徒歩2分 + 地下鉄2 1分 + 徒歩7分（乗換待ち計1分）。別ルート: 47分 — 徒歩3分 + バスQ63 2分 + 徒歩2分 + 地下鉄7 33分 + 徒歩7分。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1666025098948334014?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="98" data-type="airbnb" data-minutes="35" data-price="1782.85">
+        <button type="button">
+          <b>The Tillary Hotel Brooklyn, 1 King bed classic</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 35分 · $1,782.85 · 約284,389円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 104分。公共交通: 35分。徒歩2分 + バスB57 3分 + 徒歩4分 + 地下鉄2 18分 + 徒歩7分（乗換待ち計1分）。別ルート: 35分 — 徒歩9分 + バスB25 0分 + 徒歩2分 + 地下鉄A 15分 + 徒歩8分（乗換待ち計1分）。税込みかどうかは記載なし。返金条件は未記載。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1097125624434587092?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="99" data-type="airbnb" data-minutes="35" data-price="1782.85">
+        <button type="button">
+          <b>The Tillary Hotel Brooklyn, 1 King bed luxury</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 35分 · $1,782.85 · 約284,389円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 104分。公共交通: 35分。徒歩2分 + バスB57 3分 + 徒歩4分 + 地下鉄2 18分 + 徒歩7分（乗換待ち計1分）。別ルート: 35分 — 徒歩9分 + バスB25 0分 + 徒歩2分 + 地下鉄A 15分 + 徒歩8分（乗換待ち計1分）。税込みかどうかは記載なし。返金条件は未記載。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1097125870673466743?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="100" data-type="airbnb" data-minutes="28" data-price="1803.75">
+        <button type="button">
+          <b>Feather Factory Hotel, Run of House</b>
+          <span>Airbnb · Long Island City</span>
+          <span>公共交通 28分 · $1,803.75 · 約287,723円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 85分。公共交通: 28分。徒歩9分 + バスQ67 1分 + 徒歩2分 + 地下鉄7 9分 + 徒歩7分。別ルート: 29分 — 徒歩5分 + バスQ39 2分 + 徒歩3分 + 地下鉄7 11分 + 徒歩7分（乗換待ち計1分）。税込みかどうかは記載なし。返金条件は未記載。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1172500363755547171?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="101" data-type="airbnb" data-minutes="46" data-price="1806.28">
+        <button type="button">
+          <b>Lovely 2 Bedroom apt. in the heart of Bed-Stuy, BK</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 46分 · $1,806.28 · 約288,127円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 158分。公共交通: 46分。徒歩4分 + バスB26 8分 + 徒歩2分 + 地下鉄A 24分 + 徒歩8分。別ルート: 45分 — 徒歩4分 + バスB26 8分 + 徒歩2分 + 地下鉄A 13分 + 徒歩2分 + 地下鉄3 8分 + 徒歩7分（乗換待ち計1分）。税込みかどうかは記載なし。返金条件は未記載。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/699189080597169915?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="102" data-type="airbnb" data-minutes="21" data-price="1811.56">
+        <button type="button">
+          <b>Pod 51, Full pod - private bathroom</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 21分 · $1,811.56 · 約288,969円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 25分。公共交通: 21分。徒歩4分 + バスM50 12分 + 徒歩5分。別ルート: 19分 — 徒歩5分 + バスM102 4分 + 徒歩4分 + 地下鉄S 2分 + 徒歩4分。税込みかどうかは記載なし。返金可。<a href="https://www.airbnb.com/rooms/1249885166911603587?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="103" data-type="airbnb" data-minutes="11" data-price="1823">
+        <button type="button">
+          <b>Doxie Hotel, 1 Queen bed</b>
+          <span>Airbnb · Manhattan</span>
+          <span>徒歩 11分 · $1,823 · 約290,794円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 11分。公共交通: 11分。徒歩3分 + バスM20 3分 + 徒歩5分。別ルート: 11分 — 徒歩4分 + バスM104 2分 + 徒歩5分。税込みかどうかは記載なし。返金は選択肢による（データ上 options）。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1699244486707682837?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="104" data-type="airbnb" data-minutes="14" data-price="1896.47">
+        <button type="button">
+          <b>Pod 39, Full pod</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 14分 · $1,896.47 · 約302,513円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 21分。公共交通: 14分。徒歩9分 + 地下鉄S 1分 + 徒歩4分。別ルート: 17分 — 徒歩4分 + バス42nd St 1分 + 徒歩2分 + 地下鉄7 3分 + 徒歩7分。税込みかどうかは記載なし。返金可。<a href="https://www.airbnb.com/rooms/1249885513565135493?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="105" data-type="airbnb" data-minutes="10" data-price="1911.95">
+        <button type="button">
+          <b>Pod Times Square Hotel, Bunk pod</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 10分 · $1,911.95 · 約304,982円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 12分。公共交通: 10分。徒歩2分 + バスM42 3分 + 徒歩5分。別ルート: 13分 — 徒歩6分 + バスM104 2分 + 徒歩5分。税込みかどうかは記載なし。返金可。<a href="https://www.airbnb.com/rooms/1643351505460876003?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="106" data-type="airbnb" data-minutes="28" data-price="2081.45">
+        <button type="button">
+          <b>Close to Times Square + Free Breakfast &amp; Gym</b>
+          <span>Airbnb · Long Island City</span>
+          <span>公共交通 28分 · $2,081.45 · 約332,020円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 79分。公共交通: 28分。徒歩4分 + バスQ69 2分 + 徒歩3分 + 地下鉄7 12分 + 徒歩7分。別ルート: 28分 — 徒歩4分 + バスQ66 2分 + 徒歩3分 + 地下鉄N 12分 + 徒歩6分（乗換待ち計1分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1453066826493838112?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="107" data-type="airbnb" data-minutes="34" data-price="2109">
+        <button type="button">
+          <b>Radio Hotel, Radio two queen room</b>
+          <span>Airbnb · New York City (fc=true)</span>
+          <span>公共交通 34分 · $2,109 · 約336,415円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 155分。公共交通: 34分。徒歩1分 + バスBx36 3分 + 徒歩3分 + 地下鉄A 19分 + 徒歩8分。別ルート: 36分 — 徒歩1分 + バスM101 6分 + 徒歩3分 + 地下鉄A 18分 + 徒歩8分。税込みかどうかは記載なし。返金は選択肢による（データ上 options）。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1635369079890222997?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="108" data-type="airbnb" data-minutes="25" data-price="2113.92">
+        <button type="button">
+          <b>World Center Hotel, Superior king with sofa bed a.</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 25分 · $2,113.92 · 約337,199円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 85分。公共交通: 25分。徒歩6分 + 地下鉄5 11分 + 徒歩3分 + 地下鉄S 1分 + 徒歩4分。別ルート: 25分 — 徒歩5分 + バスM55 3分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分。税込みかどうかは記載なし。返金は選択肢による（データ上 options）。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1638447130241466582?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="109" data-type="airbnb" data-minutes="33" data-price="2191">
+        <button type="button">
+          <b>The Hoxton Williamsburg, Cozy</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 33分 · $2,191 · 約349,495円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 119分。公共交通: 33分。徒歩3分 + バスB32 11分 + 徒歩3分 + 地下鉄7 8分 + 徒歩7分（乗換待ち計1分）。別ルート: 31分 — 徒歩7分 + バスB62 1分 + 徒歩2分 + 地下鉄L 6分 + 徒歩2分 + 地下鉄W 6分 + 徒歩6分（乗換待ち計1分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1181127097582334636?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="110" data-type="airbnb" data-minutes="33" data-price="2205">
+        <button type="button">
+          <b>Wythe Hotel, Brooklyn king 2</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 33分 · $2,205 · 約351,728円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 121分。公共交通: 33分。徒歩4分 + バスB32 10分 + 徒歩3分 + 地下鉄7 8分 + 徒歩7分（乗換待ち計1分）。別ルート: 33分 — 徒歩9分 + バスB62 1分 + 徒歩2分 + 地下鉄L 6分 + 徒歩2分 + 地下鉄W 6分 + 徒歩6分（乗換待ち計1分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1060849093204290693?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="111" data-type="airbnb" data-minutes="20" data-price="2262.42">
+        <button type="button">
+          <b>AMTD Idea Tribeca Hotel, 2 Doubles Tribeca view</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 20分 · $2,262.42 · 約360,887円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 63分。公共交通: 20分。徒歩3分 + 地下鉄A 9分 + 徒歩8分。別ルート: 22分 — 徒歩3分 + 地下鉄E 11分 + 徒歩8分。税込みかどうかは記載なし。返金条件は未記載。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1639160543426248063?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="112" data-type="airbnb" data-minutes="18" data-price="2462">
+        <button type="button">
+          <b>The Lucerne Hotel, Superior Queen Bed</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 18分 · $2,462 · 約392,723円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 42分。公共交通: 18分。徒歩1分 + バスM79-SBS 1分 + 徒歩2分 + 地下鉄1 7分 + 徒歩7分。別ルート: 19分 — 徒歩1分 + バスM7 1分 + 徒歩3分 + 地下鉄1 7分 + 徒歩7分。税込みかどうかは記載なし。返金条件は未記載。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1040631615442446563?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="113" data-type="airbnb" data-minutes="33" data-price="2616">
+        <button type="button">
+          <b>Arlo Williamsburg, City view king with balcony</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 33分 · $2,616 · 約417,288円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 120分。公共交通: 33分。徒歩3分 + バスB32 11分 + 徒歩3分 + 地下鉄7 8分 + 徒歩7分（乗換待ち計1分）。別ルート: 31分 — 徒歩7分 + バスB62 1分 + 徒歩2分 + 地下鉄L 6分 + 徒歩2分 + 地下鉄W 6分 + 徒歩6分（乗換待ち計1分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1629877301528231669?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="114" data-type="airbnb" data-minutes="28" data-price="2720.25">
+        <button type="button">
+          <b>Nesva Hotel, King standard</b>
+          <span>Airbnb · Long Island City</span>
+          <span>公共交通 28分 · $2,720.25 · 約433,917円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 78分。公共交通: 28分。徒歩4分 + バスQ102 4分 + 徒歩2分 + 地下鉄E 8分 + 徒歩2分 + バスM20 4分 + 徒歩2分（乗換待ち計2分）。別ルート: 31分 — 徒歩4分 + バスQ102 2分 + 徒歩2分 + 地下鉄N 17分 + 徒歩6分。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1680334995413596827?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="115" data-type="airbnb" data-minutes="5" data-price="2752">
+        <button type="button">
+          <b>Radio City Apartments, Queen Studio Apartment</b>
+          <span>Airbnb · Manhattan</span>
+          <span>徒歩 5分 · $2,752 · 約438,982円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 5分。公共交通: データに無い。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1558123678183808059?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="116" data-type="airbnb" data-minutes="27" data-price="2773.87">
+        <button type="button">
+          <b>Little Something, Queen room</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 27分 · $2,773.87 · 約442,470円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 87分。公共交通: 27分。徒歩6分 + 地下鉄A 13分 + 徒歩8分。別ルート: 25分 — 徒歩6分 + 地下鉄A 2分 + 徒歩2分 + 地下鉄2 8分 + 徒歩7分。税込みかどうかは記載なし。返金可。<a href="https://www.airbnb.com/rooms/1704378900955277956?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="117" data-type="airbnb" data-minutes="13" data-price="2932">
+        <button type="button">
+          <b>Hotel Boutique at Grand Central, Standard Room</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 13分 · $2,932 · 約467,694円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 15分。公共交通: 13分。徒歩8分 + 地下鉄S 1分 + 徒歩4分。税込みかどうかは記載なし。返金は選択肢による（データ上 options）。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1132597716790457917?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="118" data-type="airbnb" data-minutes="15" data-price="2944">
+        <button type="button">
+          <b>Omni Berkshire Place, Premier city view room, 2 d.</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 15分 · $2,944 · 約469,609円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 17分。公共交通: 15分。徒歩2分 + バスM4 3分 + 徒歩10分。別ルート: 15分 — 徒歩2分 + バスQ32 3分 + 徒歩10分。税込みかどうかは記載なし。返金は選択肢による（データ上 options）。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1798247736556020128?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="119" data-type="airbnb" data-minutes="6" data-price="3312">
+        <button type="button">
+          <b>Royalton New York, Standard one queen bed with ba.</b>
+          <span>Airbnb · Manhattan</span>
+          <span>徒歩 6分 · $3,312 · 約528,310円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 6分。公共交通: データに無い。税込みかどうかは記載なし。返金条件は未記載。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1624139636998107542?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="120" data-type="airbnb" data-minutes="17" data-price="3401">
+        <button type="button">
+          <b>Walker Hotel Greenwich Village, Bedford Double Ci.</b>
+          <span>Airbnb · Manhattan</span>
+          <span>公共交通 17分 · $3,401 · 約542,506円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 38分。公共交通: 17分。徒歩4分 + バスM14D-SBS 1分 + 徒歩2分 + 地下鉄2 3分 + 徒歩7分。別ルート: 18分 — 徒歩3分 + 地下鉄L 2分 + 徒歩2分 + 地下鉄Q 5分 + 徒歩6分。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1364637126350215959?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li><li data-stay-index="121" data-type="airbnb" data-minutes="32" data-price="4274">
+        <button type="button">
+          <b>The William Vale, Gotham king with balcony</b>
+          <span>Airbnb · Williamsburg</span>
+          <span>公共交通 32分 · $4,274 · 約681,762円 <span class="tag tag--estimate">目安</span></span>
+        </button>
+        <p class="stay-static">徒歩: 124分。公共交通: 32分。徒歩3分 + バスB32 10分 + 徒歩3分 + 地下鉄7 8分 + 徒歩7分（乗換待ち計1分）。別ルート: 33分 — 徒歩9分 + バスB62 1分 + 徒歩2分 + 地下鉄L 6分 + 徒歩2分 + 地下鉄W 6分 + 徒歩6分（乗換待ち計1分）。税込みかどうかは記載なし。返金可。地図の位置は約 150m の概算（Airbnb）。<a href="https://www.airbnb.com/rooms/1105739323543886103?check_in=2026-12-28&amp;check_out=2027-01-02&amp;adults=1&amp;display_currency=USD" target="_blank" rel="noopener noreferrer">掲載ページ</a></p>
+      </li></ul>
+        </div>
+      </div>
     
 </main>
 <div class="dock" id="dock"><nav class="botnav" aria-label="主要ナビ">

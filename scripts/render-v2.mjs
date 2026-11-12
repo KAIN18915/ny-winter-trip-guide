@@ -1,3 +1,5 @@
+import { stayMapList, stayMapNotes } from "./site/stay-map-html.mjs";
+
 export function buildV2Pages(ctx) {
   const {
     esc,
@@ -216,20 +218,46 @@ export function buildV2Pages(ctx) {
   }
 
   function buildMap() {
+    const stays = readJson("map_stays.json");
+    if (!stays.listings || stays.listings.length !== stays.counts.on_map) {
+      throw new Error("map_stays.json の件数と counts.on_map が一致しません");
+    }
     const body = `
       ${banner()}
-      <h1>地図</h1>
-      <p class="lead">OpenStreetMap タイル。座標は出典付き（data/map_points.json）。座標 null の宿はピンなし。</p>
-      <div id="map" class="map-canvas" role="application" aria-label="旅行候補地図"></div>
-      <p>${tag("estimate")} 写真は参考イメージであり現地の 2026 年末状況を保証しません。</p>
+      <h1>宿と Times Square までの所要時間</h1>
+      <p class="lead">${esc(String(stays.counts.on_map))}件（ホテル ${esc(String(stays.counts.hotel))}、Airbnb ${esc(String(stays.counts.airbnb))}）。ピンに触れるか、一覧を押すと内訳が出ます。</p>
+      ${stayMapNotes()}
+      <div class="stay-filters">
+        <label>種類
+          <select id="stay-type">
+            <option value="all">両方</option>
+            <option value="hotel">ホテル</option>
+            <option value="airbnb">Airbnb</option>
+          </select>
+        </label>
+        <label>Times Square まで（分）以内
+          <input id="stay-max-min" type="number" min="0" inputmode="numeric" placeholder="指定なし">
+        </label>
+        <label>5泊合計（USD）以内
+          <input id="stay-max-price" type="number" min="0" inputmode="decimal" placeholder="指定なし">
+        </label>
+      </div>
+      <p class="map-legend" aria-hidden="true"><span><i class="swatch-hotel"></i>ホテル</span><span><i class="swatch-airbnb"></i>Airbnb</span><span><i class="swatch-dest"></i>タイムズスクエア</span></p>
+      <p id="stay-count">表示 ${esc(String(stays.listings.length))} / ${esc(String(stays.listings.length))}</p>
+      <div class="map-layout">
+        <div id="map" class="map-canvas" role="application" aria-label="宿とタイムズスクエアの地図"></div>
+        <div class="stay-list-wrap">
+          <ul id="stay-list" class="stay-list">${stayMapList(stays.listings, esc)}</ul>
+        </div>
+      </div>
     `;
     return layoutExt({
-      title: "地図",
+      title: "宿と Times Square までの時間",
       nav: "map",
       depth: 1,
       body,
       extraHead:
-        '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">',
+        '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">\n  <link rel="stylesheet" href="../assets/css/map-stays.css">',
       scripts: [
         "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
         "assets/js/map.js",

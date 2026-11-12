@@ -12,6 +12,7 @@ const paths = [
   "guide/more/",
   "guide/nye/",
   "map/",
+  "data/map_stays.json",
   "fares/",
   "practical/",
   "credits/",

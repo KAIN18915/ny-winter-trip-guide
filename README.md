@@ -14,7 +14,7 @@ GitHub Pages 静的サイト。ホームは未予約の暫定プラン（2026-12
 | `plan-a.html` / `plan-b.html` / `plan-c.html` | 固定行程案 |
 | `stays.html` | 宿泊候補カード（Google Hotels 目安価格） |
 | `options.html` | 観光・食事・イベント75件 |
-| `map.html` | Leaflet + OSM |
+| `map.html` | 宿122件の地図と Times Square までの所要時間 |
 | `credits.html` | Wikimedia Commons 41枚のクレジット |
 | `nye.html` / `practical.html` / `fares.html` | 年越し・実務・運賃カレンダー |
 
